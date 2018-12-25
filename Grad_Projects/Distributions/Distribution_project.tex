@@ -1,0 +1,820 @@
+\documentclass[10pt]{article}  
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{graphicx,amsmath,verbatim,float,amsfonts,amssymb,enumerate}
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+\usepackage[normalem]{ulem}
+% Added
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+
+\setlength{\parskip}{2ex}
+\setlength{\parindent}{0in}
+
+
+\newcommand{\bi}{\begin{itemize}\addtolength{\itemsep}{-.5\baselineskip}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}\addtolength{\itemsep}{-.5\baselineskip}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bt}{\begin{minipage}{1in}\begin{flushleft}\vspace{2mm}}
+\newcommand{\et}{\vspace{2mm}\end{flushleft}\end{minipage}}
+\newcommand{\br}{\begin{minipage}{5.5in}\begin{raggedright}\vspace{2mm}}
+\newcommand{\er}{\vspace{2mm}\end{raggedright}\end{minipage}}
+\newcommand{\brt}{\begin{minipage}{2.75in}\begin{raggedright}\vspace{2mm}}
+
+\newcommand{\bk}{\backslash}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5 in}
+
+
+\usepackage{fancyhdr} 
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}   
+
+\renewcommand{\headrulewidth}{.4pt}
+\renewcommand{\footrulewidth}{.4pt}
+
+\lhead{}
+\chead{Distribution Encyclopedia - Jeremy Meyer}
+
+\begin{document}
+
+% Bernouli Distribution
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Bernoulli($p$)}}\\
+\hline
+\bt pmf {\tiny (\& support)}  \et & \br $f(x|p) = p^x(1-p)^{1-x}  \qquad \mbox{for } x = 0,1$\er \\ \hline
+ 
+\bt parameter space \et & \br  $0 < p < 1$
+where  $p = P(X=1)=P(\mbox{success})$ \\{\tiny (Note: technically $0 \le p \le 1$, but sometimes the 
+edge cases cause problems.)}   \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = p$  \qquad \qquad ${\rm Var}(X) = p(1-p)$ \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = pe^t + (1-p)$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Bernoulli} \er\\\hline 
+
+\bt shape \et & \br Since $X$ can only be two values, there isn't much of a defined shape. \er \\\hline
+
+\bt common uses \et & \br Usually used to model a binary ``experiment'' where the outcome 
+ is either a 1 (success) or 0 (failure),  for example: win/lose; heads/tails; live/die, etc.
+\er\\\hline
+
+\bt R functions \et & \br 
+ \texttt{dbinom(x, 1, p)}\\ \texttt{rbinom(n, 1, p)} \\
+ {\scriptsize (Note \texttt{qbinom} and \texttt{pbinom} also exist but aren't very useful for Bernoulli)} \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - Special case of the binomial distribution when $n=1$ \\ - Sum of n Bernoulli(p) trials is binomial(n,p) \\ - Number of Bernouli(p) \textit{trials} until $r^{th}$ success is Negative binomial(p, r) \er \\\hline
+
+\bt Random Generation \et&  \br If runif(0,1)$ < p$, $X=1$, else $X=0$. \\   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+% Beta-Binomial
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Beta-Binomial($\alpha$, $\beta$, $n$)}} \\
+\hline
+\bt pmf {\tiny (\& support)} \et & \br {\small \[f(x|\alpha,\beta, n) =
+{n \choose x}\frac{\Gamma(x+\alpha)\Gamma(n-x+\beta)}{\Gamma(n+\alpha+\beta)}\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} = {n \choose x}\frac{B(x+\alpha, n-x+\beta)}{B(\alpha, \beta)} \quad x=0,1,...n  
+   \]} {\scriptsize Where $B(,)$ is the beta function} \er\\\hline
+
+\bt parameter space \et & \br $\alpha \ge 0$ and $\beta \ge 0$ (shape parameters); $n$ (number of trials) is a positive integer   \er\\\hline
+
+\bt mean  \& variance \et & \br \[E(X) = \frac{n\alpha}{\alpha+\beta} \qquad \qquad 
+{\rm Var}(X) =\frac{n\alpha\beta(\alpha + \beta + n)}{(\alpha+\beta)^2(\alpha+\beta+1)}\] \er\\\hline
+
+\bt mgf \et & \br  The form of the mgf is complicated and unhelpful \er \\\hline
+\bt graph \et & 
+\br \includegraphics[height=3in]{Beta_Binomial} \er\\\hline 
+
+ \bt shape \et & \br{\footnotesize If $\alpha = \beta$, the distribution will be symmetric;  \\
+if $\alpha < \beta$, the distribution will be right skewed;\\ if $\alpha > \beta$, the distribution 
+will be left skewed;\\ if both $\alpha < 1$ and $\beta <1$, the distribution will be sort of ``U" shaped. \\ As n gets larger, distribution will look more smooth} \er\\\hline
+
+\bt common uses \et & \br   {\footnotesize Used as a predictive or marginal distribution in Bayesian statistics with a beta-binomial model. Can be interpreted as a weighted binomial distribution over different values of p (which has a beta distribution) } \er\\
+\hline
+\bt R functions \et & \br 
+ R Does not have built in functions, but the pmf can be evaluated directly through beta functions (see pmf above). See "random generation' below for generating random draws. \er\\\hline
+
+\bt special cases \& relationships \et &  \br - When $\alpha=1$ and $\beta=1$, it reduces to a Discrete Uniform\\ - If we let $p=\frac{\alpha}{\alpha + \beta}$ and as $n \rightarrow \infty$, this approaches a binomial  \er \\\hline
+
+\bt Random Generation \et & \br Let $X \sim Binomial(n, P)$ and $P \sim Beta(\alpha, \beta)$. Draw $Ps$, use those to get $X$. \er \\\hline
+
+\end{tabular}
+\end{center}
+
+
+
+% Binomial Distribution
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Binomial($n,p$)}}\\
+\hline
+\bt pmf {\tiny (\& support)}  \et & \br $f(x|n,p) = {n \choose x}p^x(1-p)^{1-x}  \qquad \mbox{for } x = 0,1,...,n$\er \\ \hline
+ 
+\bt parameter space \et & \br  $0 < p < 1$,
+where  $p = P(\mbox{success})$; n (number of trials) is a positive integer \\{\tiny Note: n is usually considered known}   \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = np$  \qquad \qquad ${\rm Var}(X) = np(1-p)$ \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = (pe^t + (1-p))^n$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Binomial} \er\\\hline
+
+\bt shape \et & \br If p is close to 0 or 1, graph is skewed. As n gets larger or if p is close 0.5, it looks more normal.  \er \\\hline
+
+\bt common uses \et & \br Modeling the number of successes in a fixed number (n) trials, sampling with replacement. Ex. Number of heads in 10 coin flips, number of 6s after rolling n dice. 
+\er\\\hline
+
+\bt R functions \et & \br 
+ \texttt{dbinom(x, n, p)    } $\qquad \qquad $ \texttt{pbinom(x, n, p)}\\ 
+ \texttt{qbinom(q, n, p)} $ \qquad \qquad $ \texttt{  rbinom(nDraws,n, p)} \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - When $n=1$, it's a Bernoulli \\ - As $n\rightarrow \infty$, it approaches a normal \\ - Can approximate a Poisson if $p=\lambda n$ and $n$ is large, \\ - Can approximate Hypergeometric$(M,N,k)$ $N\rightarrow \infty$\er \\\hline
+
+\bt Random Generation \et&  \br Let $Y_i \sim Bernoulli(p)$, then $X = \sum_{i=1}^{n}Y_i$ (sum of n independent Bernoulli varibules). \\   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+% Discrete Uniform
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Discrete Uniform($N$)}}\\
+\hline
+\bt pmf {\tiny (\& support)}  \et & \br $f(x|N) = 1/N  \qquad \mbox{for x = 1,2,...,N} $\er \\ \hline
+ 
+\bt parameter space \et & \br  N is a positive integer
+   \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \frac{N+1}{2}$  \qquad \qquad ${\rm Var}(X) = \frac{N^2-1}{12}$ \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = \sum_{i=1}^{N}e^{it}$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=1.5in]{discunif} \er\\\hline 
+
+\bt shape \et & \br Graph has N "tick marks" of all equal height at integers 1 to N. \er \\\hline
+
+\bt common uses \et & \br Discrete outcomes that are all equally likely. Ex. Rolling an N sided die. 
+\er\\\hline
+
+\bt R functions \et & \br No default R functions. Though, these aren't hard to calculate since the pmf is uniform. \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - Special case of Beta-Binomial($\alpha, \beta$) when $\alpha=1$ and $\beta=1$ \\ - Can also be parameterized using support a, a+1, ..., b-1, b\er \\\hline
+
+\bt Random Generation \et&  \br $X = \ceil{runif(0,N)}$ Where the function $\ceil{.}$ always rounds up. \\   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+% Geometric
+\begin{center}
+\begin{tabular}{| p{1in} | p{2.75in} | p{2.75in}|}
+\multicolumn{3}{l}{\textbf{Geometric($p$)}} \\ \hline
+{\small Parameterization} & $X=$ \textbf{Number of Failures} & $X=$ \textbf{Number of Trials}\\\hline
+\bt pmf {\tiny (\& support)} \et & \brt $f(x|p) = p(1-p)^{x}$ for $x=$0,1,...  \er &  $f(x|p) = p(1-p)^{x-1}$ for $x=$1,2,... \\\hline
+
+\bt parameter space \et & \multicolumn{2}{|l|}{ $0 < p < 1$ where  $p = P(\mbox{success})$} \\ \hline
+
+\bt mean \& variance  \et & \brt $E(X) = \frac{1-p}{p}$  \qquad\qquad ${\rm Var}(X) = \frac{1-p}{p^2}$ \er &
+\brt $E(X) = \frac{1}{p}$  \qquad\qquad ${\rm Var}(X) = \frac{1-p}{p^2}$ \er \\\hline
+
+\bt mgf \et & \brt $M_X(t) = \frac{p}{1-(1-p)e^t}$ \quad $t < -ln(1-p)$ \er &
+\brt $M_X(t) = \frac{pe^t}{1-(1-p)e^t}$ \qquad $t < -ln(1-p)$ \er \\\hline
+
+\bt graph \et & \multicolumn{2}{|l|}{\br \includegraphics[height=3in]{Geometric} \er}\\\hline 
+
+\bt shape \et & \multicolumn{2}{|l|}{\br Looks like a discrete exponential. Higher values of $p$ have more mass near X=1, lower values of $p$ have more disperse mass. \er}\\\hline
+
+\bt common uses \et & \multicolumn{2}{|l|}{\br Used to model number of trials until first success. \\ Ex. Number of coin flips until first heads.\er }  \\\hline
+
+\bt R functions \et & \multicolumn{2}{|l|}{\br 
+{\small Note: These are only for the $X=0,1,...$ (number of failures) parameterization} \\
+\texttt{dgeom(x, p)} $\qquad \qquad $ \texttt{pgeom(x, p)}\\ 
+ \texttt{qgeom(q, p)} $ \qquad \qquad $ \texttt{rgeom(n, p)} \er} \\\hline
+
+\bt special cases \& relationships \et & \multicolumn{2}{|l|}{\br - Special case of the negative binomial distribution when $r=1$ \\ - Sum of n $Geometric(p)$ trials is $Negative Binomial(n,p)$ \\ 
+- Distribution has memory-less property \\ - If $X\sim Exponential(1)$, $\floor{X} \sim$ $Geometric(1-\frac{1}{e}) $\er} \\\hline
+
+\bt Random Generation \et & \multicolumn{2}{|l|}{\br Run Bernoulli trials until you get a 1. $ X =$ number of failures (0's) or trials. \er} \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+% Hypergeometric
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Hypergeometric($N,M,k$)}}\\
+\hline
+\bt pmf {\tiny (\& support)}  \et & \br $f(x|N,M,k) = \frac{{M \choose x}{N-M \choose k-x}}{{N \choose k}}  \qquad \mbox{for } x = max(0,k+M-N),1,2,..,min(k,M) $\er \\ \hline
+ 
+\bt parameter space \et & \br {\small $N =$ Population size, where $N>0$ \\ $M =$ Number of successes in the population, where $0<M \leq N$ \\ $k =$ sample size, where $ 0 < k \leq N$}\er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \frac{kM}{N}$  \qquad \qquad ${\rm Var}(X) = \frac{kM}{N}\frac{N-M}{N}\frac{N-k}{N-1}$ \er\\\hline
+
+\bt mgf \et & \br Too complicated to be useful \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Hypergeometric} \er\\\hline %
+
+\bt shape \et & \br If both M and k are close to 0 or N, graph is skewed. As N gets larger, graph appears more normal.    \er \\\hline
+
+\bt common uses \et & \br Modeling the number of successes in a finite population and sampling \underline{without replacement}. Ex. Number of aces drawn in a 13 card hand, number of defective parts in a sample, accuracy of a voting sample. \er \\\hline   
+
+\bt R functions \et & \br 
+ \texttt{dhyper(x, M, N, k)} $\qquad \qquad $ \texttt{phyper(x, M, N, k)}\\ 
+ \texttt{qhyper(p, M, N, k)} $ \qquad \qquad $ \texttt{rhyper(n, M, N, k)} \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - Let $p=\frac{M}{N}, n=k$ and $N\rightarrow \infty$, this approaches a binomial(n,p). \\ - If $k=1$ this is bernoulli(M/N) \er \\\hline
+
+\bt Random Generation \et&  \br Generate a population of size N with M successes. Sample k elements without replacement. $X=$ number of successes in sample. \\   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+% Negative Binomial
+\begin{center}
+\begin{tabular}{| p{1in} | p{2.75in} | p{2.75in}|}
+\multicolumn{3}{l}{\textbf{Negative Binomial($r,p$)}} \\ \hline
+{\small Parameterization} & $X=$ \textbf{Number of Failures} & $X=$ \textbf{Number of Trials}\\\hline
+\bt pmf {\tiny (\& support)} \et & \brt $f(x|r,p) = {r+x-1 \choose x}p^r(1-p)^{x}$ for $x=$0,1,...  \er &  $f(x|r,p) = {x-1 \choose r-1}p^r(1-p)^{x-r}$ for $x=$r,r+1,... \\\hline
+
+\bt parameter space \et & \multicolumn{2}{|l|}{ $0 < p < 1$ where  $p = P(\mbox{success})$; Experiment stops after $r$ successes where $r$ is a positive integer } \\ \hline
+
+\bt mean \& variance  \et & \brt $E(X) = \frac{r(1-p)}{p}$  \qquad\qquad ${\rm Var}(X) = \frac{r(1-p)}{p^2}$ \er &
+\brt $E(X) = \frac{r}{p}$  \qquad\qquad ${\rm Var}(X) = \frac{r(1-p)}{p^2}$ \er \\\hline
+
+\bt mgf \et & \brt $M_X(t) = (\frac{p}{1-(1-p)e^t})^r$ \quad $t < -ln(1-p)$ \er &
+\brt $M_X(t) = (\frac{pe^t}{1-(1-p)e^t})^r$ \qquad $t < -ln(1-p)$ \er \\\hline
+
+\bt graph \et & \multicolumn{2}{|l|}{\br \includegraphics[height=3in]{Negative_Binomial} \er}\\\hline 
+
+\bt shape \et & \multicolumn{2}{|l|}{\br Higher values of r make it look more normal. Higher values of $p$ have more mass near X=0, lower values of $p$ have more disperse mass. Graph is always skewed right.\er}\\\hline
+
+\bt common uses \et & \multicolumn{2}{|l|}{\br Used in experiments that stop after finding $r$ successes. \\ Ex. Number of coin flips until $r=3$ heads; if people decline surveys with prob p, how many people should we ask to get $r$ participants?  \er }  \\\hline
+
+\bt R functions \et & \multicolumn{2}{|l|}{\br 
+{\small Note: These are only for the $X=0,1,...$ (number of failures) parameterization} \\
+\texttt{dnbinom(x, r, p)} $\qquad \qquad $ \texttt{pnbinom(x, r, p)}\\ 
+ \texttt{qnbinom(x, r, p)} $ \qquad \qquad $ \texttt{rnbinom(x, r, p)} \er} \\\hline
+
+\bt special cases \& relationships \et & \multicolumn{2}{|l|}{\br - Result of a sum of $r$ independent geometric(p) variables (for matching parameterizations) \\ - If $r=1$, it's a geometric.  \\ - Can approximate Poisson if $\lambda = r(1-p)$ and as $r \rightarrow \infty$. \er} \\\hline
+
+\bt Random Generation \et & \multicolumn{2}{|l|}{\br Draw $U_1, U_2,...U_r \sim$ unif(0,1) variables. X = $\floor{\sum_{i=1}^{i=r}ln(U_i)/ln(1-p)}$ where $\floor{.}$ means round down. \er} \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+% Poisson
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Poisson($\lambda$)}}\\
+\hline
+\bt pmf {\tiny (\& support)}  \et & \br $f(x|\lambda) = \frac{\lambda^xe^{-\lambda}}{x!}  \qquad \mbox{for } x = 0,1,...$\er \\ \hline
+ 
+\bt parameter space \et & \br  $\lambda > 0$, $\lambda$ is interpreted as a rate parameter over a given interval of time or space.   \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \lambda$  \qquad \qquad ${\rm Var}(X) = \lambda$ \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = e^{\lambda(e^t-1)}$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Poisson} \er\\\hline
+
+\bt shape \et & \br If $\lambda$ is low, graph looks like an exponential. As $\lambda$ gets larger, the graph is more disperse and looks more normal.  \er \\\hline
+
+\bt common uses \et & \br Counting occurrences over a fixed interval of time or space. \\ Ex. Number of scratches on a car surface, number of asteroids during a time interval. 
+\er \\\hline
+
+\bt R functions \et & \br 
+ \texttt{dpois(x, lambda)} $\qquad \qquad $ \texttt{ppois(x, lambda)}\\ 
+ \texttt{qpois(q, lambda)} $ \qquad \qquad $ \texttt{rpois(n,lambda)} \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br Can be approximated as a Normal($\lambda, \lambda$) if $\lambda$ is large \\ - Sum of Poisson variables is also Poisson \er \\\hline
+
+\bt Random Generation \et&  \br Draw $U_1, U_2, .. \sim$ unif(0,1), $X=j-1$ where j is the lowest index such that $\prod^j_{i=1}U_i < e^{-\lambda}$ \\   \er \\\hline
+\end{tabular}
+\end{center}
+
+
+
+
+% Beta Distribution
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Beta($\alpha$, $\beta$)}} \\
+\hline
+\bt pdf {\tiny (\& support)} \et & \br \[f(x|\alpha,\beta) =
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha-1}
+(1-x)^{\beta-1} \qquad \mbox{ for }
+  0 \le x\le 1 \] \er\\\hline
+
+\bt parameter space \et & \br $\alpha \ge 0$ and $\beta \ge 0$, 
+both are called ``shape'' parameters \er\\\hline
+
+\bt mean  \& variance \et & \br \[E(X) = \frac{\alpha}{\alpha+\beta} \qquad \qquad 
+{\rm Var}(X) =\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}\] \er\\\hline
+
+\bt mgf \et & \br  {\scriptsize The form of the mgf is complicated and unhelpful. However, raw moments can be calculated:}
+\[E(X^n) = \frac{\Gamma(\alpha+n)\Gamma(\alpha+\beta)}{\Gamma(\alpha+\beta+n)\Gamma(\alpha)}\]   \er \\\hline
+
+ \bt graph \et & 
+ \br \includegraphics[height=2.25in]{Beta} \er\\\hline 
+
+ \bt shape \et & \br{\footnotesize Lot of possible shapes:\\  If $\alpha = \beta$, the distribution will be symmetric;  \\
+if $\alpha < \beta$, the distribution will be right skewed;\\ if $\alpha > \beta$, the distribution 
+will be left skewed;\\ if both $\alpha < 1$ and $\beta <1$, the distribution will be sort of ``U" shaped.} \er\\\hline
+
+\bt common uses \et & \br   {\small Commonly used in Bayesian inference as a prior distribution for parameters that are between 
+0 and 1 (such as for the Bernoulli, binomial, geometric, and negative binomial distributions).} \er\\
+\hline
+\bt R functions \et & \br 
+ \texttt{dbeta(x, alpha, beta)} $\qquad \qquad $ \texttt{pbeta(x, alpha, beta)}\\ 
+ \texttt{qbeta(p, alpha, beta)} $ \qquad \qquad $ \texttt{rbeta(n, alpha, beta)}\\
+{\small Note: \texttt{R} documentation refers to $\alpha$ as \texttt{shape1} and
+$\beta$ as \texttt{shape2}} \er\\\hline
+
+\bt special cases \& relationships \et &  \br {\small When $\alpha=1$ and $\beta=1$ reduces to uniform(0,1)\\
+A gamma over the sum of two independent gammas is a beta. Same for Chi-Squared and F. \\
+If $\alpha = \beta \rightarrow \infty$ then the beta converges to a normal} \er \\\hline
+
+\bt Random Generation \et & \br Let $Y \sim Gamma(\alpha, 1)$ and $Z \sim Gamma(\beta, 1)$. X = $\frac{Y}{Y+Z}$ \er \\\hline
+
+\bt Other notes \\ (Beta function): \et & \br
+\[ \beta(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}\] \er \\\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% Cauchy
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Cauchy($\mu, \sigma$)}}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|\lambda) = \frac{1}{\sigma\pi(1+(\frac{x-\mu}{\sigma})^2)}  \qquad \mbox{for } -\infty < x < \infty$\er \\ \hline
+ 
+\bt parameter space \et & \br  $-\infty < \mu < \infty$ (location); $\sigma > 0$ (scale)  \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) =$ Undefined   \qquad \qquad ${\rm Var}(X) =$ Undefined  \er\\\hline
+
+\bt mgf \et & \br Does not Exist \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Cauchy} \er\\\hline 
+
+\bt shape \et & \br The graph looks like a normal distribution with very heavy tails.$\mu$ affects where it is centered, $\sigma$ scales it.\er \\\hline
+
+\bt common uses \et & \br Used for heavy-tailed data or as a  test distribution with an undefined mean/variance.  
+\er \\\hline
+
+\bt R functions \et & \br 
+ \texttt{dcauchy(x,$\mu, \sigma$)} $\qquad \qquad $ \texttt{pcauchy(x,$\mu, \sigma$)}\\ 
+ \texttt{qcauchy(p,$\mu, \sigma$)} $ \qquad \qquad $ \texttt{rcauchy(n,$\mu, \sigma$)} \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - Special case of the t-distribution with 1 df. \\ - Standard cauchy can be obtained by taking the ratio of 2 standard normals. \\ - If $X \sim$ Cauchy Sampling distrubution of $\overline{x}$ is the same distribution as X.  \er \\\hline
+
+\bt Random Generation \et&  \br Draw $U \sim$ unif(0,1), $X= \mu + \sigma \tan(\pi(U-1/2)$  (Inverse CDF) \\   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+% Chi Squared
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Chi-Squared(k)}}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|k) = \frac{1}{\Gamma(k/2)2^{k/2}}x^{k/2-1}e^{-x/2}  \qquad \mbox{for } x \geq 0 $\er \\ \hline
+ 
+\bt parameter space \et & \br $k$ (degrees of freedom) is a positive integer \\{\footnotesize Also, non-centrality parameter (ncp) is often denoted $\theta \geq 0$} \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = k + 2\theta$    \qquad \qquad ${\rm Var}(X) = 2k + 8\theta \quad$ (Using 1/2 parameterization of $\theta$)  \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = (\frac{1}{1-2t})^{k/2} \quad t < \frac{1}{2}; \quad$ Non-Central $\chi^2$: $(\frac{1}{1-2t})^{k/2}exp(\frac{2t\theta}{1-2t})$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Chi2} \er\\\hline
+
+\bt shape \et & \br If $k<2$ it has an asymptote at 0, if $k=2$ it's exponential(1/2) \\ $k>2$ the density is shifted away from zero and it is right skewed. \\ The ncp $\theta$ shifts density away from zero. \er \\\hline
+
+\bt common uses \et & \br Used to test uniformity/independence of categorical variables, used in goodness of fit tests, derivations of the F and t-distribution, and in construction of confidence intervals.   
+\er \\\hline
+
+\bt R functions \et & \br 
+ \texttt{dchisq(x,k, ncp)} $\qquad \qquad $ \texttt{pchisq(x,k, ncp)}\\ 
+ \texttt{qchisq(p,k, ncp)} $ \qquad \qquad $ \texttt{rchisq(n,k, ncp)} \\{\footnotesize Where ncp is the non-centrality parameter, which is $\sum_i \mu_i^2$ in R}\er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - Special case of the gamma when $\alpha=k/2$ and $\beta=2$ \\  - $\chi^2_{(k)}$ distribution is the sum of k standard normal variables.  \\ - If $Y\sim$ Normal, then $\frac{(n-p)s^2}{\sigma^2} \sim \chi^2_{n-p}$ \\ - If $Y_1,...Y_k \sim$ Normal($\mu_i,1)$, then $\sum_{i=1}^k Y_i^2 \sim \chi^2(k, ncp)$  where $ncp=\frac{1}{2}\sum_{i=1}^nu_i^2$  \er \\\hline
+
+\bt Random Generation \et&  \br Draw $Y_1,...Y_k \sim$ Normal(0,1), then $X= \sum_{i=1}^kY_i^2$. Chi-squared with ncp can be drawn by changing to N($\mu$,1).   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+% Double Exponential
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Double Exponential($\mu,\sigma$) or Laplace}}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|\mu,\sigma) = \frac{1}{2\sigma}e^{-|x-\mu|/\sigma}  \qquad \mbox{for } -\infty < x < \infty $\er \\ \hline
+ 
+\bt parameter space \et & \br $-\infty < \mu < \infty$ (location), $\sigma > 0$ (scale)  \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \mu$    \qquad \qquad ${\rm Var}(X) = 2\sigma^2$  \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = \frac{e^{\mu t}}{1-(\sigma t)^2}, \quad |t| < \frac{1}{\sigma}$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Laplace} \er\\\hline 
+
+\bt shape \et & \br A two-sided exponential curve. $\mu$ affects the location of the peak, and a higher $\sigma$ lowers the peak and makes the graph more disperse.  \er \\\hline
+
+\bt common uses \et & \br Could be used to model errors or difference in failure times. In LASSO Bayesian regression, the beta coefficients can be interpreted to have Double Exponential Priors. 
+\er \\\hline
+
+\bt R functions \et & \br No built-in R functions exist \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - The difference of two exponential($\lambda$) is Laplace($0,\frac{1}{\lambda}$) \\ - The absolute value of a Double Exponential(0,$\sigma$) is exponential($\sigma^{-1}$)  \er \\\hline
+
+\bt Random Generation \et&  \br Draw $Y_1,Y_2 \sim$ Exp($\frac{1}{\sigma}$), then $X= Y_1 - Y_2 + \mu$.   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+% Exponential
+\begin{center}
+\begin{tabular}{| p{1in} | p{2.75in} | p{2.75in}|}
+\multicolumn{3}{l}{\textbf{Exponential($\lambda$)}} \\ \hline
+{\small Parameterization} & \textbf{$\lambda$ (rate)} &\textbf{$\beta $ (scale)}\\\hline
+\bt pdf {\tiny (\& support)} \et & \brt $f(x|\lambda) = \lambda e^{-\lambda x}$ for $x>0$  \er &  $f(x|\beta) = \frac{1}{\beta}e^{\frac{-x}{\beta}}$ for $x>0$ \\\hline
+
+\bt parameter space \et & \brt $\lambda > 0$ \er & \brt $\beta > 0$ \er \\ \hline
+
+\bt mean \& variance  \et & \brt $E(X) = \frac{1}{\lambda}$  \qquad\qquad ${\rm Var}(X) = \frac{1}{\lambda^2}$ \er &
+\brt $E(X) = \beta$  \qquad\qquad ${\rm Var}(X) = \beta^2$ \er \\\hline
+
+\bt mgf \et & \brt $M_X(t) = \frac{\lambda}{1-\lambda t},$ \quad $t < \lambda$ \er &
+\brt $M_X(t) = \frac{1}{1-\beta t},$ \qquad $t < \frac{1}{\beta}$ \er \\\hline
+
+\bt graph \et & \multicolumn{2}{|l|}{\br \includegraphics[height=3in]{Expo} \er} \\\hline 
+
+\bt shape \et & \multicolumn{2}{|l|}{\br (rate) As $\lambda$ increases, failure rate increases, so density gathers closer to zero. If $\lambda$ is small, graph is more disperse. Mode is always at zero. \er}\\\hline
+
+\bt common uses \et & \multicolumn{2}{|l|}{\br Used to model failure times for objects with a constant failure rate. Also, it makes a simple prior for positive parameters.   \er }  \\\hline
+
+\bt R functions \et & \multicolumn{2}{|l|}{\br 
+{\small Note: R uses the \underline{rate} parameterization} \\
+\texttt{dexp(x, r)} $\qquad \qquad $ \texttt{pexp(x, r)}\\ 
+ \texttt{qexp(p, r)} $ \qquad \qquad $ \texttt{rexp(n, r)} \er} \\\hline
+
+\bt special cases \& relationships \et & \multicolumn{2}{|l|}{\br - Special case of Gamma when $\alpha=1$ and Weibull when $\gamma=1$ \\ - Memory-less property: $P(X > t + a|X>t)=P(X>a)$ \\ - Minimum of Exponential($\lambda_i$) variables is also Exp($\sum_i \lambda_i$) \\ - Sum of n Exp($\lambda$) variabules is Gamma($n,\lambda$) \er} \\\hline
+
+\bt Random Generation \et & \multicolumn{2}{|l|}{\br Draw $U \sim$ unif(0,1). X = $\frac{-\ln{U}}{\lambda}$ \er} \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+% F
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{F($\nu_1, \nu_2$)}}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|\nu_1, \nu_2) = \frac{\Gamma(\frac{\nu_1+\nu_2}{2})}{\Gamma(\nu_1/2)\Gamma(\nu_2/2)}(\frac{\nu_1}{\nu_2})^{\nu_1/2}\frac{x^{(\nu_1-2)/2}}{(1+\frac{\nu_1}{\nu_2}x)^{(\nu_1+\nu_2)/2}}  \qquad \mbox{for } x \geq 0 $\er \\ \hline
+ 
+\bt parameter space \et & \br $\nu_1 > 0; \nu_2 > 0$ (Numerator; Denominator degrees of freedom) \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \frac{\nu_2}{\nu_2-2}, \quad \nu_2 > 2$    \qquad \qquad ${\rm Var}(X) = 2(\frac{\nu_2}{\nu_2-2})^2\frac{\nu_1+\nu_2-2}{\nu_1(\nu_2-4)}, \quad \nu_2 > 4$  \er\\\hline
+
+\bt mgf \et & \br {\scriptsize mgf does not exist, but raw moments can be calculated as:} \\ $E(X^n) = \frac{\Gamma(\frac{\nu_1+2n}{2})\Gamma(\frac{\nu_2-2n}{2})}{\Gamma(\nu_1/2)\Gamma(\nu_2/2)}(\frac{\nu_2}{\nu_1})^n, \quad n < \frac{\nu_2}{2}$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{F} \er\\\hline 
+
+\bt shape \et & \br If $\nu_1<2$ it has an asymptote at 0,\\ $\nu_1>2$ the density is shifted away from zero and it is right skewed. \\ As $\nu_2$ increases, graph appears less skewed and if both $\nu_1, \nu_2$ are large, it appears normal \er \\\hline
+
+\bt common uses \et & \br Used for ANOVA tests or likelihood ratio tests and tests with contrasts.
+\er \\\hline
+
+\bt R functions \et & \br 
+ \texttt{df(x,$\nu_1$, $\nu_2$, ncp)} $\qquad \qquad $ \texttt{pf(x,$\nu_1$, $\nu_2$, ncp)}\\ 
+ \texttt{qf(p,$\nu_1$, $\nu_2$, ncp)} $ \qquad \qquad $ \texttt{rf(x,$\nu_1$, $\nu_2$, ncp)} \\{\footnotesize Where ncp is the non-centrality parameter, which is the ncp for the numerator $\chi^2$}\er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - If $U_1 \sim \chi^2_{\nu_1}$ and $U_2 \sim \chi^2_{\nu_2}$, then $(U_1/\nu_1)/U_2/\nu_2) \sim F(\nu_1, \nu_2)$ \\  - If $X \sim F(\nu_1, \nu_2)$ then $1/X \sim F(\nu_2, \nu_1)$  \\ - If $X \sim t_{\nu_2}$, then $X^2 \sim F(1, \nu_2)$ or $\frac{1}{X^2} \sim F(\nu_2,1)$ \\ - If $X \sim F(\nu_1, \nu_2)$ then $\frac{(\nu_1/\nu_2)X}{1+(\nu_1/\nu_2)X} \sim Beta(\nu_1/2, \nu_2/2)$  \er \\\hline
+
+\bt Random Generation \et&  \br Draw $U_1 \sim \chi^2_{\nu_1}$ and $U_2 \sim \chi^2_{\nu_2}$. X = $(U_1/\nu_1)/U_2/\nu_2) \sim F(\nu_1, \nu_2)$   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+% Gamma Distribution
+\begin{center}
+\begin{tabular}{| p{1in} | p{2.75in} | p{2.75in}|}
+\multicolumn{3}{l}{\textbf{Gamma($\alpha, \lambda$)}} \\ \hline
+{\small Parameterization} & \textbf{$\lambda$ (rate)} &\textbf{$\beta $ (scale)}\\\hline
+\bt pdf {\tiny (\& support)} \et & \brt $f(x|\alpha, \lambda) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1} e^{-\lambda x}$ for $x>0$  \er &  $f(x|\beta) = \frac{1}{\Gamma(\alpha)\beta^{\alpha}}x^{\alpha-1} e^{-x/\beta}$ for $x>0$ \\\hline
+
+\bt parameter space \et & \brt $\alpha > 0$ (shape); $\lambda > 0$ (rate) \er & \brt $\alpha > 0$ (shape); $\beta > 0$ (scale) \er \\ \hline
+
+\bt mean \& variance  \et & \brt $E(X) = \frac{\alpha}{\lambda}$  \qquad\qquad ${\rm Var}(X) = \frac{\alpha}{\lambda^2}$ \er &
+\brt $E(X) = \alpha\beta$  \qquad\qquad ${\rm Var}(X) = \alpha\beta^2$ \er \\\hline
+
+\bt mgf \et & \brt $M_X(t) = (\frac{\lambda}{1-\lambda t})^{\alpha},$ \quad $t < \lambda$ \er &
+\brt $M_X(t) = (\frac{1}{1-\beta t})^{\alpha},$ \qquad $t < \frac{1}{\beta}$ \er \\\hline
+
+\bt graph \et & \multicolumn{2}{|l|}{\br \includegraphics[height=3in]{Gamma} \er} \\\hline 
+
+\bt shape \et & \multicolumn{2}{|l|}{\br If $\alpha < 1$, curve has an asymptote at zero, if $\alpha = 1$ it's exponential. \\ If $\alpha >1$, mode is pushed away from zero and the curve is right skewed \\As $\lambda$ increases, failure rate increases, so density gathers closer to zero. If $\lambda$ is small, graph is more disperse.  \er}\\\hline
+
+\bt common uses \et & \multicolumn{2}{|l|}{\br Useful for continuous data/priors where the support is positive.  \er }  \\\hline
+
+\bt R functions \et & \multicolumn{2}{|l|}{\br 
+{\small Note: R uses the \underline{rate} parameterization} \\
+\texttt{dgamma(x, shape, rate)} $\qquad \qquad $ \texttt{pgamma(x, shape, rate)}\\ 
+ \texttt{qgamma(p, shape, rate)} $ \qquad \qquad $ \texttt{rgamma(n, shape, rate)} \\  {\footnotesize Some other useful functions are  \texttt{gamma(x), lgamma(x), digamma(x), and trigamma(x)}}\er} \\\hline
+
+
+\bt special cases \& relationships \et & \multicolumn{2}{|l|}{\br - Reduces to $Exponential(\lambda)$ if $\alpha=1$; and $\chi^2(k)$ if $\alpha=k/2$ and  $\lambda=1/2$ \\ - As $\alpha \rightarrow \infty$ it approaches a Normal distribution   \\ - Sum of n Exp($\lambda$) variabules is Gamma($n,\lambda$) \er} \\\hline
+
+\bt Random Generation \et & \multicolumn{2}{|l|}{\br For integer $\alpha$, Draw $U_1,...,U_{\alpha} \sim$ unif(0,1). X = $\frac{-1}{\lambda}\sum_{i=1}^{\alpha}\ln{U_i} \quad$ (Sum of $\alpha$ Exponentials) \er} \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+% Inverse Gamma
+\begin{center}
+\begin{tabular}{| p{1in} | p{2.75in} | p{2.75in}|}
+\multicolumn{3}{l}{\textbf{InvGamma($\alpha, \lambda$)}} \\ \hline
+{\small Parameterization} & \textbf{$\lambda$ (rate)} &\textbf{$\beta $ (scale)}\\\hline
+\bt pdf {\tiny (\& support)} \et & \brt $f(x|\alpha, \lambda) = \frac{1}{\Gamma(\alpha)\lambda^{\alpha}}x^{-\alpha-1} e^{-1/(\lambda x)}$ for $x>0$  \er &  $f(x|\beta) = \frac{\beta^{\alpha}}{\Gamma(\alpha)}x^{-\alpha-1} e^{-\beta/x}$ for $x>0$ \\\hline
+
+\bt parameter space \et & \brt $\alpha > 0$ (shape); $\lambda > 0$ (rate) \er & \brt $\alpha > 0$ (shape); $\beta > 0$ (scale) \er \\ \hline
+
+\bt mean \& variance  \et & \brt $E(X) = \frac{1}{\lambda(\alpha-1)} \quad$  ${\rm V}(X) = \frac{1}{\lambda^2(\alpha-1)^2(\alpha-2)}$ \\
+{\tiny $\alpha > 1$ for finite mean; $\alpha>2$ for finite variance}  \er &
+\brt $E(X) = \frac{\beta}{(\alpha-1)} \quad$  ${\rm V}(X) = \frac{\beta^2}{(\alpha-1)^2(\alpha-2)}$ \\{\tiny same restrictions for $\alpha$ apply}  \er \\\hline
+
+\bt mgf \et & \brt Does not exist \er &
+\brt Does not exist \er \\\hline
+
+\bt graph \et & \multicolumn{2}{|l|}{\br \includegraphics[height=3in]{InvGamma} \er} \\\hline
+
+\bt shape \et & \multicolumn{2}{|l|}{\br As $\alpha$ increases, curve gets more dense for lower values of x.  \\As $\beta$ increases (or $\lambda$ decreases) density is pushed out and the curve appears more flat.  \er}\\\hline
+
+\bt common uses \et & \multicolumn{2}{|l|}{\br It is conjugate with a normal likelihood. \\ Can model precision (1/variance) well due to positive support.   \er }  \\\hline
+
+\bt R functions \et & \multicolumn{2}{|l|}{\br {\small No built-in R functions exist, but the package "invgamma" uses the scale parameterization.}
+ \er} \\\hline
+
+
+\bt special cases \& relationships \et & \multicolumn{2}{|l|}{\br - If $Y ~ Gamma(\alpha,rate=\lambda)$ then $\frac{1}{Y} \sim InvGamma(\alpha, scale=\lambda)$  \\
+- CAREFUL: The InvGamma parameterization switches from the Gamma distribution. \er}   \\ \hline
+
+\bt Random Generation \et & \multicolumn{2}{|l|}{\br Draw $Y \sim Gamma(\alpha, rate=beta)$. Then $X=1/Y \sim InvGamma(\alpha, scale=\beta)$ \er}   \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+%Lognormal
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Lognormal($\mu,\sigma^2$) }}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi}\sigma x}e^{-(\ln(x)-\mu)^2/(2\sigma^2)}  \qquad \mbox{for } x \geq 0 $\er \\ \hline
+ 
+\bt parameter space \et & \br $-\infty < \mu < \infty$; $\quad \sigma > 0; \quad$ parameters of $\ln(X) \sim Normal(\mu,\sigma^2)$  \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = e^{\mu + \sigma^2/2}$    \qquad \qquad ${\rm Var}(X) = e^{2\mu + \sigma^2}(e^{\sigma^2} - 1)$  \er\\\hline
+
+\bt mgf \et & \br {\scriptsize mgf does not exist, but raw moments can be calculated:} \\ $E(X^n)= e^{n\mu + n^2\sigma^2/2}$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{LogNormal} \er\\\hline %
+
+\bt shape \et & \br Higher values of $\sigma^2$ quickly skew graph right, low values of $\sigma^2$ make graph look more normal. Higher values of $\mu$ scale/push the curve away from zero.  \er \\\hline
+
+\bt common uses \et & \br Used as some priors with positive support and sometimes errors in linear models become lognormal after transformations.  \\
+Can be used as an approximation for a product of RVs by the multiplicative version of the central limit theorem (due to the RVs being added on the log scale). 
+\er \\\hline
+
+\bt R functions \et & \br \texttt{dlnorm(x, $\mu$, $\sigma$)} $\qquad \qquad $ \texttt{plnorm(x, $\mu$, $\sigma$)}\\ 
+ \texttt{qlnorm(p, $\mu$, $\sigma$)} $ \qquad \qquad $ \texttt{rlnorm(n, $\mu$, $\sigma$)} \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - If $X \sim LogNorm(\mu,\sigma^2)$, then $\ln(X) \sim N(\mu, \sigma^2)$ (It's logarithim is normally distributed) \\ - Product of Lognormals is also Lognormal: \\ $\quad$ If $X_i \sim LN(\mu_i, \sigma^2_i)$, then $\prod_{i=1}^nX_i \sim LN(\sum\mu_i, \sum\sigma^2_i)$   \er \\\hline
+
+\bt Random Generation \et&  \br Draw $Y \sim Normal(\mu,\sigma^2)$. Then, $X = e^Y$   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+%Multivariate Normal
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Multivariate Normal($\boldsymbol{\mu},\mathbf{V}$) }}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(\mathbf{x|\boldsymbol{\mu},V},n) = (2\pi)^{-n/2}|\mathbf{V}|^{-1/2}exp(-\frac{1}{2}(\mathbf{Y}-\boldsymbol{\mu})^{T}\mathbf{V}^{-1}(\mathbf{Y}-\boldsymbol{\mu}))  \qquad \mbox{for } x \geq 0 $\er \\ \hline
+ 
+\bt parameter space \et & \br $-\infty < \boldsymbol{\mu} < \infty$; $\quad \mathbf{V}$ is positive semi-definite ($\mathbf{y^{'}Vy} \geq 0$ for all $\mathbf{y}$) \\ $n$ (dimension) is a positive integer  \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \boldsymbol{\mu}$ ($n$ x 1 vector) $\qquad \qquad {\rm Var}(X) = \mathbf{V}$ ($n$ x $n$ matrix)  \er\\\hline
+
+\bt mgf \et & \br $M_{\mathbf{X}}(\mathbf{t})= e^{\mathbf{t^{T}}\boldsymbol{\mu} + \mathbf{t^{T}Vt}/2}$ \er \\\hline
+
+\bt graph \\
+(when $n=2$) \et & \br \includegraphics[height=3in]{mvn} \er\\\hline 
+
+\bt shape \et & \br Looks like a 2D bell or galaxy cloud. $\boldsymbol{\mu}$ affects location of the cloud. Diagonals of \textbf{V} affect spread, and off-diagonals (covariances) of \textbf{V} affect how correlated the dimensions are.  \er \\\hline
+
+\bt common uses \et & \br Simple linear regression is treating one dimension as y and conditioning on all others.  \\
+Can be used to help describe correlated datasets.  
+\er \\\hline
+
+\bt R functions \et & \br No built in R functions exist, but package "mvtnorm" can be installed. \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - When $n=2$, it's bivariate normal. If $n=1$, it's a univariate normal \\ - Any linear combination, marginal, joint subset, or conditioning of a MVN is also MVN. \\ - Marginal Variabules are independent iff their covariances are zero.  \er \\\hline
+
+\bt Random Generation \et&  \br $X = \boldsymbol{\mu} + \mathbf{C^{'}z}$, where $\mathbf{z}_{1,..,n} \sim Normal(0,1)$ and \textbf{C} is the cholesky decomposition of $\mathbf{V}$   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+ 
+%Normal
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Normal($\mu,\sigma^2$) }}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2\sigma^2}(x-\mu)^2}  \qquad \mbox{for } -\infty < x < \infty $\er \\ \hline
+ 
+\bt parameter space \et & \br $-\infty < \mu < \infty$; $\quad \sigma > 0 \quad$  \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \mu$    \qquad \qquad ${\rm Var}(X) = \sigma^2$  \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = e^{t\mu + t^2\sigma^2/2}$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{Normal} \er\\\hline 
+
+\bt shape \et & \br Bell-shaped. $\mu$ affects the centering. Higher values of $\sigma^2$ quickly spread the curve out, low values of $\sigma^2$ make graph look tighter.  \er \\\hline
+
+\bt common uses \et & \br Many variables and distributions are approximately normal due to the Central Limit theorem  \/ Many techniques such as regression, ANOVA, and t-tests assume normality.  \\
+White noise or errors can often be approximated by a normal distribution. \\
+Commonly used as priors for beta coefficients in Bayesian regression. 
+ 
+\er \\\hline
+
+\bt R functions \et & \br \texttt{dnorm(x, $\mu$, $\sigma$)} $\qquad \qquad $ \texttt{pnorm(x, $\mu$, $\sigma$)}\\ 
+ \texttt{qnorm(p, $\mu$, $\sigma$)} $ \qquad \qquad $ \texttt{rnorm(n, $\mu$, $\sigma$)} \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br {\footnotesize - Special case of multivariate normal when $n=1$ \\ - If $X \sim Norm(\mu,\sigma^2)$, then $e^X \sim LogNorm(\mu, \sigma^2)$ \\ - Any linear combination of Normals is normal \\ - If $Z \sim N(0,1)$, then $Z^2 \sim \chi^2(1)$, if $\mu \neq 0$, it's non-central. If $\sigma^2 \neq 1$, result is gamma. \\ 
+- Central Limit Theorem: If $\sigma^2$ is finite, $\overline{X} \rightarrow N(\mu, \frac{\sigma^2}{n})$ and $\sum X_i \rightarrow N(n\mu, \sigma^2n)$ as $n \rightarrow \infty$} \er \\\hline
+
+\bt Random Generation \et&  \br Use the Box-Muller transform.   Draw $U_1,U_2 \sim unif(0,1)$. $X_1 = \mu + \sigma \sqrt{-2\ln{U_1}}\cos{(2\pi U_2)}$, $X_1 = \mu + \sigma \sqrt{-2\ln{U_1}}\sin{(2\pi U_2)}$   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+%Pareto
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Pareto($\alpha,\beta$) }}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|\mu,\sigma^2) = \frac{\beta\alpha^{\beta}}{x^{\beta+1}}  \qquad \mbox{for } \alpha < x < \infty $\er \\ \hline
+ 
+\bt parameter space \et & \br $\alpha > 0$ "minimum"; $\quad \beta > 0$ (shape)  \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \frac{\beta\alpha}{\beta-1}, \quad \beta > 1$    \qquad \qquad ${\rm Var}(X) = \frac{\beta\alpha^2}{(\beta-1)^2(\beta-2)}, \quad \beta > 2$  \er\\\hline
+
+\bt mgf \et & \br {\scriptsize mgf does not exist, but raw momemnts can be calculated:}\\ $E(X^n) = \frac{\beta\alpha^n}{\beta-n}$, $\beta > n$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{pareto} \er\\\hline 
+
+\bt shape \et & \br Looks like a shifted exponential, $\alpha$ is the minimum value, and curve peaks up to it. Higher values of $\beta$ taper off quicker.     \er \\\hline
+
+\bt common uses \et & \br Modeling distribution of incomes and other econometrics \\ Expressed more generally as the 80-20 principle (ex. 80\% wealth, 20\% population). Small number of cases produce a large effect. 
+\er \\\hline
+
+\bt R functions \et & \br No built-in R functions exist, but it has a closed form CDF: $1-(\frac{\alpha}{x})^{\beta}, \quad x \geq \alpha$ \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - If $Y \sim Exp$(rate=$\beta$), then $\alpha e^Y \sim Pareto(\alpha, \beta) \quad$ OR $\quad Y = \ln(\frac{X}{\alpha})$ \\ \er \\\hline
+
+\bt Random Generation \et&  \br One way is to use the Inverse CDF. Draw $U \sim unif(0,1)$. $X = \alpha(U)^{-1/\beta}$  \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+%t
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{t($\nu$)}}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|\nu) = \frac{\Gamma(\frac{\nu+1}{2})}{\Gamma(\nu/2)}\frac{1}{\sqrt{\nu\pi}}\frac{1}{(1+\frac{x^2}{\nu})^{(\nu+1)/2}}  \qquad \mbox{for } -\infty < x <\infty  $\er \\ \hline
+ 
+\bt parameter space \et & \br $\nu > 0$ (Degrees of freedom) \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = 0, \quad \nu > 1$    \qquad \qquad ${\rm Var}(X) = \frac{\nu}{\nu-2}, \quad \nu > 2$  \er\\\hline
+
+\bt mgf \et & \br {\scriptsize mgf does not exist, but raw moments can be calculated as:} \\ $E(X^n) = \frac{\Gamma(\frac{n+1}{2})\Gamma(\frac{\nu-n}{2})}{\sqrt{\pi}\Gamma(\nu/2)}\nu^{n/2}, \quad$ if $n < \nu$ and $n$ is even, OR $E(X^n) = 0$ if $n < \nu$ and $n$ is odd \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{T} \er\\\hline
+
+\bt shape \et & \br Graph has heavier tails than the normal distribution, but as $\nu$ gets larger, tails approach the normal's. Always centered at zero and symmetric, unless ncp is non-zero. \er \\\hline
+
+\bt common uses \et & \br Used for inferences or confidence intervals in a normal population where $\sigma^2$ is unknown and $s^2$ is used instead.\\
+Non-Centrality parameter $\theta$ is used for power tests where $\theta = \frac{\mu_A - crit^{*}}{\sigma/\sqrt{n}}$.  
+\er \\\hline
+
+\bt R functions \et & \br 
+ \texttt{dt(x, $\nu$, ncp)} $\qquad \qquad $ \texttt{pt(x, $\nu$, ncp)}\\ 
+ \texttt{qt(p, $\nu$, ncp)} $ \qquad \qquad $ \texttt{rt(n, $\nu$, ncp)} \\{\footnotesize Where ncp is the non-centrality parameter, which is the mean of the numerator Normal distribution.}\er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - If $U \sim \chi^2_{\nu}$ and $Z \sim N(0,1)$ are independent, then $\frac{Z}{\sqrt{U/\nu}} \sim t(\nu)$ \\ - If $X \sim t_{\nu_2}$, then $X^2 \sim F(1, \nu_2)$ or $\frac{1}{X^2} \sim F(\nu_2,1)$ \\ - As $\nu \rightarrow \infty$, this approaches a standard normal. \\- If $X \sim t(\nu)$ then $\frac{\nu}{\nu+X^2} \sim Beta(1/2, \nu/2)$  \er \\\hline
+
+\bt Random Generation \et&  \br Draw $U \sim \chi^2_{\nu}$ and $Z \sim N(0,1)$. Then $X = \frac{Z}{\sqrt{U/\nu}}$.   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+%Uniform
+\begin{center}
+\begin{tabular}{|p{1in}| p{5.5in}|}
+\multicolumn{2}{l}{\textbf{Uniform($a,b$)}}\\
+\hline
+\bt pdf {\tiny (\& support)}  \et & \br $f(x|a,b) = \frac{1}{b-a}  \qquad \mbox{for } a \leq x \leq b $\er \\ \hline
+ 
+\bt parameter space \et & \br  $-\infty < a < b < \infty$
+   \er\\\hline
+
+\bt mean \& variance  \et & \br $E(X) = \frac{b+a}{2}$  \qquad \qquad ${\rm Var}(X) = \frac{(b-a)^2}{12}$ \er\\\hline
+
+\bt mgf \et & \br $M_X(t) = \frac{e^{bt}-e^{at}}{(b-a)t}$ \er \\\hline
+
+\bt graph \et & \br \includegraphics[height=3in]{uniform_cont} \er\\\hline
+
+\bt shape \et & \br Flat, uniform density on interval $[a,b]$ \er \\\hline
+
+\bt common uses \et & \br Used for uninformative prioirs or modeling continuous outcomes that are all equally likely. \\
+Useful for sampling from other distributions by inverse CDF or importance sampling. 
+\er\\\hline
+
+\bt R functions \et & \br 
+ \texttt{dunif(x, a, b)} $\qquad \qquad $ \texttt{punif(x, a, b)}\\ 
+ \texttt{qunif(p, a, b)} $ \qquad \qquad $ \texttt{runif(n, a, b)} \\ \er\\\hline
+ 
+\bt special cases \& relationships \et &  \br - Unif($0,1$) is a special case of Beta($\alpha, \beta$) when $\alpha=1$ and $\beta=1$ \\ - Sum of two iid uniform variables produces a symmetric triangle distribution \er \\\hline
+
+\bt Random Generation \et&  \br For Unif(a,b), draw $U\sim$ Unif(0,1). $X = a+(b-a)$U \\   \er \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+%Weibull
+\begin{center}
+\begin{tabular}{| p{1in} | p{2.75in} | p{2.75in}|}
+\multicolumn{3}{l}{\textbf{Weibull($\alpha, \beta$)}} \\ \hline
+{\small Parameterization} & \textbf{R} &\textbf{JAGS } (From R: $\lambda = (1/\beta)^{\alpha} )$\\\hline
+\bt pdf {\tiny (\& support)} \et & \brt $f(x|\alpha, \beta) = \frac{\alpha}{\beta}(\frac{x}{\beta})^{\alpha-1} e^{-(x/\beta)^{\alpha}}$ for $x\geq 0$  \er &  $f(x|\alpha, \lambda) = \alpha\lambda x^{\alpha-1} e^{-\lambda x^{\alpha}}$ for $x\geq 0$ \\\hline
+
+\bt parameter space \et & \brt $\alpha > 0$ (shape); $\beta > 0$ (scale) \er & \brt $\alpha > 0$ (shape); $\lambda > 0$ (rate) \er \\ \hline
+
+\bt mean \& variance  \et & \brt $E(X) = \beta \Gamma(1+1/\alpha)$  \\ ${\rm Var}(X) = \beta^2[\Gamma(1+2/\alpha) -\Gamma^2(1+1/\alpha)]$ \er &
+\brt $E(X) = \lambda^{-1/\alpha} \Gamma(1+1/\alpha)$  \\ ${\rm Var}(X) = \lambda^{-2/\alpha}[\Gamma(1+2/\alpha) -\Gamma^2(1+1/\alpha)]$ \er \\\hline
+
+\bt mgf \et & \brt {\footnotesize mgf is too complicated, but raw moments are:} \\$E(X^n) = \beta^{n}\Gamma(1+n/\alpha)$ \quad \er &
+\brt $E(X^n) = \lambda^{-n/\alpha}\Gamma(1+n/\alpha)$ \er \\\hline
+
+\bt graph \et & \multicolumn{2}{|l|}{\br \includegraphics[height=3in]{Weib} \er} \\\hline
+
+\bt shape \et & \multicolumn{2}{|l|}{\br If $\alpha < 1$, failure rate is decreasing (high infant mortality), so right tail is very long. 
+\\ If $\alpha = 1$, failure rate is constant, so it's exponential. 
+\\ If $\alpha >1$, failure rate increases with time (wear and tear), so graph is left skewed. \\As $\beta$ increases, the shape is the same and the curve spreads out.   \er}\\\hline
+
+\bt common uses \et & \multicolumn{2}{|l|}{\br - Used in many reliability, meteorology, engineering, and survival problems due to the shape parameter relating directly to the failure rate. \\ - Useful for continuous data/priors where the support is positive.  \er }  \\\hline
+
+\bt R functions \et & \multicolumn{2}{|l|}{\br 
+\texttt{dweibull(x, alpha, beta)} $\qquad \qquad $ \texttt{pweibull(x, alpha, beta))}\\ 
+\texttt{qweibull(p, alpha, beta)} $ \qquad \qquad $ \texttt{rweibull(n, alpha, beta)} \er} \\\hline
+
+
+\bt special cases \& relationships \et & \multicolumn{2}{|l|}{\br - Reduces to $Exponential(1/\beta)$ if $\alpha=1$ \\ - If $Y \sim Exp(1/\beta)$, then $\beta(\frac{Y}{\beta})^{1/\alpha} \sim$ Weibull($\alpha, \beta$)  \\ - Closed form CDF: $1-e^{-(x/\beta)^{\alpha}}$ \er} \\\hline
+
+\bt Random Generation \et & \multicolumn{2}{|l|}{\br Draw $U \sim$ unif(0,1). $X = \beta(-\ln(U))^{1/\alpha} \quad$ \er} \\\hline
+\end{tabular}
+\end{center}
+\newpage
+
+
+
+
+\end{document}
+
