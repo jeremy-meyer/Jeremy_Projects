@@ -1,0 +1,214 @@
+---
+title: "Simulation Basics"
+author: "Jeremy Meyer"
+date: "October 26, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# R basics
+```{r}
+# Storing variabules
+# Matrices/vectors/dataframes/lists and subsetting
+# Rbund, cbind
+# Vectorized adding/multiplying
+# For loops
+# Functions
+# Sapply/Lapply
+# Basic plotting
+# Sampling from Distributions
+
+# Simulation basics
+# Taking the mean of T/F to get proportion
+
+```
+
+# R basics
+```{r}
+a <- 5
+b <- 4
+st <- "This is a string."
+st2 <- 'Can we add them?' # Either single/double quotes work
+t <- TRUE
+
+
+print(a*3)
+print(b^4)               # Exponents work with ^ signs
+print(paste(st,st2))       # Use paste to add strings (or paste0 for no spaces)
+print(t*4)               # R treats logicals (booleans) as 0 or 1. Makes some calculates easier
+```
+
+
+# Vectors / Indexing
+```{r}
+vect <- c(0,1,2,3,4,5,6)    # Create vectors with c()
+vect2 <- 0:6                # Can also do this
+vect3 <- seq(1,5,by=0.5)    # Or sequence by other increments. Similar to python's range(), but it includes last element
+vect4 <- c(1,2,3,'Test')
+vect4
+# These cannot store different data types. R will coerce everything to strings automatically
+
+print(vect[1])                # Returns FIRST element!!! Different from most other languages. Index of 0 does not work!
+print(vect2[2:4])             # Returns 2nd-4th elements inclusive
+print(vect3[-c(3,4)])         # Miss the third/fourth element 
+print(vect3[length(vect3):1]) # Print in reverse order
+
+list1 <- list(vect,3,'test')  # We can store different data types in a list
+print(list1)
+print(list1[[2]])              # Subset with double brackets
+
+```
+
+# Matrices / Data Frames
+```{r}
+m <- matrix(c(1,2,3,4,
+              2,4,6,8), nrow=2)  # Well that didn't do what we wanted. R works by columns by default
+m
+m.new <- matrix(c(1,2,3,4,       # You can put periods in the names, unlike python. Periods are not special in R :(
+                  2,4,6,8), nrow=2, byrow = TRUE) 
+m.new
+# you can add names
+colnames(m.new) <- c( 'did', 'that', 'just', 'happen?')
+row.names(m.new) <- c('yes', 'no')
+row.names(m.new)[2] <- 'NO'    # And even change individual names
+
+print(m.new)
+
+m.new[2,]                        # 2nd row. To select a whole column, just do a comma
+m.new[1,-3]                      # 1st row, Miss third column
+m.new[m.new[,4] == 8,]           # Only take rows where the 4th column has a 8. (Boolean Indexing)
+m.new
+# Can also use Data Frames to store multiple variabule types in a matrix
+data.frame(iris)
+```
+
+# Cbind / Rbind / Vectorized Arithmetic
+```{r}
+# Similar to hstack and vstack in numpy. Easy way to create matrices
+col.of1s <- matrix(1:10, nrow=10, ncol=1)
+col.of1s
+col.of1s10 <- col.of1s*10
+col.of1s10
+print(col.of1s10)
+print(cbind(col.of1s10, col.of1s*20))
+print(rbind(1:6, 2*1:6, 3*1:6))
+
+# R does element wise addition/multiplication
+1:10 * 1:10
+
+# Example: Integers between 1:100 not divisible by 2,3,5 or 7. (Prime numbers, other than 2,3,5,7)
+nums <- 1:100
+nums[(nums %% 2 != 0) & (nums %% 3 != 0) & (nums %% 5 != 0) & (nums %% 7 != 0)]
+```
+
+# For loops / While Loops
+```{r}
+z <- 4
+times.table <- matrix(NA, nrow=z, ncol=z)
+for (i in 1:z){
+  for (j in 1:z){
+    times.table[i,j] <- i*j
+  }
+}
+
+print(times.table)
+
+# While loops
+i <- 0
+while (i < z){
+  print(i)
+  i <- i +1
+}
+```
+
+# Functions (VERY USEFUL IN SIMULATIONS)
+```{r}
+roll.dice <- function(nRolls, nSides=6){     # User specifies amount rolled, number of sides by default is 6
+  sample(1:nSides, nRolls, replace = TRUE)   
+}
+
+roll.dice(10, 20)
+# From code above
+make.table <- function(z){
+  times.table <- matrix(NA, nrow=z, ncol=z)
+  for (i in 1:z){
+    for (j in 1:z){
+      times.table[i,j] <- i*j
+    }
+  }
+    times.table    # R will return last statement by default. No explicit return statements needed. Otherwise, return(x) works
+}
+
+make.table(3)
+
+```
+
+
+# Apply / Sapply 
+```{r}
+# Suppose we want to repeat a function many times, instead of using loops (Slow in R), we can vectorize using apply statements
+# Apply statement: We can find the mean of each row. This treats each row/column as a vector. 
+print(m)
+# Row means
+apply(m, 1, mean) # 1 = row, 2 = column
+
+# One-line functions
+cleanString <- function(x) gsub("4","",x)
+
+# Sapply: Similar to comprehensions or map() in python. Applies a funciton to every element in a list
+strings <- c('as4&df', 'D4oes thi4s work?', '444', 'Test', 'Replace4 it')
+sapply(strings, cleanString, USE.NAMES = FALSE)
+
+# You can also use it to repeat a single function several times
+Nsim <- 10000
+sumOf2Dice <- sapply(1:Nsim, function(x) sum(roll.dice(2, nSides=6)))
+head(sumOf2Dice, 10)
+```
+
+# Python equilavent of roll.dice and sapply statement
+```{python}
+import random as r
+
+def rollDice(nRolls, nSides=6):
+  return([r.randint(1,nSides) for x in range(nRolls)])
+
+Nsim = 10000
+sumOf2Dice = [sum(rollDice(2, nSides = 6)) for x in range(Nsim)]
+print(sumOf2Dice[1:10])
+```
+
+# Plotting / Sampling random normals / Table function
+
+```{r}
+# hist(sumOf2Dice, main='Sum of 2 Dice rolls', xlab='roll', breaks=15) # Quick histogram plots
+
+# Sample from random normals
+draws <- rnorm(1000, 0, 3)    # Mean of 0, standard deviation of 3
+quantile(draws, c(.025, .975)) #95% are between -5.90 and -5.98
+# Quick histogram
+hist(draws)                 
+
+# We can also make a graph of the dice rolls.
+table(sumOf2Dice) # This makes a nice table of probabilities
+probDice <- as.vector(table(sumOf2Dice)/Nsim)
+plot(2:12, probDice, type='h', ylab='Estimated Probability')
+
+```
+
+
+# Misc Functions
+```{r}
+# Rep function: Creates a vector of A's
+rep('A', 10)
+
+# Sample function: samples from a vector, with or without replacement:
+sample(c('H', "T"), 4, replace=TRUE)
+sample(c('Ace', 'King', 'Queen', 'J'), 2, replace=FALSE)
+```
+
+
+
