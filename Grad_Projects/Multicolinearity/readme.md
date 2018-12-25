@@ -1,1 +1,1 @@
-In this project, I explored the consequences of violating the assumption of low multicolinearity between the predictors.
+In this project, I explored the consequences of multicolinearity in multiple regression via simulation. 
