@@ -1,0 +1,199 @@
+---
+title: "GGplot2"
+author: "Jeremy"
+date: "6/4/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Basic Scatterplot
+```{r}
+library(ggplot2)
+g <- ggplot(midwest, aes(x=area, y=poptotal)) + 
+       geom_point() + scale_y_continuous(labels = scales::comma)
+g
+
+```
+## Aes() specifies axis values, but geom_point() actually graphs it
+## the comma labels make the axis values more readable
+
+# Draw line of best fit / Axis limits
+```{r}
+g + geom_smooth(method='lm', se=TRUE) + xlim(c(0, 0.1)) + ylim(c(0, 1000000))
+g1 <- g + geom_smooth(method='lm', se=TRUE) + coord_cartesian(xlim=c(0,0.1), ylim=c(0, 1000000))  # zooms in without deleting points
+
+plot(g1)
+```
+## Ggplot removed points outside ylimits before calculating line of best fit
+
+## Title, subtitles and axis labels
+```{r}
+g1 + labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics")
+
+# or
+
+g1 + ggtitle("Area Vs Population", subtitle="From midwest dataset") + xlab("Area") + ylab("Population")
+```
+
+## Adjusting size /color of points
+```{r}
+ggplot(midwest, aes(x=area, y=poptotal)) + 
+  geom_point(col="steelblue", size=3) +   # Set static color and size for points
+  geom_smooth(method="lm", col="firebrick") +  # change the color of line
+  coord_cartesian(xlim=c(0, 0.1), ylim=c(0, 1000000)) + 
+  labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics")
+```
+
+## Adjusting Color based on categories
+```{r}
+gg <- ggplot(midwest, aes(x=area, y=poptotal)) + 
+  geom_point(aes(col=state), size=3) +  # Set color to vary based on state categories.
+  geom_smooth(method="lm", col="firebrick", size=2) + 
+  coord_cartesian(xlim=c(0, 0.1), ylim=c(0, 1000000)) + 
+  labs(title="Area Vs Population", subtitle="From midwest dataset",   y="Population", x="Area", caption="Midwest Demographics")
+# + theme(legend.position="None")  # remove legend
+plot(gg)
+```
+#### Wrap colors in aes() function. Describes how variables in data are mapped to visual properties. 
+
+## 
+```{r}
+gg + scale_colour_brewer(palette = "Set1") # Can change entire clor set. 
+# There are lots of palettes online  (RColorBrewer package)
+```
+
+
+```{r}
+gg2 <- gg + scale_x_continuous(breaks=seq(0, 0.1, 0.01),labels = letters[1:11]) +
+scale_y_continuous(breaks=seq(0, 1000000, 200000), labels = function(x){paste0(x/1000, 'K')})
+
+gg2
+```
+
+## Setting Themes
+```{r}
+gg + theme_bw() + labs(subtitle="BW Theme")
+gg + theme_classic() + labs(subtitle="Classic Theme")
+```
+
+
+Part 2:
+```{r}
+options(scipen=999) # No scientific notation
+data("midwest", package = "ggplot2")
+
+# Add plot components --------------------------------
+gg <- ggplot(midwest, aes(x=area, y=poptotal)) + 
+  geom_point(aes(col=state, size=popdensity)) + 
+  geom_smooth(method="loess", se=F) + xlim(c(0, 0.1)) + ylim(c(0, 500000)) + 
+  labs(title="Area Vs Population", y="Population", x="Area", caption="Source: midwest")
+
+plot(gg)
+```
+
+##
+```{r}
+gg <- ggplot(midwest, aes(x=area, y=poptotal)) + 
+  geom_point(aes(col=state, size=popdensity)) + 
+  geom_smooth(method="loess", se=F) + xlim(c(0, 0.1)) + ylim(c(0, 500000)) + 
+  labs(title="Area Vs Population", y="Population", x="Area", caption="Source: midwest")
+
+gg + labs(color="State", size="Density")  # modify legend title
+
+gg <- gg + guides(color=guide_legend("State"), size=guide_legend("Density"))  # modify legend title
+
+gg + scale_color_discrete(name="State") + scale_size_continuous(name = "Density", guide = FALSE)  # turn off legend for size
+
+```
+
+## Manual Labeling of legend
+```{r}
+gg + scale_color_manual(name="State", 
+                        labels = c("Illinois", 
+                                   "Indiana", 
+                                   "Michigan", 
+                                   "Ohio", 
+                                   "Wisconsin"), 
+                        values = c("IL"="blue", 
+                                   "IN"="red", 
+                                   "MI"="green", 
+                                   "OH"="brown", 
+                                   "WI"="orange"))
+```
+
+
+## Legend Position
+```{r}
+# No legend --------------------------------------------------
+gg + theme(legend.position="None") + labs(subtitle="No Legend")
+
+# Legend to the left -----------------------------------------
+gg + theme(legend.position="left") + labs(subtitle="Legend on the Left")
+
+# legend at the bottom and horizontal ------------------------
+gg + theme(legend.position="bottom", legend.box = "horizontal") + labs(subtitle="Legend at Bottom")
+
+# legend at bottom-right, inside the plot --------------------
+gg + theme(legend.title = element_text(size=12, color = "salmon", face="bold"),
+           legend.justification=c(1,0), 
+           legend.position=c(0.95, 0.05),  
+           legend.background = element_blank(),
+           legend.key = element_blank()) + 
+  labs(subtitle="Legend: Bottom-Right Inside the Plot")
+
+# legend at top-left, inside the plot -------------------------
+gg + theme(legend.title = element_text(size=12, color = "salmon", face="bold"),
+           legend.justification=c(0,1), 
+           legend.position=c(0.05, 0.95),
+           legend.background = element_blank(),
+           legend.key = element_blank()) + 
+  labs(subtitle="Legend: Top-Left Inside the Plot")
+```
+
+## Labels to a subset of data
+```{r}
+midwest_sub <- midwest[midwest$poptotal > 300000, ]
+midwest_sub$large_county <- ifelse(midwest_sub$poptotal > 300000, midwest_sub$county, "")
+
+
+gg + geom_text(aes(label=large_county), size=2, data=midwest_sub) + labs(subtitle="With ggplot2::geom_text") + theme(legend.position = "None")   # text
+
+gg + geom_label(aes(label=large_county), size=2, data=midwest_sub, alpha=0.25) + labs(subtitle="With ggplot2::geom_label") + theme(legend.position = "None")  # label
+
+# Plot text and label that REPELS eachother (using ggrepel pkg) ------------
+library(ggrepel)
+gg + geom_text_repel(aes(label=large_county), size=2, data=midwest_sub) + labs(subtitle="With ggrepel::geom_text_repel") + theme(legend.position = "None")   # text
+
+gg + geom_label_repel(aes(label=large_county), size=2, data=midwest_sub) + labs(subtitle="With ggrepel::geom_label_repel") + theme(legend.position = "None")   # label
+```
+
+
+## Text to plot
+```{r}
+library(grid)
+my_text <- "This text is at x=0.7 and y=0.8!"
+my_grob = grid.text(my_text, x=0.7,  y=0.8, gp=gpar(col="firebrick", fontsize=14, fontface="bold"))
+gg + annotation_custom(my_grob)
+```
+
+## Panels
+```{r}
+data(mpg, package="ggplot2")  # load data
+
+g <- ggplot(mpg, aes(x=displ, y=hwy)) + 
+      geom_point() + 
+      labs(title="hwy vs displ", caption = "Source: mpg") +
+      geom_smooth(method="lm", se=FALSE) + 
+      theme_bw()  # apply bw theme
+plot(g)
+
+# Facet wrap with common scales
+g + facet_wrap( ~ class, nrow=3) + labs(title="hwy vs displ", caption = "Source: mpg", subtitle="Ggplot2 - Faceting - Multiple plots in one figure")  # Shared scales
+
+```
+
+

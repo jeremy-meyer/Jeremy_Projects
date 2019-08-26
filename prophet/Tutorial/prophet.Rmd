@@ -1,0 +1,325 @@
+---
+title: "prophet_package"
+author: "Jeremy"
+date: "6/25/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Prophet uses GAM framework:
+yhat = trendFun + seasonal_trends + holidays + err
+
+
+## Prophet function
+```{r}
+library(prophet)
+df <- read.csv('C:/Users/jmeyer/Work_Code/prophet/example_wp_log_peyton_manning.txt') # timestamps are labeled ds
+m1 <- prophet(df)
+
+future <- make_future_dataframe(m1, periods=365) # Contains future dates
+```
+
+## Predictions
+## Good indication of overfit/underfit
+```{r}
+forecast <- predict(m1, future)
+tail(forecast[c('ds', 'yhat', 'yhat_lower', 'yhat_upper')])
+# tail(forecast) # Also has seasonal compoents
+```
+
+## Plotting 
+```{r}
+plot(m1, forecast, ds='')
+dyplot.prophet(m1, forecast) # Interactive
+```
+
+
+## PLotting seasonal components/trends
+```{r}
+prophet_plot_components(m1, forecast)
+
+```
+
+
+## Logistic Growth
+### Note: The caps/floors need to be user-given. Implicit 0 floor
+```{r}
+df <- read.csv('examples/example_wp_log_R.csv')
+df$cap <- 9
+m <- prophet(df, growth = 'logistic')
+
+future <- make_future_dataframe(m, periods = 1826)
+future$cap <- 9
+fcst <- predict(m, future)
+plot(m, fcst)
+
+```
+
+
+```{r}
+df2 <- df
+df2$y <- 10 - df$y
+df2$cap <- future$cap <- 6
+df2$floor <- future$floor <- 1.5
+m <- prophet(df2, growth = 'logistic')
+fcst <- predict(m, future)
+plot(m, fcst)
+```
+
+
+## Trend Changepoints. Sometimes TS experience abrupt changes in tregectories. These are added automatically only for first 80% of data 
+```{r}
+plot(m, fcst) + add_changepoints_to_plot(m)
+dat <- cbind.data.frame(1:25,t(m$params$delta))
+colnames(dat) <- c('Time', 'mag')
+ggplot(dat) + geom_bar(aes(x=Time, y=mag), stat='identity') # Magnitude of changepoints (can be negative)
+
+```
+
+## The tuning parameter changepoint_prior_scale can also be fine tuned
+## High values = More flexible and so more uncertanity
+## Changepoints are assumed to continue at same rate as the past, so coverage intervals are not the same for every iteration and may not be accurate
+```{r}
+m <- prophet(df2, changepoint.prior.scale = 0.0005, n.changepoints = 10)
+plot(m, fcst) + add_changepoints_to_plot(m)
+ggplot(cbind.data.frame('Time'=1:10,'mag'=t(m$params$delta))) + 
+  geom_bar(aes(x=Time, y=mag), stat='identity')
+
+# Locations can be manually specified, then they will be regularized
+```
+
+## Special Dataes / Holidays
+## Holidays are treated as indicator variables, each with its own parameter
+## Windows around a specific holiday are treated as their own separate holiday
+```{r}
+library(dplyr)
+playoffs <- data_frame(
+  holiday = 'playoff',
+  ds = as.Date(c('2008-01-13', '2009-01-03', '2010-01-16',
+                 '2010-01-24', '2010-02-07', '2011-01-08',
+                 '2013-01-12', '2014-01-12', '2014-01-19',
+                 '2014-02-02', '2015-01-11', '2016-01-17',
+                 '2016-01-24', '2016-02-07')),
+  lower_window = 0,
+  upper_window = 1
+)
+superbowls <- data_frame(
+  holiday = 'superbowl',
+  ds = as.Date(c('2010-02-07', '2014-02-02', '2016-02-07')),
+  lower_window = 0,
+  upper_window = 1
+)
+holidays <- bind_rows(playoffs, superbowls)
+holidays
+
+m3 <- prophet(df, holidays = holidays, holidays.prior.scale = 0.05) # Default value is 10. If you want more regularization, lower the scale. 
+forecast3 <- predict(m3, future)
+
+```
+## Windows are to include days before/after event. Ex. Christmas eve
+
+# Holiday Effect
+```{r}
+forecast3 %>% 
+  select(ds, playoff, superbowl) %>% 
+  filter(abs(playoff + superbowl) > 0) %>%
+  tail(10)
+prophet_plot_components(m3, forecast3)
+
+```
+## We can see what days / years have largest impact on views. We can also see spikes from the special hoildays.
+
+## There's a built-in funciton that adds the common holidays for you
+```{r}
+m3 <- prophet(holidays = holidays)
+m3 <- add_country_holidays(m3, country_name = 'US')
+m3 <- fit.prophet(m3, df)
+forecast3 <- predict(m3, future)
+m3$train.holiday.names
+prophet_plot_components(m3, forecast3)
+```
+
+
+## Fourier Order Seasonalities.
+## N forier terms = @N variables. Be careful with overfitting
+```{r}
+df4 <- read.csv("examples/example_wp_log_peyton_manning.csv")
+m4 <- prophet(df4)
+prophet:::plot_yearly(m4)
+
+m4 <- prophet(df4, yearly.seasonality = 20)
+prophet:::plot_yearly(m4)
+
+```
+#### Default is 10 terms. If we have a more irregular pattern, we can increase the number of terms as so
+
+
+## Custom Regular Seasonalities
+```{r}
+m5 <- prophet(weekly.seasonality=FALSE)
+m5 <- add_seasonality(m5, name='monthly', period=30.5, fourier.order=5) # prior.scale can also be used here to regularize
+m5 <- fit.prophet(m5, df)
+forecast <- predict(m5, future)
+prophet_plot_components(m5, forecast)
+```
+
+
+## Custom Conditional Seasonalities
+## We have a seasonal effect that is different for the on/off seasons
+```{r}
+is_nfl_season <- function(ds) {
+  dates <- as.Date(ds)
+  month <- as.numeric(format(dates, '%m'))
+  return(month > 8 | month < 2)
+}
+df4$on_season <- is_nfl_season(df4$ds)
+df4$off_season <- !is_nfl_season(df4$ds) # Create conditionals
+
+m6 <- prophet(weekly.seasonality=FALSE)
+m6 <- add_seasonality(m6, name='weekly_on_season', period=7, fourier.order=3, condition.name='on_season')
+m6 <- add_seasonality(m6, name='weekly_off_season', period=7, fourier.order=3, condition.name='off_season')
+m6 <- fit.prophet(m6, df4)
+
+future$on_season <- is_nfl_season(future$ds)
+future$off_season <- !is_nfl_season(future$ds)
+forecast <- predict(m6, future)
+prophet_plot_components(m6, forecast)
+
+```
+
+## Overview. (Knobs): scale (fix overfitting), order (fix underfitting)
+1. Changepoints (Locations, number of)
+2. Holidays (Dates, regularization scale)
+3. Seasonal Compoents (# Terms, length, scale)
+4. Adding regressors (regressor, standardized)
+
+
+## Adding regressors (don't have to be boolean values)
+## Are put in as a linear component of the model
+```{r}
+nfl_sunday <- function(ds) {
+  dates <- as.Date(ds)
+  month <- as.numeric(format(dates, '%m'))
+  as.numeric((weekdays(dates) == "Sunday") & (month > 8 | month < 2))
+}
+df$nfl_sunday <- nfl_sunday(df$ds)
+
+m <- prophet()
+m <- add_regressor(m, 'nfl_sunday')
+m <- fit.prophet(m, df)
+
+future$nfl_sunday <- nfl_sunday(future$ds)
+
+forecast <- predict(m, future)
+prophet_plot_components(m, forecast)
+```
+
+
+## Multiplicative Seasonality
+## Problem: Series is not stationary. (Constant mean/variance)
+## Addative seasonality does not work! Seasonlity is not a constant additive factor; it grows with the trend. (Increasing variance)
+## Effects are in terms of percentages, not raw numbers
+```{r}
+df7 <- read.csv('examples/example_air_passengers.csv')
+m7 <- prophet(df7)
+future7 <- make_future_dataframe(m7, 50, freq = 'm')
+forecast7 <- predict(m7, future7)
+plot(m7, forecast7)
+
+
+```
+
+## Corrected
+```{r}
+m7 <- prophet(df7, seasonality.mode = 'multiplicative')
+forecast7 <- predict(m7, future7)
+plot(m7, forecast7)
+```
+
+## Components
+```{r}
+prophet_plot_components(m7, forecast7)
+
+```
+
+
+## Can mix/match time series effects
+```{r}
+# m <- prophet(seasonality.mode = 'multiplicative')
+# m <- add_seasonality(m, 'quarterly', period = 91.25, fourier.order = 8, mode = 'additive')
+# m <- add_regressor(m, 'regressor', mode = 'additive')
+```
+
+
+Width of uncertanity intervals by default is 80% (interval.width arguement)
+Sources of Uncertanity
+1. Trend
+- Assumes that changepoints wil assume at same magnitude/frequency as the past (changepoint_prior_scale)
+2. Seasonalities
+- By default, these are turned off. Set mcmc.samples = N in prophet() to get components
+3. Observation Noise
+
+## Example
+```{r}
+m8 <- prophet(df, mcmc.samples = 300)
+forecast8 <- predict(m8, future)
+prophet_plot_components(m8, forecast8)
+```
+
+## Outliers
+## Problem: Prophet will fit outliers using change points and it will expect the same occurances in the future -> LARGE Uncertanity intervals
+```{r}
+df9 <- read.csv('examples/example_wp_log_R_outliers1.csv')
+m9 <- prophet(df9)
+future9 <- make_future_dataframe(m9, periods = 1096)
+forecast9 <- predict(m9, future9)
+plot(m9, forecast9)
+```
+
+
+## Best way to deal with outliers is to remove them
+## Prophet will replace NA with predicted values
+```{r}
+outliers <- (as.Date(df9$ds) > as.Date('2010-01-01')
+             & as.Date(df9$ds) < as.Date('2011-01-01'))
+df9$y[outliers] = NA
+m <- prophet(df9)
+forecast <- predict(m9, future9)
+plot(m9, forecast9)
+```
+
+## Sometimes outliers can even mess up the predicted line
+```{r}
+df <- read.csv('examples/example_wp_log_R_outliers2.csv')
+m <- prophet(df)
+future <- make_future_dataframe(m, periods = 1096)
+forecast <- predict(m, future)
+plot(m, forecast)
+
+outliers <- (as.Date(df$ds) > as.Date('2015-06-01')
+             & as.Date(df$ds) < as.Date('2015-06-30'))
+df$y[outliers] = NA
+m <- prophet(df)
+forecast <- predict(m, future)
+plot(m, forecast)
+```
+
+
+## Diagnostics (Cross Validation)
+# Horizion: Length of predicted window
+# Period: Distance between each set cutoff values/bins
+# Initial: How much of the training set to use before the cutoff value
+# Default allows you to include sections (overlapping windows each containing 10% of data) of 
+#     predictions to diagnose separately. 
+```{r}
+df.cv <- cross_validation(m, units='days', horizon=365, period=182, initial=1096)
+performance_metrics(df.cv, rolling_window = 1) # Aggregated across all predictions
+performance_metrics(df.cv, rolling_window = 0) # Error for each day after cutoff value
+plot_cross_validation_metric(df.cv, metric = 'mae') # Blue line is a moving average taken over rolling window (10%)
+plot_cross_validation_metric(df.cv, metric = 'mae', rolling_window = .1)
+
+```
+### Note: Make sure initial period is long enough to capture components. 

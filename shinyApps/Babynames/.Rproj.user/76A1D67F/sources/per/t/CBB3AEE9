@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564530348114.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2927142695",
+    "id" : "CBB3AEE9",
+    "lastKnownWriteTime" : 1566065031,
+    "last_content_update" : 1566065031941,
+    "path" : "C:/Users/jmeyer/Work_Code/shinyApps/Babynames/Modules/mod_name_analysis_server.R",
+    "project_path" : "Modules/mod_name_analysis_server.R",
+    "properties" : {
+        "cursorPosition" : "160,58",
+        "scrollLine" : "158",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

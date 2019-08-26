@@ -1,0 +1,27 @@
+Package: golemTest
+Title: Testing package
+Version: 0.0.0.9000
+Authors@R: person('Jeremy', 'Meyer', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
+Description: My first golem shiny app!
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    shiny,
+    golem,
+    ggplot2,
+    dplyr,
+    processx,
+    attempt,
+    DT,
+    glue,
+    htmltools,
+    shinydashboard,
+    shinyWidgets,
+    MASS
+RoxygenNote: 6.1.1
+Suggests: 
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
