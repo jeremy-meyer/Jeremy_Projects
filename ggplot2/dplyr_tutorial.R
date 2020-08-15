@@ -10,12 +10,19 @@ head(msleep)
 
 # dplyr functions ---------------------------------------------------------
 
+# %>%       pipes data into functions
 # select()	select columns
 # filter()	filter rows
 # arrange()	re-order or arrange rows
 # mutate()	create new columns
 # summarise()	summarise values
 # group_by()	allows for group operations in the "split-apply-combine" concept
+
+
+# Pipe operator %>% (ctr+shift+m) -----------------------------------------
+# This puts whatever is on the left inside the first argument of what's on the right
+# Instead of nesting several functions, we can just use the pipe operator instead. Makes code much more readable.
+c(4,1,5,2,6,NA) %>% mean(na.rm=TRUE)
 
 
 # Select (Columns) ----------------------------------------------------------------
