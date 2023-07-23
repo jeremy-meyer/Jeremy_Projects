@@ -1,10 +1,11 @@
+os.chdir("github_repos\\Jeremy_Projects\\Acnh_flower_simulation\\")
 from flower_class import flower, rose, flower_field, test_flower_field
 
 # Starting simulation
 SEED_YELLOW_WHITE_START = 10 # Pairs
 SEED_WHITE_WHITE_START = 10 # Pairs
 SEED_RED_YELLOW_START = 5 # Pairs
-MAX_SIZE = 40
+MAX_SIZE = 30
 
 seed_yellow = '0200'
 seed_white = '0010'
@@ -75,6 +76,13 @@ stage4_rr = flower_field(
   add_pattern=['1220', '1220'],
 )
 
+final_target_field = flower_field(
+  flower_plots=[],
+  target_geneotypes=['2220'],
+  max_size=MAX_SIZE,
+  add_pattern=['2220', '2220'],
+)
+
 # Rename to successful offspring
 # TODO: Set target colors
 # rework singleton return dict
@@ -85,7 +93,7 @@ stage4_rr = flower_field(
 
 DAY_NUM = 0
 stage1 = [stage1_yw, stage1_ww, stage1_yr]
-while (len(stage3_po.children) < 5) and DAY_NUM < 100:
+while DAY_NUM < 100:
   
   # Run simlulation on the seed-based flowers
   for x in stage1:
@@ -98,24 +106,26 @@ while (len(stage3_po.children) < 5) and DAY_NUM < 100:
   stage2_pw.run_simulation()
 
   # Stage 2 - Test output flower
-  if (len(stage2_pw.children) > 0):
-    stage2_pw.transfer_children_to_field(stage2_pp_test)
-    
+  stage2_pw.transfer_children_to_field(stage2_pp_test)
   stage2_pp_test.run_simulation()
 
   # Stage 3 - Purple and orange
-  if (len(stage1_yr.children) > 0) or (len(stage2_pp_test.children) > 0):
-    stage1_yr.transfer_children_to_field(stage3_po)
-    stage2_pp_test.transfer_children_to_field(stage3_po)
+  stage1_yr.transfer_children_to_field(stage3_po)
+  stage2_pp_test.transfer_children_to_field(stage3_po)
   
   stage3_po.run_simulation()
 
-  # Stage 4 - Orange and Orange
-  if (len(stage3_po.children) > 0):
-    stage3_po.transfer_children_to_field(stage4_oo)
+  # Stage 4 - Orange and Orange and R/R (optional)
+  stage3_po.transfer_children_to_field(stage4_oo)
+  stage4_oo.run_simulation()
 
-    stage4_oo.run_simulation()
-    
+  stage4_oo.transfer_children_to_field(stage4_rr, remove_extras=False) # Transfer reds
+  stage4_rr.run_simulation()
+  stage4_rr.reuse_children() # (stage4_rr, remove_extras=False) # Can also reuse reds
+
+  
+  # Final stage
+  stage4_oo.transfer_children_to_field(final_target_field)
 
   DAY_NUM +=1
 DAY_NUM

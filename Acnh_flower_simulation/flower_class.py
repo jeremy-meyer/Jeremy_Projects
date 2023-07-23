@@ -182,9 +182,13 @@ class flower_field:
     self.lifetime_children +=1
     self.children.append(new_flower)
 
-  def transfer_children_to_field(self, new_field):
-    new_field.add_flower_to_field(self.children)
-    self.children = []
+  def transfer_children_to_field(self, new_field, remove_extras=True):
+    if len(self.children)!=0:
+      new_field.add_flower_to_field(self.children)
+      if remove_extras:
+        self.children = []
+      else:
+        print('NEED TO FIGURE OUT HOW TO JUST REMOVE SOME')
     
   def __repr__(self) -> str:
     return f"{type(self).__name__}({repr(self.flower_plots)}, {self.target_genotypes}, {self.max_size}, {self.add_pattern})"
@@ -355,6 +359,5 @@ p3_bad = rose('0020')
 # ff_test.run_simulation(1.1)
 # ff_test.children
 # ff_test
-
 
 
