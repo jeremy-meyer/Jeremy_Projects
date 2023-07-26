@@ -188,7 +188,9 @@ class flower_field:
       if remove_extras:
         self.children = []
       else:
-        print('NEED TO FIGURE OUT HOW TO JUST REMOVE SOME')
+        self.children = [
+          c for c in self.children if (c.genotype not in new_field.add_pattern)
+        ]
     
   def __repr__(self) -> str:
     return f"{type(self).__name__}({repr(self.flower_plots)}, {self.target_genotypes}, {self.max_size}, {self.add_pattern})"
@@ -359,5 +361,4 @@ p3_bad = rose('0020')
 # ff_test.run_simulation(1.1)
 # ff_test.children
 # ff_test
-
 

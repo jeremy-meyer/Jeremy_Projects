@@ -1,5 +1,7 @@
-os.chdir("github_repos\\Jeremy_Projects\\Acnh_flower_simulation\\")
+import os
+# os.chdir("github_repos\\Jeremy_Projects\\Acnh_flower_simulation\\")
 from flower_class import flower, rose, flower_field, test_flower_field
+
 
 # Starting simulation
 SEED_YELLOW_WHITE_START = 10 # Pairs
@@ -94,7 +96,7 @@ final_target_field = flower_field(
 DAY_NUM = 0
 stage1 = [stage1_yw, stage1_ww, stage1_yr]
 while DAY_NUM < 100:
-  
+  DAY_NUM +=1
   # Run simlulation on the seed-based flowers
   for x in stage1:
     x.run_simulation()
@@ -121,12 +123,23 @@ while DAY_NUM < 100:
 
   stage4_oo.transfer_children_to_field(stage4_rr, remove_extras=False) # Transfer reds
   stage4_rr.run_simulation()
-  stage4_rr.reuse_children() # (stage4_rr, remove_extras=False) # Can also reuse reds
+  stage4_rr.transfer_children_to_field(stage4_rr, remove_extras=False)
 
-  
-  # Final stage
+  # Check for Blues
   stage4_oo.transfer_children_to_field(final_target_field)
+  stage4_rr.transfer_children_to_field(final_target_field)
 
-  DAY_NUM +=1
+  if final_target_field.size(False) > 0:
+    break # Got a blue rose
 DAY_NUM
 
+# Check
+stage4_oo.add_flower_to_field(rose('1210'))
+stage4_oo.children = [rose('1220', 0, 0), rose('2220', 0, 0)]
+stage4_oo.transfer_children_to_field(stage4_rr, remove_extras=False)
+
+# Check reds mechanic
+stage4_rr.add_flower_to_field(rose('1220'))
+stage4_rr.run_simulation(breed_chance=1)
+
+stage4_rr.children
