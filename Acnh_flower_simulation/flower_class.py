@@ -104,6 +104,7 @@ class flower(ABC):
   
 
 class rose(flower):
+  
   # Global class variables
   color_map = flower.subset_global_color_map('rose')
   n_genes = 4
@@ -330,11 +331,12 @@ class test_flower_field(flower_field):
               self.failed_offspring += 1
     
     # Remove failed flowers after loop
-    for i_removal in pairs_to_remove:
-      print(i_removal)
+    for i_removal in sorted(pairs_to_remove, reverse=True):
+      # print(i_removal)
       self.remove_plot(i_removal)
     pairs_to_remove = []
     self.day_num +=1  
+
 
 
 
