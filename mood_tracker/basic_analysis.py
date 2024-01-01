@@ -22,16 +22,21 @@ mood_data_unpivoted = pd.melt(mood_data_raw, id_vars=['date'],value_vars=['month
 # Get histogram of total ratings
 ax = sns.histplot(mood_data_raw, x='rating', discrete=True)
 ax.set_xticks([x for x in range(-5,6)])
+plt.title('Rating Count')
 plt.show()
 
 # Show rolling 14 vs rolling month avg
 plt.subplots(figsize=(15, 5))
 plt.ylim(bottom=0, top=4)
 ax = sns.lineplot(mood_data_unpivoted, x='date', y='value',hue='variable')
+plt.legend(title=None)
+plt.ylabel('avg rating')
+plt.title('Moving Average of Mood Rating')
 plt.show()
 
 # Day of week avg
 plt.subplots(figsize=(8, 5))
+plt.ylim(bottom=0, top=3.0)
 day_avg = mood_data_raw.groupby('day_of_week').aggregate({'rating' : 'mean'}).reindex(weekday_order)
 ax = sns.barplot(x=day_avg.index, y='rating', data=day_avg, errorbar=None, color='steelblue')
 ax.set(ylabel='rating avg', xlabel='weekday')
@@ -39,6 +44,7 @@ plt.show()
 
 # Month avg
 plt.subplots(figsize=(8, 5))
+plt.ylim(bottom=0, top=3.0)
 month_avg = mood_data_raw.groupby('month').aggregate({'rating' : 'mean'}).reindex(month_order)
 month_avg['month'] = [x[:3] for x in month_avg.index.values]
 month_avg.set_index('month', inplace=True)
@@ -79,13 +85,13 @@ import matplotlib.pyplot as plt
 cal_input = mood_data_raw['rating'].copy()
 cal_input.index = mood_data_raw['date'].copy()
 
-fig = calplot.calplot(cal_input,
+fig_mood = calplot.calplot(cal_input,
                 suptitle = 'On a scale of -5 to +5, how was your day?',
                 suptitle_kws = {'x': 0.5, 'y': 1.0},
                 edgecolor = 'black',
                 yearlabel_kws = {'fontsize': 20, 'color': 'black'},
                 cmap="viridis", # Spectral
-                figsize=(16,4),
+                figsize=(16,4.5),
 )
 plt.show()
 
@@ -97,3 +103,6 @@ keywords_agg[keywords_agg.rating['count']>=5].sort_values(by=[('rating', 'mean')
 keywords_agg.sort_values(by=[('rating', 'count')], ascending=True)
 
 
+# Tomorrow:
+# Look at common patterns for 5s and 4s
+# Look at common patterns for -3s and -2s
