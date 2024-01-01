@@ -79,11 +79,8 @@ import matplotlib.pyplot as plt
 cal_input = mood_data_raw['rating'].copy()
 cal_input.index = mood_data_raw['date'].copy()
 
-
-pd.Series(np.random.randn(len(days)), index = days)
-
 fig = calplot.calplot(cal_input,
-                suptitle = 'On a scale of (-5, +5), how was your day?',
+                suptitle = 'On a scale of -5 to +5, how was your day?',
                 suptitle_kws = {'x': 0.5, 'y': 1.0},
                 edgecolor = 'black',
                 yearlabel_kws = {'fontsize': 20, 'color': 'black'},
@@ -93,10 +90,10 @@ fig = calplot.calplot(cal_input,
 plt.show()
 
 
-# Keywords
+# Keywords analysis
 keywords_explode = keywords.explode("keywords")
 keywords_agg = keywords_explode.groupby("keywords").aggregate({'rating' : ['mean', 'count']})
-keywords_agg[keywords_agg.rating['count']>=4].sort_values(by=[('rating', 'mean')], ascending=False)
+keywords_agg[keywords_agg.rating['count']>=5].sort_values(by=[('rating', 'mean')], ascending=False)
 keywords_agg.sort_values(by=[('rating', 'count')], ascending=True)
 
 
