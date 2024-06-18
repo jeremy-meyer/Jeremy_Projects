@@ -18,6 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Vectorized adding/multiplying
 # For loops
 # Functions
+# Conditionals
 # Sapply/Lapply
 # Basic plotting
 # Sampling from Distributions
@@ -86,6 +87,30 @@ m.new
 data.frame(iris)
 ```
 
+# Conditionals
+```{r}
+# You can provide an if statement to execute code only if a condition is true
+number <- 19
+if (number > 0) {
+  print("Number is positive")
+} else if (number < 0) {
+  print("Number is negative")
+} else {
+  print("Number is zero")
+}
+
+# Can combine conditions with and (&&) + or (||) + not (!)
+# %% is remainder division
+if ((number >0) && (number %% 2 == 0)) {
+  print("Number is a positive, even number")
+}
+
+if (!(number >0) || !(number %% 2 == 0)) {
+  print("Number is not a positive, even number")
+}
+```
+
+
 # Cbind / Rbind / Vectorized Arithmetic
 ```{r}
 # Similar to hstack and vstack in numpy. Easy way to create matrices
@@ -132,7 +157,8 @@ roll.dice <- function(nRolls, nSides=6){     # User specifies amount rolled, num
 }
 
 roll.dice(10, 20)
-# From code above
+
+# Combining functins and for loops for multiplication table
 make.table <- function(z){
   times.table <- matrix(NA, nrow=z, ncol=z)
   for (i in 1:z){
@@ -156,7 +182,7 @@ print(m)
 # Row means
 apply(m, 1, mean) # 1 = row, 2 = column
 
-# One-line functions
+# One-line functions. Gets rid of "4"
 cleanString <- function(x) gsub("4","",x)
 
 # Sapply: Similar to comprehensions or map() in python. Applies a funciton to every element in a list
