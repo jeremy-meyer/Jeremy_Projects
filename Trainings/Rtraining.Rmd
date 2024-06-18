@@ -87,7 +87,7 @@ m.new
 data.frame(iris)
 ```
 
-# Conditionals
+# Conditionals / logic operators
 ```{r}
 # You can provide an if statement to execute code only if a condition is true
 number <- 19

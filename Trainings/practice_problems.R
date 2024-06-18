@@ -1,32 +1,39 @@
 # Example Problems
 
-# Create and store a vector of numbers from 1 to 100. Multiply each value by 5
+# 1. Create and store a vector of numbers from 1 to 100. Multiply each value by 5
 
 
-# Remove the 10th element from the above vector
+# 2. Remove the 10th element from the above vector
 
 
-# Load in a dataset called mtcars (should be already stored). Print all rows with mpg<15. 
+# 3. Load in a dataframe called mtcars (should be already stored). Print all rows with mpg<15. 
 # How many rows are there?
 
 
-# Write a for loop / conditional to print out all even numbers between 1-50
+# 4. What is the average mpg value for each gear value (3,4,5)?
 
 
-# Use for loops to print all pairs of integers that multiply to get 60.
+# 5 Make a basic plot between the mpg and hoursepower (hp) values in mtcars.
+# What is the correlation? Is this expected?
 
 
-# Write a coin flip function that returns "H" or "T" with 50 % probability
+# 6. Write a for loop / conditional to print out all even numbers between 1-50
 
 
-# To check your function, plot a basic histogram of the total number of heads/tails
+# 7. Use for loops to print all pairs of integers that multiply to get 60.
+
+
+# 8. Write a coin flip function that returns "H" or "T" with 50% probability
+
+
+# 9. To check your function, plot a basic histogram of the total number of heads/tails
 # after running your function 1000 times.
 
 
-# Create a simulation to determine the approximate probability of flipping 
-# exactly 6 heads out of 20 flips. 
+# 10. Create a simulation to determine the approximate probability of flipping
+# exactly 6 heads out of 20 flips.
 
 
-# (Harder) Suppose that you flip 100 coins. Create a simulation and determine
-# an approximate probability of flipping 5+ heads in a row somewhere within the 100 flips? 
-# 8+ in a row?
+# 11. (Harder) Suppose that you flip 100 coins. Create a simulation and determine
+# an approximate probability of flipping consecutive 5+ heads somewhere within the 100 flip sequence? 
+# What about 8+ in a row?
