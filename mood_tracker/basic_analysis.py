@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from statsmodels.graphics.tsaplots import plot_acf, acf
 
-mood_data_raw = pd.read_csv('github_repos/Jeremy_Projects/mood_tracker/2023_mood_data.csv')
+mood_data_raw = pd.read_csv('mood_tracker/2023_mood_data.csv')
 weekday_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10] # for weighted moving average
@@ -13,6 +13,7 @@ keywords = mood_data_raw[~mood_data_raw['keywords'].isnull()]
 keywords['keywords'] = keywords["keywords"].copy().apply(lambda x: x.lower().split(", "))
 
 mood_data_raw['date'] = pd.to_datetime(mood_data_raw['date'])
+mood_data_raw['year'] = mood_data_raw['date'].apply(lambda x: x.year)
 # mood_data_raw['month'] = pd.to_datetime(mood_data_raw['month'])
 mood_data_raw['14_day_avg'] = mood_data_raw['rating'].rolling(window=14, min_periods=3).mean()
 mood_data_raw['14_day_wavg'] = mood_data_raw['rating'].rolling(window=14).apply(lambda x: (weights*x).sum()/sum(weights), raw=True)
@@ -37,18 +38,22 @@ plt.show()
 # Day of week avg
 plt.subplots(figsize=(8, 5))
 plt.ylim(bottom=0, top=3.0)
-day_avg = mood_data_raw.groupby('day_of_week').aggregate({'rating' : 'mean'}).reindex(weekday_order)
-ax = sns.barplot(x=day_avg.index, y='rating', data=day_avg, errorbar=None, color='steelblue')
+index_ordering = [(x,2023) for x in weekday_order] + [(x,2024) for x in weekday_order]
+day_avg = mood_data_raw.groupby(["day_of_week", "year"]).aggregate({'rating' : 'mean'}).reindex(index_ordering)
+day_avg['year'] = [x[1] for x in day_avg.index]
+day_avg['day_of_week'] = [x[0] for x in day_avg.index]
+ax = sns.barplot(x="day_of_week", y='rating', data=day_avg, errorbar=None, hue='year')
 ax.set(ylabel='rating avg', xlabel='weekday')
 plt.show()
 
 # Month avg
 plt.subplots(figsize=(8, 5))
-plt.ylim(bottom=0, top=3.0)
-month_avg = mood_data_raw.groupby('month').aggregate({'rating' : 'mean'}).reindex(month_order)
-month_avg['month'] = [x[:3] for x in month_avg.index.values]
-month_avg.set_index('month', inplace=True)
-ax = sns.barplot(x=month_avg.index, y='rating', data=month_avg, errorbar=None, color='steelblue')
+plt.ylim(bottom=0, top=3.25)
+index_ordering = [(x,2023) for x in month_order] + [(x,2024) for x in month_order]
+month_avg = mood_data_raw.groupby(['month', 'year']).aggregate({'rating' : 'mean'}).reindex(index_ordering)
+month_avg['month'] = [x[0][:3] for x in month_avg.index]
+month_avg['year'] = [x[1] for x in month_avg.index]
+ax = sns.barplot(x='month', y='rating', data=month_avg, errorbar=None, hue='year')
 ax.set(ylabel='rating avg', xlabel='month')
 ax.tick_params(axis='x', which='major', labelsize=8)
 plt.show()
@@ -106,3 +111,17 @@ keywords_agg.sort_values(by=[('rating', 'count')], ascending=True)
 # Tomorrow:
 # Look at common patterns for 5s and 4s
 # Look at common patterns for -3s and -2s
+
+# Day of week avg for different parts of the year
+plt.subplots(figsize=(8, 5))
+plt.ylim(bottom=0, top=3.0)
+index_ordering = [(x,'2023H0') for x in weekday_order] + [(x,'2023H1') for x in weekday_order] + [(x,'2024H0') for x in weekday_order]
+filtered = mood_data_raw# [mood_data_raw['date']>='2023-07-01'].copy() # mood_data_raw[mood_data_raw['date'].apply(lambda x:x.month) <= 7].copy()
+filtered['year_half'] = filtered['year'].apply(str) + 'H' + ((filtered['date'].apply(lambda x:x.month)-1)//6).apply(str)
+day_avg = filtered.groupby(["day_of_week", "year_half"]).aggregate({'rating' : 'mean'}).reindex(index_ordering)
+day_avg['year_half'] = [x[1] for x in day_avg.index]
+day_avg['day_of_week'] = [x[0] for x in day_avg.index]
+
+ax = sns.barplot(x="day_of_week", y='rating', data=day_avg, errorbar=None, hue='year_half')
+ax.set(ylabel='rating avg', xlabel='weekday')
+plt.show()
