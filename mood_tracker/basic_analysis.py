@@ -5,10 +5,11 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from statsmodels.graphics.tsaplots import plot_acf, acf
 
-mood_data_raw = pd.read_csv('mood_tracker/2023_mood_data.csv')
+mood_data_raw = pd.read_csv('github_repos/Jeremy_Projects/mood_tracker/2023_mood_data.csv')
 weekday_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10] # for weighted moving average
+weights_m = list(range(1, 22)) + [21 for x in range(7)] 
 keywords = mood_data_raw[~mood_data_raw['keywords'].isnull()]
 keywords['keywords'] = keywords["keywords"].copy().apply(lambda x: x.lower().split(", "))
 
@@ -18,7 +19,8 @@ mood_data_raw['year'] = mood_data_raw['date'].apply(lambda x: x.year)
 mood_data_raw['14_day_avg'] = mood_data_raw['rating'].rolling(window=14, min_periods=3).mean()
 mood_data_raw['14_day_wavg'] = mood_data_raw['rating'].rolling(window=14).apply(lambda x: (weights*x).sum()/sum(weights), raw=True)
 mood_data_raw['month_avg'] = mood_data_raw['rating'].rolling(window=28, min_periods=3).mean()
-mood_data_unpivoted = pd.melt(mood_data_raw, id_vars=['date'],value_vars=['month_avg', '14_day_wavg'])
+mood_data_raw['month_wavg'] = mood_data_raw['rating'].rolling(window=28).apply(lambda x: (weights_m*x).sum()/sum(weights_m), raw=True)
+mood_data_unpivoted = pd.melt(mood_data_raw, id_vars=['date'],value_vars=['month_wavg', 'month_avg'])
 
 # Get histogram of total ratings
 ax = sns.histplot(mood_data_raw, x='rating', discrete=True)
