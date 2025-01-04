@@ -1,0 +1,51 @@
+import pandas as pd
+import numpy as np
+import re
+
+
+journal_data_raw = pd.read_csv('/users/jeremy/Documents/mood_journal.csv')
+
+journal_data = journal_data_raw[['Date', 'Rating', 'Summary']].dropna()
+
+
+# Can I get an average per word?
+
+# Remove punctuation, uppercase everything
+cleaning_pattern = '\\W|\\d+'
+def clean_sentence(example, clean_regex = cleaning_pattern, repl=' '):
+  return re.sub(clean_regex, repl, example).upper()
+
+def split_sentence(sentence, pattern='\\s+'):
+  return re.split('\\s+', sentence)
+
+journal_data['Summary_Cleaned'] = (
+  journal_data['Summary'].apply(clean_sentence)
+)
+
+journal_data['Summary_List'] = (
+  journal_data['Summary_Cleaned'].apply(split_sentence)
+)
+
+journal_words = journal_data[['Date', 'Rating', 'Summary_List']].explode('Summary_List')
+words_agged = (
+  journal_words
+  .groupby(by=['Summary_List'])
+  # .agg({'Summary_List': "count", "Rating": "mean"})
+  .agg(N=('Summary_List', "count"), avg_rating=("Rating", "mean"))
+)
+
+pd.set_option('display.max_rows', 25)
+results = words_agged[words_agged['N'] >= 10].sort_values(by='avg_rating', ascending=False) # down to 373 words
+results.to_string()
+# Words at the top: Sharing! plank goals, friends names, seeing new things, 
+# getting credit from manager, phone calls, church lessons, being a part of group (everyone)
+# "Drive" usually means I'm going somehwere
+
+journal_data[journal_data['Summary_List'].apply(lambda x: 'EVERYONE' in x)]['Summary'].iloc[6]
+
+
+
+
+# Can I get a snapshot of words over time
+
+
