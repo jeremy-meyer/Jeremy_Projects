@@ -71,16 +71,16 @@ control = sleep_control.groupby(['bed_time_hour', 'hours_asleep'], as_index=Fals
 
 sns.lineplot(data=control[control['hours_asleep']>6], x='hours_asleep', y='rating', hue='bed_time_hour')
 #    bed_time_hour  hours_asleep    rating
-# 0           22.0           7.0  4.000000
-# 1           22.0           8.0  2.833333
-# 2           22.0           9.0  4.000000
-# 4           23.0           7.0  1.666667
-# 5           23.0           8.0  1.800000
-# 6           23.0           9.0  2.000000
+# 0           22.0           7.0  4.000000 (1)
+# 1           22.0           8.0  2.833333 (12)
+# 2           22.0           9.0  4.000000 (1)
+# 4           23.0           7.0  1.666667 (6)
+# 5           23.0           8.0  1.800000 (5)
+# 6           23.0           9.0  2.000000 (3)
 
 # Avg rating is higher across the board for bed times before 11pm
 
-
+# Under 8hr:15, 8hr45
 
 
 # Stepwise regression for feature selection
