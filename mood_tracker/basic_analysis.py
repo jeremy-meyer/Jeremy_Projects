@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from datetime import datetime
+from datetime import datetime, date
 from statsmodels.graphics.tsaplots import plot_acf, acf
 
-mood_data_raw = pd.read_csv('github_repos/Jeremy_Projects/mood_tracker/2023_mood_data.csv')
+mood_data_raw = pd.read_csv('mood_tracker\\2023_mood_data.csv')
+
 weekday_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10] # for weighted moving average
@@ -91,6 +92,8 @@ import calplot
 import matplotlib.pyplot as plt
 cal_input = mood_data_raw['rating'].copy()
 cal_input.index = mood_data_raw['date'].copy()
+cal_input=cal_input[cal_input.index <= datetime.today()]
+
 
 fig_mood = calplot.calplot(cal_input,
                 suptitle = 'On a scale of -5 to +5, how was your day?',
