@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime, date
 from statsmodels.graphics.tsaplots import plot_acf, acf
 
-mood_data_raw = pd.read_csv('mood_tracker\\2023_mood_data.csv')
+mood_data_raw = pd.read_csv('github_repos/Jeremy_Projects/mood_tracker/2023_mood_data.csv')
 
 weekday_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -39,25 +39,25 @@ plt.title('Moving Average of Mood Rating')
 plt.show()
 
 # Day of week avg
-plt.subplots(figsize=(8, 5))
-plt.ylim(bottom=0, top=3.0)
+plt.subplots(figsize=(6.25, 4))
+plt.ylim(bottom=0, top=3.5)
 index_ordering = [(x,2023) for x in weekday_order] + [(x,2024) for x in weekday_order]
 day_avg = mood_data_raw.groupby(["day_of_week", "year"]).aggregate({'rating' : 'mean'}).reindex(index_ordering)
 day_avg['year'] = [x[1] for x in day_avg.index]
 day_avg['day_of_week'] = [x[0] for x in day_avg.index]
 ax = sns.barplot(x="day_of_week", y='rating', data=day_avg, errorbar=None, hue='year')
-ax.set(ylabel='rating avg', xlabel='weekday')
+ax.set(ylabel='rating avg', xlabel='weekday', title='Weekday Avg')
 plt.show()
 
 # Month avg
-plt.subplots(figsize=(8, 5))
-plt.ylim(bottom=0, top=3.25)
+plt.subplots(figsize=(6.25, 4))
+plt.ylim(bottom=0, top=3.5)
 index_ordering = [(x,2023) for x in month_order] + [(x,2024) for x in month_order]
 month_avg = mood_data_raw.groupby(['month', 'year']).aggregate({'rating' : 'mean'}).reindex(index_ordering)
 month_avg['month'] = [x[0][:3] for x in month_avg.index]
 month_avg['year'] = [x[1] for x in month_avg.index]
 ax = sns.barplot(x='month', y='rating', data=month_avg, errorbar=None, hue='year')
-ax.set(ylabel='rating avg', xlabel='month')
+ax.set(ylabel='rating avg', xlabel='month', title='Month Avg')
 ax.tick_params(axis='x', which='major', labelsize=8)
 plt.show()
 
@@ -101,7 +101,7 @@ fig_mood = calplot.calplot(cal_input,
                 edgecolor = 'black',
                 yearlabel_kws = {'fontsize': 20, 'color': 'black'},
                 cmap="viridis", # Spectral
-                figsize=(16,4.5),
+                figsize=(16,5.5),
 )
 plt.show()
 
