@@ -223,7 +223,7 @@ date,day_of_week,month,rating,keywords
 2023-08-10,Thursday,August,3,"exercise, reflection, roommates"
 2023-08-11,Friday,August,3,"conversation, roommates, coworkers"
 2023-08-12,Saturday,August,4,"vacation, spiritual, nature, social, friends"
-2023-08-13,Sunday,August,1,"social, journal, uncertanity"
+2023-08-13,Sunday,August,1,"social, jorunal, uncertanity"
 2023-08-14,Monday,August,2,"bored, social, exercise, games"
 2023-08-15,Tuesday,August,3,"insight, coach, reflection"
 2023-08-16,Wednesday,August,1,"solve, organize, insight"
@@ -233,7 +233,7 @@ date,day_of_week,month,rating,keywords
 2023-08-20,Sunday,August,4,"spiritual, comfort zone, challenge, roommates, conversation"
 2023-08-21,Monday,August,3,"work, roommates, conversation, nature, social"
 2023-08-22,Tuesday,August,5,"coworkers, coach, exercise, presentation, teaching, conversation, roommates"
-2023-08-23,Wednesday,August,2,"roommates, exercise, uncertanity, funny, self-care"
+2023-08-23,Wednesday,August,2,"roommates, exercose, uncertanity, funny, self-care"
 2023-08-24,Thursday,August,2,"coworkers, funny, friends, work"
 2023-08-25,Friday,August,2,"coworkers, games, nature"
 2023-08-26,Saturday,August,2,"journal, exercise, accomplishment, journal"
@@ -247,7 +247,7 @@ date,day_of_week,month,rating,keywords
 2023-09-03,Sunday,September,2,"games, social, funny, friends"
 2023-09-04,Monday,September,1,"shopping, nature, lazy"
 2023-09-05,Tuesday,September,3,"work, exercise, coworkers, accomplishment, coach"
-2023-09-06,Wednesday,September,2,"work, productive, exercise, accomplishment, roommates"
+2023-09-06,Wednesday,September,2,"work, productive, exercise, accomplishment, roommate"
 2023-09-07,Thursday,September,2,"work, coworkers"
 2023-09-08,Friday,September,3,"exercise, roommates, conversation, friends"
 2023-09-09,Saturday,September,1,"shopping, lazy"
@@ -302,7 +302,7 @@ date,day_of_week,month,rating,keywords
 2023-10-28,Saturday,October,3,"roommates, family, challenge, comfort zone, reflection"
 2023-10-29,Sunday,October,2,"family, emotional, reflection, spiritual, insight, challenge"
 2023-10-30,Monday,October,3,"roommates, social"
-2023-10-31,Tuesday,October,4,"presentation, coworkers, insight, social, coach"
+2023-10-31,Tuesday,October,4,"presentation, coworkers, insight, social"
 2023-11-01,Wednesday,November,1,"productive, self-care"
 2023-11-02,Thursday,November,4,"recognition, work, exercise, productive, insight, roommates"
 2023-11-03,Friday,November,2,"work, teaching"
@@ -364,369 +364,394 @@ date,day_of_week,month,rating,keywords
 2023-12-29,Friday,December,2,"roommates, reflection, insight, organize"
 2023-12-30,Saturday,December,5,"roommates, spiritual, friends, insight, hobby, conversation"
 2023-12-31,Sunday,December,4,"spiritual, roommates, games, social, presentation, hobby, reflection, conversation"
-2024-01-01,Monday,January,4,
-2024-01-02,Tuesday,January,5,
-2024-01-03,Wednesday,January,4,
-2024-01-04,Thursday,January,2,
-2024-01-05,Friday,January,4,
-2024-01-06,Saturday,January,2,
-2024-01-07,Sunday,January,-2,
-2024-01-08,Monday,January,1,
-2024-01-09,Tuesday,January,4,
-2024-01-10,Wednesday,January,3,
-2024-01-11,Thursday,January,4,
-2024-01-12,Friday,January,3,
-2024-01-13,Saturday,January,5,
-2024-01-14,Sunday,January,3,
-2024-01-15,Monday,January,3,
-2024-01-16,Tuesday,January,4,
-2024-01-17,Wednesday,January,2,
-2024-01-18,Thursday,January,3,
-2024-01-19,Friday,January,1,
-2024-01-20,Saturday,January,4,
-2024-01-21,Sunday,January,0,
-2024-01-22,Monday,January,4,
-2024-01-23,Tuesday,January,4,
-2024-01-24,Wednesday,January,1,
-2024-01-25,Thursday,January,1,
-2024-01-26,Friday,January,4,
-2024-01-27,Saturday,January,3,
-2024-01-28,Sunday,January,4,
-2024-01-29,Monday,January,2,
-2024-01-30,Tuesday,January,4,
-2024-01-31,Wednesday,January,1,
-2024-02-01,Thursday,February,3,
-2024-02-02,Friday,February,4,
-2024-02-03,Saturday,February,3,
-2024-02-04,Sunday,February,2,
-2024-02-05,Monday,February,3,
-2024-02-06,Tuesday,February,4,
-2024-02-07,Wednesday,February,3,
-2024-02-08,Thursday,February,5,
-2024-02-09,Friday,February,1,
-2024-02-10,Saturday,February,3,
-2024-02-11,Sunday,February,3,
-2024-02-12,Monday,February,4,
-2024-02-13,Tuesday,February,4,
-2024-02-14,Wednesday,February,3,
-2024-02-15,Thursday,February,1,
-2024-02-16,Friday,February,3,
-2024-02-17,Saturday,February,3,
-2024-02-18,Sunday,February,2,
-2024-02-19,Monday,February,2,
-2024-02-20,Tuesday,February,5,
-2024-02-21,Wednesday,February,3,
-2024-02-22,Thursday,February,5,
-2024-02-23,Friday,February,3,
-2024-02-24,Saturday,February,1,
-2024-02-25,Sunday,February,1,
-2024-02-26,Monday,February,2,
-2024-02-27,Tuesday,February,1,
-2024-02-28,Wednesday,February,4,
-2024-02-29,Thursday,February,2,
-2024-03-01,Friday,March,2,
-2024-03-02,Saturday,March,3,
-2024-03-03,Sunday,March,2,
-2024-03-04,Monday,March,4,
-2024-03-05,Tuesday,March,3,
-2024-03-06,Wednesday,March,3,
-2024-03-07,Thursday,March,4,
-2024-03-08,Friday,March,5,
-2024-03-09,Saturday,March,4,
-2024-03-10,Sunday,March,-2,
-2024-03-11,Monday,March,1,
-2024-03-12,Tuesday,March,2,
-2024-03-13,Wednesday,March,0,
-2024-03-14,Thursday,March,3,
-2024-03-15,Friday,March,4,
-2024-03-16,Saturday,March,3,
-2024-03-17,Sunday,March,3,
-2024-03-18,Monday,March,1,
-2024-03-19,Tuesday,March,3,
-2024-03-20,Wednesday,March,3,
-2024-03-21,Thursday,March,3,
-2024-03-22,Friday,March,2,
-2024-03-23,Saturday,March,4,
-2024-03-24,Sunday,March,2,
-2024-03-25,Monday,March,0,
-2024-03-26,Tuesday,March,3,
-2024-03-27,Wednesday,March,2,
-2024-03-28,Thursday,March,1,
-2024-03-29,Friday,March,3,
-2024-03-30,Saturday,March,2,
-2024-03-31,Sunday,March,2,
-2024-04-01,Monday,April,2,
-2024-04-02,Tuesday,April,3,
-2024-04-03,Wednesday,April,2,
-2024-04-04,Thursday,April,1,
-2024-04-05,Friday,April,3,
-2024-04-06,Saturday,April,2,
-2024-04-07,Sunday,April,3,
-2024-04-08,Monday,April,5,
-2024-04-09,Tuesday,April,3,
-2024-04-10,Wednesday,April,4,
-2024-04-11,Thursday,April,4,
-2024-04-12,Friday,April,5,
-2024-04-13,Saturday,April,3,
-2024-04-14,Sunday,April,2,
-2024-04-15,Monday,April,2,
-2024-04-16,Tuesday,April,2,
-2024-04-17,Wednesday,April,0,
-2024-04-18,Thursday,April,3,
-2024-04-19,Friday,April,1,
-2024-04-20,Saturday,April,4,
-2024-04-21,Sunday,April,3,
-2024-04-22,Monday,April,3,
-2024-04-23,Tuesday,April,0,
-2024-04-24,Wednesday,April,1,
-2024-04-25,Thursday,April,2,
-2024-04-26,Friday,April,3,
-2024-04-27,Saturday,April,2,
-2024-04-28,Sunday,April,2,
-2024-04-29,Monday,April,3,
-2024-04-30,Tuesday,April,2,
-2024-05-01,Wednesday,May,5,
-2024-05-02,Thursday,May,0,
-2024-05-03,Friday,May,1,
-2024-05-04,Saturday,May,4,
-2024-05-05,Sunday,May,2,
-2024-05-06,Monday,May,0,
-2024-05-07,Tuesday,May,2,
-2024-05-08,Wednesday,May,3,
-2024-05-09,Thursday,May,4,
-2024-05-10,Friday,May,5,
-2024-05-11,Saturday,May,2,
-2024-05-12,Sunday,May,3,
-2024-05-13,Monday,May,-2,
-2024-05-14,Tuesday,May,2,
-2024-05-15,Wednesday,May,1,
-2024-05-16,Thursday,May,0,
-2024-05-17,Friday,May,2,
-2024-05-18,Saturday,May,3,
-2024-05-19,Sunday,May,3,
-2024-05-20,Monday,May,1,
-2024-05-21,Tuesday,May,3,
-2024-05-22,Wednesday,May,1,
-2024-05-23,Thursday,May,2,
-2024-05-24,Friday,May,3,
-2024-05-25,Saturday,May,2,
-2024-05-26,Sunday,May,3,
-2024-05-27,Monday,May,3,
-2024-05-28,Tuesday,May,1,
-2024-05-29,Wednesday,May,2,
-2024-05-30,Thursday,May,2,
-2024-05-31,Friday,May,2,
-2024-06-01,Saturday,June,1,
-2024-06-02,Sunday,June,3,
-2024-06-03,Monday,June,2,
-2024-06-04,Tuesday,June,4,
-2024-06-05,Wednesday,June,2,
-2024-06-06,Thursday,June,1,
-2024-06-07,Friday,June,3,
-2024-06-08,Saturday,June,4,
-2024-06-09,Sunday,June,2,
-2024-06-10,Monday,June,3,
-2024-06-11,Tuesday,June,1,
-2024-06-12,Wednesday,June,1,
-2024-06-13,Thursday,June,4,
-2024-06-14,Friday,June,3,
-2024-06-15,Saturday,June,3,
-2024-06-16,Sunday,June,3,
-2024-06-17,Monday,June,1,
-2024-06-18,Tuesday,June,3,
-2024-06-19,Wednesday,June,3,
-2024-06-20,Thursday,June,1,
-2024-06-21,Friday,June,5,
-2024-06-22,Saturday,June,-1,
-2024-06-23,Sunday,June,2,
-2024-06-24,Monday,June,2,
-2024-06-25,Tuesday,June,4,
-2024-06-26,Wednesday,June,2,
-2024-06-27,Thursday,June,3,
-2024-06-28,Friday,June,2,
-2024-06-29,Saturday,June,4,
-2024-06-30,Sunday,June,4,
-2024-07-01,Monday,July,1,
-2024-07-02,Tuesday,July,2,
-2024-07-03,Wednesday,July,2,
-2024-07-04,Thursday,July,3,
-2024-07-05,Friday,July,0,
-2024-07-06,Saturday,July,3,
-2024-07-07,Sunday,July,0,
-2024-07-08,Monday,July,3,
-2024-07-09,Tuesday,July,2,
-2024-07-10,Wednesday,July,0,
-2024-07-11,Thursday,July,3,
-2024-07-12,Friday,July,2,
-2024-07-13,Saturday,July,4,
-2024-07-14,Sunday,July,3,
-2024-07-15,Monday,July,1,
-2024-07-16,Tuesday,July,2,
-2024-07-17,Wednesday,July,3,
-2024-07-18,Thursday,July,4,
-2024-07-19,Friday,July,2,
-2024-07-20,Saturday,July,2,
-2024-07-21,Sunday,July,2,
-2024-07-22,Monday,July,3,
-2024-07-23,Tuesday,July,4,
-2024-07-24,Wednesday,July,4,
-2024-07-25,Thursday,July,1,
-2024-07-26,Friday,July,4,
-2024-07-27,Saturday,July,3,
-2024-07-28,Sunday,July,3,
-2024-07-29,Monday,July,1,
-2024-07-30,Tuesday,July,2,
-2024-07-31,Wednesday,July,2,
-2024-08-01,Thursday,August,3,
-2024-08-02,Friday,August,1,
-2024-08-03,Saturday,August,2,
-2024-08-04,Sunday,August,2,
-2024-08-05,Monday,August,3,
-2024-08-06,Tuesday,August,3,
-2024-08-07,Wednesday,August,5,
-2024-08-08,Thursday,August,1,
-2024-08-09,Friday,August,2,
-2024-08-10,Saturday,August,3,
-2024-08-11,Sunday,August,1,
-2024-08-12,Monday,August,3,
-2024-08-13,Tuesday,August,3,
-2024-08-14,Wednesday,August,1,
-2024-08-15,Thursday,August,3,
-2024-08-16,Friday,August,3,
-2024-08-17,Saturday,August,4,
-2024-08-18,Sunday,August,2,
-2024-08-19,Monday,August,1,
-2024-08-20,Tuesday,August,5,
-2024-08-21,Wednesday,August,1,
-2024-08-22,Thursday,August,1,
-2024-08-23,Friday,August,2,
-2024-08-24,Saturday,August,2,
-2024-08-25,Sunday,August,3,
-2024-08-26,Monday,August,2,
-2024-08-27,Tuesday,August,3,
-2024-08-28,Wednesday,August,2,
-2024-08-29,Thursday,August,4,
-2024-08-30,Friday,August,1,
-2024-08-31,Saturday,August,2,
-2024-09-01,Sunday,September,2,
-2024-09-02,Monday,September,4,
-2024-09-03,Tuesday,September,0,
-2024-09-04,Wednesday,September,2,
-2024-09-05,Thursday,September,4,
-2024-09-06,Friday,September,1,
-2024-09-07,Saturday,September,4,
-2024-09-08,Sunday,September,5,
-2024-09-09,Monday,September,1,
-2024-09-10,Tuesday,September,3,
-2024-09-11,Wednesday,September,4,
-2024-09-12,Thursday,September,4,
-2024-09-13,Friday,September,4,
-2024-09-14,Saturday,September,3,
-2024-09-15,Sunday,September,3,
-2024-09-16,Monday,September,2,
-2024-09-17,Tuesday,September,3,
-2024-09-18,Wednesday,September,2,
-2024-09-19,Thursday,September,4,
-2024-09-20,Friday,September,1,
-2024-09-21,Saturday,September,4,
-2024-09-22,Sunday,September,4,
-2024-09-23,Monday,September,2,
-2024-09-24,Tuesday,September,3,
-2024-09-25,Wednesday,September,4,
-2024-09-26,Thursday,September,2,
-2024-09-27,Friday,September,4,
-2024-09-28,Saturday,September,3,
-2024-09-29,Sunday,September,2,
-2024-09-30,Monday,September,3,
-2024-10-01,Tuesday,October,4,
-2024-10-02,Wednesday,October,3,
-2024-10-03,Thursday,October,1,
-2024-10-04,Friday,October,2,
-2024-10-05,Saturday,October,2,
-2024-10-06,Sunday,October,1,
-2024-10-07,Monday,October,4,
-2024-10-08,Tuesday,October,2,
-2024-10-09,Wednesday,October,3,
-2024-10-10,Thursday,October,-2,
-2024-10-11,Friday,October,3,
-2024-10-12,Saturday,October,3,
-2024-10-13,Sunday,October,2,
-2024-10-14,Monday,October,4,
-2024-10-15,Tuesday,October,2,
-2024-10-16,Wednesday,October,-1,
-2024-10-17,Thursday,October,3,
-2024-10-18,Friday,October,2,
-2024-10-19,Saturday,October,4,
-2024-10-20,Sunday,October,2,
-2024-10-21,Monday,October,1,
-2024-10-22,Tuesday,October,3,
-2024-10-23,Wednesday,October,2,
-2024-10-24,Thursday,October,0,
-2024-10-25,Friday,October,4,
-2024-10-26,Saturday,October,2,
-2024-10-27,Sunday,October,3,
-2024-10-28,Monday,October,2,
-2024-10-29,Tuesday,October,4,
-2024-10-30,Wednesday,October,1,
-2024-10-31,Thursday,October,2,
-2024-11-01,Friday,November,2,
-2024-11-02,Saturday,November,3,
-2024-11-03,Sunday,November,4,
-2024-11-04,Monday,November,0,
-2024-11-05,Tuesday,November,1,
-2024-11-06,Wednesday,November,1,
-2024-11-07,Thursday,November,2,
-2024-11-08,Friday,November,4,
-2024-11-09,Saturday,November,2,
-2024-11-10,Sunday,November,0,
-2024-11-11,Monday,November,3,
-2024-11-12,Tuesday,November,2,
-2024-11-13,Wednesday,November,3,
-2024-11-14,Thursday,November,3,
-2024-11-15,Friday,November,2,
-2024-11-16,Saturday,November,1,
-2024-11-17,Sunday,November,5,
-2024-11-18,Monday,November,1,
-2024-11-19,Tuesday,November,3,
-2024-11-20,Wednesday,November,2,
-2024-11-21,Thursday,November,2,
-2024-11-22,Friday,November,2,
-2024-11-23,Saturday,November,2,
-2024-11-24,Sunday,November,3,
-2024-11-25,Monday,November,3,
-2024-11-26,Tuesday,November,1,
-2024-11-27,Wednesday,November,4,
-2024-11-28,Thursday,November,3,
-2024-11-29,Friday,November,2,
-2024-11-30,Saturday,November,1,
-2024-12-01,Sunday,December,2,
-2024-12-02,Monday,December,2,
-2024-12-03,Tuesday,December,1,
-2024-12-04,Wednesday,December,2,
-2024-12-05,Thursday,December,1,
-2024-12-06,Friday,December,3,
-2024-12-07,Saturday,December,3,
-2024-12-08,Sunday,December,3,
-2024-12-09,Monday,December,4,
-2024-12-10,Tuesday,December,3,
-2024-12-11,Wednesday,December,3,
-2024-12-12,Thursday,December,4,
-2024-12-13,Friday,December,3,
-2024-12-14,Saturday,December,2,
-2024-12-15,Sunday,December,3,
-2024-12-16,Monday,December,3,
-2024-12-17,Tuesday,December,4,
-2024-12-18,Wednesday,December,1,
-2024-12-19,Thursday,December,2,
-2024-12-20,Friday,December,1,
-2024-12-21,Saturday,December,4,
-2024-12-22,Sunday,December,0,
-2024-12-23,Monday,December,-1,
-2024-12-24,Tuesday,December,3,
-2024-12-25,Wednesday,December,3,
-2024-12-26,Thursday,December,4,
-2024-12-27,Friday,December,1,
-2024-12-28,Saturday,December,3,
-2024-12-29,Sunday,December,3,
-2024-12-30,Monday,December,2,
-2024-12-31,Tuesday,December,2,
+2024-01-01,Monday,January,4,"exercise, roommates, social, accomplishment, insight, reflection, games, friends, self-care"
+2024-01-02,Tuesday,January,5,"work, coach, insight, friends, movie, reflection"
+2024-01-03,Wednesday,January,4,"work, roommates, exercise, social, conversation, insight"
+2024-01-04,Thursday,January,2,"work, solve, social, friends, reflection, hobby"
+2024-01-05,Friday,January,4,"vacation/travel, family, social, conversation, accomplishment"
+2024-01-06,Saturday,January,2,"exercise, shopping, service, social, reflection"
+2024-01-07,Sunday,January,-2,"stress, roommates, games, planning, sick"
+2024-01-08,Monday,January,1,"work, roommates, relax, sick, headache"
+2024-01-09,Tuesday,January,4,"work, solve, video games, games"
+2024-01-10,Wednesday,January,3,"work, accomplishment, reflection, networking, friends"
+2024-01-11,Thursday,January,4,"work, accomplishment, insight, productive, recognition"
+2024-01-12,Friday,January,3,"work, coworkers, networking, reflection, games, social"
+2024-01-13,Saturday,January,5,"exercise, friends, shopping, conversation, insight, self-care, accomplishment, games"
+2024-01-14,Sunday,January,3,"spiritual, roommates, conversation, social, movie, reflection"
+2024-01-15,Monday,January,3,"day off work, relax, planning, insight, conversation, spiritual"
+2024-01-16,Tuesday,January,4,"work, coworkers, productive, networking, reflection"
+2024-01-17,Wednesday,January,2,"sick, vacation/travel, nature, challenge"
+2024-01-18,Thursday,January,3,"work, accomplishment, coworker, conversation, insight, reflection, self-care"
+2024-01-19,Friday,January,1,"work, coworkers, insight, roommates, exercise, relaxation"
+2024-01-20,Saturday,January,4,"exercise, roommates, games, social, reflection, relaxation"
+2024-01-21,Sunday,January,0,"spiritual, roommates, planning, networking, uncertainty"
+2024-01-22,Monday,January,4,"work, friends, social, exercise, spiritual, conversation, insight"
+2024-01-23,Tuesday,January,4,"work, coworkers, coach, insight, learning, conversation, networking"
+2024-01-24,Wednesday,January,1,"work, coworkers, insight, reflection, journal, stress"
+2024-01-25,Thursday,January,1,"work, exercise, insight, planning, friends, vacation/travel, accomplishment"
+2024-01-26,Friday,January,4,"work, accomplishment, exercise, friends, roommates, social, networking"
+2024-01-27,Saturday,January,3,"lazy, exercise, shopping, vacation/travel, organize, games, social, movie, roommates"
+2024-01-28,Sunday,January,4,"spiritual, roommates, conversation, reflection, insight, friends, video games, planning"
+2024-01-29,Monday,January,2,"work, coworkers, challenge, social, accomplishment, networking, uncertainty, adventure"
+2024-01-30,Tuesday,January,4,"work, solve, accomplishment, planning, vacation/travel"
+2024-01-31,Wednesday,January,1,"work, shopping, friends, games, social, reflection"
+2024-02-01,Thursday,February,3,"work, exercise, roommates, accomplishment, social, conversation"
+2024-02-02,Friday,February,4,"work, coworkers, friends, roommates, social, games, conversation, funny"
+2024-02-03,Saturday,February,3,"lazy, exercise, family, conversation, insight, spiritual"
+2024-02-04,Sunday,February,2,"stress, planning, friends, service, insight, reflection"
+2024-02-05,Monday,February,3,"work, productive, accomplishment, service, planning"
+2024-02-06,Tuesday,February,4,"work, solve, networking, accomplishment, friends"
+2024-02-07,Wednesday,February,3,"work, learning, exercise, friends, social, adventure, conversation"
+2024-02-08,Thursday,February,5,"work, accomplishment, networking, vacation/travel, challenge, insight, friends, conversation, reflection"
+2024-02-09,Friday,February,1,"presentation, health, friends, exercise, conversation, accomplishment"
+2024-02-10,Saturday,February,3,"relax, organize, nature, movie, friends, reflection"
+2024-02-11,Sunday,February,3,"insight, social, friends, games, conversation, reflection"
+2024-02-12,Monday,February,4,"work, health, exercise, friends, social, hobby"
+2024-02-13,Tuesday,February,4,"work, coworkers, accomplishment, insight, planning, vacation/travel, tired"
+2024-02-14,Wednesday,February,3,"work, friends, social, networking, conversation"
+2024-02-15,Thursday,February,1,"productive, stuck, exercise, video games"
+2024-02-16,Friday,February,3,"health, work, accomplishment, social, friends, movie, conversation"
+2024-02-17,Saturday,February,3,"lazy, exercise, friends, games, social, hobby"
+2024-02-18,Sunday,February,2,"spiritual, friends, roommates, vacation/travel, stuck, games, social"
+2024-02-19,Monday,February,2,"nature, social, networking, coach, insight, reflection"
+2024-02-20,Tuesday,February,5,"exercise, friends, accomplishment, work, social, reflection"
+2024-02-21,Wednesday,February,3,"work, accomplishment, exercise, friends, reflection"
+2024-02-22,Thursday,February,5,"work, insight, friends, health, exercise, accomplishment, self-care, reflection, social"
+2024-02-23,Friday,February,3,"work, accomplishment, coworkers, exercise, friends, social, productive"
+2024-02-24,Saturday,February,1,"relax, shopping, accomplishment, insight, roommates, reflection, friends, spiritual"
+2024-02-25,Sunday,February,1,"spiritual, reflection, nature, social, relax, anxiety"
+2024-02-26,Monday,February,2,"work, insight, exercise, accomplishment, friends"
+2024-02-27,Tuesday,February,1,"work, exercise, coworkers, reflection, adjustment"
+2024-02-28,Wednesday,February,4,"work, exercise, friends, conversation, social, reflection"
+2024-02-29,Thursday,February,2,"work, health, exercise, friends, hobby, shopping, funny"
+2024-03-01,Friday,March,2,"work, roommates, relax, dinner, late night, reflection"
+2024-03-02,Saturday,March,3,"work, learning, exercise, health, hobby, boredom, reflection, social"
+2024-03-03,Sunday,March,2,"nature, family, social, conversation, reflection, planning"
+2024-03-04,Monday,March,4,"work, friends, social, conversation, insight, roommates, reflection"
+2024-03-05,Tuesday,March,3,"work, coworkers, vacation/travel, social, accomplishment"
+2024-03-06,Wednesday,March,3,"work, accomplishment, coworkers, social"
+2024-03-07,Thursday,March,4,"work, accomplishment, coworkers, social, networking"
+2024-03-08,Friday,March,5,"vacation/travel, adventure, exercise, learning, nature, reflection, accomplishment"
+2024-03-09,Saturday,March,4,"work travel, exercise, friends, games, accomplishment, social"
+2024-03-10,Sunday,March,-2,"sick, reflection, friends, learning"
+2024-03-11,Monday,March,1,"health, work, service, nature, roommates, late night, relax"
+2024-03-12,Tuesday,March,2,"work, teaching, funny, conversation, sports, sick"
+2024-03-13,Wednesday,March,0,"sick, work, conversation, health, stress"
+2024-03-14,Thursday,March,3,"day off work, friends, insight, reflection, conversation, roommates, health"
+2024-03-15,Friday,March,4,"sick, exercise, friends, conversation, movie, accomplishment"
+2024-03-16,Saturday,March,3,"self-care, friends, spiritual, conversation, social, networking, roommates"
+2024-03-17,Sunday,March,3,"spiritual, roommates, friends, social, games, reflection, adjustment"
+2024-03-18,Monday,March,1,"work, stress, exercise, health, service, reflection"
+2024-03-19,Tuesday,March,3,"work, insight, coworkers, exercise, accomplishment, reflection, health"
+2024-03-20,Wednesday,March,3,"work, productive, exercise, friends, planning, accomplishment, challenge, conversation"
+2024-03-21,Thursday,March,3,"friends, networking, work, stress, exercise, social, reflection"
+2024-03-22,Friday,March,2,"work, coworkers, insight, coach, learning, relax"
+2024-03-23,Saturday,March,4,"insight, roommates, exercise, accomplishment, reflection, health, games, social, networking"
+2024-03-24,Sunday,March,2,"friends, social, reflection, nature, spiritual"
+2024-03-25,Monday,March,0,"work, stress, exercise, accomplishment, health"
+2024-03-26,Tuesday,March,3,"work, accomplishment, presentation, exercise, coworkers, social, games"
+2024-03-27,Wednesday,March,2,"work, accomplishment, friends, vacation/travel, social, video games, reflection"
+2024-03-28,Thursday,March,1,"work, stress, coworkers, dinner, friends, coaching, roommates, social, accomplishment"
+2024-03-29,Friday,March,3,"exercise, friends, learning, vacation/travel, reflection, social, accomplishment"
+2024-03-30,Saturday,March,2,"friends, exercise, stress, reflection, conversation, vacation/travel, movie"
+2024-03-31,Sunday,March,2,"planning, spiritual, family, relax, stress"
+2024-04-01,Monday,April,2,"work, nature, insight, spiritual, relax"
+2024-04-02,Tuesday,April,3,"work, friends, exercise, nature, social, reflection"
+2024-04-03,Wednesday,April,2,"work, learning, productive, nature, social"
+2024-04-04,Thursday,April,1,"work, accomplishment, friends, games, social"
+2024-04-05,Friday,April,3,"work, presentation, vacation/travel, coworkers, relax, accomplishment"
+2024-04-06,Saturday,April,2,"nature, family, friends, social, reflection, vacation/travel, stress"
+2024-04-07,Sunday,April,3,"vacation/travel, family, nostalgia, stress"
+2024-04-08,Monday,April,5,"vacation/travel, nature, social, adventure, reflection"
+2024-04-09,Tuesday,April,3,"relax, reflection, vacation/travel, planning, nature"
+2024-04-10,Wednesday,April,4,"vacation/travel, adventure, nature, social, learning"
+2024-04-11,Thursday,April,4,"vacation/travel, nature, adventure"
+2024-04-12,Friday,April,5,"relax, nature, massage, health, vacation/travel, social"
+2024-04-13,Saturday,April,3,"exercise, vacation/travel, nature, spiritual, reflection, friends, conversation, uncertainty"
+2024-04-14,Sunday,April,2,"spiritual, conversation, reflection, stress, adjustment"
+2024-04-15,Monday,April,2,"work, exercise, accomplishment, friends, shopping, productive"
+2024-04-16,Tuesday,April,2,"work, vacation/travel, productive, coworkers, presentation, exercise, insight"
+2024-04-17,Wednesday,April,0,"headache, work, relax, exercise, friends, roommates, games, anxiety"
+2024-04-18,Thursday,April,3,"work, insight, social, friends, conversation"
+2024-04-19,Friday,April,1,"work, coworkers, learning, exercise, relax, reflection"
+2024-04-20,Saturday,April,4,"vacation/travel, friends, social, hobby, nature, games, conversation"
+2024-04-21,Sunday,April,3,"spiritual, family, journal, late night, roommates, conversation"
+2024-04-22,Monday,April,3,"work, exercise, accomplishment, family, social, friends"
+2024-04-23,Tuesday,April,0,"work, errands, coach, insight, reflection, emotional, friends, exercise, social"
+2024-04-24,Wednesday,April,1,"exercise, friends, social, networking"
+2024-04-25,Thursday,April,2,"work, coworkers, accomplishment, exercise, friends"
+2024-04-26,Friday,April,3,"work, coworkers, presentation, insight, health, social, relaxation"
+2024-04-27,Saturday,April,2,"nature, friends, spiritual, relaxation, learning"
+2024-04-28,Sunday,April,2,"spiritual, friends, planning, roommates, relax, movie"
+2024-04-29,Monday,April,3,"work, exercise, productive, friends, social, networking, insight, stress, challenge"
+2024-04-30,Tuesday,April,2,"work, health, exercise, vacation/travel, accomplishment, reflection"
+2024-05-01,Wednesday,May,5,"work, exercise, friends, social, conversation, insight"
+2024-05-02,Thursday,May,0,"work, productive, headache, relax"
+2024-05-03,Friday,May,1,"work, headache, exercise, health, spiritual, reflection"
+2024-05-04,Saturday,May,4,"service, friends, nature, social, conversation, reflection"
+2024-05-05,Sunday,May,2,"spiritual, roommates, relax, reflection, conversation"
+2024-05-06,Monday,May,0,"work, reflection, health, stress, self-care"
+2024-05-07,Tuesday,May,2,"work, coworkers, insight, challenge, productive"
+2024-05-08,Wednesday,May,3,"work, exercise, friends, reflection, social, relationship, insight"
+2024-05-09,Thursday,May,4,"work, accomplishment, coworkers, networking, social, insight"
+2024-05-10,Friday,May,5,"work, coworkers, social, adventure, friends, nature, reflection"
+2024-05-11,Saturday,May,2,"roommates, exercise, friends, nature, reflection, adventure"
+2024-05-12,Sunday,May,3,"spiritual, family, vacation/travel, reflection, nature"
+2024-05-13,Monday,May,-2,"work, spiritual, friends, anxiety, reflection"
+2024-05-14,Tuesday,May,2,"work, solve, accomplishment, coworkers, exercise, relax"
+2024-05-15,Wednesday,May,1,"work, roommates, friends, accomplishment, social, reflection"
+2024-05-16,Thursday,May,0,"work, sick, day off work, health, nature"
+2024-05-17,Friday,May,2,"family, accomplishment, relax, reflection"
+2024-05-18,Saturday,May,3,"exercise, family, spiritual, friends, conversation, social"
+2024-05-19,Sunday,May,3,"spiritual, journal, social, friends, games, reflection, conversation, insight"
+2024-05-20,Monday,May,1,"work, insight, spiritual, service, adjustment, relax"
+2024-05-21,Tuesday,May,3,"work, coworkers, productive, accomplishment, social, health, insight, adjustment"
+2024-05-22,Wednesday,May,1,"learning, exercise, health, insight, relax"
+2024-05-23,Thursday,May,2,"coworkers, exercise, social, accomplishment, networking, fun"
+2024-05-24,Friday,May,3,"dentist, presentation, solve, coworkers, accomplishment, productive, stress"
+2024-05-25,Saturday,May,2,"exercise, bored, friends, social, adventure"
+2024-05-26,Sunday,May,3,"spiritual, health, planning, nature, video games"
+2024-05-27,Monday,May,3,"nature, friends, relax, video games"
+2024-05-28,Tuesday,May,1,"work, challenge, health, vacation/travel, games"
+2024-05-29,Wednesday,May,2,"work, insight, networking, accomplishment, learning, social"
+2024-05-30,Thursday,May,2,"work, insight, friends, roommates, social, reflection"
+2024-05-31,Friday,May,2,"work, accomplishment, relax, friends, conversation, social"
+2024-06-01,Saturday,June,1,"shopping, games, loneliness, accomplishment, organize"
+2024-06-02,Sunday,June,3,"spiritual, family, planning, learning, vacation/travel, accomplishment, reflection"
+2024-06-03,Monday,June,2,"work, insight, family, exercise, games, social"
+2024-06-04,Tuesday,June,4,"work, presentation, insight, exercise, friends, accomplishment"
+2024-06-05,Wednesday,June,2,"work, presentation, productive, exercise, relax"
+2024-06-06,Thursday,June,1,"work, networking, presentation, bored, reflection"
+2024-06-07,Friday,June,3,"work, coworkers, adjustment, presentation, reflection"
+2024-06-08,Saturday,June,4,"nature, exercise, health, relax, games"
+2024-06-09,Sunday,June,2,"spiritual, insight, friends, nature, reflection, challenge, health"
+2024-06-10,Monday,June,3,"work, accomplishment, friends, social, games"
+2024-06-11,Tuesday,June,1,"work, solve, productive, exercise, video games, health, headache"
+2024-06-12,Wednesday,June,1,"work, roommates, challenge, insight, games, social, relaxation"
+2024-06-13,Thursday,June,4,"work, roommates, social, conversation, friends, insight, games"
+2024-06-14,Friday,June,3,"work, insight, networking, health, relax, video games"
+2024-06-15,Saturday,June,3,"video games, lazy, exercise, insight, friends, social, adventure"
+2024-06-16,Sunday,June,3,"friends, family, spiritual, social, reflection, movie, planning"
+2024-06-17,Monday,June,1,"work, accomplishment, health, bored, games"
+2024-06-18,Tuesday,June,3,"work, exercise, friends, movie, insight, reflection"
+2024-06-19,Wednesday,June,3,"vacation/travel, video games, friends, health, exercise, work, presentation, relax"
+2024-06-20,Thursday,June,1,"work, video games, exercise, health, stress, reflection"
+2024-06-21,Friday,June,5,"work, accomplishment, friends, exercise, spiritual, social, games, conversation, late night"
+2024-06-22,Saturday,June,-1,"lazy, exercise, roommates, loneliness, conversation, reflection"
+2024-06-23,Sunday,June,2,"spiritual, insight, roommates, work, social, conversation"
+2024-06-24,Monday,June,2,"vacation/travel, friends, social, games, relaxation"
+2024-06-25,Tuesday,June,4,"work, networking, social, friends, dinner, conversation, relax"
+2024-06-26,Wednesday,June,2,"work, coworkers, insight, social, relax, reflection"
+2024-06-27,Thursday,June,3,"work, networking, presentation, coworkers, relax, social, games, reflection"
+2024-06-28,Friday,June,2,"health, work travel, insight, exercise, reflection"
+2024-06-29,Saturday,June,4,"nature, friends, accomplishment, adjustment"
+2024-06-30,Sunday,June,4,"roommates, spiritual, work, social, conversation, reflection, day off work"
+2024-07-01,Monday,July,1,"work, productive, coworkers, roommates, conversation"
+2024-07-02,Tuesday,July,2,"work, coworkers, social, exercise, friends, relax"
+2024-07-03,Wednesday,July,2,"work, productive, shopping"
+2024-07-04,Thursday,July,3,"lazy, organize, planning, family, accomplishment, reflection"
+2024-07-05,Friday,July,0,"exercise, family, travel, games, reflection, health"
+2024-07-06,Saturday,July,3,"nature, friends, games, social, reflection, late night, relax"
+2024-07-07,Sunday,July,0,"health, day off work, social, vacation/travel, relaxation"
+2024-07-08,Monday,July,3,"work, spiritual, exercise, relax"
+2024-07-09,Tuesday,July,2,"exercise, friends, work, networking, productive, shopping, health, adjustment"
+2024-07-10,Wednesday,July,0,"work, exercise, stress, reflection"
+2024-07-11,Thursday,July,3,"work, productive, exercise, health, shopping, relax"
+2024-07-12,Friday,July,2,"work, coworkers, exercise, health, lazy"
+2024-07-13,Saturday,July,4,"vacation/travel, friends, spiritual, conversation, comfort zone, relax, games"
+2024-07-14,Sunday,July,3,"spiritual, service, planning, reflection, learning, accomplishment"
+2024-07-15,Monday,July,1,"work, accomplishment, coworkers, productive, shopping, day off work, stress"
+2024-07-16,Tuesday,July,2,"work, coworkers, insight, exercise, roommates, accomplishment, self-care, reflection"
+2024-07-17,Wednesday,July,3,"work, productive, insight, social, conversation, fun"
+2024-07-18,Thursday,July,4,"work, accomplishment, exercise, health, relax, reflection"
+2024-07-19,Friday,July,2,"work, roommates, lazy, games, reflection"
+2024-07-20,Saturday,July,2,"exercise, errands, planning, friends, conversation, roommates"
+2024-07-21,Sunday,July,2,"spiritual, planning, insight, relax, started, video games"
+2024-07-22,Monday,July,3,"productive, work, exercise, relax, insight, reflection"
+2024-07-23,Tuesday,July,4,"work, insight, exercise, roommates, sick"
+2024-07-24,Wednesday,July,4,"work, accomplishment, roommates, insight, self-care, conversation"
+2024-07-25,Thursday,July,1,"work, coworkers, exercise, social, reflection, hobby"
+2024-07-26,Friday,July,4,"work, meeting, coworkers, productive, adjustment, health, exercise, relax, headache"
+2024-07-27,Saturday,July,3,"nature, spiritual, bored, video games, service, conversation, insight"
+2024-07-28,Sunday,July,3,"spiritual, family, journal, movie, reflection, conversation"
+2024-07-29,Monday,July,1,"adjustment, work, spiritual, roommates, reflection"
+2024-07-30,Tuesday,July,2,"work, adjustment, exercise, relax, games"
+2024-07-31,Wednesday,July,2,"work, stuck, exercise, health, hobby, adjustment, accomplishment"
+2024-08-01,Thursday,August,3,"work, coworkers, insight, challenge, stuck, games"
+2024-08-02,Friday,August,1,"work, accomplishment, coworkers, presentation, relax, stress"
+2024-08-03,Saturday,August,2,"work, cleaning, games, reflection, hobby"
+2024-08-04,Sunday,August,2,"headache, roommates, video games, social, games, reflection"
+2024-08-05,Monday,August,3,"work, exercise, video games, relax, hobby"
+2024-08-06,Tuesday,August,3,"accomplishment, presentation, work, exercise, relax, health, games"
+2024-08-07,Wednesday,August,5,"work, solve, exercise, video games, excitement, reflection"
+2024-08-08,Thursday,August,1,"work, coworkers, solve, exercise, hobby, games"
+2024-08-09,Friday,August,2,"work, sick, family, vacation/travel, nature, challenge, health"
+2024-08-10,Saturday,August,3,"vacation/travel, nature, video games, fun, hobby"
+2024-08-11,Sunday,August,1,"spiritual, reflection, social, service, games, conversation, networking"
+2024-08-12,Monday,August,3,"work, solve, exercise, friends, video games, accomplishment"
+2024-08-13,Tuesday,August,3,"work, coworkers, challenge, video games, funny"
+2024-08-14,Wednesday,August,1,"work, coworkers, roommates, games, reflection"
+2024-08-15,Thursday,August,3,"work, coworkers, exercise, video games, hobby"
+2024-08-16,Friday,August,3,"work, organize, planning, accomplishment, reflection, hobby, games"
+2024-08-17,Saturday,August,4,"family, accomplishment, organize, social, insight, nature, adventure"
+2024-08-18,Sunday,August,2,"spiritual, service, networking, reflection, planning"
+2024-08-19,Monday,August,1,"work, insight, stress, spiritual, reflection, recognition"
+2024-08-20,Tuesday,August,5,"presentation, coworkers, insight, conversation, social, reflection"
+2024-08-21,Wednesday,August,1,"stress, work, solve, video games, games, reflection"
+2024-08-22,Thursday,August,1,"work, learning, coworker, hobby, games, accomplishment"
+2024-08-23,Friday,August,2,"work, insight, coworkers, networking, games, spiritual, stress"
+2024-08-24,Saturday,August,2,"exercise, hobby, relax, shopping, reflection"
+2024-08-25,Sunday,August,3,"spiritual, loneliness, insight, roommates, relax, conversation"
+2024-08-26,Monday,August,2,"accomplishment, work, service, games, hobby"
+2024-08-27,Tuesday,August,3,"work, coworkers, networking, games, stress"
+2024-08-28,Wednesday,August,2,"learning, exercise, friends, movie, late night"
+2024-08-29,Thursday,August,4,"work, accomplishment, roommates, exercise, social, friends, reflection"
+2024-08-30,Friday,August,1,"work, insight, video games, stress, relax, accomplishment"
+2024-08-31,Saturday,August,2,"exercise, shopping, insight, stuck, comfort zone, roommates, conversation"
+2024-09-01,Sunday,September,2,"work, spiritual, roommates, relax, planning, day off work, accomplishment"
+2024-09-02,Monday,September,4,"family, vacation/travel, nature, accomplishment, social, reflection"
+2024-09-03,Tuesday,September,0,"sick, work, relax, video games, bored"
+2024-09-04,Wednesday,September,2,"work, learning, productive, exercise, hobby"
+2024-09-05,Thursday,September,4,"work, coworkers, accomplishment, challenge, presentation, planning"
+2024-09-06,Friday,September,1,"day off work, friends, stress, meditation, games, insight, reflection, health"
+2024-09-07,Saturday,September,4,"exercise, social, insight, spiritual, conversation, reflection, adventure"
+2024-09-08,Sunday,September,5,"exercise, spiritual, coach, insight, reflection, funny, family, social"
+2024-09-09,Monday,September,1,"roommates, journal, reflection, spiritual"
+2024-09-10,Tuesday,September,3,"work, accomplishment, solve, exercise, video games, relax"
+2024-09-11,Wednesday,September,4,"work, coworkers, productive, accomplishment, late night, roommates, conversation"
+2024-09-12,Thursday,September,4,"work, accomplishment, exercise, friends, social, reflection, networking, relax"
+2024-09-13,Friday,September,4,"spiritual, friends, insight, social, reflection"
+2024-09-14,Saturday,September,3,"spiritual, friends, conversation, reflection, insight"
+2024-09-15,Sunday,September,3,"social, friends, nature, games, vacation/travel, reflection"
+2024-09-16,Monday,September,2,"work, insight, service, social, conversation, adjustment"
+2024-09-17,Tuesday,September,3,"work, accomplishment, recognition, presentation, conversation, roommates, social, journal"
+2024-09-18,Wednesday,September,3,"work, accomplishment, exercise, friends, games"
+2024-09-19,Thursday,September,4,"work, coworkers, insight, exercise, games, hobby, reflection"
+2024-09-20,Friday,September,1,"work, roommates, dinner, games, challenge, reflection"
+2024-09-21,Saturday,September,4,"lazy, video games, family, conversation, vacation/travel, relax"
+2024-09-22,Sunday,September,4,"spiritual, roommates, friends, social, conversation, networking, surprise"
+2024-09-23,Monday,September,2,"work, insight, exercise, nature, hobby, games"
+2024-09-24,Tuesday,September,3,"work, accomplishment, productive, exercise, reflection"
+2024-09-25,Wednesday,September,4,"work, accomplishment, vacation/travel, productive, planning, insight"
+2024-09-26,Thursday,September,2,"work, coworkers, adjustment"
+2024-09-27,Friday,September,4,"coworkers, funny, health, work, exercise, accomplishment, conversation, nature, self-care"
+2024-09-28,Saturday,September,3,"nature, friends, social, games, started, late night, accomplishment"
+2024-09-29,Sunday,September,2,"spiritual, friends, roommates, journal, planning, relax, social"
+2024-09-30,Monday,September,3,"work, insight, coworkers, nature, social, conversation, hobby"
+2024-10-01,Tuesday,October,4,"work, started, funny, vacation/travel, friends, video games, social, conversation"
+2024-10-02,Wednesday,October,3,"work, exercise, productive, health, adjustment"
+2024-10-03,Thursday,October,1,"stress, work, exercise, accomplishment, health, reflection"
+2024-10-04,Friday,October,2,"work, coworkers, social, productive, reflection, relax"
+2024-10-05,Saturday,October,2,"spiritual, reflection, nature, roommates, health, exercise"
+2024-10-06,Sunday,October,1,"sick, family, spiritual, reflection, conversation"
+2024-10-07,Monday,October,4,"work, productive, vacation/travel, planning, accomplishment, conversation, roommates, social"
+2024-10-08,Tuesday,October,2,"work, sick, health, reflection, planning"
+2024-10-09,Wednesday,October,3,"work, coworkers, productive, roommates, stress, reflection"
+2024-10-10,Thursday,October,-2,"work, challenge, coworkers, insight, stress, health, spiritual, nature, relax"
+2024-10-11,Friday,October,3,"work, productive, accomplishment, planning, relax, vacation/travel"
+2024-10-12,Saturday,October,3,"exercise, nature, started, insight, social, adventure"
+2024-10-13,Sunday,October,2,"spiritual, work, relax, nature, journal"
+2024-10-14,Monday,October,4,"work, productive, exercise, health, friends, social, reflection"
+2024-10-15,Tuesday,October,2,"work, coworkers, insight, nature, planning, challenge"
+2024-10-16,Wednesday,October,-1,"roommates, work, insight, stress, reflection"
+2024-10-17,Thursday,October,3,"work, roommates, social, accomplishment, reflection, hobby"
+2024-10-18,Friday,October,2,"work, accomplishment, reflection, conversation, roommates, networking"
+2024-10-19,Saturday,October,4,"family, roommates, travel, nature, reflection, accomplishment"
+2024-10-20,Sunday,October,2,"spiritual, journal, planning, social, reflection, friends"
+2024-10-21,Monday,October,1,"work, exercise, productive, health, social, relax"
+2024-10-22,Tuesday,October,3,"vacation/travel, stress, massage, relax, movie, insight, conversation"
+2024-10-23,Wednesday,October,2,"presentation, coworkers, accomplishment, health, relax, reflection"
+2024-10-24,Thursday,October,0,"work, insight, relax, accomplishment, games"
+2024-10-25,Friday,October,4,"work, coworkers, exercise, shopping, social, reflection, conversation"
+2024-10-26,Saturday,October,2,"nature, friends, reflection, games, social, headache, relax"
+2024-10-27,Sunday,October,3,"spiritual, friends, vacation/travel, reflection, learning"
+2024-10-28,Monday,October,2,"work, accomplishment, coworkers, exercise, productive, late night, reflection"
+2024-10-29,Tuesday,October,4,"work, accomplishment, insight, exercise, family, social, reflection, planning"
+2024-10-30,Wednesday,October,1,"work, learning, roommates, insight, stress, family, spiritual"
+2024-10-31,Thursday,October,2,"presentation, coworkers, exercise, roommates, family, movie, social, reflection"
+2024-11-01,Friday,November,2,"day off work, vacation/travel, nature, social, reflection"
+2024-11-02,Saturday,November,3,"lazy, nature, adventure, relax, movie"
+2024-11-03,Sunday,November,4,"spiritual, presentation, friends, social, roommates, reflection, adjustment"
+2024-11-04,Monday,November,0,"work, coworkers, reflection, adjustment, stress"
+2024-11-05,Tuesday,November,1,"work, nature, coworkers, reflection, stress, health"
+2024-11-06,Wednesday,November,1,"work, roommates, insight, reflection, stress, conversation"
+2024-11-07,Thursday,November,2,"work, relax, presentation, accomplishment, spiritual"
+2024-11-08,Friday,November,4,"health, work, unproductive, exercise, friends, spiritual, accomplishment"
+2024-11-09,Saturday,November,2,"day off work, reflection, anxiety, conversation, insight"
+2024-11-10,Sunday,November,0,"spiritual, friends, reflection, journal, loneliness, accomplishment, self-care, insight"
+2024-11-11,Monday,November,3,"vacation/travel, work, friends, productive, health, reflection"
+2024-11-12,Tuesday,November,2,"work, learning, coworkers, social, productive, nature"
+2024-11-13,Wednesday,November,3,"work, coworkers, networking, social, reflection, conversation"
+2024-11-14,Thursday,November,3,"work, coworkers, networking, social, reflection, conversation, accomplishment"
+2024-11-15,Friday,November,2,"work, friends, vacation/travel, productive, networking, challenge"
+2024-11-16,Saturday,November,1,"health, planning, cooking, reflection, lonely, adjustment"
+2024-11-17,Sunday,November,5,"spiritual, presentation, accomplishment, roommates, social, conversation"
+2024-11-18,Monday,November,1,"work, challenge, productive, service, games, insight"
+2024-11-19,Tuesday,November,3,"presentation, work, productive, friends, games, social, insight"
+2024-11-20,Wednesday,November,2,"work, insight, conversation, health, learning, reflection, adjustment, late night"
+2024-11-21,Thursday,November,2,"work, challenge, exercise, video games, nature, lazy"
+2024-11-22,Friday,November,2,"work, roommates, video games, conversation, headache"
+2024-11-23,Saturday,November,2,"exercise, family, relax, hobby, accomplishment, games"
+2024-11-24,Sunday,November,3,"spiritual, family, accomplishment, games, reflection"
+2024-11-25,Monday,November,3,"productive, work, insight, accomplishment, coworkers, games, relax"
+2024-11-26,Tuesday,November,1,"work, frustration, accomplishment, social, movie, roommates"
+2024-11-27,Wednesday,November,4,"vacation/travel, family, adventure, social, reflection"
+2024-11-28,Thursday,November,3,"health, family, nature, games, movie, reflection"
+2024-11-29,Friday,November,2,"family, vacation/travel, work, productive, food, conversation"
+2024-11-30,Saturday,November,1,"exercise, shopping, relax, games"
+2024-12-01,Sunday,December,2,"spiritual, friends, shopping, reflection, journal, insight, stress, uncertainty"
+2024-12-02,Monday,December,2,"health, family, shopping, work, roommates, productive, reflection"
+2024-12-03,Tuesday,December,1,"health, adjustment, work, productive, exercise, organize, reflection"
+2024-12-04,Wednesday,December,2,"work, health, stress, adjustment, accomplishment, shopping"
+2024-12-05,Thursday,December,1,"work, stress, accomplishment, exercise, started, games"
+2024-12-06,Friday,December,3,"work, coworkers, insight, social, games, productive, accomplishment"
+2024-12-07,Saturday,December,3,"roommates, video games, funny, reflection, challenge"
+2024-12-08,Sunday,December,3,"spiritual, conversation, roommates, insight, reflection, social, health"
+2024-12-09,Monday,December,4,"work, coworkers, exercise, accomplishment, social, family, shopping"
+2024-12-10,Tuesday,December,3,"work, exercise, friends, social, conversation, games"
+2024-12-11,Wednesday,December,3,"work, friends, networking, adventure, social"
+2024-12-12,Thursday,December,4,"work, accomplishment, exercise, social, relax, self-care"
+2024-12-13,Friday,December,3,"work, accomplishment, coworkers, relax, video games"
+2024-12-14,Saturday,December,2,"roommates, nature, adventure, relax, shopping"
+2024-12-15,Sunday,December,3,"spiritual, roommates, friends, social, stress, games, accomplishment, reflection"
+2024-12-16,Monday,December,3,"work, accomplishment, networking, social, friends, reflection, service, relaxing, hobby"
+2024-12-17,Tuesday,December,4,"work, presentation, coworkers, insight, family, conversation, vacation/travel, shopping, exercise, stress"
+2024-12-18,Wednesday,December,1,"stress, work, accomplishment, coworkers, reflection, health"
+2024-12-19,Thursday,December,2,"presentation, relax, work, conversation, stuck, adjustment, hobby"
+2024-12-20,Friday,December,1,"headache, work, accomplishment, coworkers, social, stress, self-care, relax"
+2024-12-21,Saturday,December,4,"vacation/travel, friends, family, spiritual, reflection, health"
+2024-12-22,Sunday,December,0,"headache, roommates, family, journal, social, relax, massage"
+2024-12-23,Monday,December,-1,"work, health, spiritual, insight, reflection, challenge"
+2024-12-24,Tuesday,December,3,"work, exercise, family, vacation/travel, accomplishment, relaxation, hobby"
+2024-12-25,Wednesday,December,3,"family, vacation/travel, games, social, accomplishment"
+2024-12-26,Thursday,December,4,"video games, friends, games, social, comfort zone"
+2024-12-27,Friday,December,1,"family, video games, lazy, late night, reflection"
+2024-12-28,Saturday,December,3,"exercise, video games, family, movie, conversation, games, relax"
+2024-12-29,Sunday,December,3,"spiritual, family, insight, games, reflection, conversation, social, planning, roommates"
+2024-12-30,Monday,December,2,"exercise, shopping, video games, relax, nature"
+2024-12-31,Tuesday,December,2,"exercise, spiritual, roommates, hobby, bored, reflection, accomplishment"
+2025-01-01,Wednesday,January,3,"organize, spiritual, exercise, shopping, adventure, conversation, comfort zone, learning"
+2025-01-02,Thursday,January,2,"work, coworkers, exercise, video games, reflection"
+2025-01-03,Friday,January,4,"friends, work, accomplishment, learning, self-care, service, conversation"
+2025-01-04,Saturday,January,2,"snow, friends, church, nap, learning, video games, late night, reflection, social"
+2025-01-05,Sunday,January,3,"spiritual, reflection, planning, nature, games, friends, accomplishment"
+2025-01-06,Monday,January,2,"work, productive, exercise, coworkers, friends, insight, service, adjustment"
+2025-01-07,Tuesday,January,4,"work, insight, accomplishment, friends, exercise, stress, spiritual, reflection"
+2025-01-08,Wednesday,January,-3,"sick, work, roommates, day off work, relax"
+2025-01-09,Thursday,January,2,"sick, work, video games, accomplishment, friends, conversation"
+2025-01-10,Friday,January,0,"work, sick, reflection, video games, family, learning, productivity"
+2025-01-11,Saturday,January,4,"work, accomplishment, recognition, coworkers, conversation, funny, reflection"
+2025-01-12,Sunday,January,1,"work, journal, spiritual, reflection, friends, roommates, conversation, relax"
+2025-01-13,Monday,January,3,"recognition, presentation, coworkers, work, exercise, sick, service, social, games, friends"
+2025-01-14,Tuesday,January,2,"work, coworkers, reflection, sick, health, spiritual, relax"
+2025-01-15,Wednesday,January,2,"work, coworkers, exercise, accomplishment, learning, nature, reflection"
+2025-01-16,Thursday,January,1,"work, insight, uncertainty, productive, vacation/travel, accomplishment, coworkers"
+2025-01-17,Friday,January,2,"work, coworkers, reflection, challenge, learning, accomplishment, conversation"
+2025-01-18,Saturday,January,3,"friends, social, conversation, exercise, health, relax, self-care"
+2025-01-19,Sunday,January,4,"spiritual, family, conversation, insight, reflection, day off work, accomplishment, social"
+2025-01-20,Monday,January,2,"reflection, organize, nature, spiritual, learning, insight, self-care"
+2025-01-21,Tuesday,January,2,"work, coworkers, exercise, networking, social, reflection, accomplishment, health"
+2025-01-22,Wednesday,January,4,"work, exercise, insight, hobby, relaxation, massage, productive"
+2025-01-23,Thursday,January,-1,"work, stressful, progress, coworker, health, relax"
+2025-01-24,Friday,January,2,"stress, coworkers, productive, exercise, shopping, vacation/travel, insight, social"
+2025-01-25,Saturday,January,2,

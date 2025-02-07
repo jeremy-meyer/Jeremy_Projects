@@ -107,9 +107,9 @@ plt.show()
 
 
 # Keywords analysis
-keywords_explode = keywords.explode("keywords")
+keywords_explode = keywords[keywords["date"]>='2024-01-01'].explode("keywords")
 keywords_agg = keywords_explode.groupby("keywords").aggregate({'rating' : ['mean', 'count']})
-keywords_agg[keywords_agg.rating['count']>=5].sort_values(by=[('rating', 'mean')], ascending=False)
+keywords_agg[keywords_agg.rating['count']>=10].sort_values(by=[('rating', 'mean')], ascending=False)
 keywords_agg.sort_values(by=[('rating', 'count')], ascending=True)
 
 
@@ -130,19 +130,3 @@ day_avg['day_of_week'] = [x[0] for x in day_avg.index]
 ax = sns.barplot(x="day_of_week", y='rating', data=day_avg, errorbar=None, hue='year_half')
 ax.set(ylabel='rating avg', xlabel='weekday')
 plt.show()
-
-# Notes
-
-# April 2023
-# May 2023
-# July 2023 - started seeing life coach
-# Mid Aug 2023 - started going to gym
-# October 2023 - 3 weekend trips: solo, family, and work
-# Early Dec 2023 - Exitement for NYC trip
-# Mid Dec 2023 - Sick for a week with Covid after work travel
-# Late dec 2023 - Week off work, Holidays with family. New years plans!
-# Late Feb 2023 - Finished important work project sucessfully! Took private ski lessons
-# March 2023 - Work started getting stressful and demanding (long hours)
-# Early april 2023 - Solo week-long vacation
-# June 2023 - Assigned to new prokects at work. NYC networking trip
-# July 2023 - Doomscrolling, worked picked up a lot
