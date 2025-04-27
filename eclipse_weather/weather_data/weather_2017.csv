@@ -1,0 +1,525 @@
+Address,Date time,Minimum Temperature,Maximum Temperature,Temperature,Dew Point,Relative Humidity,Heat Index,Wind Speed,Wind Gust,Wind Direction,Wind Chill,Precipitation,Precipitation Cover,Snow Depth,Visibility,Cloud Cover,Sea Level Pressure,Weather Type,Latitude,Longitude,Resolved Address,Name,Info,Conditions
+"Mazatlan,MX",04/08/2017 00:00:00,72.8,72.8,72.8,65.6,78.16,,2.2,,340.0,,0.0,,,6.2,90.0,1012.8,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2017 01:00:00,64.5,64.5,64.5,55.5,72.59,,0.0,,,,0.0,,,9.9,100.0,1014.2,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2017 02:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 03:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 04:00:00,60.9,60.9,60.9,57.3,87.93,,0.0,,,,0.0,,,9.9,50.0,1013.2,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2017 05:00:00,59.1,59.1,59.1,55.5,87.84,,4.7,,60.0,,0.0,,,9.9,50.0,1011.2,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2017 06:00:00,67.4,67.4,67.4,59.3,75.26,,2.2,,360.0,,0.0,,,6.2,0.0,1011.3,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2017 07:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 08:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 09:00:00,73.1,73.1,73.1,64.7,74.81,,2.2,,20.0,,0.0,,,12.4,10.0,1013.1,Fog,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2017 10:00:00,84.3,84.3,84.3,60.9,45.39,84.5,5.8,,80.0,,0.0,,,14.9,0.0,1014.9,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2017 11:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 12:00:00,80.0,80.0,80.0,64.7,59.64,,2.2,,260.0,,0.0,,,12.4,0.0,1013.0,Sky Coverage Increasing,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2017 13:00:00,86.1,86.1,86.1,66.3,51.77,88.5,8.1,,260.0,,0.0,,,14.9,30.0,1012.9,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2017 14:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 15:00:00,82.1,82.1,82.1,68.6,63.73,85.3,2.2,,290.0,,0.0,,,12.4,30.0,1010.3,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2017 16:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 17:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 18:00:00,80.9,80.9,80.9,69.5,68.49,84.2,4.5,,260.0,,0.0,,,12.4,30.0,1009.4,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2017 19:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 20:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2017 21:00:00,76.2,76.2,76.2,68.1,76.06,,2.2,,320.0,,0.0,,,6.2,10.0,1010.8,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Torreon,MX",04/08/2017 01:00:00,72.2,72.2,72.2,55.5,55.65,,4.5,,30.0,,0.0,,,6.2,30.0,1008.2,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Partially cloudy
+"Torreon,MX",04/08/2017 02:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 03:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 04:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 05:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 06:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 07:00:00,61.4,61.4,61.4,52.4,72.28,,2.2,,190.0,,0.0,,,6.2,0.0,1011.3,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2017 08:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 09:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 10:00:00,67.7,67.7,67.7,51.5,56.12,,2.2,,140.0,,0.0,,,18.6,0.0,1013.3,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2017 11:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 12:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 13:00:00,,,,,56.12,,2.2,,340.0,,0.0,,,18.6,0.0,1012.3,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 14:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 15:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 16:00:00,,,,,56.12,,6.7,,340.0,,0.0,,,18.6,0.0,1006.3,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 17:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 18:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 19:00:00,93.1,93.1,93.1,13.9,5.39,88.6,7.9,,351.0,,0.0,,,15.1,0.0,1002.7,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2017 20:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 21:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2017 22:00:00,76.9,76.9,76.9,26.5,15.49,,0.1,,6.0,,0.0,,,9.8,0.0,1001.5,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"San Antonio,TX,US",04/08/2017 00:00:00,63.1,63.1,63.1,53.3,70.37,,8.9,,159.0,,0.0,,,9.9,6.5,1018.6,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 01:00:00,60.7,60.7,60.7,54.2,78.97,,7.6,,162.0,,0.0,,,9.9,6.5,1018.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 02:00:00,61.4,61.4,61.4,54.9,79.23,,6.9,,159.0,,0.0,,,9.9,6.5,1017.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 03:00:00,60.4,60.4,60.4,55.2,83.16,,6.0,,178.0,,0.0,,,9.9,6.5,1016.7,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 04:00:00,60.0,60.0,60.0,55.0,83.59,,4.5,,165.0,,0.0,,,9.9,6.5,1016.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 05:00:00,59.3,59.3,59.3,55.1,85.87,,2.9,,121.0,,0.0,,,9.9,6.5,1016.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 06:00:00,57.9,57.9,57.9,54.4,88.39,,3.6,,12.0,,0.0,,,9.9,6.5,1015.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 07:00:00,58.2,58.2,58.2,54.7,88.17,,1.7,,293.0,,0.0,,,9.9,16.5,1016.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 08:00:00,58.3,58.3,58.3,55.0,88.7,,1.1,,71.0,,0.0,,,9.9,17.5,1016.5,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 09:00:00,63.3,63.3,63.3,58.2,83.54,,4.0,,139.0,,0.0,,,9.9,97.4,1016.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2017 10:00:00,67.1,67.1,67.1,58.9,74.86,,10.0,,182.0,,0.0,,,9.9,97.4,1016.9,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2017 11:00:00,72.6,72.6,72.6,59.9,64.42,,12.9,24.2,184.0,,0.0,,,9.9,66.6,1017.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2017 12:00:00,76.5,76.5,76.5,60.5,57.88,,16.4,23.0,170.0,,0.0,,,9.9,65.7,1016.6,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2017 13:00:00,77.5,77.5,77.5,59.9,54.73,,14.1,,173.0,,0.0,,,9.9,91.0,1016.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2017 14:00:00,78.1,78.1,78.1,59.6,53.01,,15.9,23.0,168.0,,0.0,,,9.9,97.4,1015.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2017 15:00:00,79.4,79.4,79.4,60.1,51.76,,12.1,23.0,169.0,,0.0,,,9.9,97.4,1013.9,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2017 16:00:00,79.7,79.7,79.7,60.7,52.35,,13.1,24.2,163.0,,0.0,,,9.9,92.9,1013.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2017 17:00:00,81.3,81.3,81.3,60.4,49.11,81.9,13.3,20.8,162.0,,0.0,,,9.9,79.7,1012.2,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2017 18:00:00,80.7,80.7,80.7,59.9,49.28,81.3,12.3,,147.0,,0.0,,,9.9,6.5,1011.5,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 19:00:00,79.3,79.3,79.3,60.1,51.95,,10.9,,154.0,,0.0,,,9.9,16.5,1011.2,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 20:00:00,76.1,76.1,76.1,60.7,58.78,,13.2,,140.0,,0.0,,,9.9,16.5,1011.2,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 21:00:00,72.3,72.3,72.3,61.6,69.07,,13.8,,138.0,,0.0,,,9.9,6.5,1011.7,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 22:00:00,70.2,70.2,70.2,61.6,74.1,,13.9,21.9,136.0,,0.0,,,9.9,21.2,1012.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2017 23:00:00,68.8,68.8,68.8,61.5,77.45,,12.3,26.4,146.0,,0.0,,,9.9,32.2,1012.9,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2017 00:00:00,63.4,63.4,63.4,51.3,64.81,,5.9,,181.0,,0.0,,0.0,9.9,0.0,1018.9,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 01:00:00,62.1,62.1,62.1,52.3,70.2,,5.9,,184.0,,0.0,,0.0,9.9,0.0,1018.6,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 02:00:00,60.2,60.2,60.2,52.9,76.67,,3.9,,192.0,,0.0,,0.0,9.9,0.0,1018.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 03:00:00,58.9,58.9,58.9,52.9,80.47,,3.7,,190.0,,0.0,,0.0,9.9,7.8,1017.7,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 04:00:00,57.7,57.7,57.7,52.7,83.4,,1.1,,68.0,,0.0,,0.0,9.9,11.9,1017.1,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 05:00:00,57.5,57.5,57.5,53.3,86.02,,3.5,,202.0,,0.0,,0.0,9.9,12.8,1016.7,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 06:00:00,56.3,56.3,56.3,53.7,90.98,,1.8,,284.0,,0.0,,0.0,9.9,5.4,1016.6,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 07:00:00,55.9,55.9,55.9,53.3,90.97,,4.1,,200.0,,0.0,,0.0,9.9,24.1,1016.7,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 08:00:00,57.4,57.4,57.4,54.6,90.35,,4.8,,198.0,,0.0,,0.0,9.9,20.1,1016.8,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 09:00:00,63.1,63.1,63.1,57.3,81.23,,7.9,,195.0,,0.0,,0.0,9.9,6.2,1017.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 10:00:00,69.2,69.2,69.2,59.3,70.66,,10.0,18.9,188.0,,0.0,,0.0,9.9,6.2,1017.1,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 11:00:00,72.2,72.2,72.2,60.3,66.22,,14.1,26.3,205.0,,0.0,,0.0,9.9,86.8,1017.1,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2017 12:00:00,75.5,75.5,75.5,60.2,59.09,,14.1,24.2,183.0,,0.0,,0.0,9.9,61.0,1016.6,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2017 13:00:00,79.1,79.1,79.1,61.8,55.43,,13.0,24.4,183.0,,0.0,,0.0,9.9,88.4,1016.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2017 14:00:00,79.0,79.0,79.0,61.8,55.68,,11.6,24.1,182.0,,0.0,,0.0,9.9,73.5,1015.5,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2017 15:00:00,80.1,80.1,80.1,61.3,52.74,81.1,13.2,22.7,178.0,,0.0,,0.0,9.9,81.2,1014.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2017 16:00:00,80.2,80.2,80.2,61.3,52.56,81.2,9.9,22.0,178.0,,0.0,,0.0,9.9,86.8,1013.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2017 17:00:00,80.7,80.7,80.7,61.0,51.04,81.6,12.4,24.8,173.0,,0.0,,0.0,9.9,86.8,1012.7,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2017 18:00:00,79.9,79.9,79.9,60.7,52.1,,11.6,23.1,166.0,,0.0,,0.0,9.9,53.2,1012.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2017 19:00:00,76.9,76.9,76.9,60.3,56.58,,10.1,20.6,170.0,,0.0,,0.0,9.9,70.0,1012.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2017 20:00:00,74.0,74.0,74.0,60.1,61.89,,11.8,21.8,151.0,,0.0,,0.0,9.9,6.2,1012.0,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 21:00:00,71.6,71.6,71.6,59.3,65.05,,8.4,,161.0,,0.0,,0.0,9.9,6.2,1012.5,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2017 22:00:00,69.7,69.7,69.7,59.3,69.36,,6.7,16.1,162.0,,0.0,,0.0,9.9,28.9,1013.1,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2017 23:00:00,68.5,68.5,68.5,60.3,75.19,,10.0,20.5,170.0,,0.0,,0.0,9.9,83.6,1013.4,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2017 00:00:00,64.9,64.9,64.9,44.3,47.25,,8.3,,170.0,,0.0,,0.0,9.9,0.0,1016.3,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 01:00:00,64.8,64.8,64.8,45.2,49.04,,11.2,,173.0,,0.0,,0.0,9.9,3.1,1015.7,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 02:00:00,64.9,64.9,64.9,46.1,50.63,,12.8,,170.0,,0.0,,0.0,9.9,3.1,1015.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 03:00:00,64.2,64.2,64.2,47.6,54.73,,15.9,28.1,184.0,,0.0,,0.0,9.9,0.0,1014.7,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 04:00:00,62.6,62.6,62.6,48.6,60.25,,16.8,25.0,189.0,,0.0,,0.0,9.9,3.1,1013.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 05:00:00,61.7,61.7,61.7,49.5,64.4,,14.9,21.9,182.0,,0.0,,0.0,9.9,3.1,1013.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 06:00:00,60.7,60.7,60.7,50.4,68.88,,11.3,18.3,180.0,,0.0,,0.0,9.9,3.1,1013.6,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 07:00:00,60.7,60.7,60.7,51.5,71.77,,13.5,,177.0,,0.0,,0.0,9.9,32.1,1013.3,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2017 08:00:00,61.7,61.7,61.7,53.2,73.83,,13.5,19.7,180.0,,0.0,,0.0,9.9,19.4,1013.6,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 09:00:00,64.6,64.6,64.6,54.5,69.76,,15.3,25.3,180.0,,0.0,,0.0,9.9,19.4,1013.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 10:00:00,68.4,68.4,68.4,56.1,64.94,,18.4,26.3,189.0,,0.0,,0.0,9.9,18.0,1013.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 11:00:00,73.1,73.1,73.1,56.7,56.65,,20.5,28.8,188.0,,0.0,,0.0,9.9,10.7,1013.4,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 12:00:00,75.8,75.8,75.8,58.1,54.36,,18.3,30.5,195.0,,0.0,,0.0,9.9,10.9,1013.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 13:00:00,78.2,78.2,78.2,58.7,51.27,,20.1,31.8,177.0,,0.0,,0.0,9.9,28.3,1012.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2017 14:00:00,80.0,80.0,80.0,59.8,50.18,,19.0,28.2,176.0,,0.0,,0.0,9.9,13.0,1011.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 15:00:00,82.0,82.0,82.0,59.5,46.52,82.3,22.6,31.7,172.0,,0.0,,0.0,9.9,8.2,1010.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 16:00:00,82.1,82.1,82.1,59.8,46.87,82.4,24.6,32.7,174.0,,0.0,,0.0,9.9,26.5,1009.3,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2017 17:00:00,81.3,81.3,81.3,59.8,48.0,81.8,23.0,34.3,170.0,,0.0,,0.0,9.9,9.8,1008.7,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 18:00:00,80.3,80.3,80.3,58.7,47.78,80.9,24.7,34.3,170.0,,0.0,,0.0,9.9,0.9,1008.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 19:00:00,79.0,79.0,79.0,58.2,48.98,,22.0,31.8,170.0,,0.0,,0.0,9.9,0.9,1008.6,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 20:00:00,76.9,76.9,76.9,57.2,50.66,,18.3,30.5,160.0,,0.0,,0.0,9.9,0.9,1008.4,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 21:00:00,74.3,74.3,74.3,57.2,55.3,,16.4,28.4,160.0,,0.0,,0.0,9.9,0.9,1008.7,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 22:00:00,73.3,73.3,73.3,56.6,55.84,,18.6,27.7,164.0,,0.0,,0.0,9.9,0.0,1009.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2017 23:00:00,71.9,71.9,71.9,56.2,57.89,,18.6,28.3,166.0,,0.0,,0.0,9.9,0.0,1009.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 00:00:00,64.0,64.0,64.0,48.3,56.61,,7.8,,158.0,,0.0,,0.0,9.9,51.2,1017.4,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 01:00:00,63.5,63.5,63.5,48.2,57.62,,8.7,,168.0,,0.0,,0.0,9.9,51.2,1016.7,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 02:00:00,64.1,64.1,64.1,47.8,55.45,,9.1,,190.0,,0.0,,0.0,9.9,51.2,1016.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 03:00:00,64.7,64.7,64.7,49.3,57.4,,11.3,,202.0,,0.0,,0.0,9.9,51.2,1015.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 04:00:00,64.1,64.1,64.1,50.4,60.93,,9.3,16.1,199.0,,0.0,,0.0,9.9,51.2,1015.0,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 05:00:00,63.5,63.5,63.5,51.7,65.45,,8.5,21.9,195.0,,0.0,,0.0,9.9,51.2,1014.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 06:00:00,63.2,63.2,63.2,54.0,72.14,,9.9,19.2,198.0,,0.0,,0.0,9.9,51.2,1014.7,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 07:00:00,62.6,62.6,62.6,54.8,75.55,,8.7,18.3,191.0,,0.0,,0.0,9.9,51.2,1014.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 08:00:00,61.2,61.2,61.2,53.9,76.94,,11.4,,170.0,,0.0,,0.0,9.9,51.2,1014.7,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 09:00:00,64.1,64.1,64.1,55.5,73.52,,12.3,,175.0,,0.0,,0.0,9.9,51.2,1014.9,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 10:00:00,69.2,69.2,69.2,56.8,64.68,,12.1,18.3,182.0,,0.0,,0.0,9.9,21.3,1014.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 11:00:00,72.5,72.5,72.5,57.7,59.74,,16.5,26.5,187.0,,0.0,,0.0,9.9,21.3,1014.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 12:00:00,75.1,75.1,75.1,59.1,57.48,,13.8,25.1,192.0,,0.0,,0.0,9.9,27.3,1014.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 13:00:00,77.5,77.5,77.5,58.8,52.56,,14.9,28.9,202.0,,0.0,,0.0,9.9,44.7,1013.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 14:00:00,79.0,79.0,79.0,59.7,51.69,,16.9,29.0,186.0,,0.0,,0.0,9.9,76.7,1013.1,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2017 15:00:00,80.3,80.3,80.3,59.5,49.11,81.0,19.6,34.5,177.0,,0.0,,0.0,9.9,77.5,1012.0,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2017 16:00:00,80.7,80.7,80.7,59.5,48.44,81.3,19.6,34.9,174.0,,0.0,,0.0,9.9,35.1,1010.9,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 17:00:00,80.0,80.0,80.0,59.4,49.44,80.8,25.1,36.1,175.0,,0.0,,0.0,9.9,26.1,1010.0,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2017 18:00:00,80.6,80.6,80.6,59.4,48.46,81.2,18.0,33.6,173.0,,0.0,,0.0,9.9,18.3,1009.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 19:00:00,78.0,78.0,78.0,58.3,50.7,,16.3,32.4,186.0,,0.0,,0.0,9.9,15.8,1009.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 20:00:00,75.8,75.8,75.8,58.3,54.48,,18.1,28.9,175.0,,0.0,,0.0,9.9,15.8,1009.7,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 21:00:00,73.8,73.8,73.8,58.3,58.27,,14.3,18.1,166.0,,0.0,,0.0,9.9,15.8,1010.0,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 22:00:00,72.8,72.8,72.8,58.2,60.16,,16.7,23.7,166.0,,0.0,,0.0,9.9,15.8,1010.4,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2017 23:00:00,71.0,71.0,71.0,57.7,62.94,,16.8,25.1,171.0,,0.0,,0.0,9.9,0.0,1010.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Little Rock,AR,US",04/08/2017 00:00:00,49.8,49.8,49.8,39.0,66.11,,3.2,,157.0,49.3,0.0,,0.0,9.9,47.8,1019.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 01:00:00,51.8,51.8,51.8,38.1,59.57,,0.0,,2.0,,0.0,,0.0,9.9,47.8,1019.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 02:00:00,50.9,50.9,50.9,38.1,61.5,,0.0,,2.0,,0.0,,0.0,9.9,47.8,1019.4,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 03:00:00,49.8,49.8,49.8,37.3,62.01,,0.0,,2.0,,0.0,,0.0,9.9,47.8,1019.0,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 04:00:00,46.0,46.0,46.0,39.9,78.94,,0.0,,2.0,,0.0,,0.0,9.9,47.8,1018.7,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 05:00:00,44.9,44.9,44.9,41.0,86.08,,0.0,,2.0,,0.0,,0.0,9.9,47.8,1018.8,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 06:00:00,45.9,45.9,45.9,40.9,82.54,,0.0,,2.0,,0.0,,0.0,9.9,47.8,1018.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 07:00:00,44.8,44.8,44.8,41.0,86.2,,0.0,,2.0,,0.0,,0.0,9.9,47.8,1019.3,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 08:00:00,50.0,50.0,50.0,41.0,71.23,,0.1,,2.0,,0.0,,0.0,9.9,47.8,1019.7,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 09:00:00,56.1,56.1,56.1,42.1,59.28,,5.8,,170.0,,0.0,,0.0,9.9,26.9,1019.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 10:00:00,62.1,62.1,62.1,44.9,53.21,,7.0,,160.0,,0.0,,0.0,9.9,26.9,1019.1,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 11:00:00,69.1,69.1,69.1,48.7,48.26,,12.6,,197.0,,0.0,,0.0,9.9,26.9,1018.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 12:00:00,71.9,71.9,71.9,50.0,45.96,,9.1,,209.0,,0.0,,0.0,9.9,47.8,1018.1,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 13:00:00,75.8,75.8,75.8,52.9,45.01,,13.7,17.2,179.0,,0.0,,0.0,9.9,85.3,1017.3,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2017 14:00:00,78.1,78.1,78.1,52.1,40.33,,12.7,21.0,190.0,,0.0,,0.0,9.9,63.7,1016.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 15:00:00,78.2,78.2,78.2,48.0,34.65,,19.4,26.1,200.0,,0.0,,0.0,9.9,85.5,1015.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2017 16:00:00,79.1,79.1,79.1,50.1,36.26,,12.6,17.6,180.0,,0.0,,0.0,9.9,85.3,1014.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2017 17:00:00,78.2,78.2,78.2,48.0,34.63,,14.8,22.7,199.0,,0.0,,0.0,9.9,85.3,1013.4,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2017 18:00:00,77.1,77.1,77.1,48.0,35.81,,12.7,19.7,180.0,,0.0,,0.0,9.9,85.3,1012.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2017 19:00:00,75.0,75.0,75.0,48.9,39.76,,17.9,23.0,189.0,,0.0,,0.0,9.9,47.8,1012.7,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 20:00:00,71.1,71.1,71.1,50.0,47.26,,9.1,,180.0,,0.0,,0.0,9.9,26.9,1012.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 21:00:00,66.1,66.1,66.1,51.1,58.47,,7.9,,160.0,,0.0,,0.0,9.9,26.9,1012.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 22:00:00,64.4,64.4,64.4,53.0,66.54,,6.9,,160.0,,0.0,,0.0,9.9,26.9,1013.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2017 23:00:00,65.1,65.1,65.1,53.0,64.79,,9.0,,170.0,,0.0,,0.0,9.9,47.8,1013.3,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2017 00:00:00,45.1,45.1,45.1,38.0,75.99,,0.2,,351.0,,0.0,,0.0,9.9,0.0,1019.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 01:00:00,45.1,45.1,45.1,37.2,73.63,,0.2,,351.0,,0.0,,0.0,9.9,0.0,1019.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 02:00:00,44.2,44.2,44.2,37.1,76.1,,0.2,,351.0,,0.0,,0.0,9.9,0.0,1018.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 03:00:00,42.3,42.3,42.3,37.1,81.81,,0.2,,356.0,,0.0,,0.0,9.9,0.0,1018.7,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 04:00:00,41.1,41.1,41.1,37.1,85.56,,0.2,,350.0,,0.0,,0.0,9.9,0.0,1018.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 05:00:00,41.1,41.1,41.1,37.1,85.56,,0.2,,4.0,,0.0,,0.0,9.9,0.0,1018.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 06:00:00,40.0,40.0,40.0,37.1,89.46,,0.1,,9.0,,0.0,,0.0,9.9,0.0,1018.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 07:00:00,41.1,41.1,41.1,38.0,88.64,,0.1,,6.0,,0.0,,0.0,9.9,0.0,1019.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 08:00:00,50.0,50.0,50.0,39.8,67.79,,4.8,,160.0,,0.0,,0.0,9.9,0.0,1019.7,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 09:00:00,55.2,55.2,55.2,40.9,58.51,,9.3,,180.0,,0.0,,0.0,9.9,0.0,1019.5,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 10:00:00,62.1,62.1,62.1,39.7,43.72,,10.5,,180.0,,0.0,,0.0,9.9,0.0,1019.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 11:00:00,65.9,65.9,65.9,39.8,38.29,,17.2,24.2,210.0,,0.0,,0.0,9.9,0.0,1019.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 12:00:00,68.0,68.0,68.0,41.0,37.31,,17.2,23.0,209.0,,0.0,,0.0,9.9,0.0,1018.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 13:00:00,71.1,71.1,71.1,44.1,37.76,,12.8,23.0,199.0,,0.0,,0.0,9.9,0.0,1018.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 14:00:00,73.2,73.2,73.2,45.0,36.46,,14.0,25.3,180.0,,0.0,,0.0,9.9,0.0,1017.0,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 15:00:00,75.0,75.0,75.0,47.0,37.11,,18.4,25.3,200.0,,0.0,,0.0,9.9,0.0,1015.7,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 16:00:00,75.9,75.9,75.9,47.9,37.25,,18.4,,200.0,,0.0,,0.0,9.9,0.0,1014.7,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 17:00:00,75.0,75.0,75.0,47.0,37.13,,17.3,26.8,209.0,,0.0,,0.0,9.9,0.0,1013.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 18:00:00,74.0,74.0,74.0,45.0,35.54,,18.3,,209.0,,0.0,,0.0,9.9,0.0,1013.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 19:00:00,72.0,72.0,72.0,47.1,41.1,,10.5,23.0,180.0,,0.0,,0.0,9.9,0.0,1013.0,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 20:00:00,69.1,69.1,69.1,46.2,43.82,,10.4,,179.0,,0.0,,0.0,9.9,0.0,1013.0,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 21:00:00,65.1,65.1,65.1,46.2,50.36,,8.2,,170.0,,0.0,,0.0,9.9,0.0,1013.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 22:00:00,65.0,65.0,65.0,46.2,50.41,,9.4,,160.0,,0.0,,0.0,9.9,0.0,1013.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2017 23:00:00,63.0,63.0,63.0,46.2,54.14,,11.5,,170.0,,0.0,,0.0,9.9,0.0,1013.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Carbondale,IL,US",04/08/2017 00:00:00,41.2,41.2,41.2,35.5,80.02,,3.1,,141.0,39.6,0.0,,0.0,9.9,0.0,1019.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 01:00:00,41.2,41.2,41.2,36.5,83.39,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1019.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 02:00:00,41.0,41.0,41.0,36.5,83.75,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1019.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 03:00:00,38.2,38.2,38.2,37.0,95.46,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1019.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 04:00:00,37.2,37.2,37.2,34.4,89.64,,4.1,,149.0,33.9,0.0,,0.0,9.9,0.0,1018.8,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 05:00:00,38.1,38.1,38.1,33.2,82.05,,4.6,,141.0,34.7,0.0,,0.0,9.9,0.0,1019.0,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 06:00:00,39.1,39.1,39.1,32.1,75.78,,6.6,,132.0,34.3,0.0,,0.0,9.9,0.0,1019.0,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 07:00:00,40.0,40.0,40.0,31.0,69.88,,4.8,,148.0,36.6,0.0,,0.0,10.6,3.3,1019.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 08:00:00,47.0,47.0,47.0,37.1,68.39,,5.7,,159.0,44.3,0.0,,0.0,9.9,0.0,1019.4,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 09:00:00,54.0,54.0,54.0,35.1,48.76,,10.3,,150.0,,0.0,,0.0,9.9,0.0,1019.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 10:00:00,58.0,58.0,58.0,36.9,45.18,,11.4,,188.0,,0.0,,0.0,10.6,1.6,1019.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 11:00:00,63.0,63.0,63.0,38.0,39.62,,14.9,,200.0,,0.0,,0.0,9.9,0.0,1018.8,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 12:00:00,65.0,65.0,65.0,38.0,36.85,,17.1,,190.0,,0.0,,0.0,9.9,0.0,1018.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 13:00:00,66.8,66.8,66.8,41.0,38.84,,14.9,17.2,190.0,,0.0,,0.0,9.9,0.0,1017.3,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 14:00:00,70.1,70.1,70.1,43.0,37.63,,17.2,23.0,190.0,,0.0,,0.0,9.9,0.0,1016.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 15:00:00,71.1,71.1,71.1,44.0,37.79,,19.6,,210.0,,0.0,,0.0,9.9,0.0,1015.5,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 16:00:00,71.1,71.1,71.1,44.0,37.79,,19.6,25.3,190.0,,0.0,,0.0,9.9,0.0,1014.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 17:00:00,71.1,71.1,71.1,44.9,39.12,,11.4,21.9,180.0,,0.0,,0.0,9.9,0.0,1013.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 18:00:00,70.1,70.1,70.1,43.1,37.7,,17.1,12.8,170.0,,0.0,,0.0,9.9,0.0,1013.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 19:00:00,65.9,65.9,65.9,42.1,41.88,,12.5,,179.0,,0.0,,0.0,9.9,0.0,1013.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 20:00:00,64.2,64.2,64.2,42.1,44.36,,10.9,,169.0,,0.0,,0.0,9.9,0.0,1012.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 21:00:00,64.1,64.1,64.1,41.0,42.85,,13.1,,159.0,,0.0,,0.0,9.9,0.0,1012.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 22:00:00,62.9,62.9,62.9,41.0,44.59,,13.3,,169.0,,0.0,,0.0,9.9,0.0,1013.0,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2017 23:00:00,60.4,60.4,60.4,42.1,50.75,,10.1,,169.0,,0.0,,0.0,9.9,0.0,1012.8,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Evansville,IN,US",04/08/2017 00:00:00,39.6,39.6,39.6,32.8,76.45,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1020.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 01:00:00,39.5,39.5,39.5,32.9,76.82,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1019.8,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 02:00:00,38.8,38.8,38.8,33.0,79.3,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1019.5,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 03:00:00,39.7,39.7,39.7,33.9,79.64,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1019.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 04:00:00,37.2,37.2,37.2,33.0,84.69,,0.1,,354.0,,0.0,,0.0,9.9,0.0,1019.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 05:00:00,37.1,37.1,37.1,32.0,81.64,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1020.3,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 06:00:00,36.9,36.9,36.9,32.9,85.19,,0.1,,5.0,,0.0,,0.0,9.9,0.0,1020.4,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 07:00:00,36.7,36.7,36.7,32.9,85.95,,0.1,,7.0,,0.0,,0.0,9.9,0.0,1020.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 08:00:00,44.1,44.1,44.1,38.0,78.76,,0.5,,27.0,,0.0,,0.0,9.9,0.0,1021.4,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 09:00:00,52.0,52.0,52.0,36.0,54.26,,6.9,,132.0,,0.0,,0.0,9.9,0.0,1021.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 10:00:00,56.8,56.8,56.8,34.1,42.38,,9.2,,141.0,,0.0,,0.0,9.9,0.0,1021.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 11:00:00,60.2,60.2,60.2,33.3,36.22,,8.4,18.3,153.0,,0.0,,0.0,9.9,0.0,1020.8,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 12:00:00,62.9,62.9,62.9,33.2,32.84,,8.5,17.2,134.0,,0.0,,0.0,9.9,0.0,1020.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 13:00:00,65.8,65.8,65.8,35.9,33.1,,11.0,,198.0,,0.0,,0.0,9.9,0.0,1019.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 14:00:00,67.8,67.8,67.8,36.0,30.89,,8.1,17.2,171.0,,0.0,,0.0,9.9,0.0,1018.5,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 15:00:00,69.2,69.2,69.2,33.4,26.62,,10.4,16.1,161.0,,0.0,,0.0,9.9,0.0,1017.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 16:00:00,70.1,70.1,70.1,34.2,26.63,,11.2,,208.0,,0.0,,0.0,9.9,0.0,1016.5,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 17:00:00,70.1,70.1,70.1,33.4,25.75,,9.5,17.2,190.0,,0.0,,0.0,9.9,0.0,1015.8,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 18:00:00,70.0,70.0,70.0,33.5,25.96,,7.3,,171.0,,0.0,,0.0,9.9,0.0,1015.1,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 19:00:00,66.6,66.6,66.6,34.4,30.27,,6.9,,150.0,,0.0,,0.0,9.9,0.0,1015.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 20:00:00,62.6,62.6,62.6,35.1,35.73,,6.0,,149.0,,0.0,,0.0,9.9,0.0,1014.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 21:00:00,61.6,61.6,61.6,34.3,35.79,,7.1,,141.0,,0.0,,0.0,9.9,0.0,1015.1,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 22:00:00,59.7,59.7,59.7,34.2,38.27,,7.1,,150.0,,0.0,,0.0,9.9,0.0,1015.3,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2017 23:00:00,58.6,58.6,58.6,33.3,38.25,,7.2,,150.0,,0.0,,0.0,9.9,0.0,1015.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2017 00:00:00,40.5,40.5,40.5,23.7,50.77,,2.8,,337.0,,0.0,,0.0,9.9,48.2,1019.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 01:00:00,39.8,39.8,39.8,23.6,51.96,,2.0,,337.0,,0.0,,0.0,9.9,48.2,1019.3,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 02:00:00,39.5,39.5,39.5,22.3,50.0,,0.2,,347.0,,0.0,,0.0,9.9,48.2,1019.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 03:00:00,37.4,37.4,37.4,24.3,58.88,,2.6,,273.0,,0.0,,0.0,9.9,48.2,1018.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 04:00:00,35.8,35.8,35.8,25.8,66.86,,4.0,,259.0,32.4,0.0,,0.0,9.9,27.1,1019.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 05:00:00,34.4,34.4,34.4,26.4,72.31,,3.2,,272.0,31.7,0.0,,0.0,9.9,27.1,1019.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 06:00:00,34.9,34.9,34.9,24.8,66.48,,2.6,,279.0,,0.0,,0.0,9.9,27.1,1019.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 07:00:00,34.5,34.5,34.5,25.3,68.87,,2.5,,265.0,,0.0,,0.0,9.9,48.2,1019.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 08:00:00,34.9,34.9,34.9,26.7,71.75,,1.9,,265.0,,0.0,,0.0,9.9,27.1,1020.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 09:00:00,39.0,39.0,39.0,29.8,69.28,,1.4,,278.0,,0.0,,0.0,9.9,27.1,1020.5,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 10:00:00,46.6,46.6,46.6,27.8,47.57,,4.2,,190.0,44.8,0.0,,0.0,9.9,27.1,1020.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 11:00:00,52.6,52.6,52.6,28.0,38.59,,9.2,,177.0,,0.0,,0.0,9.9,27.1,1020.5,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 12:00:00,54.6,54.6,54.6,28.3,36.1,,9.1,,162.0,,0.0,,0.0,9.9,27.1,1019.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 13:00:00,56.9,56.9,56.9,28.2,33.2,,10.5,,182.0,,0.0,,0.0,9.9,14.8,1019.3,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2017 14:00:00,59.6,59.6,59.6,28.7,30.81,,11.7,,194.0,,0.0,,0.0,9.9,14.8,1018.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2017 15:00:00,61.6,61.6,61.6,29.2,29.31,,11.1,17.4,195.0,,0.0,,0.0,9.9,27.1,1017.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 16:00:00,63.3,63.3,63.3,29.5,27.84,,5.5,17.2,185.0,,0.0,,0.0,9.9,27.1,1016.8,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 17:00:00,64.4,64.4,64.4,29.3,26.58,,10.1,,215.0,,0.0,,0.0,9.9,27.1,1016.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 18:00:00,64.9,64.9,64.9,31.2,28.21,,9.9,,180.0,,0.0,,0.0,9.9,27.1,1015.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 19:00:00,64.4,64.4,64.4,30.3,27.64,,9.9,,169.0,,0.0,,0.0,9.9,27.1,1014.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 20:00:00,62.3,62.3,62.3,31.3,31.12,,8.3,,166.0,,0.0,,0.0,9.9,48.2,1014.8,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 21:00:00,57.5,57.5,57.5,31.7,37.35,,6.6,,169.0,,0.0,,0.0,9.9,48.2,1014.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 22:00:00,55.5,55.5,55.5,32.3,41.22,,7.3,,151.0,,0.0,,0.0,9.9,48.2,1015.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2017 23:00:00,54.0,54.0,54.0,32.8,44.36,,8.4,,151.0,,0.0,,0.0,9.9,27.1,1015.3,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2017 00:00:00,40.2,40.2,40.2,26.2,56.96,,6.3,,291.0,35.9,0.0,,0.0,9.9,0.0,1017.8,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 01:00:00,38.8,38.8,38.8,25.4,58.36,,7.4,,309.0,33.4,0.0,,0.0,9.9,0.0,1018.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 02:00:00,37.4,37.4,37.4,25.0,60.58,,4.9,,311.0,33.5,0.0,,0.0,9.9,9.2,1018.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 03:00:00,36.0,36.0,36.0,25.9,66.51,,3.7,,296.0,33.0,0.0,,0.0,9.9,9.2,1018.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 04:00:00,33.0,33.0,33.0,25.5,73.81,,4.6,,271.0,28.6,0.0,,0.0,9.9,16.8,1018.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 05:00:00,33.3,33.3,33.3,25.3,72.18,,2.5,,318.0,,0.0,,0.0,9.9,16.8,1018.3,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 06:00:00,31.4,31.4,31.4,25.5,78.41,,2.9,,256.0,,0.0,,0.0,9.9,16.8,1018.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 07:00:00,29.4,29.4,29.4,25.0,83.32,,2.3,,320.0,,0.0,,0.0,9.9,9.2,1019.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 08:00:00,32.9,32.9,32.9,26.2,76.25,,2.3,,325.0,,0.0,,0.0,9.9,9.2,1020.5,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 09:00:00,38.2,38.2,38.2,26.5,62.5,,3.2,,323.0,36.1,0.0,,0.0,9.9,9.2,1021.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 10:00:00,43.7,43.7,43.7,25.2,47.9,,3.9,,348.0,41.7,0.0,,0.0,9.9,9.2,1021.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 11:00:00,47.9,47.9,47.9,23.5,38.06,,0.9,,0.0,,0.0,,0.0,9.9,9.2,1021.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 12:00:00,51.7,51.7,51.7,22.7,31.88,,0.0,,0.0,,0.0,,0.0,9.9,9.2,1020.8,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 13:00:00,53.8,53.8,53.8,22.5,29.21,,1.2,,291.0,,0.0,,0.0,9.9,9.2,1020.3,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 14:00:00,56.0,56.0,56.0,22.6,27.08,,2.4,,57.0,,0.0,,0.0,9.9,0.0,1019.4,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 15:00:00,58.0,58.0,58.0,21.5,24.09,,5.1,,130.0,,0.0,,0.0,9.9,0.0,1019.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 16:00:00,59.6,59.6,59.6,23.0,24.25,,9.2,,184.0,,0.0,,0.0,9.9,9.2,1018.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 17:00:00,60.5,60.5,60.5,22.4,22.9,,7.6,17.2,207.0,,0.0,,0.0,9.9,9.2,1018.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 18:00:00,61.0,61.0,61.0,23.0,23.04,,9.3,17.2,199.0,,0.0,,0.0,9.9,30.0,1017.5,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2017 19:00:00,60.0,60.0,60.0,23.3,24.15,,7.7,,214.0,,0.0,,0.0,9.9,30.0,1017.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2017 20:00:00,56.6,56.6,56.6,24.5,28.82,,6.5,,202.0,,0.0,,0.0,9.9,16.8,1017.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 21:00:00,54.7,54.7,54.7,22.9,28.89,,5.5,,150.0,,0.0,,0.0,9.9,16.8,1016.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 22:00:00,52.8,52.8,52.8,24.5,33.02,,2.8,,127.0,,0.0,,0.0,9.9,16.8,1017.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2017 23:00:00,49.9,49.9,49.9,26.1,39.26,,5.2,,156.0,48.0,0.0,,0.0,9.9,16.8,1017.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 00:00:00,41.9,41.9,41.9,28.8,59.38,,12.9,,298.0,34.9,0.0,,0.0,9.9,0.0,1016.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 01:00:00,39.8,39.8,39.8,28.7,64.35,,9.7,,300.0,33.5,0.0,,0.0,9.9,0.0,1016.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 02:00:00,37.1,37.1,37.1,28.7,71.41,,4.7,,284.0,33.3,0.0,,0.0,9.9,0.0,1016.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 03:00:00,34.8,34.8,34.8,28.2,76.57,,6.7,,272.0,29.1,0.0,,0.0,9.9,0.0,1016.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 04:00:00,34.5,34.5,34.5,28.0,76.88,,4.7,,257.0,30.2,0.0,,0.0,9.9,0.0,1016.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 05:00:00,33.9,33.9,33.9,27.0,75.83,,0.8,,321.0,,0.0,,0.0,9.9,0.0,1017.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 06:00:00,32.7,32.7,32.7,26.1,76.3,,3.9,,261.0,29.0,0.0,,0.0,9.9,0.0,1017.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 07:00:00,33.6,33.6,33.6,26.1,73.57,,0.2,,354.0,,0.0,,0.0,9.9,0.0,1018.6,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 08:00:00,33.7,33.7,33.7,26.6,75.02,,3.4,,305.0,30.8,0.0,,0.0,9.9,0.0,1019.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 09:00:00,40.8,40.8,40.8,28.5,61.23,,5.6,,310.0,36.9,0.0,,0.0,9.9,0.0,1019.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 10:00:00,45.9,45.9,45.9,24.9,43.44,,3.4,,290.0,44.7,0.0,,0.0,9.9,0.0,1019.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 11:00:00,48.8,48.8,48.8,22.4,35.09,,6.5,,258.0,46.0,0.0,,0.0,9.9,0.0,1019.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 12:00:00,53.1,53.1,53.1,21.8,29.26,,5.8,,,,0.0,,0.0,9.9,0.0,1019.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 13:00:00,55.1,55.1,55.1,20.9,26.12,,1.1,,324.0,,0.0,,0.0,9.9,0.0,1018.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 14:00:00,56.2,56.2,56.2,26.3,31.43,,6.1,,243.0,,0.0,,0.0,9.9,0.0,1018.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 15:00:00,57.7,57.7,57.7,27.2,30.84,,6.0,,212.0,,0.0,,0.0,9.9,0.0,1018.2,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 16:00:00,59.9,59.9,59.9,28.4,30.1,,11.3,18.6,212.0,,0.0,,0.0,9.9,0.0,1017.1,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 17:00:00,59.8,59.8,59.8,25.9,27.21,,12.5,19.8,230.0,,0.0,,0.0,9.9,0.0,1016.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 18:00:00,59.9,59.9,59.9,26.5,27.74,,12.7,21.9,241.0,,0.0,,0.0,9.9,0.0,1016.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 19:00:00,59.7,59.7,59.7,26.6,28.15,,12.2,,225.0,,0.0,,0.0,9.9,0.0,1016.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 20:00:00,56.0,56.0,56.0,30.1,37.06,,6.7,,214.0,,0.0,,0.0,9.9,0.0,1015.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 21:00:00,51.6,51.6,51.6,32.1,47.16,,6.4,,181.0,,0.0,,0.0,9.9,0.0,1015.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 22:00:00,48.7,48.7,48.7,31.8,51.77,,4.8,,170.0,46.9,0.0,,0.0,9.9,0.0,1016.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2017 23:00:00,46.6,46.6,46.6,32.8,58.44,,6.6,,171.0,43.3,0.0,,0.0,9.9,0.0,1016.2,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 00:00:00,38.0,38.0,38.0,21.9,51.93,,4.7,,180.0,34.3,0.0,,0.73,9.9,0.3,1015.4,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 01:00:00,37.1,37.1,37.1,24.2,59.26,,5.8,,167.0,32.4,0.0,,0.66,9.9,0.0,1015.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 02:00:00,35.9,35.9,35.9,23.0,59.21,,5.8,,150.0,31.0,0.0,,0.58,9.9,0.0,1015.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 03:00:00,35.0,35.0,35.0,25.0,66.74,,5.8,,160.0,29.9,0.0,,0.5,9.9,0.0,1015.4,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 04:00:00,33.2,33.2,33.2,25.1,71.86,,6.9,,157.0,27.0,0.0,,0.43,9.9,0.0,1015.4,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 05:00:00,33.2,33.2,33.2,26.0,74.78,,4.7,,167.0,28.7,0.0,,0.35,9.9,0.3,1015.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 06:00:00,35.0,35.0,35.0,29.0,78.47,,6.9,,220.0,29.2,0.0,,0.28,9.9,0.3,1016.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 07:00:00,37.9,37.9,37.9,30.8,75.12,,8.0,,250.0,32.1,0.0,,0.2,9.9,0.0,1017.0,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 08:00:00,38.9,38.9,38.9,29.9,69.96,,5.8,,269.0,34.6,0.0,,0.13,9.9,0.0,1017.9,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 09:00:00,41.0,41.0,41.0,32.0,70.09,,6.9,,260.0,36.4,0.0,,0.0,9.9,0.0,1018.5,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 10:00:00,42.2,42.2,42.2,32.0,66.85,,9.2,,270.0,36.7,0.0,,0.0,9.9,0.3,1019.0,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 11:00:00,43.1,43.1,43.1,32.0,64.52,,8.0,,270.0,38.4,0.0,,0.0,9.9,0.3,1019.1,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 12:00:00,44.1,44.1,44.1,31.9,62.12,,8.0,,260.0,39.5,0.0,,0.0,9.9,0.3,1019.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 13:00:00,44.1,44.1,44.1,31.9,62.03,,5.8,,300.0,40.8,0.0,,0.0,9.9,0.0,1019.3,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 14:00:00,44.1,44.1,44.1,33.1,64.88,,5.9,,290.0,40.8,0.0,,0.0,9.9,0.3,1019.0,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 15:00:00,47.1,47.1,47.1,29.8,50.81,,4.8,,349.0,45.0,0.0,,0.0,9.9,0.3,1018.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 16:00:00,47.1,47.1,47.1,25.0,41.63,,4.7,,300.0,45.1,0.0,,0.0,9.9,0.3,1018.4,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 17:00:00,50.1,50.1,50.1,26.9,40.26,,3.4,,360.0,,0.0,,0.0,9.9,0.5,1017.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 18:00:00,48.9,48.9,48.9,28.9,45.78,,4.7,,39.0,47.1,0.0,,0.0,9.9,0.3,1017.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 19:00:00,48.9,48.9,48.9,24.9,38.89,,0.0,,0.0,,0.0,,0.0,9.9,0.3,1017.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 20:00:00,48.9,48.9,48.9,25.0,38.95,,0.1,,2.0,,0.0,,0.0,9.9,0.3,1016.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 21:00:00,48.8,48.8,48.8,29.8,47.53,,0.0,,0.0,,0.0,,0.0,9.9,0.3,1016.9,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 22:00:00,51.1,51.1,51.1,20.1,29.17,,4.7,,140.0,,0.0,,0.0,9.9,0.3,1016.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2017 23:00:00,48.7,48.7,48.7,24.2,37.97,,8.0,,150.0,45.2,0.0,,0.0,9.9,0.3,1017.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Erie,PA,US",04/08/2017 00:00:00,36.8,36.8,36.8,24.8,61.48,,6.9,,289.0,31.4,0.0,,0.12,9.9,0.0,1013.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 01:00:00,35.8,35.8,35.8,25.8,66.71,,4.8,,260.0,31.6,0.0,,0.12,9.9,0.0,1013.9,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 02:00:00,36.8,36.8,36.8,26.7,66.51,,6.9,,270.0,31.3,0.0,,0.11,9.9,0.0,1014.0,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 03:00:00,37.6,37.6,37.6,26.6,64.3,,8.0,,279.0,31.7,0.0,,0.11,9.9,0.0,1013.9,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 04:00:00,37.6,37.6,37.6,26.6,64.22,,10.1,19.7,280.0,30.7,0.0,,0.1,9.9,0.0,1013.9,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 05:00:00,37.6,37.6,37.6,27.7,67.34,,10.1,,270.0,30.6,0.0,,0.1,9.9,0.0,1014.4,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 06:00:00,36.8,36.8,36.8,26.6,66.2,,10.1,,289.0,29.6,0.0,,0.09,9.9,0.0,1015.0,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 07:00:00,36.8,36.8,36.8,27.6,69.04,,11.1,,299.0,29.2,0.0,,0.09,9.9,0.0,1015.8,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 08:00:00,37.7,37.7,37.7,30.3,74.43,,7.9,,279.0,31.8,0.0,,0.09,9.9,0.0,1016.6,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 09:00:00,39.6,39.6,39.6,28.8,64.8,,9.1,,299.0,33.6,0.0,,0.0,9.9,0.0,1017.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 10:00:00,39.8,39.8,39.8,28.8,64.51,,9.0,,271.0,33.8,0.0,,0.0,9.9,0.0,1017.6,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 11:00:00,42.2,42.2,42.2,28.8,58.85,,8.0,,262.0,37.2,0.0,,0.0,9.9,0.0,1018.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 12:00:00,43.1,43.1,43.1,28.8,56.8,,11.3,,261.0,37.1,0.0,,0.0,9.9,0.0,1018.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 13:00:00,45.1,45.1,45.1,30.5,56.33,,10.3,,270.0,39.8,0.0,,0.0,9.9,0.0,1018.3,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 14:00:00,45.2,45.2,45.2,31.5,58.53,,8.0,,291.0,40.9,0.0,,0.0,9.9,0.0,1018.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 15:00:00,47.2,47.2,47.2,26.7,44.62,,8.3,,260.0,43.2,0.0,,0.0,9.9,0.0,1018.3,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 16:00:00,47.2,47.2,47.2,24.0,39.85,,10.2,19.7,260.0,42.5,0.0,,0.0,9.9,0.0,1018.0,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 17:00:00,48.1,48.1,48.1,22.9,36.73,,11.2,20.8,253.0,43.3,0.0,,0.0,9.9,0.0,1018.0,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 18:00:00,49.0,49.0,49.0,20.0,31.54,,9.2,,261.0,45.0,0.0,,0.0,9.9,0.0,1017.6,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 19:00:00,48.1,48.1,48.1,16.2,27.66,,9.0,,262.0,44.0,0.0,,0.0,9.9,0.0,1017.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 20:00:00,46.2,46.2,46.2,14.2,27.23,,5.7,,242.0,43.3,0.0,,0.0,9.9,0.0,1017.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 21:00:00,43.1,43.1,43.1,20.1,39.44,,3.3,,185.0,41.6,0.0,,0.0,9.9,0.0,1017.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 22:00:00,39.1,39.1,39.1,21.8,49.72,,3.3,,176.0,37.0,0.0,,0.0,9.9,0.0,1018.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2017 23:00:00,39.1,39.1,39.1,20.9,47.79,,3.3,,176.0,37.0,0.0,,0.0,9.9,0.0,1017.9,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Buffalo,NY,US",04/08/2017 00:00:00,34.0,34.0,34.0,22.1,61.34,,9.3,24.2,262.0,26.6,0.0,,0.2,9.9,0.0,1011.0,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 01:00:00,35.2,35.2,35.2,22.6,59.68,,11.7,21.9,281.0,27.0,0.0,,0.18,9.9,0.0,1011.2,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 02:00:00,34.2,34.2,34.2,22.6,62.38,,11.5,,280.0,25.7,0.0,,0.15,9.9,0.0,1011.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 03:00:00,34.2,34.2,34.2,23.4,64.42,,9.5,19.5,281.0,26.7,0.0,,0.13,9.9,0.0,1011.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 04:00:00,33.1,33.1,33.1,23.4,67.18,,8.3,19.5,283.0,26.1,0.0,,0.1,9.9,0.0,1011.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 05:00:00,33.6,33.6,33.6,24.4,68.64,,8.5,,292.0,26.5,0.0,,0.08,9.9,0.0,1012.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 06:00:00,32.0,32.0,32.0,23.2,69.63,,7.1,19.5,271.0,25.4,0.0,,0.05,9.9,0.0,1013.3,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 07:00:00,30.8,30.8,30.8,23.9,75.2,,7.4,,258.0,23.8,0.0,,0.03,9.9,0.0,1014.3,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 08:00:00,33.6,33.6,33.6,24.5,69.11,,9.7,,281.0,25.8,0.0,,0.0,9.9,0.0,1015.3,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 09:00:00,37.1,37.1,37.1,25.7,63.04,,8.2,,288.0,30.9,0.0,,0.0,9.9,21.5,1015.7,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 10:00:00,38.9,38.9,38.9,24.2,55.24,,9.9,,308.0,32.3,0.0,,0.0,9.9,21.5,1016.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 11:00:00,40.8,40.8,40.8,23.5,49.95,,8.2,,309.0,35.4,0.0,,0.0,9.9,69.7,1016.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2017 12:00:00,42.0,42.0,42.0,19.3,39.93,,10.8,,317.0,35.7,0.0,,0.0,9.9,69.7,1017.0,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2017 13:00:00,44.7,44.7,44.7,19.5,36.15,,10.4,,311.0,39.3,0.0,,0.0,9.9,69.7,1016.7,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2017 14:00:00,46.6,46.6,46.6,19.0,33.01,,12.3,19.7,283.0,41.1,0.0,,0.0,9.9,39.1,1016.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2017 15:00:00,45.5,45.5,45.5,27.3,48.75,,13.7,,237.0,39.3,0.0,,0.0,9.9,21.5,1016.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 16:00:00,45.8,45.8,45.8,27.3,48.22,,15.9,,220.0,39.0,0.0,,0.0,9.9,21.5,1016.7,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 17:00:00,46.0,46.0,46.0,25.4,44.15,,16.3,,228.0,39.2,0.0,,0.0,9.9,21.5,1016.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 18:00:00,45.6,45.6,45.6,27.4,48.71,,15.2,,227.0,38.9,0.0,,0.0,9.9,21.5,1016.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 19:00:00,44.3,44.3,44.3,29.3,55.32,,12.9,,227.0,38.0,0.0,,0.0,9.9,21.5,1016.3,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 20:00:00,41.8,41.8,41.8,28.7,59.41,,12.0,,227.0,35.1,0.0,,0.0,9.9,21.5,1016.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 21:00:00,40.4,40.4,40.4,27.9,60.7,,10.7,,221.0,33.9,0.0,,0.0,9.9,21.5,1016.7,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 22:00:00,40.2,40.2,40.2,28.7,63.05,,10.7,,225.0,33.7,0.0,,0.0,9.9,21.5,1017.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2017 23:00:00,38.6,38.6,38.6,29.1,68.48,,10.5,,216.0,31.7,0.0,,0.0,9.9,21.5,1017.2,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 00:00:00,34.0,34.0,34.0,25.1,69.36,,11.3,13.9,287.0,25.6,0.0,,0.68,9.9,0.0,1009.3,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 01:00:00,34.0,34.0,34.0,24.2,66.86,,9.4,15.0,278.0,26.5,0.0,,0.68,9.9,0.0,1009.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 02:00:00,33.1,33.1,33.1,24.1,69.24,,11.8,26.4,293.0,24.3,0.0,,0.67,9.9,0.0,1009.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 03:00:00,32.0,32.0,32.0,25.0,75.24,,10.2,28.9,295.0,23.6,0.0,,0.67,9.9,0.0,1010.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 04:00:00,32.0,32.0,32.0,25.0,75.32,,11.4,30.0,294.0,23.0,0.0,,0.66,9.9,0.0,1010.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 05:00:00,30.8,30.8,30.8,24.2,76.08,,10.1,27.7,286.0,22.2,0.0,,0.66,9.9,0.0,1011.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 06:00:00,30.8,30.8,30.8,24.1,76.1,,9.8,28.9,286.0,22.3,0.0,,0.65,9.9,0.0,1011.9,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 07:00:00,30.8,30.8,30.8,24.1,76.13,,10.2,26.4,294.0,22.1,0.0,,0.65,9.9,0.0,1013.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 08:00:00,34.0,34.0,34.0,24.2,66.87,,9.8,26.4,294.0,26.4,0.0,,0.64,9.9,0.0,1013.9,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 09:00:00,37.1,37.1,37.1,23.0,56.23,,14.2,21.2,311.0,28.4,0.0,,0.0,9.9,0.0,1014.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 10:00:00,38.9,38.9,38.9,21.8,49.89,,13.4,21.9,330.0,31.0,0.0,,0.0,9.9,0.0,1015.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 11:00:00,41.0,41.0,41.0,23.0,48.35,,15.3,20.8,319.0,33.0,0.0,,0.0,9.9,0.0,1015.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 12:00:00,42.2,42.2,42.2,24.2,48.53,,15.0,21.7,303.0,34.6,0.0,,0.0,9.9,0.0,1015.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 13:00:00,44.1,44.1,44.1,23.0,42.95,,13.1,19.7,310.0,37.6,0.0,,0.0,9.9,0.0,1015.6,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 14:00:00,47.0,47.0,47.0,25.0,41.87,,16.1,24.5,291.0,40.6,0.0,,0.0,9.9,49.6,1015.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2017 15:00:00,47.1,47.1,47.1,21.8,36.57,,16.9,21.7,300.0,40.4,0.0,,0.0,9.9,49.6,1015.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2017 16:00:00,48.0,48.0,48.0,20.0,32.72,,15.9,23.1,309.0,41.8,0.0,,0.0,9.9,27.0,1015.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2017 17:00:00,51.2,51.2,51.2,19.1,27.95,,12.8,19.2,316.0,,0.0,,0.0,9.9,0.0,1015.3,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 18:00:00,51.2,51.2,51.2,17.9,26.58,,16.2,24.2,300.0,,0.0,,0.0,9.9,0.0,1015.3,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 19:00:00,50.0,50.0,50.0,24.1,36.09,,13.8,20.8,287.0,44.9,0.0,,0.0,9.9,0.0,1015.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 20:00:00,47.0,47.0,47.0,24.2,40.38,,12.5,15.0,268.0,41.5,0.0,,0.0,9.9,0.0,1015.9,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2017 21:00:00,44.9,44.9,44.9,24.2,43.78,,10.2,16.1,268.0,39.7,0.0,,0.0,9.9,27.0,1016.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2017 22:00:00,43.0,43.0,43.0,21.9,42.72,,9.3,16.1,266.0,37.7,0.0,,0.0,9.9,27.0,1017.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2017 23:00:00,42.1,42.1,42.1,21.0,42.57,,9.4,15.0,258.0,36.5,0.0,,0.0,9.9,49.6,1016.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 00:00:00,36.0,36.0,36.0,30.6,80.78,,16.0,25.7,291.0,26.4,0.0,,0.04,9.9,99.6,1006.0,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 01:00:00,36.0,36.0,36.0,26.1,67.15,,15.0,23.0,291.0,26.7,0.0,,0.04,9.9,99.6,1006.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 02:00:00,35.9,35.9,35.9,25.1,64.39,,18.3,23.6,301.0,25.6,0.0,,0.03,9.9,100.0,1006.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 03:00:00,35.1,35.1,35.1,24.2,64.33,,13.9,,310.0,25.9,0.0,,0.03,9.9,98.5,1006.7,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 04:00:00,34.1,34.1,34.1,25.0,69.04,,17.3,26.7,310.0,23.5,0.0,,0.02,9.9,100.0,1007.0,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 05:00:00,33.2,33.2,33.2,23.0,66.02,,15.0,,301.0,23.1,0.0,,0.02,9.9,96.0,1008.0,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 06:00:00,32.1,32.1,32.1,23.0,68.93,,8.4,22.8,291.0,24.6,0.0,,0.01,9.9,86.7,1008.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 07:00:00,32.0,32.0,32.0,23.0,69.19,,11.5,,301.0,23.0,0.0,,0.01,9.9,91.1,1009.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 08:00:00,32.1,32.1,32.1,24.2,72.37,,12.9,,300.0,22.5,0.0,,0.0,9.9,26.6,1010.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 09:00:00,34.1,34.1,34.1,24.2,66.76,,15.0,,300.0,24.3,0.0,,0.0,9.9,85.0,1011.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 10:00:00,35.2,35.2,35.2,24.3,64.16,,17.0,23.0,320.0,25.0,0.0,,0.0,9.9,86.1,1012.1,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2017 11:00:00,38.9,38.9,38.9,25.1,57.42,,15.1,21.0,291.0,30.4,0.0,,0.0,9.9,48.8,1012.6,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 12:00:00,41.0,41.0,41.0,25.1,53.01,,17.2,25.3,301.0,32.4,0.0,,0.0,9.9,48.6,1012.7,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 13:00:00,42.1,42.1,42.1,25.0,50.47,,14.0,23.2,291.0,34.9,0.0,,0.0,9.9,49.7,1012.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 14:00:00,44.0,44.0,44.0,25.2,47.35,,16.1,23.1,281.0,36.7,0.0,,0.0,9.9,48.0,1012.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 15:00:00,44.0,44.0,44.0,25.2,47.24,,16.1,28.8,289.0,36.7,0.0,,0.0,9.9,68.6,1013.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 16:00:00,44.9,44.9,44.9,25.1,45.5,,20.6,24.3,262.0,36.8,0.0,,0.0,9.9,26.9,1013.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 17:00:00,46.1,46.1,46.1,21.9,38.13,,15.2,28.5,299.0,39.6,0.0,,0.0,9.9,26.6,1013.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 18:00:00,46.1,46.1,46.1,20.2,35.4,,17.3,29.4,281.0,39.0,0.0,,0.0,9.9,26.2,1013.7,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 19:00:00,44.0,44.0,44.0,17.2,33.7,,13.7,19.8,299.0,37.4,0.0,,0.0,9.9,26.2,1014.1,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 20:00:00,42.2,42.2,42.2,17.2,36.2,,8.0,,280.0,37.2,0.0,,0.0,9.9,26.2,1014.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 21:00:00,39.8,39.8,39.8,17.3,39.68,,5.9,,271.0,35.6,0.0,,0.0,9.9,26.2,1014.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 22:00:00,39.0,39.0,39.0,17.4,41.33,,4.7,,271.0,35.5,0.0,,0.0,9.9,26.2,1015.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2017 23:00:00,37.1,37.1,37.1,20.4,50.42,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1015.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Burlington,VT,US",04/08/2017 00:00:00,37.0,37.0,37.0,29.0,72.47,,15.8,26.2,310.0,27.8,0.0,,0.11,8.7,99.9,998.2,"Light Snow, Mist",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 01:00:00,35.9,35.9,35.9,28.1,73.02,,18.0,25.2,310.0,25.7,0.0,,0.12,6.3,99.9,999.0,"Light Snow, Mist",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 02:00:00,35.9,35.9,35.9,26.9,69.64,,13.9,24.2,300.0,27.0,0.0,,0.12,9.9,100.0,999.5,"Mist, Light Snow",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 03:00:00,35.0,35.0,35.0,26.1,69.54,,17.1,26.3,300.0,24.8,0.0,,0.13,6.9,100.0,1000.0,"Light Snow, Mist",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 04:00:00,35.0,35.0,35.0,25.1,66.8,,14.9,24.1,290.0,25.4,0.0,,0.14,9.9,99.7,1000.8,"Mist, Light Snow",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 05:00:00,35.0,35.0,35.0,25.1,66.8,,11.5,23.2,300.0,26.7,0.0,,0.15,9.9,100.0,1001.7,"Mist, Light Snow",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 06:00:00,35.0,35.0,35.0,25.0,66.77,,12.7,23.2,300.0,26.2,0.0,,0.15,8.7,100.0,1002.7,Light Snow,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 07:00:00,35.0,35.0,35.0,25.0,66.77,,10.4,27.7,300.0,27.2,0.0,,0.16,8.7,100.0,1003.6,Light Snow,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 08:00:00,35.0,35.0,35.0,25.0,66.67,,17.0,28.6,310.0,24.7,0.0,,0.17,9.9,100.0,1004.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 09:00:00,35.0,35.0,35.0,25.0,66.51,,13.8,27.5,300.0,25.9,0.0,,0.0,9.9,100.0,1005.4,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 10:00:00,36.0,36.0,36.0,24.2,61.87,,13.0,30.9,300.0,27.4,0.0,,0.0,9.9,99.7,1006.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 11:00:00,37.1,37.1,37.1,25.0,61.25,,12.7,24.4,310.0,29.0,0.0,,0.0,9.9,99.7,1006.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 12:00:00,38.0,38.0,38.0,25.0,59.09,,12.7,21.9,300.0,30.1,0.0,,0.0,9.9,98.8,1007.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 13:00:00,38.9,38.9,38.9,24.2,55.17,,14.7,24.1,300.0,30.5,0.0,,0.0,9.9,100.0,1007.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 14:00:00,39.0,39.0,39.0,25.1,56.96,,9.3,24.7,329.0,32.8,0.0,,0.0,9.9,100.0,1007.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 15:00:00,42.2,42.2,42.2,26.1,52.42,,15.8,23.0,320.0,34.5,0.0,,0.0,9.9,100.0,1007.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 16:00:00,44.0,44.0,44.0,26.9,50.73,,21.4,27.6,330.0,35.5,0.0,,0.0,9.9,99.9,1007.4,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 17:00:00,44.1,44.1,44.1,26.9,50.7,,13.9,31.1,311.0,37.4,0.0,,0.0,9.9,100.0,1008.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 18:00:00,44.1,44.1,44.1,26.9,50.7,,10.4,29.9,310.0,38.5,0.0,,0.0,9.9,98.7,1008.6,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 19:00:00,44.9,44.9,44.9,28.0,51.26,,9.2,26.4,349.0,40.1,0.0,,0.0,9.9,93.8,1009.4,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 20:00:00,43.0,43.0,43.0,28.0,55.16,,5.8,,339.0,39.4,0.0,,0.0,9.9,96.8,1010.6,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 21:00:00,42.9,42.9,42.9,26.9,52.96,,4.7,,358.0,40.1,0.0,,0.0,9.9,96.8,1011.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2017 22:00:00,38.8,38.8,38.8,26.9,62.03,,5.6,,76.0,34.6,0.0,,0.0,9.9,0.0,1012.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2017 23:00:00,35.7,35.7,35.7,26.9,70.06,,0.0,,357.0,,0.0,,0.0,9.9,0.0,1013.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Houlton,ME,US",04/08/2017 00:00:00,38.9,38.9,38.9,35.1,85.92,,5.8,,160.0,34.6,0.0,,2.9,9.9,100.0,990.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 01:00:00,38.0,38.0,38.0,35.1,88.99,,5.8,,180.0,33.5,0.0,,2.83,9.9,100.0,990.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 02:00:00,38.0,38.0,38.0,35.1,89.0,,6.9,,180.0,32.8,0.0,,2.76,9.9,100.0,990.0,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 03:00:00,38.0,38.0,38.0,36.0,92.24,,5.8,,170.0,33.5,0.0,,2.69,9.9,93.0,990.1,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 04:00:00,37.1,37.1,37.1,36.0,95.56,,4.7,,180.0,33.4,0.01,,2.63,3.7,100.0,990.3,"Mist, Rain, Light Rain",46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,"Rain, Overcast"
+"Houlton,ME,US",04/08/2017 05:00:00,37.1,37.1,37.1,36.0,95.56,,3.3,,200.0,34.7,0.0,,2.56,5.0,100.0,990.7,"Mist, Rain, Light Rain",46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 06:00:00,37.1,37.1,37.1,37.1,99.98,,3.4,,180.0,34.7,0.01,,2.49,5.0,100.0,991.3,"Mist, Light Rain",46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,"Rain, Overcast"
+"Houlton,ME,US",04/08/2017 07:00:00,37.1,37.1,37.1,37.1,99.99,,4.7,,210.0,33.4,0.02,,2.42,6.8,93.0,992.1,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,"Rain, Overcast"
+"Houlton,ME,US",04/08/2017 08:00:00,37.1,37.1,37.1,37.1,99.98,,4.7,,260.0,33.4,0.01,,2.35,8.7,92.9,993.1,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,"Rain, Overcast"
+"Houlton,ME,US",04/08/2017 09:00:00,36.0,36.0,36.0,35.1,96.49,,5.8,,280.0,31.1,0.01,,0.0,8.1,56.2,993.5,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,"Rain, Partially cloudy"
+"Houlton,ME,US",04/08/2017 10:00:00,38.9,38.9,38.9,38.9,99.98,,6.9,,280.0,33.9,0.0,,0.0,9.9,70.9,994.0,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Partially cloudy
+"Houlton,ME,US",04/08/2017 11:00:00,39.8,39.8,39.8,39.8,99.96,,8.0,,320.0,34.4,0.0,,0.0,9.9,93.0,994.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 12:00:00,41.0,41.0,41.0,35.1,79.33,,8.1,,320.0,35.8,0.0,,0.0,9.9,93.0,995.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 13:00:00,41.0,41.0,41.0,35.1,79.32,,9.2,,300.0,35.2,0.0,,0.0,8.7,92.9,995.7,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 14:00:00,41.0,41.0,41.0,35.1,79.31,,9.2,,300.0,35.2,0.0,,0.0,9.9,70.9,996.4,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Partially cloudy
+"Houlton,ME,US",04/08/2017 15:00:00,41.0,41.0,41.0,35.1,79.31,,10.3,,240.0,34.8,0.0,,0.0,9.9,92.9,996.9,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 16:00:00,42.2,42.2,42.2,36.0,78.5,,9.2,20.8,260.0,36.7,0.0,,0.0,9.9,92.9,997.5,Light Rain,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 17:00:00,42.2,42.2,42.2,37.1,82.13,,5.8,17.2,260.0,38.5,0.02,,0.0,9.9,70.8,998.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,"Rain, Partially cloudy"
+"Houlton,ME,US",04/08/2017 18:00:00,41.0,41.0,41.0,34.1,76.17,,6.9,,290.0,36.4,0.0,,0.0,9.9,70.9,999.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Partially cloudy
+"Houlton,ME,US",04/08/2017 19:00:00,39.8,39.8,39.8,34.1,79.66,,6.9,,260.0,35.0,0.0,,0.0,9.9,70.8,1000.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Partially cloudy
+"Houlton,ME,US",04/08/2017 20:00:00,38.9,38.9,38.9,33.2,79.59,,4.7,,260.0,35.5,0.0,,0.0,9.9,56.3,1001.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Partially cloudy
+"Houlton,ME,US",04/08/2017 21:00:00,38.0,38.0,38.0,33.2,82.43,,5.8,,250.0,33.5,0.0,,0.0,9.9,92.9,1002.9,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 22:00:00,38.0,38.0,38.0,33.2,82.44,,5.8,,250.0,33.5,0.0,,0.0,9.9,100.0,1003.8,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2017 23:00:00,37.1,37.1,37.1,32.0,81.44,,3.4,,270.0,34.7,0.0,,0.0,9.9,100.0,1004.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Fredericton,NB,CA",04/08/2017 00:00:00,37.7,37.7,37.7,35.2,90.66,,8.4,,153.0,31.5,0.0,,0.96,9.2,0.0,992.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2017 01:00:00,38.0,38.0,38.0,35.2,89.52,,10.4,,162.0,30.9,0.0,,0.95,9.8,25.0,992.1,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2017 02:00:00,38.0,38.0,38.0,35.3,89.99,,9.5,,171.0,31.3,0.0,,0.94,9.8,88.0,991.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 03:00:00,38.0,38.0,38.0,35.5,90.48,,7.5,,167.0,32.4,0.0,,0.93,9.2,100.0,991.8,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 04:00:00,38.0,38.0,38.0,35.8,91.68,,6.4,,145.0,33.1,0.0,,0.92,9.8,100.0,991.8,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 05:00:00,38.9,38.9,38.9,36.2,89.84,,6.1,,139.0,34.3,0.0,,0.91,8.4,100.0,991.8,Light Rain,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 06:00:00,37.7,37.7,37.7,36.2,94.29,,5.7,,144.0,33.3,0.0,,0.9,6.2,100.0,991.9,Light Rain,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 07:00:00,37.8,37.8,37.8,37.1,97.24,,5.0,,145.0,33.8,0.01,,0.89,7.0,100.0,992.3,Light Rain,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,"Rain, Overcast"
+"Fredericton,NB,CA",04/08/2017 08:00:00,38.0,38.0,38.0,37.3,97.44,,6.0,,162.0,33.3,0.0,,0.88,8.9,100.0,993.0,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 09:00:00,39.3,39.3,39.3,37.9,94.89,,6.0,,190.0,34.9,0.0,,0.0,9.2,100.0,993.5,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 10:00:00,39.8,39.8,39.8,38.9,96.65,,7.8,,197.0,34.5,0.0,,0.0,8.9,100.0,993.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 11:00:00,41.1,41.1,41.1,39.0,92.48,,7.3,,211.0,36.3,0.0,,0.0,4.8,100.0,994.3,Mist,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 12:00:00,41.1,41.1,41.1,38.9,91.95,,5.4,,217.0,37.4,0.0,,0.0,9.2,94.3,994.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 13:00:00,41.1,41.1,41.1,38.8,91.61,,7.1,,229.0,36.4,0.0,,0.0,8.9,88.0,995.1,Light Rain,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 14:00:00,40.9,40.9,40.9,37.6,87.96,,7.0,,275.0,36.2,0.0,,0.0,8.9,50.0,995.7,Light Rain,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2017 15:00:00,41.3,41.3,41.3,37.5,86.18,,8.8,,260.0,35.8,0.0,,0.0,9.2,94.3,996.1,Light Rain,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 16:00:00,42.9,42.9,42.9,37.8,82.08,,9.3,,265.0,37.5,0.0,,0.0,9.8,25.0,996.5,"Light Drizzle, Light Rain",45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2017 17:00:00,44.2,44.2,44.2,36.2,73.32,,13.3,21.9,286.0,37.7,0.0,,0.0,9.8,50.0,997.3,Light Rain,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2017 18:00:00,43.5,43.5,43.5,36.0,74.75,,9.1,,280.0,38.4,0.0,,0.0,9.2,89.1,998.1,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 19:00:00,43.4,43.4,43.4,35.9,74.7,,7.7,,267.0,38.8,0.0,,0.0,9.8,50.0,999.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2017 20:00:00,41.3,41.3,41.3,35.9,81.1,,7.5,,269.0,36.4,0.0,,0.0,9.8,32.5,1000.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2017 21:00:00,40.5,40.5,40.5,34.3,78.43,,7.0,,257.0,35.7,0.0,,0.0,9.2,89.1,1001.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 22:00:00,39.0,39.0,39.0,35.2,86.11,,8.6,,262.0,33.1,0.0,,0.0,9.8,100.0,1002.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2017 23:00:00,38.5,38.5,38.5,34.1,83.94,,8.8,,255.0,32.3,0.0,,0.0,9.8,50.0,1003.1,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2017 00:00:00,35.6,35.6,35.6,35.4,99.16,,19.7,25.3,153.0,24.8,0.0,,42.99,5.0,100.0,1012.1,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 01:00:00,36.5,36.5,36.5,35.7,96.77,,17.2,27.8,145.0,26.7,0.0,,42.75,1.9,100.0,1010.8,"Mist, Light Rain",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 02:00:00,37.3,37.3,37.3,37.3,100.0,,20.1,27.9,145.0,26.8,0.0,,42.51,0.6,100.0,1009.1,"Mist, Light Rain",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 03:00:00,37.4,37.4,37.4,37.1,98.83,,21.6,30.2,146.0,26.7,0.04,,42.26,3.1,100.0,1008.7,Light Rain,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2017 04:00:00,39.1,39.1,39.1,39.1,100.0,,22.9,30.3,145.0,28.6,0.0,,42.02,6.2,100.0,1007.6,"Mist, Light Rain",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 05:00:00,39.1,39.1,39.1,37.5,93.99,,20.0,28.0,145.0,29.2,0.0,,41.77,6.2,100.0,1006.2,"Mist, Light Rain",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 06:00:00,39.3,39.3,39.3,38.9,98.37,,24.9,34.0,155.0,28.5,0.02,,41.53,5.9,100.0,1005.9,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2017 07:00:00,40.1,40.1,40.1,39.2,96.58,,22.9,30.9,155.0,30.0,0.01,,41.28,8.1,88.0,1005.5,Light Rain,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2017 08:00:00,40.9,40.9,40.9,40.0,96.6,,11.4,22.4,185.0,34.2,0.04,,41.04,3.1,100.0,1006.2,"Mist, Rain",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2017 09:00:00,41.0,41.0,41.0,40.8,99.56,,13.5,21.9,135.0,33.5,0.28,,0.0,5.0,100.0,1004.3,Light Rain,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2017 10:00:00,42.7,42.7,42.7,41.8,96.85,,19.6,26.4,165.0,34.1,0.02,,0.0,3.1,100.0,1004.7,"Mist, Light Rain",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2017 11:00:00,41.9,41.9,41.9,41.1,96.84,,16.6,24.0,160.0,33.8,0.0,,0.0,5.0,88.0,1004.8,"Mist, Light Drizzle",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 12:00:00,43.7,43.7,43.7,42.9,96.87,,13.9,19.7,183.0,37.0,0.0,,0.0,14.9,93.5,1004.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 13:00:00,42.6,42.6,42.6,41.9,97.27,,10.3,25.3,170.0,36.8,0.0,,0.0,14.9,88.0,1004.6,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 14:00:00,41.1,41.1,41.1,41.0,99.76,,5.3,24.2,175.0,37.5,0.0,,0.0,14.9,88.0,1004.6,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 15:00:00,41.8,41.8,41.8,41.1,97.27,,14.4,,150.0,34.4,0.04,,0.0,11.8,93.5,1003.8,Rain Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2017 16:00:00,42.7,42.7,42.7,41.9,96.84,,5.9,21.9,180.0,39.1,0.0,,0.0,19.9,88.0,1004.2,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 17:00:00,40.9,40.9,40.9,40.9,100.0,,17.2,19.5,180.0,32.4,0.0,,0.0,19.9,88.0,1004.1,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 18:00:00,41.0,41.0,41.0,40.8,99.12,,14.1,,172.0,33.4,0.0,,0.0,19.3,88.9,1004.4,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 19:00:00,41.0,41.0,41.0,41.0,100.0,,6.9,,130.0,36.4,0.0,,0.0,19.9,88.0,1004.1,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 20:00:00,38.2,38.2,38.2,38.2,100.0,,9.8,,160.0,31.6,0.0,,0.0,1.2,100.0,1004.8,Mist,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 21:00:00,37.6,37.6,37.6,37.5,99.75,,4.4,,157.0,34.1,0.0,,0.0,0.0,100.0,1005.0,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 22:00:00,37.3,37.3,37.3,37.3,100.0,,6.3,,150.0,32.3,0.0,,0.0,0.0,100.0,1005.2,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2017 23:00:00,38.2,38.2,38.2,38.2,100.0,,4.7,,165.0,34.7,0.0,,0.0,0.0,100.0,1005.1,"Fog, Rain Showers",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast

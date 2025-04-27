@@ -1,0 +1,504 @@
+Address,Date time,Minimum Temperature,Maximum Temperature,Temperature,Dew Point,Relative Humidity,Heat Index,Wind Speed,Wind Gust,Wind Direction,Wind Chill,Precipitation,Precipitation Cover,Snow Depth,Visibility,Cloud Cover,Sea Level Pressure,Weather Type,Latitude,Longitude,Resolved Address,Name,Info,Conditions
+"Mazatlan,MX",04/08/2021 01:00:00,62.7,62.7,62.7,60.9,93.84,,3.4,,160.0,,0.0,,,8.1,50.0,1011.5,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2021 02:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 03:00:00,60.9,60.9,60.9,59.1,93.79,,4.7,,30.0,,0.0,,,6.8,90.0,1010.2,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2021 04:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 05:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 06:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 07:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 08:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 09:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 10:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 11:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 12:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 13:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 14:00:00,82.5,82.5,82.5,60.9,48.1,83.0,10.3,,230.0,,0.0,,,14.9,50.0,1008.9,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2021 15:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 16:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 17:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 18:00:00,77.1,77.1,77.1,62.7,61.17,,4.7,,260.0,,0.0,,,14.9,30.0,1010.5,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2021 19:00:00,73.5,73.5,73.5,66.3,78.22,,3.4,,260.0,,0.0,,,11.8,0.0,1010.8,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2021 20:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 21:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2021 22:00:00,66.3,66.3,66.3,64.5,93.93,,0.0,,,,0.0,,,9.9,0.0,1011.8,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Torreon,MX",04/08/2021 20:00:00,89.5,89.5,89.5,19.3,7.62,85.6,0.0,,0.0,,0.0,,,9.9,25.0,1011.2,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"San Antonio,TX,US",04/08/2021 00:00:00,70.7,70.7,70.7,41.1,34.17,,7.3,,64.0,,0.0,,0.0,9.9,6.5,1010.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 01:00:00,68.6,68.6,68.6,44.8,42.35,,7.3,,102.0,,0.0,,0.0,9.9,0.0,1010.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 02:00:00,65.1,65.1,65.1,47.0,51.99,,1.9,,40.0,,0.0,,0.0,9.9,11.9,1010.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 03:00:00,64.3,64.3,64.3,48.8,57.12,,0.0,,0.0,,0.0,,0.0,9.9,97.4,1009.6,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2021 04:00:00,66.4,66.4,66.4,57.3,72.39,,2.6,,115.0,,0.0,,0.0,7.7,97.4,1009.2,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2021 05:00:00,65.4,65.4,65.4,63.7,94.26,,0.0,,0.0,,0.0,,0.0,2.3,100.0,1009.3,Fog,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2021 06:00:00,65.9,65.9,65.9,65.1,97.21,,0.0,,0.0,,0.0,,0.0,0.9,100.0,1009.6,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2021 07:00:00,66.4,66.4,66.4,65.9,98.15,,0.0,,0.0,,0.0,,0.0,0.5,100.0,1010.0,"Mist, Light Drizzle, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2021 08:00:00,67.6,67.6,67.6,66.8,97.29,,3.6,,236.0,,0.0,,0.0,2.5,100.0,1010.5,"Mist, Light Drizzle",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2021 09:00:00,69.8,69.8,69.8,67.6,92.45,,6.0,,186.0,,0.0,,0.0,5.9,95.6,1010.7,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2021 10:00:00,74.6,74.6,74.6,65.2,72.65,,6.5,,160.0,,0.0,,0.0,9.4,55.2,1010.6,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2021 11:00:00,79.5,79.5,79.5,65.0,61.4,,8.3,,177.0,,0.0,,0.0,9.9,6.5,1010.2,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 12:00:00,83.8,83.8,83.8,62.7,49.19,84.7,10.1,20.2,171.0,,0.0,,0.0,9.9,6.5,1009.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 13:00:00,86.3,86.3,86.3,61.6,43.59,86.6,9.9,19.9,179.0,,0.0,,0.0,9.9,6.5,1008.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 14:00:00,89.6,89.6,89.6,60.4,37.72,89.4,10.6,24.2,205.0,,0.0,,0.0,9.9,14.4,1007.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 15:00:00,91.4,91.4,91.4,57.4,32.03,90.1,9.9,18.9,203.0,,0.0,,0.0,9.9,21.9,1006.5,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 16:00:00,93.0,93.0,93.0,55.2,28.06,91.1,10.7,17.7,209.0,,0.0,,0.0,9.9,32.0,1004.9,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2021 17:00:00,92.8,92.8,92.8,53.5,26.6,90.5,9.0,,174.0,,0.0,,0.0,9.9,56.9,1004.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2021 18:00:00,92.7,92.7,92.7,51.9,25.1,90.0,7.3,18.3,192.0,,0.0,,0.0,9.9,21.2,1003.5,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 19:00:00,92.7,92.7,92.7,51.6,24.9,89.9,7.5,,166.0,,0.0,,0.0,9.9,11.9,1002.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 20:00:00,85.5,85.5,85.5,52.0,31.69,83.5,7.9,,138.0,,0.0,,0.0,9.9,11.9,1003.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 21:00:00,83.8,83.8,83.8,53.6,35.38,82.5,12.7,24.2,150.0,,0.0,,0.0,9.9,6.5,1003.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 22:00:00,78.8,78.8,78.8,62.1,56.66,,12.4,20.3,132.0,,0.0,,0.0,9.9,6.5,1004.2,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2021 23:00:00,74.5,74.5,74.5,63.2,67.73,,13.5,,138.0,,0.0,,0.0,9.9,6.5,1004.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 00:00:00,60.0,60.0,60.0,41.2,49.76,,1.1,,71.0,,0.0,,0.0,9.9,0.0,1011.6,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 01:00:00,56.3,56.3,56.3,42.7,60.27,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1011.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 02:00:00,55.6,55.6,55.6,42.4,60.94,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1010.8,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 03:00:00,54.0,54.0,54.0,42.2,64.18,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1010.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 04:00:00,52.8,52.8,52.8,43.8,71.25,,1.1,,316.0,,0.0,,0.0,9.9,6.4,1010.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 05:00:00,56.5,56.5,56.5,51.1,82.31,,0.0,,0.0,,0.0,,0.0,7.6,96.6,1009.7,Fog,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2021 06:00:00,58.9,58.9,58.9,56.5,91.59,,0.0,,0.0,,0.0,,0.0,3.5,88.4,1010.0,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2021 07:00:00,60.0,60.0,60.0,57.6,91.8,,0.0,,0.0,,0.0,,0.0,4.7,91.9,1010.7,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2021 08:00:00,61.9,61.9,61.9,59.0,90.16,,0.0,,0.0,,0.0,,0.0,4.7,90.9,1011.6,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2021 09:00:00,65.4,65.4,65.4,61.1,86.14,,0.0,,0.0,,0.0,,0.0,7.5,16.6,1011.8,Fog,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 10:00:00,69.6,69.6,69.6,62.3,77.62,,5.2,,110.0,,0.0,,0.0,7.8,100.0,1011.7,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2021 11:00:00,70.9,70.9,70.9,63.7,78.08,,6.3,,155.0,,0.0,,0.0,8.5,100.0,1011.6,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2021 12:00:00,76.6,76.6,76.6,64.3,65.84,,5.1,,173.0,,0.0,,0.0,9.6,89.1,1011.1,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2021 13:00:00,81.6,81.6,81.6,63.3,53.94,82.9,8.1,,171.0,,0.0,,0.0,9.8,13.1,1010.1,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 14:00:00,85.4,85.4,85.4,62.1,45.68,86.0,12.2,18.3,161.0,,0.0,,0.0,9.9,11.6,1008.8,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 15:00:00,88.6,88.6,88.6,61.3,40.22,88.8,8.9,25.3,188.0,,0.0,,0.0,9.9,11.6,1007.6,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 16:00:00,90.1,90.1,90.1,58.7,34.92,89.2,9.0,20.8,173.0,,0.0,,0.0,9.9,20.7,1006.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 17:00:00,91.0,91.0,91.0,56.8,31.72,89.5,8.6,19.2,165.0,,0.0,,0.0,9.9,20.7,1005.1,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 18:00:00,89.5,89.5,89.5,55.6,31.81,87.7,8.1,21.9,152.0,,0.0,,0.0,9.9,11.6,1004.4,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 19:00:00,87.5,87.5,87.5,53.7,31.55,85.5,5.9,,169.0,,0.0,,0.0,9.9,6.4,1003.4,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 20:00:00,84.1,84.1,84.1,54.1,35.71,82.8,8.1,,150.0,,0.0,,0.0,9.9,20.7,1003.0,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 21:00:00,80.6,80.6,80.6,55.6,42.29,80.5,8.1,,154.0,,0.0,,0.0,9.9,11.6,1003.8,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 22:00:00,79.0,79.0,79.0,56.1,45.5,,8.7,21.9,150.0,,0.0,,0.0,9.9,6.4,1005.0,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2021 23:00:00,74.9,74.9,74.9,63.7,68.24,,12.0,23.0,145.0,,0.0,,0.0,9.9,7.3,1005.6,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 00:00:00,58.4,58.4,58.4,41.4,53.24,,0.2,,351.0,,0.0,,0.0,9.9,0.0,1009.4,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 01:00:00,56.3,56.3,56.3,44.0,63.36,,4.5,,314.0,,0.0,,0.0,9.9,0.0,1009.9,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 02:00:00,56.2,56.2,56.2,44.4,64.73,,3.2,,261.0,,0.0,,0.0,9.9,0.0,1009.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 03:00:00,55.4,55.4,55.4,41.1,58.55,,0.5,,348.0,,0.0,,0.0,9.9,0.0,1009.7,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 04:00:00,53.0,53.0,53.0,43.3,69.54,,5.8,,327.0,,0.0,,0.0,9.9,0.0,1010.1,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 05:00:00,53.3,53.3,53.3,41.1,63.15,,4.6,,275.0,,0.0,,0.0,9.9,0.0,1010.0,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 06:00:00,52.9,52.9,52.9,43.0,69.12,,4.1,,313.0,,0.0,,0.0,9.9,0.0,1010.0,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 07:00:00,50.9,50.9,50.9,42.7,73.46,,2.3,,341.0,,0.0,,0.0,9.9,0.0,1010.1,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 08:00:00,52.8,52.8,52.8,43.6,70.62,,4.8,,328.0,,0.0,,0.0,9.9,0.0,1010.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 09:00:00,57.4,57.4,57.4,45.3,64.05,,2.3,,121.0,,0.0,,0.0,9.9,0.0,1011.6,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 10:00:00,62.6,62.6,62.6,44.7,51.8,,0.2,,12.0,,0.0,,0.0,9.9,0.9,1011.7,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 11:00:00,68.9,68.9,68.9,43.0,39.07,,3.4,,180.0,,0.0,,0.0,9.9,10.7,1011.4,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 12:00:00,73.9,73.9,73.9,42.5,32.42,,5.4,,154.0,,0.0,,0.0,9.9,1.8,1010.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 13:00:00,77.1,77.1,77.1,41.0,27.42,,7.0,17.2,132.0,,0.0,,0.0,9.9,10.7,1009.6,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 14:00:00,79.8,79.8,79.8,40.5,24.7,,9.8,17.9,157.0,,0.0,,0.0,9.9,12.0,1008.3,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 15:00:00,81.2,81.2,81.2,41.0,24.04,79.5,12.5,19.9,166.0,,0.0,,0.0,9.9,12.0,1007.3,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 16:00:00,81.9,81.9,81.9,45.4,27.78,80.2,14.4,21.9,151.0,,0.0,,0.0,9.9,12.0,1006.0,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 17:00:00,82.1,82.1,82.1,53.5,37.26,81.2,14.1,30.4,142.0,,0.0,,0.0,9.9,27.4,1004.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2021 18:00:00,81.6,81.6,81.6,56.3,42.04,81.3,12.4,19.7,147.0,,0.0,,0.0,9.9,12.0,1003.7,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 19:00:00,80.0,80.0,80.0,57.3,45.96,,13.2,,137.0,,0.0,,0.0,9.9,22.6,1003.6,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 20:00:00,78.1,78.1,78.1,59.0,52.03,,15.0,,137.0,,0.0,,0.0,9.9,28.7,1003.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2021 21:00:00,74.5,74.5,74.5,60.2,60.96,,7.6,,126.0,,0.0,,0.0,9.9,28.7,1004.1,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2021 22:00:00,73.1,73.1,73.1,60.2,63.83,,7.2,,100.0,,0.0,,0.0,9.9,6.3,1005.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2021 23:00:00,72.2,72.2,72.2,60.1,65.79,,9.8,,133.0,,0.0,,0.0,9.9,3.2,1004.9,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 00:00:00,59.7,59.7,59.7,41.6,51.07,,3.8,,347.0,,0.0,,0.0,9.9,0.0,1009.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 01:00:00,58.0,58.0,58.0,41.6,54.3,,2.3,,297.0,,0.0,,0.0,9.9,0.0,1010.0,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 02:00:00,58.8,58.8,58.8,42.4,54.45,,4.9,,225.0,,0.0,,0.0,9.9,0.0,1010.1,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 03:00:00,59.5,59.5,59.5,41.0,50.35,,2.3,,307.0,,0.0,,0.0,9.9,0.0,1009.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 04:00:00,54.6,54.6,54.6,41.8,61.96,,6.4,,331.0,,0.0,,0.0,9.9,0.0,1010.1,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 05:00:00,55.5,55.5,55.5,42.1,60.8,,4.3,,302.0,,0.0,,0.0,9.9,0.0,1010.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 06:00:00,55.9,55.9,55.9,43.7,63.49,,4.7,,262.0,,0.0,,0.0,9.9,0.0,1010.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 07:00:00,53.8,53.8,53.8,42.2,64.69,,4.2,,309.0,,0.0,,0.0,9.9,0.0,1010.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 08:00:00,54.0,54.0,54.0,45.2,72.16,,5.6,,325.0,,0.0,,0.0,9.9,0.0,1011.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 09:00:00,60.9,60.9,60.9,44.3,54.36,,4.6,,296.0,,0.0,,0.0,9.9,0.0,1011.9,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 10:00:00,65.8,65.8,65.8,44.2,45.58,,3.5,,257.0,,0.0,,0.0,9.9,15.8,1012.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 11:00:00,70.2,70.2,70.2,42.0,36.03,,0.0,,0.0,,0.0,,0.0,9.9,15.8,1012.0,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 12:00:00,74.7,74.7,74.7,40.8,29.49,,4.7,,216.0,,0.0,,0.0,9.9,15.8,1011.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 13:00:00,78.4,78.4,78.4,39.8,25.17,,6.7,,230.0,,0.0,,0.0,9.9,15.8,1010.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 14:00:00,79.9,79.9,79.9,39.1,23.26,,3.5,20.6,75.0,,0.0,,0.0,9.9,51.2,1009.1,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2021 15:00:00,81.5,81.5,81.5,40.1,22.96,79.7,10.0,18.9,185.0,,0.0,,0.0,9.9,51.2,1007.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2021 16:00:00,82.5,82.5,82.5,42.2,24.07,80.4,10.7,18.6,178.0,,0.0,,0.0,9.9,28.8,1006.9,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2021 17:00:00,83.3,83.3,83.3,46.0,27.14,81.2,14.2,22.0,170.0,,0.0,,0.0,9.9,15.8,1005.7,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 18:00:00,82.0,82.0,82.0,53.3,37.2,81.1,11.4,20.1,155.0,,0.0,,0.0,9.9,15.8,1004.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2021 19:00:00,80.3,80.3,80.3,56.6,44.24,80.5,11.2,20.5,157.0,,0.0,,0.0,9.9,92.6,1004.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2021 20:00:00,78.7,78.7,78.7,58.0,49.07,,12.4,23.0,156.0,,0.0,,0.0,9.9,60.3,1004.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2021 21:00:00,75.9,75.9,75.9,58.2,54.2,,7.8,,144.0,,0.0,,0.0,9.9,85.2,1004.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2021 22:00:00,75.4,75.4,75.4,56.9,52.65,,6.8,,128.0,,0.0,,0.0,9.9,89.0,1005.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2021 23:00:00,73.8,73.8,73.8,57.0,55.89,,6.8,,143.0,,0.0,,0.0,9.9,89.5,1005.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Little Rock,AR,US",04/08/2021 00:00:00,56.9,56.9,56.9,47.2,69.97,,0.4,19.7,348.0,,0.0,,0.0,9.9,0.4,1007.8,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 01:00:00,55.1,55.1,55.1,47.0,73.97,,9.3,,260.0,,0.0,,0.0,9.9,0.0,1007.7,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 02:00:00,53.0,53.0,53.0,44.1,71.59,,9.2,,259.0,,0.0,,0.0,9.9,0.0,1007.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 03:00:00,49.9,49.9,49.9,44.1,80.2,,4.5,,243.0,48.4,0.0,,0.0,9.9,0.0,1007.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 04:00:00,48.7,48.7,48.7,44.9,86.6,,0.0,,359.0,,0.0,,0.0,9.9,0.0,1007.3,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 05:00:00,47.0,47.0,47.0,44.9,92.46,,5.6,,233.0,44.3,0.0,,0.0,9.9,0.0,1007.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 06:00:00,46.1,46.1,46.1,44.0,92.26,,6.8,,231.0,42.6,0.0,,0.0,9.9,0.0,1007.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 07:00:00,47.2,47.2,47.2,44.0,88.62,,3.6,,267.0,45.9,0.0,,0.0,9.9,0.0,1007.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 08:00:00,50.1,50.1,50.1,44.9,82.1,,7.2,,259.0,,0.0,,0.0,9.9,0.0,1008.4,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 09:00:00,54.0,54.0,54.0,43.1,66.37,,14.1,28.9,266.0,,0.0,,0.0,9.9,0.0,1008.8,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 10:00:00,57.0,57.0,57.0,42.1,57.54,,15.2,26.4,250.0,,0.0,,0.0,9.9,26.9,1008.7,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2021 11:00:00,61.1,61.1,61.1,42.1,49.63,,15.2,24.4,241.0,,0.0,,0.0,9.9,26.9,1008.8,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2021 12:00:00,64.1,64.1,64.1,42.2,44.78,,14.9,25.0,259.0,,0.0,,0.0,9.9,0.0,1008.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 13:00:00,68.0,68.0,68.0,44.0,41.89,,16.1,21.9,239.0,,0.0,,0.0,9.9,0.0,1007.8,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 14:00:00,71.0,71.0,71.0,44.0,37.85,,16.2,25.3,250.0,,0.0,,0.0,9.9,0.0,1007.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 15:00:00,74.0,74.0,74.0,43.0,32.87,,16.4,21.1,258.0,,0.0,,0.0,9.9,0.0,1006.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 16:00:00,75.8,75.8,75.8,41.0,28.65,,18.3,25.3,239.0,,0.0,,0.0,9.9,0.0,1006.1,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 17:00:00,75.0,75.0,75.0,42.8,31.58,,16.1,28.9,221.0,,0.0,,0.0,9.9,0.0,1005.8,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 18:00:00,74.1,74.1,74.1,43.0,32.79,,12.8,27.1,218.0,,0.0,,0.0,9.9,0.0,1005.7,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 19:00:00,73.2,73.2,73.2,39.9,30.0,,13.9,,229.0,,0.0,,0.0,9.9,0.0,1006.0,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 20:00:00,67.0,67.0,67.0,43.0,41.77,,9.0,,200.0,,0.0,,0.0,9.9,26.9,1006.3,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2021 21:00:00,65.1,65.1,65.1,42.2,43.23,,6.9,,209.0,,0.0,,0.0,9.9,26.9,1006.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2021 22:00:00,64.2,64.2,64.2,43.1,46.22,,8.9,,218.0,,0.0,,0.0,9.9,0.0,1008.0,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2021 23:00:00,62.1,62.1,62.1,44.0,51.55,,5.9,,228.0,,0.0,,0.0,9.9,0.0,1008.1,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 00:00:00,60.1,60.1,60.1,57.7,91.84,,6.9,,259.0,,0.0,,0.0,9.9,99.7,1005.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2021 01:00:00,58.9,58.9,58.9,56.8,92.58,,4.8,,220.0,,0.17,,0.0,9.9,86.3,1005.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,"Rain, Overcast"
+"Jonesboro,AR,US",04/08/2021 02:00:00,56.9,56.9,56.9,55.9,96.36,,4.8,,210.0,,0.0,,0.0,9.9,0.0,1005.7,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 03:00:00,56.0,56.0,56.0,51.1,83.61,,10.2,,221.0,,0.0,,0.0,9.9,1.6,1005.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 04:00:00,53.9,53.9,53.9,46.1,74.68,,11.4,,251.0,,0.0,,0.0,9.9,1.8,1005.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 05:00:00,52.1,52.1,52.1,46.0,79.87,,6.9,,269.0,,0.0,,0.0,9.9,50.1,1005.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2021 06:00:00,50.0,50.0,50.0,44.8,82.14,,8.0,,228.0,46.7,0.0,,0.0,9.9,0.0,1006.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 07:00:00,50.0,50.0,50.0,44.1,80.02,,11.4,,220.0,45.6,0.0,,0.0,9.9,0.5,1006.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 08:00:00,53.0,53.0,53.0,44.9,73.94,,11.5,,210.0,,0.0,,0.0,9.9,0.0,1006.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 09:00:00,56.0,56.0,56.0,44.9,66.32,,20.7,26.4,230.0,,0.0,,0.0,9.9,0.0,1006.0,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 10:00:00,56.9,56.9,56.9,44.0,62.06,,16.2,24.2,249.0,,0.0,,0.0,9.9,0.0,1006.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 11:00:00,58.9,58.9,58.9,44.9,59.64,,24.0,29.9,220.0,,0.0,,0.0,9.9,51.1,1006.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2021 12:00:00,57.0,57.0,57.0,45.0,64.03,,17.2,26.3,230.0,,0.0,,0.0,9.9,100.0,1006.5,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2021 13:00:00,57.9,57.9,57.9,45.0,62.0,,20.6,27.6,240.0,,0.0,,0.0,9.9,99.2,1006.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2021 14:00:00,61.1,61.1,61.1,46.1,57.77,,17.3,28.0,239.0,,0.0,,0.0,9.9,88.7,1006.0,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2021 15:00:00,63.1,63.1,63.1,47.0,55.77,,24.0,22.5,210.0,,0.0,,0.0,9.9,50.6,1005.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2021 16:00:00,66.9,66.9,66.9,48.8,52.16,,15.1,26.4,230.0,,0.0,,0.0,9.9,87.8,1005.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2021 17:00:00,69.2,69.2,69.2,49.9,50.12,,21.8,31.0,201.0,,0.0,,0.0,9.9,49.0,1005.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2021 18:00:00,69.2,69.2,69.2,48.7,47.98,,15.1,25.3,201.0,,0.0,,0.0,9.9,1.6,1004.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 19:00:00,66.9,66.9,66.9,49.8,54.1,,12.7,,201.0,,0.0,,0.0,9.9,0.0,1005.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 20:00:00,64.1,64.1,64.1,48.8,57.56,,9.1,,200.0,,0.0,,0.0,9.9,0.0,1005.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 21:00:00,61.0,61.0,61.0,48.8,64.2,,8.1,,210.0,,0.0,,0.0,9.9,0.0,1006.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 22:00:00,60.9,60.9,60.9,48.8,64.35,,8.0,,210.0,,0.0,,0.0,9.9,0.0,1006.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2021 23:00:00,60.9,60.9,60.9,48.8,64.35,,9.2,,210.0,,0.0,,0.0,9.9,0.0,1007.0,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Carbondale,IL,US",04/08/2021 00:00:00,61.9,61.9,61.9,59.1,90.4,,13.6,24.2,196.0,,0.01,,0.0,9.9,99.9,1004.6,Light Rain,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,"Rain, Overcast"
+"Carbondale,IL,US",04/08/2021 01:00:00,56.5,56.5,56.5,53.7,90.35,,8.2,,253.0,,0.03,,0.0,9.9,100.0,1004.9,"Light Drizzle, Light Rain",37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,"Rain, Overcast"
+"Carbondale,IL,US",04/08/2021 02:00:00,55.1,55.1,55.1,52.2,89.93,,4.4,,210.0,,0.01,,0.0,8.3,99.7,1004.2,"Drizzle, Heavy Drizzle, Light Drizzle, Light Rain",37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,"Rain, Overcast"
+"Carbondale,IL,US",04/08/2021 03:00:00,54.1,54.1,54.1,52.3,93.72,,3.4,,150.0,,0.0,,0.0,9.9,90.4,1003.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 04:00:00,55.1,55.1,55.1,53.2,93.3,,2.9,,139.0,,0.0,,0.0,9.9,100.0,1003.3,Light Rain,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 05:00:00,54.2,54.2,54.2,52.4,93.83,,3.2,,211.0,,0.0,,0.0,9.9,100.0,1003.3,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 06:00:00,53.3,53.3,53.3,51.6,93.94,,0.4,,349.0,,0.0,,0.0,8.9,11.9,1003.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2021 07:00:00,52.4,52.4,52.4,51.5,96.82,,9.0,,210.0,,0.0,,0.0,8.8,6.9,1003.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2021 08:00:00,55.2,55.2,55.2,52.1,89.34,,9.2,,229.0,,0.0,,0.0,9.9,88.2,1003.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 09:00:00,52.2,52.2,52.2,46.2,80.13,,11.4,,230.0,,0.0,,0.0,9.9,100.0,1004.0,Light Drizzle,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 10:00:00,54.0,54.0,54.0,43.1,66.56,,11.5,,230.0,,0.0,,0.0,9.9,99.9,1004.4,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 11:00:00,56.0,56.0,56.0,42.1,59.54,,11.4,20.8,220.0,,0.0,,0.0,9.9,100.0,1004.3,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 12:00:00,57.0,57.0,57.0,43.0,59.54,,15.0,27.6,190.0,,0.0,,0.0,9.9,100.0,1004.0,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 13:00:00,57.0,57.0,57.0,44.0,61.81,,15.0,27.5,210.0,,0.0,,0.0,9.9,100.0,1003.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 14:00:00,57.9,57.9,57.9,44.0,59.89,,15.0,25.3,210.0,,0.0,,0.0,9.9,100.0,1003.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 15:00:00,59.0,59.0,59.0,44.9,59.47,,15.0,23.1,210.0,,0.0,,0.0,9.9,100.0,1003.5,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 16:00:00,59.0,59.0,59.0,44.0,57.53,,17.2,27.6,220.0,,0.0,,0.0,9.9,100.0,1003.8,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 17:00:00,60.2,60.2,60.2,44.9,57.11,,16.1,25.3,200.0,,0.0,,0.0,9.9,100.0,1004.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 18:00:00,59.0,59.0,59.0,44.9,59.47,,13.9,25.3,210.0,,0.0,,0.0,9.9,99.9,1004.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 19:00:00,58.9,58.9,58.9,46.1,62.48,,9.1,21.9,191.0,,0.0,,0.0,9.9,100.0,1005.3,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 20:00:00,57.6,57.6,57.6,47.1,67.74,,7.7,,177.0,,0.0,,0.0,9.9,100.0,1005.5,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 21:00:00,57.7,57.7,57.7,47.2,67.92,,6.7,,159.0,,0.0,,0.0,9.9,100.0,1005.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 22:00:00,57.5,57.5,57.5,48.9,72.98,,6.8,,168.0,,0.0,,0.0,9.9,100.0,1006.4,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2021 23:00:00,58.1,58.1,58.1,49.2,72.22,,12.1,,180.0,,0.0,,0.0,9.9,93.6,1006.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Evansville,IN,US",04/08/2021 00:00:00,65.6,65.6,65.6,56.3,71.91,,12.7,34.9,218.0,,0.0,,0.0,9.9,100.0,1006.1,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 01:00:00,64.7,64.7,64.7,57.2,76.47,,15.1,26.6,198.0,,0.0,,0.0,9.9,100.0,1006.7,Light Rain,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 02:00:00,62.7,62.7,62.7,58.1,84.85,,9.3,20.8,179.0,,0.02,,0.0,9.9,100.0,1005.8,Light Rain,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,"Rain, Overcast"
+"Evansville,IN,US",04/08/2021 03:00:00,61.0,61.0,61.0,57.8,89.37,,13.1,20.9,179.0,,0.05,,0.0,7.3,100.0,1005.7,"Rain, Heavy Rain, Light Rain",37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,"Rain, Overcast"
+"Evansville,IN,US",04/08/2021 04:00:00,60.0,60.0,60.0,56.9,89.44,,8.8,,137.0,,0.05,,0.0,9.9,100.0,1004.4,Light Rain,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,"Rain, Overcast"
+"Evansville,IN,US",04/08/2021 05:00:00,60.2,60.2,60.2,57.0,89.34,,6.5,,139.0,,0.0,,0.0,9.9,100.0,1004.7,Light Rain,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 06:00:00,60.8,60.8,60.8,57.0,87.38,,9.7,,151.0,,0.0,,0.0,9.9,99.7,1004.3,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 07:00:00,60.9,60.9,60.9,57.0,86.84,,12.0,18.3,170.0,,0.0,,0.0,9.9,100.0,1004.1,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 08:00:00,61.9,61.9,61.9,57.0,83.97,,11.9,19.7,180.0,,0.0,,0.0,9.9,100.0,1004.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 09:00:00,62.8,62.8,62.8,57.0,81.38,,11.0,21.0,171.0,,0.0,,0.0,9.9,98.4,1003.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 10:00:00,64.8,64.8,64.8,56.1,73.3,,13.4,22.2,206.0,,0.0,,0.0,9.9,88.9,1003.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 11:00:00,67.6,67.6,67.6,55.3,64.78,,20.4,30.3,211.0,,0.06,,0.0,9.9,81.5,1003.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,"Rain, Overcast"
+"Evansville,IN,US",04/08/2021 12:00:00,66.6,66.6,66.6,50.1,55.31,,23.9,36.0,213.0,,0.0,,0.0,9.9,54.7,1003.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2021 13:00:00,66.6,66.6,66.6,47.1,49.44,,21.1,34.9,220.0,,0.0,,0.0,9.9,31.7,1003.7,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2021 14:00:00,64.9,64.9,64.9,45.3,48.94,,20.5,34.2,220.0,,0.0,,0.0,9.9,90.2,1004.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 15:00:00,64.9,64.9,64.9,45.2,48.79,,18.3,30.0,229.0,,0.0,,0.0,9.9,90.2,1003.8,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 16:00:00,64.1,64.1,64.1,45.2,50.22,,15.0,29.3,222.0,,0.0,,0.0,9.9,100.0,1004.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 17:00:00,64.2,64.2,64.2,44.5,48.74,,12.9,,214.0,,0.0,,0.0,9.9,100.0,1004.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 18:00:00,63.9,63.9,63.9,45.4,50.92,,11.6,,242.0,,0.0,,0.0,9.7,100.0,1004.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 19:00:00,62.7,62.7,62.7,46.4,55.22,,15.4,23.0,259.0,,0.0,,0.0,9.9,100.0,1005.5,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 20:00:00,59.7,59.7,59.7,45.3,58.89,,16.9,32.2,232.0,,0.0,,0.0,9.9,45.4,1006.7,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2021 21:00:00,56.6,56.6,56.6,46.3,68.33,,8.7,,208.0,,0.0,,0.0,9.9,54.6,1007.5,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2021 22:00:00,57.5,57.5,57.5,46.3,66.19,,6.8,,188.0,,0.0,,0.0,9.9,98.7,1007.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2021 23:00:00,57.7,57.7,57.7,46.3,65.74,,10.1,,178.0,,0.0,,0.0,9.9,99.7,1007.4,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 00:00:00,62.9,62.9,62.9,56.0,78.16,,9.0,,129.0,,0.0,,0.0,9.9,92.0,1007.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 01:00:00,62.0,62.0,62.0,56.0,80.76,,9.9,,124.0,,0.0,,0.0,9.9,72.2,1006.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2021 02:00:00,64.1,64.1,64.1,55.6,73.89,,11.9,,136.0,,0.0,,0.0,9.9,89.3,1005.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 03:00:00,64.2,64.2,64.2,55.1,72.3,,12.1,21.1,148.0,,0.0,,0.0,9.9,65.1,1005.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2021 04:00:00,64.5,64.5,64.5,55.6,72.82,,11.4,,150.0,,0.0,,0.0,9.9,29.1,1004.8,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2021 05:00:00,63.8,63.8,63.8,55.6,74.57,,11.4,,151.0,,0.0,,0.0,9.9,97.6,1004.8,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 06:00:00,62.5,62.5,62.5,56.0,79.07,,12.1,,176.0,,0.0,,0.0,9.9,99.7,1004.8,Light Rain,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 07:00:00,61.5,61.5,61.5,56.4,83.33,,11.2,,165.0,,0.0,,0.0,9.9,100.0,1004.7,Light Rain,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 08:00:00,60.6,60.6,60.6,55.9,84.64,,11.4,17.2,157.0,,0.0,,0.0,9.9,100.0,1004.8,Light Rain,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 09:00:00,60.6,60.6,60.6,56.0,84.88,,11.0,,154.0,,0.01,,0.0,9.9,93.7,1004.5,Light Rain,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,"Rain, Overcast"
+"Indianapolis,IN,US",04/08/2021 10:00:00,61.6,61.6,61.6,55.6,80.79,,16.1,24.1,150.0,,0.0,,0.0,9.9,99.7,1004.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 11:00:00,63.0,63.0,63.0,55.1,75.28,,18.3,28.3,170.0,,0.0,,0.0,9.9,99.7,1003.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 12:00:00,64.5,64.5,64.5,55.6,72.79,,13.6,25.0,174.0,,0.0,,0.0,9.9,100.0,1003.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 13:00:00,62.5,62.5,62.5,56.1,79.61,,11.7,23.0,169.0,,0.01,,0.0,5.7,100.0,1003.3,"Mist, Rain, Heavy Rain, Light Rain",39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,"Rain, Overcast"
+"Indianapolis,IN,US",04/08/2021 14:00:00,64.5,64.5,64.5,58.9,81.94,,13.0,25.5,144.0,,0.03,,0.0,9.9,89.7,1002.5,Light Rain,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,"Rain, Overcast"
+"Indianapolis,IN,US",04/08/2021 15:00:00,64.0,64.0,64.0,56.6,76.9,,14.9,24.5,145.0,,0.0,,0.0,9.3,99.3,1001.2,Light Rain,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 16:00:00,64.1,64.1,64.1,57.4,78.94,,12.5,27.1,170.0,,0.21,,0.0,9.9,89.7,1000.8,Light Rain,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,"Rain, Overcast"
+"Indianapolis,IN,US",04/08/2021 17:00:00,62.3,62.3,62.3,55.7,78.95,,11.4,24.3,231.0,,0.0,,0.0,9.3,92.0,1001.4,"Rain, Heavy Rain, Light Rain",39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 18:00:00,65.1,65.1,65.1,50.3,58.7,,16.9,29.1,234.0,,0.0,,0.0,9.9,55.3,1001.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2021 19:00:00,62.2,62.2,62.2,46.7,56.93,,16.8,30.1,240.0,,0.0,,0.0,9.9,51.6,1003.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2021 20:00:00,59.6,59.6,59.6,44.7,57.73,,12.1,29.4,226.0,,0.0,,0.0,9.9,65.1,1003.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2021 21:00:00,58.3,58.3,58.3,44.7,60.37,,8.6,,226.0,,0.0,,0.0,9.9,87.7,1004.5,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 22:00:00,57.8,57.8,57.8,45.4,63.18,,5.8,,210.0,,0.0,,0.0,9.9,100.0,1005.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2021 23:00:00,57.8,57.8,57.8,45.1,62.56,,6.7,,218.0,,0.0,,0.0,9.9,100.0,1005.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Dayton,OH,US",04/08/2021 00:00:00,66.6,66.6,66.6,50.4,56.07,,4.8,,97.0,,0.0,,0.0,9.9,77.4,1010.4,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 01:00:00,67.5,67.5,67.5,50.3,53.91,,6.6,,135.0,,0.0,,0.0,9.9,97.1,1010.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 02:00:00,66.0,66.0,66.0,50.0,56.24,,5.1,,148.0,,0.0,,0.0,9.9,87.0,1009.3,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 03:00:00,62.6,62.6,62.6,49.0,61.26,,5.2,,101.0,,0.0,,0.0,9.9,79.8,1008.4,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 04:00:00,65.4,65.4,65.4,49.1,55.48,,8.1,,147.0,,0.0,,0.0,9.9,73.0,1008.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2021 05:00:00,63.4,63.4,63.4,48.3,57.72,,9.1,,136.0,,0.0,,0.0,9.9,53.1,1007.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2021 06:00:00,64.6,64.6,64.6,48.4,55.73,,9.3,,140.0,,0.0,,0.0,9.9,93.4,1007.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 07:00:00,65.2,65.2,65.2,48.5,54.74,,9.9,,153.0,,0.0,,0.0,9.9,92.7,1007.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 08:00:00,65.0,65.0,65.0,49.4,57.04,,10.0,,166.0,,0.0,,0.0,9.9,30.0,1007.8,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2021 09:00:00,67.1,67.1,67.1,51.1,56.52,,10.7,,177.0,,0.0,,0.0,9.9,89.0,1007.7,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 10:00:00,68.1,68.1,68.1,53.2,58.95,,10.7,,183.0,,0.0,,0.0,9.9,75.1,1007.4,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 11:00:00,70.3,70.3,70.3,53.5,55.31,,13.4,,169.0,,0.0,,0.0,9.9,89.0,1007.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 12:00:00,67.4,67.4,67.4,54.4,63.12,,16.3,26.7,176.0,,0.0,,0.0,8.7,100.0,1007.1,Light Rain,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 13:00:00,65.6,65.6,65.6,54.9,68.37,,18.5,27.0,171.0,,0.01,,0.0,8.4,100.0,1007.0,Light Rain,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,"Rain, Overcast"
+"Dayton,OH,US",04/08/2021 14:00:00,62.3,62.3,62.3,57.1,83.11,,16.1,28.2,164.0,,0.05,,0.0,5.9,100.0,1007.0,"Mist, Rain Showers, Light Rain",39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,"Rain, Overcast"
+"Dayton,OH,US",04/08/2021 15:00:00,62.3,62.3,62.3,57.9,85.6,,14.0,21.3,153.0,,0.05,,0.0,9.9,100.0,1006.2,Light Rain,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,"Rain, Overcast"
+"Dayton,OH,US",04/08/2021 16:00:00,63.6,63.6,63.6,57.6,80.86,,12.3,24.2,156.0,,0.0,,0.0,9.9,95.6,1005.7,Light Rain,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 17:00:00,63.8,63.8,63.8,56.6,77.22,,13.9,,164.0,,0.0,,0.0,9.6,100.0,1005.0,Light Rain,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 18:00:00,65.9,65.9,65.9,56.8,72.53,,12.0,24.3,137.0,,0.0,,0.0,9.9,91.8,1004.5,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 19:00:00,65.2,65.2,65.2,56.3,72.85,,13.6,25.3,151.0,,0.0,,0.0,9.9,82.6,1004.4,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 20:00:00,64.0,64.0,64.0,56.2,75.67,,13.8,,150.0,,0.0,,0.0,9.9,91.8,1004.5,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 21:00:00,63.9,63.9,63.9,55.6,74.33,,11.8,,163.0,,0.0,,0.0,9.9,92.7,1005.2,"Thunderstorm, Light Rain",39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2021 22:00:00,61.1,61.1,61.1,54.5,78.85,,9.2,,187.0,,0.03,,0.0,8.9,97.1,1006.2,"Thunderstorm, Light Rain",39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,"Rain, Overcast"
+"Dayton,OH,US",04/08/2021 23:00:00,59.2,59.2,59.2,53.8,82.45,,7.3,,192.0,,0.0,,0.0,9.9,65.8,1006.7,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 00:00:00,58.8,58.8,58.8,48.7,69.01,,1.2,,41.0,,0.0,,0.0,9.9,0.0,1010.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2021 01:00:00,57.1,57.1,57.1,48.7,73.35,,3.8,,70.0,,0.0,,0.0,9.9,65.5,1010.6,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 02:00:00,56.3,56.3,56.3,48.8,76.01,,6.3,,74.0,,0.0,,0.0,9.0,7.7,1009.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2021 03:00:00,54.0,54.0,54.0,48.0,80.01,,3.9,,65.0,,0.0,,0.0,8.8,8.8,1009.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2021 04:00:00,55.2,55.2,55.2,48.6,78.56,,6.2,,88.0,,0.0,,0.0,8.6,0.0,1008.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2021 05:00:00,56.2,56.2,56.2,48.8,76.01,,4.8,,97.0,,0.0,,0.0,9.9,81.3,1008.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2021 06:00:00,57.1,57.1,57.1,48.8,73.55,,1.0,,24.0,,0.0,,0.0,9.9,97.1,1008.2,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2021 07:00:00,56.4,56.4,56.4,48.7,75.32,,5.2,,95.0,,0.0,,0.0,9.9,12.6,1007.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2021 08:00:00,58.2,58.2,58.2,48.9,71.32,,5.6,,98.0,,0.0,,0.0,9.7,0.0,1008.0,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2021 09:00:00,65.5,65.5,65.5,50.8,58.95,,8.1,,136.0,,0.0,,0.0,9.9,40.4,1008.0,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 10:00:00,70.0,70.0,70.0,50.7,50.3,,11.6,,148.0,,0.0,,0.0,9.9,28.0,1007.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 11:00:00,72.9,72.9,72.9,51.8,47.5,,14.6,18.3,166.0,,0.0,,0.0,9.9,56.9,1007.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 12:00:00,73.1,73.1,73.1,51.8,47.07,,12.1,,176.0,,0.0,,0.0,9.9,50.0,1006.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 13:00:00,76.4,76.4,76.4,53.1,44.34,,14.1,20.8,148.0,,0.0,,0.0,9.9,50.0,1005.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 14:00:00,76.9,76.9,76.9,52.8,43.23,,16.6,27.9,165.0,,0.0,,0.0,9.9,36.0,1004.9,"Lightning Without Thunder, Light Rain",41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2021 15:00:00,74.7,74.7,74.7,52.8,46.49,,17.8,29.2,168.0,,0.02,,0.0,8.4,58.8,1004.6,"Rain, Heavy Rain, Light Rain",41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,"Rain, Partially cloudy"
+"Toledo,OH,US",04/08/2021 16:00:00,65.4,65.4,65.4,57.6,76.0,,17.6,30.2,213.0,,0.06,,0.0,8.7,100.0,1005.4,"Rain, Heavy Rain",41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,"Rain, Overcast"
+"Toledo,OH,US",04/08/2021 17:00:00,63.0,63.0,63.0,58.0,83.52,,14.4,27.6,203.0,,0.05,,0.0,7.1,100.0,1005.5,"Rain, Heavy Rain, Light Rain",41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,"Rain, Overcast"
+"Toledo,OH,US",04/08/2021 18:00:00,62.4,62.4,62.4,56.5,81.04,,13.7,,155.0,,0.01,,0.0,9.9,98.0,1005.3,Light Rain,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,"Rain, Overcast"
+"Toledo,OH,US",04/08/2021 19:00:00,62.9,62.9,62.9,56.2,78.71,,11.2,,152.0,,0.0,,0.0,9.9,89.0,1005.1,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2021 20:00:00,62.6,62.6,62.6,56.1,79.35,,9.4,,140.0,,0.0,,0.0,9.9,100.0,1004.5,Light Rain,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2021 21:00:00,62.6,62.6,62.6,55.7,78.3,,9.9,,164.0,,0.0,,0.0,9.9,91.9,1004.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2021 22:00:00,61.6,61.6,61.6,55.6,80.71,,11.5,,161.0,,0.0,,0.0,9.9,90.0,1005.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2021 23:00:00,61.5,61.5,61.5,55.5,80.72,,9.6,,175.0,,0.0,,0.0,9.9,62.2,1005.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2021 00:00:00,71.0,71.0,71.0,50.0,47.44,,6.9,,140.0,,0.0,,0.0,9.9,0.5,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 01:00:00,69.1,69.1,69.1,50.0,50.56,,8.0,,170.0,,0.0,,0.0,9.9,0.5,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 02:00:00,68.0,68.0,68.0,48.8,50.34,,10.2,,150.0,,0.0,,0.0,9.9,0.5,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 03:00:00,65.9,65.9,65.9,48.8,54.05,,8.0,,150.0,,0.0,,0.0,9.9,0.3,1010.5,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 04:00:00,65.0,65.0,65.0,48.8,55.72,,10.3,,160.0,,0.0,,0.0,9.9,0.3,1010.0,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 05:00:00,64.1,64.1,64.1,48.8,57.5,,9.1,,160.0,,0.0,,0.0,9.9,0.3,1009.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 06:00:00,65.0,65.0,65.0,50.0,58.25,,11.3,,150.0,,0.0,,0.0,9.9,0.3,1009.7,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 07:00:00,65.0,65.0,65.0,48.8,55.72,,10.3,,160.0,,0.0,,0.0,9.9,28.0,1009.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2021 08:00:00,65.9,65.9,65.9,50.0,56.46,,13.8,,150.0,,0.0,,0.0,9.9,0.5,1010.0,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 09:00:00,70.1,70.1,70.1,50.0,48.95,,11.4,20.8,150.0,,0.0,,0.0,9.9,0.5,1009.7,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 10:00:00,74.0,74.0,74.0,50.0,42.82,,12.7,,130.0,,0.0,,0.0,8.7,0.5,1008.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 11:00:00,80.0,80.0,80.0,50.0,35.11,79.6,12.7,19.7,140.0,,0.0,,0.0,8.1,0.5,1008.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 12:00:00,83.0,83.0,83.0,48.8,30.48,81.3,15.0,23.0,150.0,,0.0,,0.0,8.7,0.5,1007.9,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 13:00:00,83.9,83.9,83.9,47.9,28.62,81.8,16.1,24.2,120.0,,0.0,,0.0,9.9,0.5,1006.7,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 14:00:00,83.9,83.9,83.9,46.1,26.77,81.6,17.2,28.4,141.0,,0.0,,0.0,9.9,28.5,1006.1,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2021 15:00:00,84.8,84.8,84.8,48.8,28.76,82.5,13.9,24.3,160.0,,0.0,,0.0,9.9,1.0,1005.3,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 16:00:00,83.0,83.0,83.0,47.0,28.49,81.1,12.7,21.9,130.0,,0.0,,0.0,9.9,1.0,1004.4,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2021 17:00:00,82.1,82.1,82.1,48.8,31.35,80.7,9.2,27.0,150.0,,0.0,,0.0,9.9,50.5,1004.1,Light Rain,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2021 18:00:00,62.1,62.1,62.1,53.0,72.3,,31.9,38.5,240.0,,0.02,,0.0,9.9,89.3,1006.8,"Thunderstorm, Light Rain",41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2021 19:00:00,60.2,60.2,60.2,55.1,83.41,,4.8,,260.0,,0.01,,0.0,9.9,89.3,1007.5,Light Rain,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2021 20:00:00,56.1,56.1,56.1,52.1,86.46,,10.2,,41.0,,0.02,,0.0,9.9,100.0,1007.3,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2021 21:00:00,57.9,57.9,57.9,55.1,90.57,,5.8,,51.0,,0.0,,0.0,8.1,100.0,1007.4,Light Rain,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2021 22:00:00,65.9,65.9,65.9,56.0,70.48,,10.3,,130.0,,0.01,,0.0,9.9,100.0,1007.3,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2021 23:00:00,65.9,65.9,65.9,56.0,70.43,,10.3,,140.0,,0.0,,0.0,9.9,100.0,1007.1,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Erie,PA,US",04/08/2021 00:00:00,55.4,55.4,55.4,44.3,66.06,,3.4,,79.0,,0.0,,0.0,9.9,0.0,1012.9,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 01:00:00,55.3,55.3,55.3,45.1,68.46,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1012.9,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 02:00:00,62.7,62.7,62.7,47.9,58.5,,6.7,,148.0,,0.0,,0.0,9.9,0.0,1012.6,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 03:00:00,63.8,63.8,63.8,47.9,56.21,,8.8,,157.0,,0.0,,0.0,9.9,0.0,1012.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 04:00:00,63.9,63.9,63.9,47.1,54.38,,11.2,,139.0,,0.0,,0.0,9.9,0.0,1011.7,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 05:00:00,62.8,62.8,62.8,47.1,56.54,,12.4,,158.0,,0.0,,0.0,9.9,0.0,1011.4,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 06:00:00,61.9,61.9,61.9,47.1,58.28,,14.5,,150.0,,0.0,,0.0,9.9,0.0,1011.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 07:00:00,61.8,61.8,61.8,47.1,58.42,,13.3,,147.0,,0.0,,0.0,9.9,0.0,1011.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 08:00:00,62.8,62.8,62.8,47.1,56.59,,15.6,23.0,150.0,,0.0,,0.0,9.9,0.0,1012.0,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 09:00:00,66.7,66.7,66.7,48.9,52.78,,11.1,,150.0,,0.0,,0.0,9.9,0.0,1011.8,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 10:00:00,70.9,70.9,70.9,50.0,47.64,,11.2,,150.0,,0.0,,0.0,9.9,0.0,1011.6,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 11:00:00,76.7,76.7,76.7,51.1,40.79,,9.2,33.3,130.0,,0.0,,0.0,9.9,0.0,1011.1,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 12:00:00,79.9,79.9,79.9,51.1,36.77,,8.1,20.8,139.0,,0.0,,0.0,9.9,0.0,1010.6,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 13:00:00,82.9,82.9,82.9,48.8,30.6,81.2,13.8,25.1,160.0,,0.0,,0.0,9.9,0.0,1009.7,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 14:00:00,83.8,83.8,83.8,47.0,27.82,81.6,14.7,23.0,150.0,,0.0,,0.0,9.9,0.0,1008.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 15:00:00,84.6,84.6,84.6,46.2,26.21,82.2,12.6,23.1,130.0,,0.0,,0.0,9.9,86.5,1007.4,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2021 16:00:00,84.6,84.6,84.6,43.2,23.43,82.0,13.7,19.8,180.0,,0.0,,0.0,9.9,86.0,1006.7,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2021 17:00:00,83.8,83.8,83.8,43.2,24.06,81.3,13.7,18.4,140.0,,0.0,,0.0,9.9,48.1,1006.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Partially cloudy
+"Erie,PA,US",04/08/2021 18:00:00,82.8,82.8,82.8,44.1,25.74,80.7,16.8,25.3,149.0,,0.0,,0.0,9.9,1.1,1006.1,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 19:00:00,79.8,79.8,79.8,44.0,28.24,,9.1,36.7,150.0,,0.0,,0.0,9.9,0.0,1006.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 20:00:00,77.7,77.7,77.7,43.3,29.49,,14.7,23.2,134.0,,0.0,,0.0,9.9,2.2,1006.8,Light Rain,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2021 21:00:00,62.1,62.1,62.1,53.9,74.56,,11.0,27.5,243.0,,0.0,,0.0,9.8,100.0,1009.9,Light Rain,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2021 22:00:00,62.0,62.0,62.0,55.1,78.22,,5.8,,246.0,,0.0,,0.0,9.9,89.5,1010.3,Light Rain,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2021 23:00:00,62.0,62.0,62.0,55.1,78.1,,4.8,,150.0,,0.0,,0.0,9.9,100.0,1010.3,Light Rain,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Buffalo,NY,US",04/08/2021 00:00:00,52.8,52.8,52.8,36.2,53.12,,8.2,,78.0,,0.0,,0.0,9.9,21.5,1014.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 01:00:00,52.9,52.9,52.9,36.4,53.29,,6.1,,80.0,,0.0,,0.0,9.9,21.5,1014.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 02:00:00,50.6,50.6,50.6,37.3,60.15,,6.4,,62.0,,0.0,,0.0,9.9,21.5,1014.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 03:00:00,50.4,50.4,50.4,37.4,60.89,,6.2,,67.0,,0.0,,0.0,9.9,21.5,1014.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 04:00:00,50.8,50.8,50.8,37.5,60.13,,5.6,,74.0,,0.0,,0.0,9.9,21.5,1013.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 05:00:00,50.7,50.7,50.7,37.4,60.11,,5.1,,93.0,,0.0,,0.0,9.9,21.5,1013.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 06:00:00,50.6,50.6,50.6,36.4,58.16,,5.4,,92.0,,0.0,,0.0,9.9,21.5,1013.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 07:00:00,48.7,48.7,48.7,37.2,64.54,,5.5,,82.0,46.4,0.0,,0.0,9.9,21.5,1013.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 08:00:00,55.0,55.0,55.0,38.4,53.62,,5.3,,88.0,,0.0,,0.0,9.9,21.5,1013.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 09:00:00,61.2,61.2,61.2,41.3,47.87,,5.6,,119.0,,0.0,,0.0,9.9,21.5,1013.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 10:00:00,67.5,67.5,67.5,44.1,42.74,,5.9,,138.0,,0.0,,0.0,9.9,21.5,1013.2,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 11:00:00,71.7,71.7,71.7,45.9,39.7,,2.6,,99.0,,0.0,,0.0,9.9,21.5,1013.0,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 12:00:00,75.3,75.3,75.3,47.1,36.78,,0.9,,39.0,,0.0,,0.0,9.9,21.5,1012.3,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 13:00:00,77.2,77.2,77.2,47.2,34.74,,7.3,,336.0,,0.0,,0.0,9.9,21.5,1011.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 14:00:00,78.0,78.0,78.0,47.8,34.55,,2.4,,360.0,,0.0,,0.0,9.9,21.5,1010.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 15:00:00,79.9,79.9,79.9,45.7,30.03,,9.1,,38.0,,0.0,,0.0,9.9,69.7,1009.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2021 16:00:00,80.0,80.0,80.0,45.7,29.89,,6.7,,110.0,,0.0,,0.0,9.9,69.7,1009.2,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2021 17:00:00,80.9,80.9,80.9,44.8,28.07,79.6,8.5,,119.0,,0.0,,0.0,9.9,69.7,1008.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2021 18:00:00,80.9,80.9,80.9,44.1,27.33,79.6,16.0,21.0,120.0,,0.0,,0.0,9.9,21.5,1008.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 19:00:00,78.8,78.8,78.8,43.5,28.64,,12.8,22.6,123.0,,0.0,,0.0,9.9,21.5,1008.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 20:00:00,75.9,75.9,75.9,44.4,32.58,,13.5,,120.0,,0.0,,0.0,9.9,21.5,1008.2,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2021 21:00:00,72.9,72.9,72.9,43.5,34.77,,13.2,,141.0,,0.0,,0.0,9.9,39.1,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2021 22:00:00,71.5,71.5,71.5,42.6,35.24,,11.5,19.5,146.0,,0.0,,0.0,9.9,39.1,1009.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2021 23:00:00,67.8,67.8,67.8,43.2,40.9,,13.2,,181.0,,0.0,,0.0,9.9,69.7,1010.2,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 00:00:00,48.0,48.0,48.0,37.1,65.94,,0.4,3.4,36.0,,0.0,,0.0,9.9,0.0,1016.6,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 01:00:00,47.9,47.9,47.9,37.1,66.01,,3.1,2.2,67.0,47.3,0.0,,0.0,9.9,0.0,1016.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 02:00:00,45.1,45.1,45.1,36.0,70.38,,0.4,3.4,326.0,,0.0,,0.0,9.9,0.0,1016.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 03:00:00,44.1,44.1,44.1,37.1,76.25,,0.4,3.4,335.0,,0.0,,0.0,9.9,0.0,1016.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 04:00:00,42.2,42.2,42.2,38.0,84.87,,0.4,3.4,332.0,,0.0,,0.0,9.9,0.0,1015.9,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 05:00:00,42.2,42.2,42.2,38.0,84.85,,0.6,4.7,24.0,,0.0,,0.0,9.9,0.0,1015.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 06:00:00,42.2,42.2,42.2,37.1,82.0,,0.3,2.2,33.0,,0.0,,0.0,9.9,0.0,1015.6,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 07:00:00,39.9,39.9,39.9,37.1,89.63,,0.8,5.8,33.0,,0.0,,0.0,9.9,26.8,1015.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 08:00:00,45.0,45.0,45.0,40.9,85.48,,3.6,5.8,168.0,43.5,0.0,,0.0,9.9,26.8,1016.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 09:00:00,56.0,56.0,56.0,39.8,54.46,,6.5,11.4,157.0,,0.0,,0.0,9.9,26.8,1015.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 10:00:00,62.1,62.1,62.1,41.0,45.91,,8.2,11.4,132.0,,0.0,,0.0,9.9,26.8,1015.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 11:00:00,66.9,66.9,66.9,44.1,43.73,,8.2,12.8,136.0,,0.0,,0.0,9.9,26.8,1014.9,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 12:00:00,71.1,71.1,71.1,46.2,40.94,,8.6,12.8,115.0,,0.0,,0.0,9.9,26.8,1014.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 13:00:00,74.0,74.0,74.0,46.2,37.08,,11.9,16.1,89.0,,0.0,,0.0,9.9,26.8,1013.6,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 14:00:00,75.0,75.0,75.0,47.0,37.16,,13.4,21.6,105.0,,0.0,,0.0,9.9,26.8,1012.9,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 15:00:00,75.9,75.9,75.9,46.2,34.88,,13.7,21.9,122.0,,0.0,,0.0,9.9,26.8,1012.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 16:00:00,77.0,77.0,77.0,46.2,33.56,,14.3,18.3,122.0,,0.0,,0.0,9.9,26.8,1011.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 17:00:00,78.2,78.2,78.2,45.0,30.9,,16.4,22.5,106.0,,0.0,,0.0,9.9,26.8,1011.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 18:00:00,77.0,77.0,77.0,45.0,32.12,,18.0,25.1,115.0,,0.0,,0.0,9.9,26.8,1011.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 19:00:00,74.9,74.9,74.9,45.0,34.37,,11.0,24.7,129.0,,0.0,,0.0,9.9,26.8,1011.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 20:00:00,72.0,72.0,72.0,45.0,37.98,,10.2,19.7,133.0,,0.0,,0.0,9.9,26.8,1011.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 21:00:00,68.0,68.0,68.0,45.0,43.48,,9.4,23.0,159.0,,0.0,,0.0,9.9,26.8,1012.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2021 22:00:00,68.0,68.0,68.0,44.1,42.09,,11.0,18.4,159.0,,0.0,,0.0,9.9,0.0,1012.3,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2021 23:00:00,65.9,65.9,65.9,44.1,45.18,,10.7,16.5,160.0,,0.0,,0.0,9.9,0.0,1012.3,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 00:00:00,50.0,50.0,50.0,37.3,61.66,,5.6,,175.0,47.8,0.0,,0.0,9.9,0.0,1015.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 01:00:00,48.7,48.7,48.7,37.3,64.53,,4.6,,59.0,47.0,0.0,,0.0,9.9,26.2,1016.1,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 02:00:00,47.0,47.0,47.0,36.1,65.68,,5.8,,90.0,44.2,0.0,,0.0,9.9,26.2,1015.6,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 03:00:00,48.1,48.1,48.1,37.2,65.89,,6.8,,70.0,45.0,0.0,,0.0,9.9,0.0,1015.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 04:00:00,47.2,47.2,47.2,38.1,70.66,,6.8,,70.0,43.9,0.0,,0.0,9.9,0.0,1016.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 05:00:00,47.1,47.1,47.1,38.1,70.81,,7.9,,80.0,43.3,0.0,,0.0,9.9,0.0,1016.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 06:00:00,48.1,48.1,48.1,39.9,73.14,,9.0,,70.0,44.0,0.0,,0.0,9.9,0.0,1016.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 07:00:00,47.1,47.1,47.1,39.9,75.72,,8.0,,81.0,43.3,0.0,,0.0,9.9,47.3,1016.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 08:00:00,51.3,51.3,51.3,42.2,71.08,,9.1,,82.0,,0.0,,0.0,9.9,47.3,1017.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 09:00:00,56.9,56.9,56.9,43.1,59.84,,9.1,,61.0,,0.0,,0.0,9.9,26.2,1017.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 10:00:00,62.0,62.0,62.0,43.1,49.8,,7.0,,71.0,,0.0,,0.0,9.9,26.2,1016.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 11:00:00,67.8,67.8,67.8,44.1,42.3,,8.1,,81.0,,0.0,,0.0,9.9,26.2,1016.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 12:00:00,70.8,70.8,70.8,43.1,36.72,,9.1,16.1,51.0,,0.0,,0.0,9.9,26.2,1015.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 13:00:00,74.7,74.7,74.7,44.1,33.48,,8.0,,61.0,,0.0,,0.0,9.9,26.2,1014.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 14:00:00,77.9,77.9,77.9,39.2,24.89,,12.3,,100.0,,0.0,,0.0,9.9,26.2,1014.1,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 15:00:00,78.9,78.9,78.9,40.0,24.94,,11.2,17.2,169.0,,0.0,,0.0,9.9,26.2,1013.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 16:00:00,79.0,79.0,79.0,40.0,24.8,,13.4,,110.0,,0.0,,0.0,9.9,26.2,1012.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2021 17:00:00,79.0,79.0,79.0,38.2,23.17,,11.2,,111.0,,0.0,,0.0,9.9,0.0,1012.7,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 18:00:00,78.1,78.1,78.1,38.2,23.83,,12.4,,160.0,,0.0,,0.0,9.9,0.0,1012.6,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 19:00:00,75.7,75.7,75.7,39.0,26.58,,9.1,,149.0,,0.0,,0.0,9.9,0.0,1012.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 20:00:00,70.1,70.1,70.1,38.9,32.06,,6.9,,120.0,,0.0,,0.0,9.9,0.0,1012.6,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 21:00:00,66.9,66.9,66.9,38.2,34.77,,7.0,,129.0,,0.0,,0.0,9.9,0.0,1013.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 22:00:00,63.1,63.1,63.1,38.2,39.76,,8.0,,90.0,,0.0,,0.0,9.9,0.0,1013.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2021 23:00:00,62.1,62.1,62.1,39.9,44.03,,4.7,,100.0,,0.0,,0.0,9.9,0.0,1013.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Burlington,VT,US",04/08/2021 00:00:00,46.8,46.8,46.8,40.9,79.64,,3.2,,331.0,45.9,0.0,,0.0,9.9,0.0,1018.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 01:00:00,44.7,44.7,44.7,40.8,86.11,,3.3,,37.0,43.5,0.0,,0.0,9.9,0.0,1018.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 02:00:00,42.9,42.9,42.9,38.9,85.43,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1018.4,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 03:00:00,42.9,42.9,42.9,38.8,85.51,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1018.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 04:00:00,40.8,40.8,40.8,37.9,89.21,,4.5,,78.0,37.9,0.0,,0.0,9.9,0.9,1018.6,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 05:00:00,40.8,40.8,40.8,37.9,89.24,,0.0,,0.0,,0.0,,0.0,9.9,0.3,1018.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 06:00:00,40.8,40.8,40.8,37.0,86.16,,0.0,,0.0,,0.0,,0.0,9.8,27.0,1019.5,Fog,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 07:00:00,39.6,39.6,39.6,37.0,90.11,,0.0,,0.0,,0.0,,0.0,9.8,27.4,1020.3,Mist,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 08:00:00,44.0,44.0,44.0,39.8,85.13,,0.0,,0.0,,0.0,,0.0,9.9,27.4,1020.5,Mist,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 09:00:00,51.9,51.9,51.9,42.2,69.33,,0.1,,6.0,,0.0,,0.0,9.9,26.3,1020.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 10:00:00,57.6,57.6,57.6,43.1,58.31,,3.3,,340.0,,0.0,,0.0,9.9,26.3,1020.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 11:00:00,60.1,60.1,60.1,44.0,55.43,,3.4,,330.0,,0.0,,0.0,9.9,26.3,1019.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 12:00:00,64.8,64.8,64.8,43.1,45.11,,4.7,,118.0,,0.0,,0.0,9.9,26.3,1019.0,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 13:00:00,68.9,68.9,68.9,44.0,40.55,,3.4,,0.0,,0.0,,0.0,9.9,26.3,1018.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 14:00:00,69.1,69.1,69.1,44.0,40.42,,3.5,,72.0,,0.0,,0.0,9.9,26.3,1017.6,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 15:00:00,71.0,71.0,71.0,43.0,36.41,,4.8,,22.0,,0.0,,0.0,9.9,26.3,1016.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 16:00:00,71.8,71.8,71.8,43.0,35.4,,8.0,,342.0,,0.0,,0.0,9.9,26.3,1016.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 17:00:00,71.0,71.0,71.0,42.2,35.29,,10.2,,343.0,,0.0,,0.0,9.9,26.3,1016.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 18:00:00,71.0,71.0,71.0,42.1,35.19,,6.9,,333.0,,0.0,,0.0,9.9,26.3,1016.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 19:00:00,69.0,69.0,69.0,42.2,37.77,,5.7,,352.0,,0.0,,0.0,9.9,26.3,1016.0,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 20:00:00,65.6,65.6,65.6,42.2,42.59,,0.0,,0.0,,0.0,,0.0,9.9,26.3,1016.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2021 21:00:00,58.8,58.8,58.8,43.1,55.86,,3.3,,193.0,,0.0,,0.0,9.9,0.0,1016.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 22:00:00,54.9,54.9,54.9,43.0,64.27,,3.2,,78.0,,0.0,,0.0,9.9,0.0,1016.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2021 23:00:00,54.8,54.8,54.8,43.0,64.28,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1016.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Houlton,ME,US",04/08/2021 00:00:00,46.1,46.1,46.1,39.8,78.54,,0.0,,360.0,,0.0,,0.0,9.9,100.0,1018.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 01:00:00,45.0,45.0,45.0,39.8,82.04,,0.0,,360.0,,0.0,,0.0,9.9,100.0,1018.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 02:00:00,45.0,45.0,45.0,39.8,82.03,,3.4,,80.0,43.6,0.0,,0.0,9.9,100.0,1018.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 03:00:00,47.0,47.0,47.0,41.0,79.39,,4.7,,20.0,44.9,0.0,,0.0,9.9,100.0,1018.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 04:00:00,46.1,46.1,46.1,39.8,78.55,,4.7,,360.0,43.9,0.0,,0.0,9.9,100.0,1018.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 05:00:00,45.0,45.0,45.0,39.8,82.07,,5.8,,30.0,41.8,0.0,,0.0,9.9,100.0,1019.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 06:00:00,41.0,41.0,41.0,38.0,89.14,,3.4,,80.0,39.1,0.0,,0.0,9.9,88.7,1019.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 07:00:00,44.1,44.1,44.1,39.8,84.93,,0.0,,360.0,,0.0,,0.0,9.9,100.0,1020.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 08:00:00,46.1,46.1,46.1,39.8,78.56,,6.9,,20.0,42.5,0.0,,0.0,9.9,100.0,1020.8,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 09:00:00,47.9,47.9,47.9,39.8,73.43,,9.2,,20.0,43.8,0.0,,0.0,9.9,100.0,1021.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 10:00:00,50.0,50.0,50.0,39.8,68.0,,9.2,,20.0,46.3,0.0,,0.0,9.9,100.0,1021.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 11:00:00,52.1,52.1,52.1,39.8,62.95,,8.0,,360.0,,0.0,,0.0,9.9,100.0,1021.3,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 12:00:00,55.1,55.1,55.1,41.0,58.86,,4.7,,50.0,,0.0,,0.0,9.9,100.0,1020.8,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 13:00:00,57.8,57.8,57.8,42.2,55.88,,9.2,17.2,40.0,,0.0,,0.0,9.9,88.9,1020.2,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 14:00:00,59.0,59.0,59.0,41.0,51.23,,8.1,,50.0,,0.0,,0.0,9.9,88.9,1019.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 15:00:00,59.0,59.0,59.0,42.2,53.6,,6.9,,60.0,,0.0,,0.0,9.9,100.0,1019.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 16:00:00,59.0,59.0,59.0,42.2,53.59,,8.0,,20.0,,0.0,,0.0,9.9,100.0,1019.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 17:00:00,60.2,60.2,60.2,42.2,51.38,,4.7,,50.0,,0.0,,0.0,9.9,100.0,1019.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 18:00:00,57.8,57.8,57.8,42.2,55.86,,10.3,,80.0,,0.0,,0.0,9.9,100.0,1019.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2021 19:00:00,55.1,55.1,55.1,42.2,61.58,,9.2,,100.0,,0.0,,0.0,9.9,50.1,1019.9,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Partially cloudy
+"Houlton,ME,US",04/08/2021 20:00:00,51.2,51.2,51.2,42.2,71.2,,9.2,,110.0,,0.0,,0.0,9.9,0.0,1020.3,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2021 21:00:00,48.8,48.8,48.8,42.2,77.69,,3.4,,120.0,48.0,0.0,,0.0,9.9,0.0,1020.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2021 22:00:00,42.2,42.2,42.2,38.0,85.15,,3.4,,260.0,40.5,0.0,,0.0,9.9,0.0,1021.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2021 23:00:00,36.0,36.0,36.0,34.1,92.69,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1021.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Fredericton,NB,CA",04/08/2021 00:00:00,44.4,44.4,44.4,43.0,94.79,,3.9,,344.0,42.5,0.0,,0.0,3.1,100.0,1018.2,Mist,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 01:00:00,44.8,44.8,44.8,43.0,93.22,,4.8,,11.0,42.2,0.0,,0.0,2.8,100.0,1018.1,Mist,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 02:00:00,44.8,44.8,44.8,42.4,91.17,,6.1,,2.0,41.4,0.0,,0.0,7.6,100.0,1018.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 03:00:00,44.3,44.3,44.3,41.5,89.61,,7.2,,353.0,40.3,0.0,,0.0,8.1,100.0,1018.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 04:00:00,44.4,44.4,44.4,41.3,88.96,,6.1,,352.0,40.9,0.0,,0.0,8.7,100.0,1018.5,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 05:00:00,44.2,44.2,44.2,41.5,89.89,,7.3,,359.0,40.1,0.0,,0.0,8.1,100.0,1018.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 06:00:00,44.2,44.2,44.2,41.1,88.82,,7.3,,356.0,40.0,0.0,,0.0,9.2,100.0,1019.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 07:00:00,44.2,44.2,44.2,41.0,88.72,,7.5,,354.0,39.9,0.0,,0.0,8.9,100.0,1019.7,Light Drizzle,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 08:00:00,44.4,44.4,44.4,41.5,89.34,,6.6,,20.0,40.6,0.0,,0.0,7.7,100.0,1020.2,"Mist, Light Drizzle",45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 09:00:00,44.8,44.8,44.8,41.0,86.25,,9.8,,29.0,39.7,0.0,,0.0,9.2,100.0,1020.8,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 10:00:00,46.0,46.0,46.0,41.1,82.77,,7.9,,21.0,42.0,0.0,,0.0,7.9,100.0,1020.9,"Mist, Light Drizzle",45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 11:00:00,46.3,46.3,46.3,41.5,83.4,,10.9,,8.0,41.1,0.0,,0.0,8.6,100.0,1021.0,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 12:00:00,49.6,49.6,49.6,42.6,76.74,,9.8,,27.0,45.6,0.0,,0.0,9.2,100.0,1021.1,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 13:00:00,50.1,50.1,50.1,42.6,75.35,,10.1,19.5,37.0,,0.0,,0.0,9.8,100.0,1020.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 14:00:00,51.6,51.6,51.6,42.6,71.26,,8.5,,11.0,,0.0,,0.0,9.8,100.0,1020.8,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 15:00:00,51.7,51.7,51.7,43.1,72.26,,7.6,,11.0,,0.0,,0.0,9.2,100.0,1020.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 16:00:00,52.8,52.8,52.8,44.2,72.46,,8.3,,46.0,,0.0,,0.0,9.8,100.0,1020.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 17:00:00,51.8,51.8,51.8,44.3,75.73,,9.3,,35.0,,0.0,,0.0,9.8,100.0,1020.8,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 18:00:00,51.4,51.4,51.4,43.4,73.98,,9.1,,38.0,,0.0,,0.0,9.2,100.0,1021.0,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 19:00:00,50.1,50.1,50.1,42.6,75.39,,6.3,,39.0,,0.0,,0.0,9.8,100.0,1021.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 20:00:00,49.4,49.4,49.4,43.0,78.58,,6.3,,32.0,46.8,0.0,,0.0,9.8,100.0,1021.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 21:00:00,47.9,47.9,47.9,42.7,82.1,,5.3,,50.0,45.6,0.0,,0.0,9.2,89.2,1021.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2021 22:00:00,44.8,44.8,44.8,40.9,86.12,,3.6,,339.0,43.2,0.0,,0.0,8.7,0.0,1021.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2021 23:00:00,42.0,42.0,42.0,40.3,93.43,,1.4,,347.0,,0.0,,0.0,8.7,0.0,1021.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Gander,NL,CA",04/08/2021 00:00:00,36.4,36.4,36.4,35.8,97.93,,12.4,,20.0,28.1,0.0,,0.03,0.0,100.0,1018.6,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 01:00:00,35.6,35.6,35.6,35.6,100.0,,10.2,,25.0,28.1,0.0,,0.03,0.0,100.0,1018.6,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 02:00:00,35.5,35.5,35.5,35.5,100.0,,9.6,,9.0,28.3,0.0,,0.02,0.0,100.0,1018.6,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 03:00:00,35.3,35.3,35.3,35.3,100.0,,13.6,,353.0,26.3,0.0,,0.02,0.0,100.0,1018.3,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 04:00:00,35.5,35.5,35.5,35.5,100.0,,11.9,19.7,359.0,27.2,0.0,,0.02,0.0,100.0,1018.2,"Fog, Light Rain",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 05:00:00,35.6,35.6,35.6,35.6,100.0,,14.6,,5.0,26.3,0.01,,0.01,0.0,100.0,1018.2,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2021 06:00:00,35.3,35.3,35.3,35.3,100.0,,11.3,,349.0,27.2,0.0,,0.01,0.0,100.0,1018.4,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 07:00:00,35.5,35.5,35.5,35.5,100.0,,11.3,,355.0,27.4,0.0,,0.0,0.0,100.0,1018.9,"Light Drizzle, Fog",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 08:00:00,35.7,35.7,35.7,35.7,100.0,,10.7,,359.0,27.9,0.0,,0.0,0.0,100.0,1019.1,"Light Drizzle, Fog",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 09:00:00,37.5,37.5,37.5,37.5,100.0,,11.9,,359.0,29.7,0.02,,0.0,0.0,100.0,1019.1,Light Drizzle,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2021 10:00:00,41.0,41.0,41.0,41.0,100.0,,10.7,,10.0,34.6,0.0,,0.0,0.0,100.0,1019.4,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 11:00:00,43.7,43.7,43.7,43.6,99.76,,14.1,,25.0,36.8,0.0,,0.0,3.1,88.0,1019.2,Mist,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 12:00:00,46.1,46.1,46.1,44.7,95.02,,14.6,,12.0,39.7,0.0,,0.0,11.8,88.9,1019.0,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 13:00:00,48.2,48.2,48.2,45.5,90.36,,12.5,20.1,20.0,43.0,0.0,,0.0,14.9,88.0,1018.7,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 14:00:00,50.0,50.0,50.0,42.7,75.85,,16.6,24.5,40.0,44.2,0.0,,0.0,14.9,88.0,1018.1,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 15:00:00,50.1,50.1,50.1,41.9,73.5,,16.4,24.1,35.0,,0.0,,0.0,14.9,84.3,1017.7,Sky Coverage Decreasing,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 16:00:00,48.2,48.2,48.2,42.7,81.21,,15.4,23.5,40.0,42.2,0.0,,0.0,14.9,88.0,1017.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 17:00:00,48.0,48.0,48.0,41.8,78.99,,16.5,20.8,15.0,41.8,0.0,,0.0,14.9,88.0,1017.2,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 18:00:00,41.0,41.0,41.0,39.4,93.87,,15.3,25.3,22.0,33.0,0.0,,0.0,2.5,90.9,1017.6,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 19:00:00,39.1,39.1,39.1,39.0,99.88,,16.5,,5.0,30.2,0.0,,0.0,0.0,100.0,1017.7,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 20:00:00,37.5,37.5,37.5,37.4,99.76,,14.8,24.2,5.0,28.7,0.0,,0.0,0.6,100.0,1017.5,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 21:00:00,37.1,37.1,37.1,37.1,100.0,,10.5,18.3,344.0,29.8,0.0,,0.0,0.0,100.0,1017.6,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 22:00:00,35.5,35.5,35.5,35.5,100.0,,13.1,,349.0,26.8,0.0,,0.0,0.0,100.0,1017.2,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2021 23:00:00,33.8,33.8,33.8,33.8,100.0,,13.1,,349.0,24.6,0.0,,0.0,0.0,100.0,1016.8,Fog,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast

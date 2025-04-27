@@ -1,0 +1,509 @@
+Address,Date time,Minimum Temperature,Maximum Temperature,Temperature,Dew Point,Relative Humidity,Heat Index,Wind Speed,Wind Gust,Wind Direction,Wind Chill,Precipitation,Precipitation Cover,Snow Depth,Visibility,Cloud Cover,Sea Level Pressure,Weather Type,Latitude,Longitude,Resolved Address,Name,Info,Conditions
+"Mazatlan,MX",04/08/2001 02:00:00,65.0,65.0,65.0,59.3,81.61,,0.0,,,,0.0,,,5.0,0.0,1011.2,Smoke Or Haze,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 03:00:00,57.3,57.3,57.3,50.1,76.85,,0.0,,,,0.0,,,9.9,50.0,1011.5,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2001 04:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 05:00:00,63.8,63.8,63.8,56.4,76.91,,0.0,,,,0.0,,,5.0,0.0,,Smoke Or Haze,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 06:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 07:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 08:00:00,71.7,71.7,71.7,57.3,60.48,,3.4,,80.0,,0.0,,,9.9,0.0,1013.9,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 09:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 10:00:00,78.9,78.9,78.9,59.1,50.74,,4.7,,190.0,,0.0,,,11.8,0.0,1013.9,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 11:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 12:00:00,80.7,80.7,80.7,57.3,44.84,80.9,8.1,,220.0,,0.0,,,11.8,0.0,1012.5,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 13:00:00,80.7,80.7,80.7,57.3,44.84,80.9,5.8,,200.0,,0.0,,,11.8,0.0,1011.5,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 14:00:00,76.4,76.4,76.4,62.3,61.84,,8.9,,290.0,,0.0,,,7.5,10.0,1011.2,Smoke Or Haze,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 15:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 16:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 17:00:00,76.4,76.4,76.4,60.2,57.31,,8.9,,300.0,,0.0,,,11.2,10.0,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Mazatlan,MX",04/08/2001 18:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 19:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2001 20:00:00,64.5,64.5,64.5,51.9,63.64,,5.8,,280.0,,0.0,,,9.9,0.0,1012.5,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Clear
+"Torreon,MX",04/08/2001 06:00:00,64.5,64.5,64.5,41.1,42.33,,0.0,,,,0.0,,,9.9,50.0,1015.9,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Partially cloudy
+"Torreon,MX",04/08/2001 07:00:00,66.3,66.3,66.3,44.7,45.65,,0.0,,,,0.0,,,9.9,0.0,1016.9,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2001 08:00:00,73.5,73.5,73.5,41.1,31.1,,4.7,,90.0,,0.0,,,9.9,0.0,1017.6,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2001 09:00:00,77.1,77.1,77.1,46.5,33.9,,5.8,,120.0,,0.0,,,9.9,0.0,1018.6,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2001 10:00:00,82.5,82.5,82.5,46.5,28.4,80.7,0.0,,,,0.0,,,9.9,0.0,1018.6,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2001 11:00:00,84.3,84.3,84.3,50.1,30.67,82.3,0.0,,,,0.0,,,9.9,0.0,1016.9,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2001 12:00:00,86.1,86.1,86.1,48.3,27.07,83.5,0.0,,,,0.0,,,9.9,0.0,1016.3,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Clear
+"Torreon,MX",04/08/2001 13:00:00,89.7,89.7,89.7,46.5,22.57,86.3,9.2,,90.0,,0.0,,,9.9,50.0,1014.6,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Partially cloudy
+"Torreon,MX",04/08/2001 14:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2001 15:00:00,91.5,91.5,91.5,44.7,19.93,87.8,0.0,,,,0.0,,,9.9,90.0,1012.5,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Overcast
+"Torreon,MX",04/08/2001 16:00:00,93.3,93.3,93.3,46.5,20.17,89.7,6.9,,170.0,,0.0,,,9.9,50.0,1011.5,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Partially cloudy
+"Torreon,MX",04/08/2001 17:00:00,93.3,93.3,93.3,46.5,20.17,89.7,6.9,,100.0,,0.0,,,14.9,90.0,1011.5,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Overcast
+"Torreon,MX",04/08/2001 18:00:00,91.5,91.5,91.5,44.7,19.93,87.8,0.0,,,,0.0,,,14.9,90.0,1011.5,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Overcast
+"San Antonio,TX,US",04/08/2001 00:00:00,72.9,72.9,72.9,69.9,90.46,,9.5,,134.0,,0.0,,0.0,7.6,100.0,1014.5,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 01:00:00,71.7,71.7,71.7,69.8,93.94,,12.5,,168.0,,0.0,,0.0,6.9,100.0,1014.9,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 02:00:00,71.7,71.7,71.7,69.9,94.02,,8.9,,128.0,,0.0,,0.0,6.2,100.0,1014.3,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 03:00:00,71.7,71.7,71.7,68.8,90.45,,9.3,,141.0,,0.0,,0.0,7.4,100.0,1014.0,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 04:00:00,71.4,71.4,71.4,69.6,93.89,,10.8,,137.0,,0.0,,0.0,7.4,100.0,1013.4,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 05:00:00,71.4,71.4,71.4,67.0,85.9,,10.0,,141.0,,0.0,,0.0,8.2,100.0,1013.4,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 06:00:00,71.1,71.1,71.1,66.9,86.66,,9.3,,141.0,,0.0,,0.0,8.7,100.0,1013.6,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 07:00:00,69.9,69.9,69.9,66.9,90.26,,8.1,,141.0,,0.0,,0.0,8.3,100.0,1014.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 08:00:00,69.9,69.9,69.9,66.9,90.1,,8.2,,137.0,,0.0,,0.0,6.4,100.0,1014.4,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 09:00:00,71.1,71.1,71.1,66.9,86.55,,9.7,,157.0,,0.0,,0.0,6.8,99.8,1015.1,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 10:00:00,71.7,71.7,71.7,67.3,85.88,,13.5,,153.0,,0.0,,0.0,6.8,96.6,1015.2,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2001 11:00:00,75.1,75.1,75.1,67.3,76.59,,11.9,,147.0,,0.0,,0.0,9.5,37.7,1015.3,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2001 12:00:00,78.7,78.7,78.7,66.5,66.22,,14.3,,168.0,,0.0,,0.0,9.9,17.3,1015.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2001 13:00:00,80.7,80.7,80.7,66.3,61.56,82.9,13.6,,158.0,,0.0,,0.0,9.9,30.3,1014.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2001 14:00:00,82.4,82.4,82.4,67.2,60.09,85.1,14.8,,150.0,,0.0,,0.0,9.9,30.3,1013.6,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2001 15:00:00,83.9,83.9,83.9,66.8,56.6,86.5,12.9,,163.0,,0.0,,0.0,9.9,48.9,1012.7,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2001 16:00:00,83.9,83.9,83.9,65.7,54.43,86.0,11.8,,154.0,,0.0,,0.0,9.9,48.9,1012.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2001 17:00:00,83.9,83.9,83.9,66.0,55.02,86.2,15.8,,141.0,,0.0,,0.0,9.9,16.9,1011.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2001 18:00:00,82.4,82.4,82.4,67.2,60.07,85.1,13.9,,125.0,,0.0,,0.0,9.9,10.7,1011.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2001 19:00:00,80.1,80.1,80.1,67.4,65.36,82.6,13.6,,133.0,,0.0,,0.0,9.9,10.1,1011.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2001 20:00:00,76.7,76.7,76.7,63.5,63.77,,13.1,,127.0,,0.0,,0.0,9.9,10.1,1011.7,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2001 21:00:00,74.8,74.8,74.8,65.0,71.42,,12.8,,118.0,,0.0,,0.0,9.9,10.1,1012.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2001 22:00:00,72.9,72.9,72.9,66.4,80.13,,10.6,,118.0,,0.0,,0.0,9.9,10.1,1013.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2001 23:00:00,70.1,70.1,70.1,67.9,92.69,,10.3,,140.0,,0.0,,0.0,9.9,50.4,1013.9,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2001 00:00:00,71.8,71.8,71.8,69.3,91.89,,8.1,,152.0,,0.0,,0.0,7.4,100.0,1014.8,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 01:00:00,71.1,71.1,71.1,69.3,94.05,,8.9,,162.0,,0.0,,0.0,5.0,100.0,1014.6,"Mist, Fog, Light Rain",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 02:00:00,71.9,71.9,71.9,69.2,91.24,,7.8,,158.0,,0.0,,0.0,6.1,100.0,1014.3,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 03:00:00,71.2,71.2,71.2,69.9,95.61,,8.3,,160.0,,0.0,,0.0,4.7,100.0,1014.0,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 04:00:00,71.2,71.2,71.2,69.2,93.35,,8.1,,147.0,,0.0,,0.0,5.7,100.0,1013.5,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 05:00:00,71.0,71.0,71.0,69.2,94.05,,8.3,,160.0,,0.0,,0.0,7.1,100.0,1013.2,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 06:00:00,71.0,71.0,71.0,68.3,91.39,,8.9,,152.0,,0.0,,0.0,6.1,100.0,1013.5,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 07:00:00,70.0,70.0,70.0,68.1,93.55,,9.7,,160.0,,0.0,,0.0,6.1,90.3,1013.9,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 08:00:00,70.1,70.1,70.1,66.8,89.47,,11.9,,155.0,,0.0,,0.0,6.1,90.3,1014.6,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 09:00:00,71.0,71.0,71.0,66.8,86.75,,9.4,,162.0,,0.0,,0.0,6.7,99.7,1014.9,"Mist, Fog",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 10:00:00,73.1,73.1,73.1,66.8,80.66,,11.1,,162.0,,0.0,,0.0,7.6,90.0,1014.9,Smoke Or Haze,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 11:00:00,75.4,75.4,75.4,66.6,74.19,,14.4,,172.0,,0.0,,0.0,9.2,50.0,1015.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2001 12:00:00,78.2,78.2,78.2,66.1,66.53,,13.8,,155.0,,0.0,,0.0,9.5,48.7,1015.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2001 13:00:00,80.2,80.2,80.2,67.1,64.54,82.5,15.3,,165.0,,0.0,,0.0,9.7,87.7,1014.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 14:00:00,82.1,82.1,82.1,68.1,62.5,85.1,14.1,,152.0,,0.0,,0.0,9.9,87.7,1013.5,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 15:00:00,82.4,82.4,82.4,68.1,62.08,85.4,17.0,,149.0,,0.0,,0.0,9.9,88.4,1012.9,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 16:00:00,82.6,82.6,82.6,67.1,59.66,85.2,12.0,,157.0,,0.0,,0.0,9.9,88.4,1012.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2001 17:00:00,82.4,82.4,82.4,66.1,58.04,84.6,15.3,,165.0,,0.0,,0.0,9.9,29.2,1011.9,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2001 18:00:00,81.2,81.2,81.2,66.1,60.31,83.3,11.9,,160.0,,0.0,,0.0,9.9,30.0,1011.5,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2001 19:00:00,79.7,79.7,79.7,65.3,61.49,,11.3,,162.0,,0.0,,0.0,9.9,29.2,1011.9,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2001 20:00:00,76.2,76.2,76.2,65.4,69.37,,8.7,,162.0,,0.0,,0.0,9.7,29.2,1012.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2001 21:00:00,75.8,75.8,75.8,64.1,67.1,,12.8,,140.0,,0.0,,0.0,9.9,0.0,1012.5,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2001 22:00:00,72.6,72.6,72.6,65.7,78.94,,9.4,,152.0,,0.0,,0.0,9.7,0.0,1013.2,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2001 23:00:00,71.7,71.7,71.7,66.1,82.79,,9.8,,152.0,,0.0,,0.0,9.5,99.7,1013.5,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 00:00:00,71.9,71.9,71.9,65.0,79.07,,12.8,,170.0,,0.0,,0.0,9.9,90.0,1013.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 01:00:00,71.0,71.0,71.0,65.9,84.11,,17.2,,180.0,,0.0,,0.0,9.9,100.0,1013.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 02:00:00,70.1,70.1,70.1,65.9,86.73,,13.9,,180.0,,0.0,,0.0,8.7,90.0,1013.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 03:00:00,70.1,70.1,70.1,66.8,89.47,,16.1,,180.0,,0.0,,0.0,8.1,100.0,1013.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 04:00:00,70.1,70.1,70.1,66.8,89.47,,15.0,,180.0,,0.0,,0.0,8.1,100.0,1012.9,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 05:00:00,70.1,70.1,70.1,66.8,89.47,,15.0,,180.0,,0.0,,0.0,6.8,100.0,1012.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 06:00:00,71.5,71.5,71.5,69.6,93.59,,13.9,,188.0,,0.0,,0.0,6.8,100.0,1012.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 07:00:00,71.5,71.5,71.5,69.6,93.59,,10.4,,161.0,,0.0,,0.0,6.2,91.0,1012.9,"Mist, Fog",32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 08:00:00,71.6,71.6,71.6,68.1,88.66,,9.3,,169.0,,0.0,,0.0,4.8,91.0,1013.2,"Mist, Fog",32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 09:00:00,71.6,71.6,71.6,68.1,88.66,,10.7,,161.0,,0.0,,0.0,4.8,100.0,1013.5,"Mist, Fog",32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 10:00:00,73.5,73.5,73.5,68.1,83.33,,15.0,,170.0,,0.0,,0.0,6.2,100.0,1013.9,"Mist, Fog, Smoke Or Haze",32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 11:00:00,80.1,80.1,80.1,66.3,62.94,82.3,20.7,,180.0,,0.0,,0.0,7.2,90.0,1013.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 12:00:00,80.2,80.2,80.2,68.0,66.35,82.8,16.6,,180.0,,0.0,,0.0,7.2,91.0,1013.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 13:00:00,80.5,80.5,80.5,69.7,69.68,83.8,18.5,,180.0,,0.0,,0.0,7.2,89.0,1012.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 14:00:00,82.2,82.2,82.2,68.0,62.09,85.2,22.9,,179.0,,0.0,,0.0,7.2,90.0,1011.9,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 15:00:00,85.6,85.6,85.6,66.3,52.59,88.0,24.9,,170.0,,0.0,,0.0,7.2,90.0,1011.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 16:00:00,85.6,85.6,85.6,66.3,52.59,88.0,23.9,,180.0,,0.0,,0.0,7.2,90.0,1010.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Overcast
+"Fort Worth,TX,US",04/08/2001 17:00:00,85.6,85.6,85.6,67.9,55.61,88.9,18.9,,170.0,,0.0,,0.0,7.2,54.1,1009.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2001 18:00:00,80.9,80.9,80.9,65.9,60.5,83.0,26.4,,170.0,,0.0,,0.0,9.9,50.0,1009.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2001 19:00:00,82.2,82.2,82.2,66.1,58.16,84.4,22.0,,170.0,,0.0,,0.0,7.2,3.1,1009.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2001 20:00:00,78.2,78.2,78.2,62.9,59.4,,18.3,,180.0,,0.0,,0.0,9.9,0.0,1010.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2001 21:00:00,78.7,78.7,78.7,64.5,61.89,,13.1,,160.0,,0.0,,0.0,7.2,0.0,1011.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2001 22:00:00,78.5,78.5,78.5,64.6,62.54,,14.0,,161.0,,0.0,,0.0,7.2,0.0,1011.9,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2001 23:00:00,78.4,78.4,78.4,64.5,62.33,,13.1,,161.0,,0.0,,0.0,7.2,44.9,1012.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2001 00:00:00,71.9,71.9,71.9,65.0,79.07,,12.8,,170.0,,0.0,,,9.9,90.0,1013.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 01:00:00,71.0,71.0,71.0,65.9,84.11,,17.2,,180.0,,0.0,,,9.9,100.0,1013.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 02:00:00,70.1,70.1,70.1,65.9,86.73,,13.9,,180.0,,0.0,,,8.7,90.0,1013.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 03:00:00,70.1,70.1,70.1,66.8,89.47,,16.1,,180.0,,0.0,,,8.1,100.0,1013.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 04:00:00,70.1,70.1,70.1,66.8,89.47,,15.0,,180.0,,0.0,,,8.1,100.0,1012.9,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 05:00:00,70.1,70.1,70.1,66.8,89.47,,15.0,,180.0,,0.0,,,6.8,100.0,1012.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 06:00:00,70.3,70.3,70.3,67.3,90.11,,13.9,,173.0,,0.0,,,6.8,100.0,1012.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 07:00:00,70.3,70.3,70.3,67.3,90.11,,11.4,,169.0,,0.0,,,6.2,98.6,1013.2,"Mist, Fog",32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 08:00:00,71.1,71.1,71.1,68.1,90.32,,10.1,,161.0,,0.0,,,3.9,98.6,1013.2,"Mist, Fog",32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 09:00:00,71.1,71.1,71.1,68.1,90.32,,13.4,,169.0,,0.0,,,3.9,100.0,1013.8,"Mist, Fog",32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 10:00:00,73.2,73.2,73.2,68.1,84.1,,15.0,,170.0,,0.0,,,6.2,100.0,1013.9,"Mist, Fog, Smoke Or Haze",32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 11:00:00,75.7,75.7,75.7,66.8,73.72,,19.8,,180.0,,0.0,,,9.5,90.0,1013.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 12:00:00,76.5,76.5,76.5,67.0,72.48,,20.1,,180.0,,0.0,,,9.5,98.6,1013.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 13:00:00,79.3,79.3,79.3,68.3,69.23,,19.5,,180.0,,0.0,,,9.5,81.4,1012.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 14:00:00,80.3,80.3,80.3,67.0,63.93,82.7,22.1,,171.0,,0.0,,,9.5,90.0,1012.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 15:00:00,81.6,81.6,81.6,66.0,59.18,83.7,22.4,,170.0,,0.0,,,9.5,90.0,1011.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 16:00:00,81.6,81.6,81.6,66.0,59.18,83.7,22.2,,180.0,,0.0,,,9.5,90.0,1010.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 17:00:00,81.6,81.6,81.6,66.2,59.7,83.8,23.3,,170.0,,0.0,,,9.5,84.4,1010.1,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Overcast
+"Dallas,TX,US",04/08/2001 18:00:00,80.9,80.9,80.9,65.9,60.5,83.0,26.4,,170.0,,0.0,,,9.9,50.0,1009.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2001 19:00:00,80.3,80.3,80.3,64.4,58.47,82.0,22.9,,170.0,,0.0,,,9.5,25.8,1010.1,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2001 20:00:00,78.2,78.2,78.2,62.9,59.4,,18.3,,180.0,,0.0,,,9.9,0.0,1010.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2001 21:00:00,77.3,77.3,77.3,65.0,65.67,,15.6,,160.0,,0.0,,,9.5,0.0,1011.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2001 22:00:00,75.5,75.5,75.5,65.7,71.75,,14.8,,169.0,,0.0,,,9.5,0.0,1011.9,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2001 23:00:00,74.7,74.7,74.7,64.2,69.76,,15.6,,169.0,,0.0,,,9.5,7.0,1012.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Little Rock,AR,US",04/08/2001 00:00:00,71.9,71.9,71.9,62.9,73.32,,7.0,,170.0,,0.0,,0.0,6.8,32.0,1015.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 01:00:00,74.0,74.0,74.0,63.6,70.01,,13.7,,180.0,,0.0,,0.0,6.8,31.7,1014.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 02:00:00,71.9,71.9,71.9,64.7,78.08,,11.5,,190.0,,0.0,,0.0,6.8,32.0,1014.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 03:00:00,71.0,71.0,71.0,63.3,76.6,,9.1,,190.0,,0.0,,0.0,6.8,30.7,1015.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 04:00:00,69.2,69.2,69.2,62.9,80.46,,9.1,,190.0,,0.0,,0.0,6.8,30.7,1015.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 05:00:00,69.3,69.3,69.3,63.3,81.45,,6.9,,,,0.0,,0.0,6.8,99.7,1015.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 06:00:00,69.3,69.3,69.3,65.1,86.56,,5.8,,170.0,,0.0,,0.0,6.8,99.7,1015.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 07:00:00,68.1,68.1,68.1,65.1,90.06,,6.9,,140.0,,0.0,,0.0,6.1,99.7,1015.9,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 08:00:00,68.1,68.1,68.1,65.1,89.9,,6.9,,140.0,,0.0,,0.0,6.2,99.7,1016.3,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 09:00:00,70.1,70.1,70.1,66.0,86.78,,5.9,,161.0,,0.0,,0.0,6.2,99.7,1016.6,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 10:00:00,73.2,73.2,73.2,68.1,84.04,,11.6,,189.0,,0.0,,0.0,6.2,99.7,1016.9,Smoke Or Haze,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 11:00:00,74.1,74.1,74.1,68.1,81.62,,12.6,,190.0,,0.0,,0.0,6.2,99.7,1016.9,Smoke Or Haze,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 12:00:00,78.2,78.2,78.2,65.1,64.24,,17.0,,239.0,,0.0,,0.0,6.2,90.0,1016.3,Smoke Or Haze,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 13:00:00,82.2,82.2,82.2,65.9,57.98,84.3,16.1,,190.0,,0.0,,0.0,6.8,88.5,1015.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 14:00:00,82.3,82.3,82.3,65.9,57.73,84.4,15.0,,200.0,,0.0,,0.0,6.8,90.0,1015.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 15:00:00,84.0,84.0,84.0,65.9,54.58,86.2,13.9,,199.0,,0.0,,0.0,6.8,90.0,1014.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 16:00:00,84.9,84.9,84.9,64.1,49.85,86.2,13.8,,200.0,,0.0,,0.0,6.8,90.0,1013.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2001 17:00:00,83.1,83.1,83.1,61.9,48.89,83.9,18.2,,190.0,,0.0,,0.0,6.8,51.3,1013.2,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 18:00:00,84.0,84.0,84.0,62.8,49.01,84.9,15.0,,180.0,,0.0,,0.0,6.8,51.3,1012.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 19:00:00,81.0,81.0,81.0,62.8,54.09,82.2,13.7,,190.0,,0.0,,0.0,6.8,51.1,1012.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 20:00:00,77.2,77.2,77.2,62.9,61.31,,9.1,,170.0,,0.0,,0.0,6.8,30.7,1012.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 21:00:00,77.1,77.1,77.1,62.7,61.17,,4.7,,160.0,,0.0,,0.0,6.8,50.0,1013.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 22:00:00,74.9,74.9,74.9,64.1,69.14,,8.9,,170.0,,0.0,,0.0,6.8,30.7,1013.5,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2001 23:00:00,71.1,71.1,71.1,64.1,78.81,,5.8,,140.0,,0.0,,0.0,6.8,30.0,1013.9,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 00:00:00,71.7,71.7,71.7,64.5,78.07,,9.2,,200.0,,0.0,,0.0,9.9,32.0,1015.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 01:00:00,69.9,69.9,69.9,64.5,83.0,,7.0,,200.0,,0.0,,0.0,9.9,32.0,1014.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 02:00:00,71.6,71.6,71.6,64.5,78.21,,12.7,,200.0,,0.0,,0.0,9.9,30.6,1014.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 03:00:00,69.8,69.8,69.8,64.4,82.99,,12.6,,200.0,,0.0,,0.0,9.9,0.0,1014.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 04:00:00,69.8,69.8,69.8,64.4,83.14,,11.3,,200.0,,0.0,,0.0,9.9,0.0,1014.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 05:00:00,66.2,66.2,66.2,64.4,93.93,,8.1,,209.0,,0.0,,0.0,9.9,0.0,1014.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 06:00:00,66.2,66.2,66.2,62.6,88.35,,5.8,,189.0,,0.0,,0.0,9.9,0.0,1015.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 07:00:00,66.2,66.2,66.2,64.4,93.93,,8.1,,199.0,,0.0,,0.0,8.1,87.4,1016.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2001 08:00:00,69.9,69.9,69.9,64.5,83.0,,13.9,,190.0,,0.0,,0.0,9.9,30.0,1016.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 09:00:00,71.7,71.7,71.7,66.3,82.97,,15.1,,190.0,,0.0,,0.0,9.9,30.6,1016.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 10:00:00,71.8,71.8,71.8,66.3,82.82,,14.0,,210.0,,0.0,,0.0,9.9,98.6,1016.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2001 11:00:00,75.3,75.3,75.3,66.3,73.51,,19.5,,220.0,,0.0,,0.0,9.9,31.7,1016.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 12:00:00,75.4,75.4,75.4,66.3,73.26,,18.2,,220.0,,0.0,,0.0,9.9,90.0,1016.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2001 13:00:00,77.2,77.2,77.2,66.3,69.13,,19.4,,190.0,,0.0,,0.0,9.9,99.7,1015.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2001 14:00:00,79.0,79.0,79.0,66.3,65.14,,20.8,,219.0,,0.0,,0.0,9.9,88.8,1015.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2001 15:00:00,79.0,79.0,79.0,66.2,65.03,,19.5,,200.0,,0.0,,0.0,9.9,88.8,1014.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2001 16:00:00,80.7,80.7,80.7,66.2,61.41,82.9,19.4,,209.0,,0.0,,0.0,9.9,30.0,1013.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 17:00:00,80.7,80.7,80.7,64.5,57.89,82.4,21.9,,200.0,,0.0,,0.0,9.9,29.1,1013.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2001 18:00:00,80.7,80.7,80.7,64.5,57.89,82.4,18.3,,199.0,,0.0,,0.0,9.9,0.9,1013.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 19:00:00,78.8,78.8,78.8,64.5,61.61,,12.6,,189.0,,0.0,,0.0,9.9,0.9,1012.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 20:00:00,75.2,75.2,75.2,64.5,69.29,,9.2,,180.0,,0.0,,0.0,9.9,0.0,1013.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 21:00:00,75.2,75.2,75.2,64.5,69.41,,11.4,,180.0,,0.0,,0.0,9.9,0.0,1013.5,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2001 22:00:00,73.4,73.4,73.4,64.5,73.6,,10.3,,180.0,,0.0,,0.0,9.9,0.0,1013.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Carbondale,IL,US",04/08/2001 00:00:00,73.5,73.5,73.5,62.7,68.98,,18.3,,210.0,,0.0,,0.0,9.9,100.0,1013.5,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 01:00:00,73.5,73.5,73.5,62.7,68.98,,17.2,,200.0,,0.0,,0.0,9.9,100.0,1013.5,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 02:00:00,71.7,71.7,71.7,62.7,73.3,,12.8,,200.0,,0.0,,0.0,9.9,100.0,1013.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 03:00:00,71.7,71.7,71.7,62.7,73.3,,13.9,,210.0,,0.0,,0.0,9.9,100.0,1013.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 04:00:00,69.9,69.9,69.9,62.7,77.92,,12.8,,210.0,,0.0,,0.0,9.9,100.0,1013.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 05:00:00,69.9,69.9,69.9,62.7,77.92,,9.2,,210.0,,0.0,,0.0,9.9,100.0,1013.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 06:00:00,69.9,69.9,69.9,62.7,77.92,,9.2,,200.0,,0.0,,0.0,9.9,100.0,1014.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 07:00:00,69.9,69.9,69.9,62.7,77.92,,12.8,,210.0,,0.0,,0.0,8.1,100.0,1014.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 08:00:00,69.9,69.9,69.9,62.7,77.92,,12.8,,210.0,,0.0,,0.0,8.7,100.0,1015.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 09:00:00,71.7,71.7,71.7,64.5,78.07,,15.0,,210.0,,0.0,,0.0,9.9,90.0,1015.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 10:00:00,73.5,73.5,73.5,64.5,73.47,,13.9,,200.0,,0.0,,0.0,9.9,90.0,1015.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 11:00:00,75.3,75.3,75.3,64.5,69.17,,12.8,,190.0,,0.0,,0.0,9.9,50.0,1015.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2001 12:00:00,75.3,75.3,75.3,66.3,73.64,,17.2,,190.0,,0.0,,0.0,9.9,30.0,1014.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2001 13:00:00,,,,,,,,,,,0.0,,,,,,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,
+"Carbondale,IL,US",04/08/2001 14:00:00,79.2,79.2,79.2,66.6,65.4,,18.4,,190.0,,0.0,,0.0,9.9,4.2,1013.8,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2001 15:00:00,80.7,80.7,80.7,66.3,61.62,82.9,18.3,,200.0,,0.0,,0.0,9.9,50.0,1013.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2001 16:00:00,80.7,80.7,80.7,64.5,57.89,82.4,25.3,,200.0,,0.0,,0.0,9.9,50.0,1012.5,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2001 17:00:00,78.9,78.9,78.9,64.5,61.4,,18.3,,200.0,,0.0,,0.0,9.9,90.0,1012.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2001 18:00:00,77.1,77.1,77.1,62.7,61.17,,16.1,,210.0,,0.0,,0.0,9.9,30.0,1012.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2001 19:00:00,77.1,77.1,77.1,62.7,61.17,,17.2,,200.0,,0.0,,0.0,9.9,50.0,1012.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2001 20:00:00,75.3,75.3,75.3,62.7,64.94,,13.9,,190.0,,0.0,,0.0,9.9,0.0,1012.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2001 21:00:00,75.3,75.3,75.3,62.7,64.94,,15.0,,210.0,,0.0,,0.0,9.9,0.0,1013.2,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2001 22:00:00,73.5,73.5,73.5,62.7,68.98,,15.0,,200.0,,0.0,,0.0,9.9,0.0,1012.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Evansville,IN,US",04/08/2001 00:00:00,74.8,74.8,74.8,59.3,58.66,,15.0,,228.0,,0.0,,0.0,9.9,100.0,1014.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 01:00:00,73.3,73.3,73.3,60.9,65.22,,11.7,,228.0,,0.0,,0.0,9.9,100.0,1014.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 02:00:00,71.8,71.8,71.8,61.0,68.8,,13.9,,228.0,,0.0,,0.0,9.9,100.0,1014.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 03:00:00,71.8,71.8,71.8,61.0,68.8,,10.6,,228.0,,0.0,,0.0,9.9,100.0,1014.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 04:00:00,70.8,70.8,70.8,61.0,71.2,,13.7,,226.0,,0.0,,0.0,9.9,100.0,1014.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 05:00:00,70.0,70.0,70.0,61.0,73.14,,10.2,,228.0,,0.0,,0.0,9.9,100.0,1014.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 06:00:00,69.3,69.3,69.3,61.0,75.14,,9.3,,228.0,,0.0,,0.0,9.9,90.0,1014.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 07:00:00,70.1,70.1,70.1,62.5,76.73,,8.8,,228.0,,0.0,,0.0,8.3,90.0,1015.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 08:00:00,70.1,70.1,70.1,62.9,77.94,,8.1,,240.0,,0.0,,0.0,8.1,30.0,1015.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2001 09:00:00,71.5,71.5,71.5,63.1,74.75,,11.4,,240.0,,0.0,,0.0,8.9,90.0,1015.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 10:00:00,70.1,70.1,70.1,65.0,83.64,,8.3,,255.0,,0.01,,0.0,5.6,100.0,1015.9,"Mist, Fog, Light Rain",37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,"Rain, Overcast"
+"Evansville,IN,US",04/08/2001 11:00:00,72.5,72.5,72.5,66.5,81.53,,5.2,,254.0,,0.01,,0.0,7.2,90.0,1015.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,"Rain, Overcast"
+"Evansville,IN,US",04/08/2001 12:00:00,75.6,75.6,75.6,65.0,69.5,,15.4,,229.0,,0.0,,0.0,8.9,90.0,1015.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 13:00:00,79.1,79.1,79.1,66.1,64.39,,17.8,,226.0,,0.0,,0.0,9.9,90.0,1014.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 14:00:00,80.3,80.3,80.3,65.5,60.83,82.2,17.4,,220.0,,0.0,,0.0,9.9,30.0,1014.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2001 15:00:00,80.1,80.1,80.1,64.0,57.99,81.7,18.2,,216.0,,0.0,,0.0,9.9,0.0,1013.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2001 16:00:00,80.0,80.0,80.0,61.1,52.55,,20.8,,240.0,,0.0,,0.0,9.9,0.0,1013.5,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2001 17:00:00,80.1,80.1,80.1,62.1,54.26,81.3,14.3,,228.0,,0.0,,0.0,9.9,0.0,1013.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2001 18:00:00,79.0,79.0,79.0,61.8,55.65,,16.8,,226.0,,0.0,,0.0,9.9,0.0,1012.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2001 19:00:00,76.6,76.6,76.6,60.9,58.26,,11.3,,219.0,,0.0,,0.0,9.9,0.0,1013.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2001 20:00:00,74.8,74.8,74.8,60.0,60.2,,8.1,,216.0,,0.0,,0.0,9.9,30.0,1013.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2001 21:00:00,74.5,74.5,74.5,59.8,60.17,,9.7,,216.0,,0.0,,0.0,9.9,30.0,1013.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2001 22:00:00,71.9,71.9,71.9,60.2,66.64,,10.3,,240.0,,0.0,,0.0,9.9,90.0,1014.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2001 23:00:00,71.6,71.6,71.6,58.9,64.14,,7.9,,216.0,,0.0,,0.0,9.9,0.0,1013.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 00:00:00,73.8,73.8,73.8,60.5,63.12,,20.3,,230.0,,0.0,,0.0,9.9,51.9,1011.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 01:00:00,73.3,73.3,73.3,61.0,65.42,,20.8,,230.0,,0.0,,0.0,9.9,84.2,1011.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2001 02:00:00,72.6,72.6,72.6,61.0,67.05,,16.9,,224.0,,0.0,,0.0,9.9,95.8,1011.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2001 03:00:00,71.3,71.3,71.3,61.0,70.02,,15.3,,230.0,,0.0,,0.0,9.9,64.6,1011.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 04:00:00,70.8,70.8,70.8,61.0,71.26,,13.6,,234.0,,0.0,,0.0,9.9,64.6,1012.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 05:00:00,68.9,68.9,68.9,61.0,76.05,,11.1,,230.0,,0.0,,0.0,9.9,51.9,1012.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 06:00:00,65.8,65.8,65.8,61.0,84.47,,8.7,,220.0,,0.0,,0.0,9.9,28.8,1012.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 07:00:00,66.1,66.1,66.1,61.5,85.22,,9.3,,230.0,,0.0,,0.0,9.9,41.5,1013.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 08:00:00,69.5,69.5,69.5,62.8,79.33,,10.6,,230.0,,0.0,,0.0,9.9,17.3,1014.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 09:00:00,71.8,71.8,71.8,63.5,75.2,,14.8,,240.0,,0.0,,0.0,9.9,17.3,1014.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 10:00:00,74.3,74.3,74.3,61.5,64.36,,16.2,,238.0,,0.0,,0.0,9.9,17.3,1014.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 11:00:00,77.1,77.1,77.1,59.7,55.05,,16.0,,238.0,,0.0,,0.0,9.9,30.0,1014.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 12:00:00,79.5,79.5,79.5,56.8,45.85,,16.5,,234.0,,0.0,,0.0,9.9,17.3,1013.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 13:00:00,80.8,80.8,80.8,57.6,45.14,81.0,13.9,,234.0,,0.0,,0.0,9.9,17.3,1013.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 14:00:00,80.8,80.8,80.8,59.0,47.44,81.2,18.3,,220.0,,0.0,,0.0,7.8,38.5,1012.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 15:00:00,82.0,82.0,82.0,59.5,46.41,82.3,14.1,,236.0,,0.0,,0.0,9.9,73.1,1012.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 16:00:00,80.8,80.8,80.8,60.5,50.15,81.6,16.5,,225.0,,0.0,,0.0,8.9,51.9,1011.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 17:00:00,80.8,80.8,80.8,62.0,52.92,81.9,16.3,,220.0,,0.0,,0.0,9.9,73.1,1011.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 18:00:00,79.0,79.0,79.0,61.5,55.11,,14.9,,220.0,,0.0,,0.0,8.9,51.9,1011.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 19:00:00,76.4,76.4,76.4,62.8,62.89,,13.6,,210.0,,0.0,,0.0,8.9,17.3,1011.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 20:00:00,74.6,74.6,74.6,62.3,65.57,,11.9,,220.0,,0.0,,0.0,8.9,17.3,1012.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 21:00:00,73.8,73.8,73.8,61.0,64.29,,11.7,,210.0,,0.0,,0.0,9.9,28.8,1012.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2001 22:00:00,72.6,72.6,72.6,60.5,65.82,,11.9,,204.0,,0.0,,0.0,9.9,17.3,1012.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2001 23:00:00,71.3,71.3,71.3,60.5,68.74,,10.3,,198.0,,0.0,,0.0,9.9,0.0,1012.4,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Dayton,OH,US",04/08/2001 00:00:00,74.8,74.8,74.8,57.1,54.11,,14.8,,205.0,,0.0,,0.0,8.3,90.0,1012.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 01:00:00,74.4,74.4,74.4,57.1,54.95,,15.4,,214.0,,0.0,,0.0,8.3,88.7,1011.9,Light Rain,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 02:00:00,73.7,73.7,73.7,57.3,56.6,,15.0,,214.0,,0.0,,0.0,8.3,49.6,1012.4,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 03:00:00,72.0,72.0,72.0,57.8,60.88,,14.1,,215.0,,0.0,,0.0,8.3,28.2,1012.5,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 04:00:00,71.0,71.0,71.0,58.1,63.82,,13.6,,210.0,,0.0,,0.0,8.3,68.3,1012.5,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 05:00:00,69.1,69.1,69.1,58.2,68.07,,13.1,,210.0,,0.0,,0.0,8.3,18.4,1012.9,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2001 06:00:00,68.6,68.6,68.6,59.5,72.9,,11.6,,210.0,,0.0,,0.0,8.3,18.4,1013.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2001 07:00:00,68.2,68.2,68.2,59.6,73.94,,11.9,,210.0,,0.0,,0.0,8.3,90.2,1013.9,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 08:00:00,68.3,68.3,68.3,61.1,77.64,,10.8,,210.0,,0.0,,0.0,8.3,90.2,1014.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 09:00:00,71.6,71.6,71.6,62.0,71.74,,13.2,,220.0,,0.0,,0.0,8.3,49.5,1014.9,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 10:00:00,74.3,74.3,74.3,63.3,68.73,,16.5,,229.0,,0.0,,0.0,8.3,88.7,1014.8,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 11:00:00,75.7,75.7,75.7,62.4,63.4,,16.0,,244.0,,0.0,,0.0,8.3,89.2,1014.9,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 12:00:00,75.4,75.4,75.4,61.0,61.07,,13.8,,230.0,,0.0,,0.0,6.9,87.8,1014.9,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 13:00:00,80.3,80.3,80.3,58.6,47.65,80.9,14.7,,224.0,,0.0,,0.0,8.3,71.7,1014.4,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 14:00:00,82.6,82.6,82.6,59.2,45.08,82.7,17.5,,219.0,,0.0,,0.0,7.9,89.2,1014.1,Smoke Or Haze,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 15:00:00,80.7,80.7,80.7,60.1,49.67,81.4,15.5,,229.0,,0.0,,0.0,8.3,63.9,1013.7,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 16:00:00,78.6,78.6,78.6,62.6,58.06,,13.4,,248.0,,0.0,,0.0,8.3,63.9,1013.4,Rain Showers,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 17:00:00,79.8,79.8,79.8,61.6,53.85,,16.6,,230.0,,0.0,,0.0,7.9,88.7,1012.7,Smoke Or Haze,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 18:00:00,79.0,79.0,79.0,64.5,61.22,,13.9,,220.0,,0.0,,0.0,6.4,87.8,1012.5,Smoke Or Haze,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2001 19:00:00,75.6,75.6,75.6,63.8,66.77,,9.6,,230.0,,0.0,,0.0,8.3,62.0,1012.7,Rain Showers,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 20:00:00,75.3,75.3,75.3,61.9,63.22,,13.2,,224.0,,0.0,,0.0,7.2,29.1,1012.7,Smoke Or Haze,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2001 21:00:00,72.5,72.5,72.5,61.0,67.23,,6.3,,220.0,,0.0,,0.0,7.2,1.9,1013.0,Smoke Or Haze,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2001 22:00:00,70.4,70.4,70.4,60.9,71.85,,6.3,,215.0,,0.0,,0.0,8.3,0.0,1013.3,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2001 23:00:00,69.6,69.6,69.6,60.9,73.85,,6.3,,214.0,,0.0,,0.0,7.7,27.2,1013.5,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2001 00:00:00,72.7,72.7,72.7,61.0,66.7,,18.1,,229.0,,0.0,,0.0,9.9,3.1,1007.5,Light Rain,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 01:00:00,72.5,72.5,72.5,61.8,69.03,,16.2,,228.0,,0.0,,0.0,9.9,27.4,1007.7,Light Rain,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2001 02:00:00,71.1,71.1,71.1,62.4,73.92,,16.1,,236.0,,0.0,,0.0,9.9,40.6,1008.1,Light Rain,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2001 03:00:00,69.5,69.5,69.5,61.0,74.35,,16.5,,266.0,,0.0,,0.0,9.9,0.0,1008.1,"Thunderstorm, Light Rain",41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 04:00:00,68.7,68.7,68.7,61.1,76.58,,16.0,,244.0,,0.0,,0.0,9.9,4.3,1008.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 05:00:00,68.6,68.6,68.6,61.6,78.32,,15.3,,245.0,,0.0,,0.0,9.9,0.0,1008.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 06:00:00,67.6,67.6,67.6,60.8,78.84,,18.6,,230.0,,0.0,,0.0,9.9,0.0,1009.1,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 07:00:00,66.5,66.5,66.5,59.7,78.91,,15.5,,237.0,,0.0,,0.0,9.9,7.8,1009.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 08:00:00,65.8,65.8,65.8,60.4,82.6,,14.6,,236.0,,0.0,,0.0,9.8,2.6,1010.2,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 09:00:00,66.8,66.8,66.8,56.2,68.74,,20.3,,238.0,,0.0,,0.0,9.9,0.0,1010.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 10:00:00,69.2,69.2,69.2,53.9,58.19,,21.8,,241.0,,0.0,,0.0,9.9,0.0,1011.1,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 11:00:00,70.5,70.5,70.5,50.6,49.24,,20.7,,249.0,,0.0,,0.0,9.9,2.6,1011.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 12:00:00,73.5,73.5,73.5,47.8,40.15,,23.9,,266.0,,0.0,,0.0,9.9,0.0,1011.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 13:00:00,75.3,75.3,75.3,48.2,38.4,,21.0,,243.0,,0.0,,0.0,9.9,0.0,1011.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 14:00:00,75.7,75.7,75.7,48.3,38.05,,20.1,,253.0,,0.0,,0.0,9.9,2.6,1011.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 15:00:00,78.3,78.3,78.3,46.9,33.08,,21.6,,252.0,,0.0,,0.0,9.9,2.6,1011.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 16:00:00,79.1,79.1,79.1,44.7,29.57,,21.8,,246.0,,0.0,,0.0,9.9,2.6,1011.1,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 17:00:00,78.4,78.4,78.4,44.0,29.56,,21.3,,255.0,,0.0,,0.0,9.9,2.6,1010.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 18:00:00,78.2,78.2,78.2,43.9,29.6,,17.7,,263.0,,0.0,,0.0,9.9,2.6,1010.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 19:00:00,77.0,77.0,77.0,43.7,30.6,,12.0,,280.0,,0.0,,0.0,9.9,0.0,1010.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 20:00:00,73.4,73.4,73.4,44.9,36.11,,6.9,,285.0,,0.0,,0.0,9.9,2.6,1010.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 21:00:00,69.2,69.2,69.2,44.6,41.06,,0.6,,310.0,,0.0,,0.0,9.9,7.8,1011.2,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2001 22:00:00,65.3,65.3,65.3,47.8,53.11,,0.8,,64.0,,0.0,,0.0,9.9,81.7,1011.6,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2001 23:00:00,61.1,61.1,61.1,47.7,61.4,,1.2,,69.0,,0.0,,0.0,9.9,26.9,1011.6,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 00:00:00,75.3,75.3,75.3,60.9,60.96,,23.0,,200.0,,0.0,,0.0,9.9,30.6,1008.1,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 01:00:00,75.3,75.3,75.3,59.1,57.22,,18.3,,210.0,,0.0,,0.0,9.9,30.5,1008.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 02:00:00,73.5,73.5,73.5,59.1,60.77,,24.1,,210.0,,0.0,,0.0,9.9,0.3,1008.5,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 03:00:00,73.5,73.5,73.5,59.1,60.78,,21.8,,210.0,,0.0,,0.0,9.9,0.4,1008.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 04:00:00,71.7,71.7,71.7,59.1,64.56,,18.3,,210.0,,0.0,,0.0,9.9,0.7,1008.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 05:00:00,71.7,71.7,71.7,59.1,64.57,,17.2,,220.0,,0.0,,0.0,9.9,50.3,1009.5,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 06:00:00,69.9,69.9,69.9,60.9,73.14,,17.2,,220.0,,0.0,,0.0,9.9,50.3,1009.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 07:00:00,69.9,69.9,69.9,60.9,73.14,,21.9,,220.0,,0.0,,0.0,9.9,99.9,1010.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2001 08:00:00,69.9,69.9,69.9,60.9,73.12,,16.1,,220.0,,0.0,,0.0,9.9,0.4,1010.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 09:00:00,71.7,71.7,71.7,62.7,73.31,,20.8,,220.0,,0.0,,0.0,9.9,99.9,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2001 10:00:00,66.3,66.3,66.3,59.1,77.58,,17.2,,240.0,,0.0,,0.0,9.9,50.3,1011.5,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 11:00:00,73.5,73.5,73.5,60.9,64.72,,18.4,,240.0,,0.0,,0.0,9.9,49.8,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 12:00:00,73.5,73.5,73.5,57.3,56.95,,19.5,,240.0,,0.0,,0.0,9.9,30.0,1011.5,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 13:00:00,71.7,71.7,71.7,55.5,56.62,,17.3,,250.0,,0.0,,0.0,9.9,30.0,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 14:00:00,66.4,66.4,66.4,51.9,59.66,,13.9,,260.0,,0.0,,0.0,9.9,0.4,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 15:00:00,62.8,62.8,62.8,50.1,63.23,,11.5,,260.0,,0.0,,0.0,9.9,30.0,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2001 16:00:00,62.8,62.8,62.8,51.9,67.56,,12.8,,270.0,,0.0,,0.0,9.9,0.3,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 17:00:00,59.3,59.3,59.3,48.4,67.15,,10.4,,270.0,,0.0,,0.0,9.9,0.4,1010.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 18:00:00,62.8,62.8,62.8,50.1,63.26,,9.2,,231.0,,0.0,,0.0,9.9,0.4,1010.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 19:00:00,64.6,64.6,64.6,50.1,59.46,,9.2,,240.0,,0.0,,0.0,9.9,0.2,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 20:00:00,57.4,57.4,57.4,48.3,71.64,,8.0,,231.0,,0.0,,0.0,9.9,0.0,1011.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 21:00:00,57.4,57.4,57.4,48.3,71.72,,6.9,,230.0,,0.0,,0.0,9.9,0.0,1011.9,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 22:00:00,64.5,64.5,64.5,46.5,52.09,,3.3,,200.0,,0.0,,0.0,9.9,0.0,1012.2,"Thunderstorm, Thunderstorm Without Precipitation",41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2001 23:00:00,66.3,66.3,66.3,46.5,48.96,,4.7,,160.0,,0.0,,0.0,9.9,50.3,1011.9,Thunderstorm,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Erie,PA,US",04/08/2001 00:00:00,68.1,68.1,68.1,56.0,65.31,,12.6,,176.0,,0.0,,0.32,9.5,0.0,1008.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 01:00:00,66.3,66.3,66.3,57.2,72.63,,15.4,,192.0,,0.17,,0.28,1.6,88.3,1009.5,"Thunderstorm, Rain Showers",42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,"Rain, Overcast"
+"Erie,PA,US",04/08/2001 02:00:00,59.3,59.3,59.3,55.5,87.19,,13.4,,180.0,,0.0,,0.24,8.6,90.0,1009.5,Thunderstorm Without Precipitation,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2001 03:00:00,65.9,65.9,65.9,56.0,70.47,,15.2,,180.0,,0.01,,0.2,9.8,90.0,1009.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,"Rain, Overcast"
+"Erie,PA,US",04/08/2001 04:00:00,66.8,66.8,66.8,55.1,66.11,,13.1,,180.0,,0.0,,0.16,9.8,88.3,1009.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2001 05:00:00,69.0,69.0,69.0,55.1,61.14,,14.1,,189.0,,0.0,,0.12,9.8,97.1,1009.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2001 06:00:00,70.0,70.0,70.0,55.1,59.23,,13.1,,208.0,,0.0,,0.08,9.8,100.0,1009.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2001 07:00:00,70.0,70.0,70.0,56.0,61.26,,12.9,,199.0,,0.0,,0.04,9.7,99.7,1010.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2001 08:00:00,69.8,69.8,69.8,55.5,60.46,,11.8,,199.0,,0.0,,0.0,9.8,98.0,1010.6,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2001 09:00:00,71.8,71.8,71.8,57.8,61.49,,9.9,,218.0,,0.0,,0.0,9.8,30.0,1011.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Partially cloudy
+"Erie,PA,US",04/08/2001 10:00:00,74.8,74.8,74.8,57.9,55.64,,12.4,,238.0,,0.0,,0.0,9.8,48.6,1010.8,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Partially cloudy
+"Erie,PA,US",04/08/2001 11:00:00,75.7,75.7,75.7,53.1,45.46,,16.4,,240.0,,0.0,,0.0,9.8,30.0,1010.8,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Partially cloudy
+"Erie,PA,US",04/08/2001 12:00:00,77.0,77.0,77.0,45.2,32.37,,23.0,,258.0,,0.0,,0.0,9.8,0.0,1010.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 13:00:00,77.0,77.0,77.0,46.3,33.71,,20.4,,258.0,,0.0,,0.0,9.8,0.0,1010.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 14:00:00,75.3,75.3,75.3,51.8,43.93,,22.3,,258.0,,0.0,,0.0,9.8,0.9,1010.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 15:00:00,75.9,75.9,75.9,51.1,41.92,,21.7,,258.0,,0.0,,0.0,9.8,0.0,1010.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 16:00:00,74.1,74.1,74.1,50.1,42.83,,22.4,,259.0,,0.0,,0.0,9.8,0.0,1010.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 17:00:00,72.0,72.0,72.0,51.1,47.78,,17.1,,259.0,,0.0,,0.0,9.9,0.0,1010.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 18:00:00,70.2,70.2,70.2,50.1,48.95,,16.1,,259.0,,0.0,,0.0,9.9,0.0,1010.8,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 19:00:00,69.3,69.3,69.3,46.2,43.66,,14.1,,250.0,,0.0,,0.0,9.9,0.0,1011.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 20:00:00,68.1,68.1,68.1,44.8,42.99,,11.0,,231.0,,0.0,,0.0,9.9,0.0,1011.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 21:00:00,68.0,68.0,68.0,44.1,42.01,,8.1,,241.0,,0.0,,0.0,9.9,0.0,1011.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 22:00:00,68.0,68.0,68.0,44.1,42.09,,7.7,,231.0,,0.0,,0.0,9.9,0.0,1012.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2001 23:00:00,66.8,66.8,66.8,44.0,43.73,,6.9,,240.0,,0.0,,0.0,9.9,0.0,1011.9,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Buffalo,NY,US",04/08/2001 00:00:00,54.3,54.3,54.3,51.3,89.68,,18.5,,158.0,,0.05,,0.0,6.8,90.0,1008.8,"Thunderstorm, Rain Showers, Light Rain",42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,"Rain, Overcast"
+"Buffalo,NY,US",04/08/2001 01:00:00,54.0,54.0,54.0,49.6,85.04,,11.8,,165.0,,0.0,,0.0,8.7,90.0,1008.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2001 02:00:00,58.5,58.5,58.5,51.9,78.91,,12.6,,200.0,,0.01,,0.0,9.9,90.0,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,"Rain, Overcast"
+"Buffalo,NY,US",04/08/2001 03:00:00,52.0,52.0,52.0,47.2,83.62,,9.6,,214.0,,0.0,,0.0,8.7,30.0,1008.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2001 04:00:00,55.0,55.0,55.0,48.9,79.89,,12.1,,183.0,,0.0,,0.0,9.9,90.0,1008.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2001 05:00:00,56.8,56.8,56.8,49.9,77.48,,14.6,,191.0,,0.0,,0.0,9.9,90.0,1008.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2001 06:00:00,56.6,56.6,56.6,49.6,77.46,,15.5,,184.0,,0.0,,0.0,9.9,50.0,1008.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2001 07:00:00,58.3,58.3,58.3,50.3,74.83,,15.9,,189.0,,0.0,,0.0,9.9,90.0,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2001 08:00:00,59.4,59.4,59.4,52.3,77.5,,17.0,,195.0,,0.0,,0.0,9.9,30.0,1009.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2001 09:00:00,60.5,60.5,60.5,51.8,73.01,,14.6,,211.0,,0.0,,0.0,9.9,50.0,1009.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2001 10:00:00,63.5,63.5,63.5,53.2,69.32,,18.8,,213.0,,0.0,,0.0,9.9,0.0,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 11:00:00,65.9,65.9,65.9,54.7,67.15,,20.0,,230.0,,0.0,,0.0,9.9,30.0,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2001 12:00:00,65.7,65.7,65.7,54.8,67.95,,22.1,,239.0,,0.0,,0.0,9.9,0.0,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 13:00:00,62.4,62.4,62.4,53.3,72.08,,22.9,,239.0,,0.0,,0.0,9.9,30.0,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2001 14:00:00,62.9,62.9,62.9,53.0,70.03,,24.9,,239.0,,0.0,,0.0,9.9,0.0,1008.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 15:00:00,62.7,62.7,62.7,51.6,67.19,,24.9,,239.0,,0.0,,0.0,9.9,0.0,1008.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 16:00:00,62.7,62.7,62.7,51.1,65.87,,22.6,,247.0,,0.0,,0.0,9.9,0.0,1008.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 17:00:00,60.6,60.6,60.6,48.9,65.14,,22.9,,239.0,,0.0,,0.0,9.9,0.0,1008.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 18:00:00,58.0,58.0,58.0,45.1,62.2,,20.2,,246.0,,0.0,,0.0,9.9,0.0,1008.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 19:00:00,55.8,55.8,55.8,42.5,60.81,,16.3,,241.0,,0.0,,0.0,9.9,0.0,1008.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 20:00:00,53.1,53.1,53.1,41.5,64.49,,17.2,,242.0,,0.0,,0.0,9.9,0.0,1009.1,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 21:00:00,52.3,52.3,52.3,41.1,65.69,,12.6,,227.0,,0.0,,0.0,9.9,0.0,1009.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 22:00:00,47.5,47.5,47.5,39.8,74.48,,9.9,,231.0,43.0,0.0,,0.0,9.9,0.0,1010.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2001 23:00:00,43.2,43.2,43.2,38.5,83.49,,6.6,,206.0,39.2,0.0,,0.0,9.9,0.0,1011.5,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Rochester,NY,US",04/08/2001 00:00:00,50.1,50.1,50.1,47.9,92.25,,25.3,,170.0,,0.04,,0.0,6.8,100.0,1009.1,"Rain, Thunderstorm, Rain Showers",43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,"Rain, Overcast"
+"Rochester,NY,US",04/08/2001 01:00:00,51.2,51.2,51.2,47.9,88.63,,20.8,,180.0,,0.0,,0.0,9.9,100.0,1010.5,"Thunderstorm, Rain Showers, Light Rain",43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2001 02:00:00,50.1,50.1,50.1,46.5,87.39,,12.8,,160.0,,0.14,,0.0,5.0,100.0,1010.8,"Mist, Thunderstorm, Rain Showers",43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,"Rain, Overcast"
+"Rochester,NY,US",04/08/2001 03:00:00,51.2,51.2,51.2,47.0,85.69,,15.0,,180.0,,0.02,,0.0,9.9,90.0,1010.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,"Rain, Overcast"
+"Rochester,NY,US",04/08/2001 04:00:00,51.2,51.2,51.2,46.1,82.82,,18.3,,180.0,,0.0,,0.0,9.9,90.0,1010.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2001 05:00:00,50.1,50.1,50.1,44.9,82.19,,16.1,,180.0,,0.0,,0.0,9.9,90.0,1010.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2001 06:00:00,51.2,51.2,51.2,46.1,82.82,,12.8,,190.0,,0.0,,0.0,9.9,100.0,1010.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2001 07:00:00,51.2,51.2,51.2,46.1,82.82,,15.0,,190.0,,0.0,,0.0,9.9,50.0,1010.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 08:00:00,51.9,51.9,51.9,46.5,81.76,,12.8,,200.0,,0.0,,0.0,9.9,90.0,1010.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2001 09:00:00,55.1,55.1,55.1,47.9,76.66,,17.2,,210.0,,0.0,,0.0,9.9,50.0,1010.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 10:00:00,57.8,57.8,57.8,48.8,71.91,,19.7,,200.0,,0.0,,0.0,9.9,30.0,1010.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 11:00:00,62.0,62.0,62.0,52.1,69.98,,16.1,,200.0,,0.0,,0.0,9.9,0.0,1009.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2001 12:00:00,66.8,66.8,66.8,55.1,66.05,,19.7,,200.0,,0.0,,0.0,9.9,30.0,1008.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 13:00:00,71.0,71.0,71.0,56.0,59.22,,17.2,,200.0,,0.0,,0.0,9.9,50.0,1007.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 14:00:00,75.3,75.3,75.3,51.9,44.02,,27.5,,240.0,,0.0,,0.0,9.9,30.0,1007.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 15:00:00,74.9,74.9,74.9,53.0,46.36,,33.3,,240.0,,0.0,,0.0,9.9,30.0,1007.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 16:00:00,74.0,74.0,74.0,52.1,46.22,,30.0,,250.0,,0.0,,0.0,9.9,30.0,1006.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 17:00:00,74.0,74.0,74.0,50.1,42.95,,34.7,,250.0,,0.0,,0.0,9.9,30.0,1006.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 18:00:00,73.1,73.1,73.1,47.9,40.84,,32.2,,240.0,,0.0,,0.0,9.9,30.0,1007.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 19:00:00,70.1,70.1,70.1,47.9,45.31,,17.2,,250.0,,0.0,,0.0,9.9,0.0,1007.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Rochester,NY,US",04/08/2001 20:00:00,68.1,68.1,68.1,46.5,45.93,,20.8,,250.0,,0.0,,0.0,9.9,50.0,1008.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 21:00:00,65.9,65.9,65.9,44.9,46.54,,17.2,,250.0,,0.0,,0.0,9.9,30.0,1009.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2001 22:00:00,62.0,62.0,62.0,44.9,53.45,,15.0,,260.0,,0.0,,0.0,9.9,0.0,1010.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2001 00:00:00,45.9,45.9,45.9,42.0,86.02,,13.7,,120.0,39.8,0.15,,0.0,5.2,100.0,1016.3,"Mist, Thunderstorm, Fog, Rain Showers",43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,"Rain, Overcast"
+"Syracuse,NY,US",04/08/2001 01:00:00,44.8,44.8,44.8,39.8,82.55,,13.7,,139.0,38.3,0.02,,0.0,9.9,100.0,1016.3,Light Rain,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,"Rain, Overcast"
+"Syracuse,NY,US",04/08/2001 02:00:00,44.6,44.6,44.6,37.6,76.3,,20.3,,150.0,36.4,0.08,,0.0,8.0,100.0,1016.5,"Thunderstorm, Thunderstorm Without Precipitation, Rain Showers",43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,"Rain, Overcast"
+"Syracuse,NY,US",04/08/2001 03:00:00,43.1,43.1,43.1,35.0,72.9,,17.2,,110.0,35.2,0.21,,0.0,9.9,100.0,1015.9,"Rain, Thunderstorm, Rain Showers",43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,"Rain, Overcast"
+"Syracuse,NY,US",04/08/2001 04:00:00,41.0,41.0,41.0,37.1,85.96,,13.7,,111.0,33.5,0.17,,0.0,9.9,100.0,1015.9,Light Drizzle,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,"Rain, Overcast"
+"Syracuse,NY,US",04/08/2001 05:00:00,41.0,41.0,41.0,35.0,78.96,,11.5,,120.0,34.3,0.0,,0.0,9.9,100.0,1015.8,Light Rain,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2001 06:00:00,42.2,42.2,42.2,37.1,82.19,,11.6,,140.0,35.7,0.0,,0.0,9.9,100.0,1015.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2001 07:00:00,42.1,42.1,42.1,37.9,85.21,,13.6,,110.0,34.9,0.0,,0.0,9.9,99.6,1014.6,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2001 08:00:00,44.5,44.5,44.5,39.2,81.43,,8.1,,130.0,40.0,0.0,,0.0,9.9,87.7,1014.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2001 09:00:00,46.9,46.9,46.9,41.0,79.77,,11.6,,140.0,41.6,0.0,,0.0,9.9,86.6,1014.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2001 10:00:00,51.0,51.0,51.0,43.0,73.99,,10.2,,140.0,,0.0,,0.0,9.9,48.1,1013.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2001 11:00:00,53.9,53.9,53.9,44.1,69.36,,11.5,,159.0,,0.0,,0.0,9.9,86.6,1013.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2001 12:00:00,56.9,56.9,56.9,46.2,67.29,,13.7,,169.0,,0.0,,0.0,9.9,28.9,1012.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2001 13:00:00,60.2,60.2,60.2,47.1,62.04,,16.1,,180.0,,0.0,,0.0,9.9,0.0,1011.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2001 14:00:00,62.8,62.8,62.8,48.4,59.46,,12.8,,180.0,,0.0,,0.0,9.9,0.0,1010.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2001 15:00:00,65.9,65.9,65.9,48.1,52.51,,14.0,,189.0,,0.0,,0.0,9.9,28.9,1009.1,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2001 16:00:00,69.2,69.2,69.2,48.9,48.49,,20.7,,180.0,,0.0,,0.0,9.9,0.0,1007.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2001 17:00:00,68.2,68.2,68.2,48.9,50.13,,10.5,,200.0,,0.0,,0.0,9.9,0.0,1007.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2001 18:00:00,69.3,69.3,69.3,48.7,47.77,,10.8,,182.0,,0.0,,0.0,9.9,0.0,1007.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2001 19:00:00,66.1,66.1,66.1,48.7,53.44,,11.8,,183.0,,0.0,,0.0,9.9,28.9,1007.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2001 20:00:00,63.0,63.0,63.0,48.2,58.43,,10.6,,192.0,,0.0,,0.0,9.9,28.9,1008.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2001 21:00:00,62.0,62.0,62.0,47.8,59.67,,9.4,,215.0,,0.0,,0.0,9.9,0.0,1008.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Syracuse,NY,US",04/08/2001 22:00:00,52.3,52.3,52.3,44.8,75.61,,15.9,,358.0,,0.0,,0.0,9.9,28.9,1010.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2001 23:00:00,50.2,50.2,50.2,43.9,78.89,,3.4,,272.0,,0.0,,0.0,9.9,0.0,1010.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Clear
+"Burlington,VT,US",04/08/2001 00:00:00,43.9,43.9,43.9,23.1,43.41,,7.0,,170.0,39.9,0.0,,8.14,9.9,30.5,1021.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2001 01:00:00,44.8,44.8,44.8,17.9,33.68,,10.3,,170.0,39.5,0.0,,8.09,9.9,99.9,1020.3,Light Rain,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 02:00:00,41.0,41.0,41.0,26.7,56.26,,11.4,,140.0,34.4,0.0,,8.04,9.9,100.0,1020.0,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 03:00:00,38.9,38.9,38.9,30.7,72.26,,14.9,,180.0,30.5,0.01,,7.99,9.9,100.0,1020.0,"Thunderstorm, Rain Showers, Light Rain, Heavy Freezing Rain",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,"Rain, Overcast"
+"Burlington,VT,US",04/08/2001 04:00:00,38.0,38.0,38.0,30.8,75.03,,16.1,,170.0,29.0,0.22,,7.94,9.9,100.0,1019.0,"Thunderstorm, Rain Showers, Light Rain",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,"Rain, Overcast"
+"Burlington,VT,US",04/08/2001 05:00:00,35.8,35.8,35.8,32.0,85.89,,15.0,,160.0,26.5,0.09,,7.9,5.0,100.0,1019.3,"Ice, Mist, Fog, Heavy Rain",44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,"Rain, Overcast"
+"Burlington,VT,US",04/08/2001 06:00:00,35.9,35.9,35.9,32.1,85.96,,15.0,,170.0,26.6,0.01,,7.85,9.9,100.0,1018.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,"Rain, Overcast"
+"Burlington,VT,US",04/08/2001 07:00:00,37.1,37.1,37.1,29.9,74.97,,19.6,,170.0,26.8,0.0,,7.8,9.9,100.0,1017.9,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 08:00:00,37.5,37.5,37.5,30.3,75.01,,25.2,,170.0,26.0,0.0,,7.75,9.9,100.0,1017.6,Light Rain,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 09:00:00,38.0,38.0,38.0,29.9,72.47,,18.3,,170.0,28.3,0.0,,0.0,9.9,100.0,1017.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 10:00:00,38.9,38.9,38.9,29.9,70.02,,25.1,,180.0,27.9,0.0,,0.0,9.9,100.0,1016.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 11:00:00,39.8,39.8,39.8,30.8,70.12,,19.6,,160.0,30.3,0.0,,0.0,9.9,100.0,1015.6,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 12:00:00,39.8,39.8,39.8,32.1,73.73,,18.2,,180.0,30.6,0.0,,0.0,9.9,100.0,1014.9,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 13:00:00,41.0,41.0,41.0,33.2,73.34,,24.0,,180.0,31.0,0.0,,0.0,9.9,100.0,1013.9,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 14:00:00,42.8,42.8,42.8,35.7,75.61,,21.8,,180.0,33.8,0.0,,0.0,9.9,100.0,1013.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 15:00:00,42.1,42.1,42.1,35.0,75.51,,20.7,,180.0,33.1,0.0,,0.0,9.9,100.0,1012.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 16:00:00,43.0,43.0,43.0,35.9,75.62,,19.6,,170.0,34.5,0.0,,0.0,9.9,100.0,1010.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 17:00:00,42.1,42.1,42.1,35.0,75.57,,21.8,,180.0,32.9,0.0,,0.0,9.9,100.0,1010.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 18:00:00,41.1,41.1,41.1,35.0,78.75,,20.7,,190.0,31.7,0.0,,0.0,9.9,100.0,1010.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 19:00:00,42.1,42.1,42.1,35.9,78.33,,18.3,,180.0,33.7,0.0,,0.0,9.9,50.4,1009.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2001 20:00:00,42.8,42.8,42.8,35.7,75.68,,19.4,,180.0,34.3,0.0,,0.0,9.9,100.0,1008.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 21:00:00,43.0,43.0,43.0,38.0,82.32,,19.6,,180.0,34.6,0.0,,0.0,9.9,100.0,1008.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 22:00:00,43.0,43.0,43.0,38.9,85.25,,24.0,,180.0,33.6,0.0,,0.0,9.9,100.0,1008.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2001 23:00:00,43.0,43.0,43.0,38.9,85.25,,13.8,,220.0,36.1,0.0,,0.0,9.9,90.1,1009.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Houlton,ME,US",04/08/2001 00:00:00,34.1,34.1,34.1,20.9,58.27,,12.7,,150.0,25.1,0.0,,2.29,9.9,0.0,1026.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 01:00:00,32.1,32.1,32.1,21.8,65.51,,9.1,,160.0,24.3,0.0,,2.29,9.9,0.0,1026.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 02:00:00,29.9,29.9,29.9,21.8,71.48,,4.7,,170.0,24.9,0.0,,2.28,9.9,0.0,1026.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 03:00:00,30.8,30.8,30.8,21.8,68.92,,10.3,,160.0,22.1,0.0,,2.28,9.9,0.0,1024.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 04:00:00,26.9,26.9,26.9,20.9,77.99,,0.0,,160.0,,0.0,,2.28,9.9,0.0,1024.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 05:00:00,28.1,28.1,28.1,23.1,81.13,,4.7,,170.0,22.8,0.0,,2.28,9.9,0.0,1025.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 06:00:00,28.1,28.1,28.1,24.2,84.87,,5.8,,170.0,21.8,0.0,,2.27,9.9,0.0,1025.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 07:00:00,29.0,29.0,29.0,25.1,84.9,,8.1,,170.0,21.2,0.0,,2.27,9.9,0.0,1025.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 08:00:00,30.8,30.8,30.8,25.1,78.93,,8.1,,180.0,23.4,0.0,,2.27,9.9,0.0,1024.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 09:00:00,34.1,34.1,34.1,25.1,69.25,,10.3,,180.0,26.2,0.0,,0.0,9.9,0.1,1024.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 10:00:00,37.1,37.1,37.1,24.2,59.1,,13.9,,190.0,28.5,0.0,,0.0,9.9,0.2,1024.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2001 11:00:00,37.1,37.1,37.1,24.2,59.1,,13.9,,190.0,28.5,0.0,,0.0,9.9,30.0,1023.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Partially cloudy
+"Houlton,ME,US",04/08/2001 12:00:00,35.9,35.9,35.9,25.1,64.53,,15.0,,210.0,26.5,0.0,,0.0,9.9,90.0,1022.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 13:00:00,,,,,,,,,,,0.0,,,,,,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,
+"Houlton,ME,US",04/08/2001 14:00:00,35.7,35.7,35.7,26.7,69.49,,15.0,,180.0,26.3,0.0,,0.0,9.9,100.0,1018.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 15:00:00,35.0,35.0,35.0,28.1,75.85,,11.7,,170.0,26.7,0.0,,0.0,9.9,100.0,1020.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 16:00:00,35.0,35.0,35.0,28.1,75.85,,11.6,,180.0,26.7,0.0,,0.0,9.9,100.0,1019.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 17:00:00,35.0,35.0,35.0,26.9,72.03,,11.7,,170.0,26.7,0.0,,0.0,9.9,100.0,1017.3,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 18:00:00,35.0,35.0,35.0,28.1,75.85,,11.7,,170.0,26.7,0.0,,0.0,9.9,100.0,1016.3,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 19:00:00,34.1,34.1,34.1,28.1,78.62,,10.3,,170.0,26.1,0.0,,0.0,9.9,100.0,1015.2,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 20:00:00,34.1,34.1,34.1,26.9,74.67,,8.1,,170.0,27.3,0.0,,0.0,9.9,100.0,1015.2,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 21:00:00,34.1,34.1,34.1,26.9,74.67,,12.8,,170.0,25.1,0.0,,0.0,9.9,100.0,1014.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2001 22:00:00,33.9,33.9,33.9,28.5,80.38,,18.3,,180.0,22.9,0.0,,0.0,9.9,100.0,1011.2,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Fredericton,NB,CA",04/08/2001 00:00:00,30.0,30.0,30.0,21.4,69.97,,0.6,,150.0,,0.0,,0.73,13.2,0.0,1028.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2001 01:00:00,28.0,28.0,28.0,21.3,75.64,,0.6,,140.0,,0.0,,0.72,13.2,64.9,1028.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 02:00:00,26.7,26.7,26.7,20.8,78.11,,0.0,,,,0.0,,0.72,13.2,44.4,1028.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 03:00:00,23.9,23.9,23.9,19.9,84.32,,0.0,,,,0.0,,0.72,13.2,36.0,1028.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 04:00:00,21.3,21.3,21.3,18.2,87.63,,0.0,,,,0.0,,0.71,13.2,21.6,1027.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2001 05:00:00,21.3,21.3,21.3,19.0,90.66,,1.3,,120.0,,0.0,,0.71,13.2,21.6,1027.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2001 06:00:00,21.1,21.1,21.1,17.4,85.32,,3.7,,274.0,15.9,0.0,,0.71,13.2,21.6,1028.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2001 07:00:00,20.0,20.0,20.0,16.4,85.67,,0.0,,,,0.0,,0.7,13.2,36.0,1027.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 08:00:00,21.8,21.8,21.8,17.7,83.95,,0.0,,,,0.0,,0.7,13.2,64.9,1028.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 09:00:00,25.4,25.4,25.4,20.1,80.05,,1.6,,90.0,,0.0,,0.0,13.2,64.9,1027.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 10:00:00,30.8,30.8,30.8,21.8,68.92,,2.2,,43.0,,0.0,,0.0,13.2,72.1,1027.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 11:00:00,34.4,34.4,34.4,23.6,64.32,,0.6,,10.0,,0.0,,0.0,13.2,80.4,1027.0,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 12:00:00,38.1,38.1,38.1,23.7,55.85,,8.1,,149.0,32.3,0.0,,0.0,13.2,80.4,1025.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 13:00:00,41.1,41.1,41.1,24.4,51.12,,8.4,,189.0,35.7,0.0,,0.0,13.2,80.4,1024.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 14:00:00,41.1,41.1,41.1,24.4,51.12,,9.5,,203.0,35.2,0.0,,0.0,13.2,80.4,1023.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 15:00:00,40.1,40.1,40.1,24.0,52.35,,16.4,,196.0,31.5,0.0,,0.0,13.2,72.1,1022.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2001 16:00:00,39.3,39.3,39.3,22.6,50.84,,13.7,,186.0,31.4,0.0,,0.0,13.2,97.2,1022.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 17:00:00,39.3,39.3,39.3,24.4,54.82,,6.8,,210.0,34.4,0.0,,0.0,13.2,100.0,1021.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 18:00:00,37.2,37.2,37.2,23.7,57.84,,10.3,,186.0,30.1,0.0,,0.0,13.2,100.0,1020.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 19:00:00,35.7,35.7,35.7,23.1,59.82,,9.4,,183.0,28.6,0.0,,0.0,13.2,100.0,1019.5,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 20:00:00,35.7,35.7,35.7,22.6,58.57,,6.4,,177.0,30.3,0.0,,0.0,13.2,100.0,1018.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 21:00:00,35.7,35.7,35.7,22.5,58.28,,11.8,,187.0,27.5,0.0,,0.0,13.2,100.0,1018.5,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 22:00:00,33.9,33.9,33.9,24.9,69.28,,12.2,,187.0,25.1,0.0,,0.0,13.2,100.0,1018.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2001 23:00:00,33.9,33.9,33.9,27.2,76.21,,11.1,,187.0,25.6,0.0,,0.0,13.2,100.0,1017.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 00:00:00,27.3,27.3,27.3,20.4,75.04,,18.3,,10.0,14.3,0.0,,41.88,9.9,100.0,1018.6,Light Snow,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 01:00:00,26.7,26.7,26.7,19.5,73.85,,17.2,,350.0,14.0,0.0,,41.94,11.8,100.0,1019.0,Light Snow,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 02:00:00,26.7,26.7,26.7,19.5,73.88,,13.8,,360.0,15.3,0.0,,42.0,11.8,100.0,1018.3,Light Snow,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 03:00:00,26.0,26.0,26.0,20.0,77.86,,12.7,,360.0,14.9,0.03,,42.06,11.8,100.0,1018.3,Light Snow,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2001 04:00:00,24.9,24.9,24.9,19.5,79.58,,11.4,,360.0,14.2,0.0,,42.12,11.8,90.0,1018.6,Light Snow,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 05:00:00,24.9,24.9,24.9,17.7,73.69,,15.0,,350.0,12.5,0.0,,42.18,14.9,90.0,1019.0,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 06:00:00,24.9,24.9,24.9,18.6,76.59,,15.0,,340.0,12.5,0.0,,42.24,14.9,100.0,1019.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 07:00:00,24.9,24.9,24.9,17.7,73.69,,11.4,,340.0,14.2,0.0,,42.31,19.9,90.0,1020.0,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 08:00:00,24.9,24.9,24.9,19.5,79.6,,9.2,,340.0,15.4,0.0,,42.37,14.9,100.0,1020.7,Snow Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 09:00:00,25.4,25.4,25.4,20.0,79.63,,10.3,,340.0,15.5,0.03,,0.0,14.9,100.0,1020.3,Snow And Rain Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2001 10:00:00,26.7,26.7,26.7,19.5,73.89,,12.7,,350.0,15.8,0.0,,0.0,14.9,90.0,1020.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 11:00:00,28.5,28.5,28.5,21.3,74.06,,16.1,,340.0,16.7,0.0,,0.0,19.9,90.0,1020.0,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 12:00:00,30.5,30.5,30.5,21.5,68.86,,16.1,,20.0,19.2,0.0,,0.0,18.6,90.0,1020.0,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 13:00:00,32.1,32.1,32.1,21.3,64.01,,16.1,,10.0,21.3,0.0,,0.0,19.9,90.0,1019.6,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 14:00:00,30.3,30.3,30.3,23.1,74.25,,16.1,,20.0,19.0,0.0,,0.0,19.9,90.0,1019.6,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 15:00:00,29.4,29.4,29.4,21.5,71.93,,15.0,,20.0,18.3,0.0,,0.0,18.6,100.0,1019.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 16:00:00,30.3,30.3,30.3,21.3,68.81,,15.0,,350.0,19.4,0.0,,0.0,14.9,100.0,1019.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 17:00:00,28.5,28.5,28.5,21.3,74.02,,12.7,,360.0,18.1,0.0,,0.0,14.9,100.0,1019.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 18:00:00,27.8,27.8,27.8,21.8,78.0,,15.0,,10.0,16.2,0.0,,0.0,14.9,99.8,1019.3,Snow Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 19:00:00,28.5,28.5,28.5,21.3,74.03,,15.0,,10.0,17.1,0.0,,0.0,11.8,100.0,1019.3,Snow Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 20:00:00,26.7,26.7,26.7,21.3,79.71,,13.8,,10.0,15.3,0.0,,0.0,11.8,100.0,1019.6,Snow Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 21:00:00,26.9,26.9,26.9,21.5,79.72,,11.4,,360.0,16.7,0.03,,0.0,9.9,100.0,1019.6,Snow Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,"Rain, Overcast"
+"Gander,NL,CA",04/08/2001 22:00:00,26.7,26.7,26.7,21.3,79.7,,12.7,,10.0,15.8,0.0,,0.0,6.2,100.0,1019.3,"Light Snow, Snow",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2001 23:00:00,26.7,26.7,26.7,21.3,79.71,,10.3,,10.0,17.0,0.0,,0.0,9.9,100.0,1019.0,"Light Snow, Snow",48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast

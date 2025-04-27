@@ -1,0 +1,507 @@
+Address,Date time,Minimum Temperature,Maximum Temperature,Temperature,Dew Point,Relative Humidity,Heat Index,Wind Speed,Wind Gust,Wind Direction,Wind Chill,Precipitation,Precipitation Cover,Snow Depth,Visibility,Cloud Cover,Sea Level Pressure,Weather Type,Latitude,Longitude,Resolved Address,Name,Info,Conditions
+"Mazatlan,MX",04/08/2020 00:00:00,73.5,73.5,73.5,66.5,78.71,,6.7,,300.0,,0.0,,,6.2,40.0,1013.7,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2020 01:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 02:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 03:00:00,72.2,72.2,72.2,67.2,84.19,,2.2,,320.0,,0.0,,,6.2,60.0,1013.0,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2020 04:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 05:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 06:00:00,71.0,71.0,71.0,67.7,89.51,,2.2,,20.0,,0.0,,,12.4,90.0,1012.3,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2020 07:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 08:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 09:00:00,75.5,75.5,75.5,66.5,73.66,,4.5,,260.0,,0.0,,,12.4,90.0,1013.4,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2020 10:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 11:00:00,82.3,82.3,82.3,64.3,54.57,83.9,3.4,,210.0,,0.0,,,14.3,50.0,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2020 12:00:00,79.4,79.4,79.4,67.7,67.49,,6.7,,260.0,,0.0,,,12.4,90.0,1014.1,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2020 13:00:00,87.7,87.7,87.7,62.5,43.09,88.4,6.9,,240.0,,0.0,,,14.3,50.0,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Partially cloudy
+"Mazatlan,MX",04/08/2020 14:00:00,91.3,91.3,91.3,57.1,31.74,89.9,5.8,,250.0,,0.0,,,14.9,88.0,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2020 15:00:00,93.1,93.1,93.1,55.3,28.12,91.2,8.1,,210.0,,0.0,,,14.9,88.0,1010.8,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2020 16:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 17:00:00,80.5,80.5,80.5,67.9,65.55,83.2,17.2,,290.0,,0.0,,,14.9,88.0,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,Overcast
+"Mazatlan,MX",04/08/2020 18:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Mazatlan,MX",04/08/2020 19:00:00,,,,,,,,,,,0.0,,,,,,,23.2,-106.422,"Mazatlán, SIN, México","Mazatlán, SIN, México",,
+"Torreon,MX",04/08/2020 07:00:00,,,,,,,2.2,,230.0,,0.0,,,6.2,30.0,1010.8,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Partially cloudy
+"Torreon,MX",04/08/2020 08:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2020 09:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2020 10:00:00,,,,,,,2.2,,20.0,,0.0,,,18.6,60.0,1013.1,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,Partially cloudy
+"Torreon,MX",04/08/2020 11:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"Torreon,MX",04/08/2020 12:00:00,,,,,,,,,,,0.0,,,,,,,25.5394,-103.453,"Torreón, COAH, México","Torreón, COAH, México",,
+"San Antonio,TX,US",04/08/2020 00:00:00,73.7,73.7,73.7,69.1,85.59,,5.1,,168.0,,0.0,,0.0,8.8,56.9,1012.3,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 01:00:00,73.1,73.1,73.1,69.9,89.74,,4.7,,166.0,,0.0,,0.0,6.5,51.9,1012.2,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 02:00:00,72.1,72.1,72.1,69.7,92.27,,6.6,,158.0,,0.0,,0.0,4.2,30.7,1011.3,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 03:00:00,72.2,72.2,72.2,70.2,93.3,,3.7,,127.0,,0.0,,0.0,4.3,52.3,1011.1,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 04:00:00,72.0,72.0,72.0,70.1,93.63,,3.3,,227.0,,0.0,,0.0,3.8,51.3,1011.1,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 05:00:00,70.7,70.7,70.7,69.5,95.93,,2.3,,271.0,,0.0,,0.0,2.4,90.8,1010.8,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2020 06:00:00,68.5,68.5,68.5,66.9,94.84,,1.1,,309.0,,0.0,,0.0,1.4,71.7,1011.2,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 07:00:00,69.5,69.5,69.5,68.3,96.05,,2.0,,257.0,,0.0,,0.0,1.6,84.6,1011.5,"Mist, Fog",29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2020 08:00:00,70.3,70.3,70.3,69.3,96.42,,0.8,,313.0,,0.0,,0.0,1.0,97.4,1012.3,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2020 09:00:00,71.6,71.6,71.6,70.6,96.67,,4.4,,260.0,,0.0,,0.0,1.9,97.4,1012.8,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2020 10:00:00,74.4,74.4,74.4,71.7,91.37,,2.6,,278.0,,0.0,,0.0,5.9,89.0,1013.0,Mist,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Overcast
+"San Antonio,TX,US",04/08/2020 11:00:00,79.7,79.7,79.7,70.3,73.18,,6.6,,257.0,,0.0,,0.0,7.3,54.1,1013.2,Smoke Or Haze,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 12:00:00,83.0,83.0,83.0,70.9,66.96,87.6,6.9,,231.0,,0.0,,0.0,9.0,49.1,1012.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 13:00:00,85.1,85.1,85.1,70.3,61.49,89.8,5.0,,284.0,,0.0,,0.0,9.3,62.2,1012.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 14:00:00,86.7,86.7,86.7,70.0,57.63,91.5,5.5,,200.0,,0.0,,0.0,9.9,54.2,1011.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 15:00:00,88.8,88.8,88.8,69.7,53.44,93.9,4.8,,198.0,,0.0,,0.0,9.9,36.9,1010.2,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 16:00:00,89.9,89.9,89.9,72.3,56.42,97.5,6.9,,130.0,,0.0,,0.0,9.9,19.9,1009.1,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Clear
+"San Antonio,TX,US",04/08/2020 17:00:00,88.6,88.6,88.6,68.9,52.28,92.9,5.9,,162.0,,0.0,,0.0,9.9,31.6,1008.8,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 18:00:00,88.6,88.6,88.6,68.4,51.42,92.6,6.9,,166.0,,0.0,,0.0,9.9,35.8,1008.0,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 19:00:00,86.0,86.0,86.0,69.0,57.09,90.0,5.6,,158.0,,0.0,,0.0,9.9,35.8,1008.4,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 20:00:00,82.1,82.1,82.1,69.7,66.07,85.8,6.5,,159.0,,0.0,,0.0,9.4,35.8,1008.7,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 21:00:00,80.4,80.4,80.4,69.1,68.47,83.4,6.8,,174.0,,0.0,,0.0,9.4,48.6,1009.2,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 22:00:00,78.9,78.9,78.9,68.5,70.47,,3.0,,141.0,,0.0,,0.0,8.4,56.9,1010.4,Smoke Or Haze,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"San Antonio,TX,US",04/08/2020 23:00:00,77.3,77.3,77.3,68.0,73.25,,5.4,,158.0,,0.0,,0.0,9.9,56.9,1010.7,,29.4246,-98.4946,"San Antonio, TX, United States","San Antonio, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2020 00:00:00,75.3,75.3,75.3,70.6,85.36,,3.5,,205.0,,0.0,,0.0,7.0,20.1,1012.1,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 01:00:00,75.5,75.5,75.5,70.6,84.78,,4.6,,182.0,,0.0,,0.0,6.9,20.1,1011.9,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 02:00:00,74.0,74.0,74.0,70.6,89.12,,4.7,,200.0,,0.0,,0.0,5.3,8.5,1011.4,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 03:00:00,73.8,73.8,73.8,70.6,89.73,,4.6,,190.0,,0.0,,0.0,3.9,36.8,1010.7,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2020 04:00:00,74.0,74.0,74.0,70.6,89.12,,6.6,,222.0,,0.0,,0.0,3.7,97.5,1010.6,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2020 05:00:00,73.8,73.8,73.8,70.4,89.11,,5.6,,207.0,,0.0,,0.0,3.9,86.5,1010.5,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2020 06:00:00,72.8,72.8,72.8,69.7,90.2,,4.1,,214.0,,0.0,,0.0,3.2,76.8,1010.6,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2020 07:00:00,72.8,72.8,72.8,69.7,90.2,,1.4,,283.0,,0.0,,0.0,3.4,98.6,1011.4,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2020 08:00:00,73.7,73.7,73.7,70.4,89.42,,1.3,,280.0,,0.0,,0.0,2.5,99.4,1012.0,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Overcast
+"Austin,TX,US",04/08/2020 09:00:00,76.1,76.1,76.1,71.3,85.02,,1.8,,283.0,,0.0,,0.0,3.1,62.2,1012.4,"Mist, Smoke Or Haze",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2020 10:00:00,79.5,79.5,79.5,72.3,78.82,,4.8,,202.0,,0.0,,0.0,4.9,32.7,1012.9,"Mist, Smoke Or Haze",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Partially cloudy
+"Austin,TX,US",04/08/2020 11:00:00,84.5,84.5,84.5,72.5,67.49,90.6,4.3,,182.0,,0.0,,0.0,7.1,17.4,1012.8,"Mist, Smoke Or Haze",30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 12:00:00,86.3,86.3,86.3,71.4,61.25,92.1,1.3,,332.0,,0.0,,0.0,8.7,8.5,1012.8,Smoke Or Haze,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 13:00:00,89.8,89.8,89.8,72.4,56.61,97.5,2.6,,322.0,,0.0,,0.0,9.0,12.9,1011.6,Smoke Or Haze,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 14:00:00,91.1,91.1,91.1,67.4,45.91,94.8,6.0,,45.0,,0.0,,0.0,9.3,8.5,1010.6,Smoke Or Haze,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 15:00:00,93.4,93.4,93.4,65.2,39.68,95.9,3.7,,52.0,,0.0,,0.0,9.5,15.8,1009.9,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 16:00:00,92.5,92.5,92.5,65.4,41.06,95.1,5.8,,168.0,,0.0,,0.0,9.4,15.8,1009.3,Smoke Or Haze,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 17:00:00,89.1,89.1,89.1,72.8,58.75,96.9,5.6,,158.0,,0.0,,0.0,9.8,12.9,1008.7,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 18:00:00,87.3,87.3,87.3,70.6,57.77,92.8,2.1,,69.0,,0.0,,0.0,9.8,15.8,1008.4,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 19:00:00,87.0,87.0,87.0,71.8,60.65,93.3,5.4,,153.0,,0.0,,0.0,9.7,20.1,1008.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 20:00:00,83.6,83.6,83.6,72.6,69.51,89.6,6.2,,167.0,,0.0,,0.0,8.6,12.9,1008.9,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 21:00:00,82.0,82.0,82.0,73.6,75.67,87.7,4.0,,167.0,,0.0,,0.0,8.5,6.2,1009.3,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 22:00:00,80.4,80.4,80.4,72.4,76.66,84.6,1.6,,283.0,,0.0,,0.0,8.9,6.2,1010.4,,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Austin,TX,US",04/08/2020 23:00:00,78.9,78.9,78.9,72.3,80.2,,4.0,,167.0,,0.0,,0.0,8.1,11.3,1010.9,Mist,30.2676,-97.743,"Austin, TX, United States","Austin, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 00:00:00,74.8,74.8,74.8,70.6,87.0,,9.6,,177.0,,0.0,,0.0,9.2,3.1,1009.4,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 01:00:00,75.0,75.0,75.0,70.1,84.55,,8.1,,183.0,,0.0,,0.0,8.1,0.9,1009.2,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 02:00:00,74.5,74.5,74.5,69.2,83.51,,4.1,,252.0,,0.0,,0.0,7.7,1.8,1008.9,Smoke Or Haze,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 03:00:00,73.8,73.8,73.8,67.7,81.04,,4.7,,237.0,,0.0,,0.0,7.7,1.8,1008.4,Smoke Or Haze,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 04:00:00,73.5,73.5,73.5,67.6,81.71,,7.1,,189.0,,0.0,,0.0,6.9,1.8,1008.0,Smoke Or Haze,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 05:00:00,72.2,72.2,72.2,67.6,85.33,,3.3,,275.0,,0.0,,0.0,6.9,1.8,1008.0,Mist,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 06:00:00,70.9,70.9,70.9,66.6,86.05,,4.1,,215.0,,0.0,,0.0,6.1,3.1,1008.0,Mist,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 07:00:00,70.4,70.4,70.4,66.6,87.75,,4.8,,177.0,,0.0,,0.0,6.9,25.9,1008.4,Mist,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2020 08:00:00,71.4,71.4,71.4,67.3,86.83,,6.0,,173.0,,0.0,,0.0,7.6,15.3,1009.5,Mist,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 09:00:00,73.4,73.4,73.4,67.6,82.16,,6.9,,208.0,,0.0,,0.0,6.1,32.4,1009.8,Mist,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2020 10:00:00,74.7,74.7,74.7,68.7,81.82,,9.2,,201.0,,0.0,,0.0,7.7,32.1,1009.9,Mist,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Partially cloudy
+"Fort Worth,TX,US",04/08/2020 11:00:00,79.6,79.6,79.6,69.7,71.84,,12.9,,224.0,,0.0,,0.0,6.2,23.7,1010.0,Smoke Or Haze,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 12:00:00,82.5,82.5,82.5,67.9,61.48,85.4,13.8,22.3,230.0,,0.0,,0.0,9.9,19.7,1009.9,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 13:00:00,86.4,86.4,86.4,63.5,46.49,87.5,13.7,24.2,239.0,,0.0,,0.0,9.9,0.9,1009.1,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 14:00:00,89.6,89.6,89.6,59.2,36.11,88.9,15.4,21.9,233.0,,0.0,,0.0,9.9,9.8,1008.4,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 15:00:00,90.9,90.9,90.9,56.8,31.79,89.5,16.0,24.0,256.0,,0.0,,0.0,6.2,10.7,1007.5,Smoke Or Haze,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 16:00:00,91.9,91.9,91.9,54.2,28.06,89.8,15.9,24.8,246.0,,0.0,,0.0,9.9,10.7,1006.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 17:00:00,92.7,92.7,92.7,47.1,21.06,89.2,13.5,22.3,251.0,,0.0,,0.0,9.9,15.0,1006.4,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 18:00:00,91.5,91.5,91.5,43.1,18.79,87.6,11.9,,272.0,,0.0,,0.0,9.9,9.8,1006.3,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 19:00:00,86.4,86.4,86.4,47.9,26.42,83.6,6.9,,247.0,,0.0,,0.0,5.4,19.4,1006.5,Smoke Or Haze,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 20:00:00,81.3,81.3,81.3,50.3,34.09,80.3,6.8,,231.0,,0.0,,0.0,9.9,18.0,1007.0,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 21:00:00,79.2,79.2,79.2,49.7,35.61,,6.1,,238.0,,0.0,,0.0,9.9,9.8,1007.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 22:00:00,76.1,76.1,76.1,49.6,39.31,,6.6,,230.0,,0.0,,0.0,9.9,9.8,1008.5,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Fort Worth,TX,US",04/08/2020 23:00:00,76.0,76.0,76.0,48.1,37.33,,5.1,,243.0,,0.0,,0.0,9.9,9.8,1008.8,,32.7509,-97.3309,"Fort Worth, TX, United States","Fort Worth, TX, United States",,Clear
+"Dallas,TX,US",04/08/2020 00:00:00,77.9,77.9,77.9,69.8,76.19,,7.6,,191.0,,0.0,,0.0,9.9,32.2,1009.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 01:00:00,78.2,78.2,78.2,69.2,73.93,,7.3,,188.0,,0.0,,0.0,9.9,35.0,1009.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 02:00:00,77.9,77.9,77.9,69.3,74.96,,9.9,18.9,200.0,,0.0,,0.0,9.6,39.8,1009.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 03:00:00,77.3,77.3,77.3,69.3,76.32,,6.9,17.2,215.0,,0.0,,0.0,9.6,51.2,1008.7,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 04:00:00,75.9,75.9,75.9,69.3,79.88,,8.1,24.2,212.0,,0.0,,0.0,9.6,51.2,1008.4,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 05:00:00,75.0,75.0,75.0,69.2,82.31,,7.0,,215.0,,0.0,,0.0,9.6,39.8,1008.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 06:00:00,74.5,74.5,74.5,69.2,83.36,,6.4,,209.0,,0.0,,0.0,9.1,51.2,1008.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 07:00:00,73.7,73.7,73.7,68.5,83.7,,7.5,,209.0,,0.0,,0.0,8.0,51.2,1008.6,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 08:00:00,74.6,74.6,74.6,69.2,83.37,,8.2,19.7,228.0,,0.0,,0.0,6.8,54.0,1009.8,Smoke Or Haze,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 09:00:00,74.7,74.7,74.7,69.3,83.13,,7.3,18.3,211.0,,0.0,,0.0,6.9,35.0,1010.0,Smoke Or Haze,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 10:00:00,77.2,77.2,77.2,69.4,76.92,,10.2,20.8,213.0,,0.0,,0.0,9.6,35.0,1010.2,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 11:00:00,78.6,78.6,78.6,69.9,74.74,,8.1,26.4,234.0,,0.0,,0.0,7.8,39.8,1010.6,Smoke Or Haze,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 12:00:00,83.7,83.7,83.7,69.3,61.95,87.6,12.2,23.0,267.0,,0.0,,0.0,9.2,32.2,1010.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 13:00:00,87.1,87.1,87.1,64.8,47.68,88.8,11.4,21.9,254.0,,0.0,,0.0,9.9,15.8,1009.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2020 14:00:00,90.9,90.9,90.9,62.3,38.63,91.6,11.8,21.9,234.0,,0.0,,0.0,9.9,15.8,1008.4,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2020 15:00:00,93.6,93.6,93.6,53.8,26.2,91.3,12.0,20.9,243.0,,0.0,,0.0,9.9,15.8,1007.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2020 16:00:00,94.3,94.3,94.3,54.4,26.27,92.2,10.6,27.7,244.0,,0.0,,0.0,9.9,51.2,1006.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 17:00:00,95.4,95.4,95.4,51.3,22.62,92.5,13.1,23.8,247.0,,0.0,,0.0,9.9,28.8,1006.3,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 18:00:00,94.9,94.9,94.9,44.5,17.84,90.9,9.6,17.2,259.0,,0.0,,0.0,9.9,21.3,1006.1,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2020 19:00:00,92.0,92.0,92.0,45.8,20.47,88.3,6.6,,258.0,,0.0,,0.0,9.9,32.2,1006.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 20:00:00,87.6,87.6,87.6,47.1,24.63,84.6,4.6,,261.0,,0.0,,0.0,9.9,21.3,1006.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Clear
+"Dallas,TX,US",04/08/2020 21:00:00,80.6,80.6,80.6,49.2,33.52,79.8,1.9,,307.0,,0.0,,0.0,9.9,32.2,1007.5,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 22:00:00,76.5,76.5,76.5,52.8,43.66,,2.3,,302.0,,0.0,,0.0,9.9,51.2,1008.7,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Dallas,TX,US",04/08/2020 23:00:00,75.4,75.4,75.4,52.1,44.14,,2.6,,297.0,,0.0,,0.0,9.9,51.2,1008.8,,32.7782,-96.7951,"Dallas, TX, United States","Dallas, TX, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 00:00:00,70.1,70.1,70.1,68.0,93.24,,8.1,,200.0,,0.0,,0.0,6.8,28.0,1010.2,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 01:00:00,70.9,70.9,70.9,68.0,90.6,,6.7,,223.0,,0.0,,0.0,6.6,0.0,1010.3,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2020 02:00:00,69.0,69.0,69.0,67.9,96.29,,4.5,,252.0,,0.0,,0.0,6.6,0.0,1009.9,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2020 03:00:00,66.7,66.7,66.7,66.7,99.98,,0.0,,358.0,,0.0,,0.0,3.8,0.0,1009.6,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Clear
+"Little Rock,AR,US",04/08/2020 04:00:00,64.9,64.9,64.9,64.9,100.0,,0.0,,358.0,,0.0,,0.0,1.8,97.5,1009.4,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 05:00:00,66.6,66.6,66.6,65.8,97.05,,3.2,,244.0,,0.0,,0.0,1.8,100.0,1009.3,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 06:00:00,66.6,66.6,66.6,66.6,99.98,,3.2,,213.0,,0.0,,0.0,1.8,100.0,1009.2,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 07:00:00,67.9,67.9,67.9,67.9,100.0,,3.2,,195.0,,0.0,,0.0,1.8,100.0,1009.5,"Mist, Fog",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 08:00:00,69.1,69.1,69.1,69.1,99.98,,3.2,,195.0,,0.0,,0.0,2.4,99.7,1010.2,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 09:00:00,70.1,70.1,70.1,69.2,97.09,,4.7,,229.0,,0.0,,0.0,3.2,95.0,1010.3,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 10:00:00,71.9,71.9,71.9,69.3,91.34,,0.3,,343.0,,0.0,,0.0,3.3,95.2,1010.1,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 11:00:00,74.1,74.1,74.1,70.3,87.95,,8.1,,229.0,,0.0,,0.0,4.0,77.9,1010.2,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 12:00:00,79.1,79.1,79.1,71.1,76.54,,8.1,,209.0,,0.0,,0.0,6.4,70.0,1009.9,Mist,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 13:00:00,77.1,77.1,77.1,70.2,79.08,,10.2,,200.0,,0.0,,0.0,7.0,99.4,1009.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Overcast
+"Little Rock,AR,US",04/08/2020 14:00:00,79.2,79.2,79.2,70.2,73.96,,11.2,19.7,228.0,,0.0,,0.0,9.7,49.7,1008.7,Smoke Or Haze,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 15:00:00,81.0,81.0,81.0,70.1,69.51,84.6,12.7,,190.0,,0.0,,0.0,9.9,27.0,1007.7,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 16:00:00,83.9,83.9,83.9,71.0,65.3,88.9,14.8,20.8,191.0,,0.0,,0.0,9.9,28.1,1006.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 17:00:00,84.0,84.0,84.0,69.2,61.35,87.8,15.9,21.9,190.0,,0.0,,0.0,9.9,27.1,1005.6,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 18:00:00,84.0,84.0,84.0,69.2,61.22,87.9,12.8,,220.0,,0.0,,0.0,9.8,27.0,1005.1,Smoke Or Haze,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 19:00:00,82.2,82.2,82.2,66.9,59.9,84.7,11.5,,210.0,,0.0,,0.0,9.9,26.9,1005.1,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 20:00:00,78.3,78.3,78.3,66.0,66.1,,8.0,,219.0,,0.0,,0.0,9.9,26.9,1005.1,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 21:00:00,78.2,78.2,78.2,66.9,68.35,,5.8,,227.0,,0.0,,0.0,9.9,26.9,1006.0,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 22:00:00,77.1,77.1,77.1,70.0,78.77,,9.3,,220.0,,0.0,,0.0,9.9,47.8,1006.3,,34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,Partially cloudy
+"Little Rock,AR,US",04/08/2020 23:00:00,68.5,68.5,68.5,58.4,70.21,,12.8,36.6,211.0,,0.11,,0.0,5.2,96.6,1006.6,"Thunderstorm, Light Rain",34.7487,-92.2748,"Little Rock, AR, United States","Little Rock, AR, United States",,"Rain, Overcast"
+"Jonesboro,AR,US",04/08/2020 00:00:00,68.7,68.7,68.7,68.0,97.57,,10.1,,188.0,,0.0,,0.0,4.0,100.0,1010.1,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 01:00:00,68.7,68.7,68.7,68.0,97.57,,11.2,,186.0,,0.0,,0.0,2.1,100.0,1009.9,"Mist, Fog",35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 02:00:00,69.2,69.2,69.2,69.2,100.0,,8.7,,196.0,,0.0,,0.0,3.0,100.0,1009.3,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 03:00:00,69.2,69.2,69.2,69.2,100.0,,8.2,,206.0,,0.0,,0.0,3.0,100.0,1008.8,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 04:00:00,70.1,70.1,70.1,69.5,98.14,,7.5,,220.0,,0.0,,0.0,3.7,100.0,1008.6,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 05:00:00,69.2,69.2,69.2,69.2,100.0,,6.7,,210.0,,0.0,,0.0,3.5,100.0,1008.5,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 06:00:00,69.2,69.2,69.2,69.2,100.0,,6.7,,194.0,,0.0,,0.0,2.8,100.0,1008.5,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 07:00:00,68.7,68.7,68.7,68.7,100.0,,7.2,,212.0,,0.0,,0.0,1.5,100.0,1008.8,"Mist, Fog",35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 08:00:00,69.3,69.3,69.3,68.7,98.13,,7.4,,202.0,,0.0,,0.0,0.8,100.0,1009.5,"Mist, Fog",35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 09:00:00,69.7,69.7,69.7,69.2,98.13,,8.7,,202.0,,0.0,,0.0,2.8,100.0,1009.5,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 10:00:00,70.7,70.7,70.7,68.7,93.53,,9.4,,194.0,,0.0,,0.0,6.9,100.0,1009.4,Mist,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 11:00:00,74.0,74.0,74.0,70.1,87.47,,9.2,,194.0,,0.0,,0.0,9.9,80.6,1009.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Overcast
+"Jonesboro,AR,US",04/08/2020 12:00:00,77.0,77.0,77.0,70.1,79.22,,10.6,,194.0,,0.0,,0.0,9.9,16.9,1008.9,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 13:00:00,78.9,78.9,78.9,70.5,75.38,,11.7,,182.0,,0.0,,0.0,9.9,0.0,1008.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 14:00:00,81.7,81.7,81.7,70.8,69.67,85.8,13.2,,184.0,,0.0,,0.0,9.9,0.0,1007.4,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 15:00:00,83.9,83.9,83.9,70.3,63.57,88.4,16.1,,200.0,,0.0,,0.0,9.9,0.0,1006.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 16:00:00,85.2,85.2,85.2,69.2,58.85,89.2,15.2,20.8,206.0,,0.0,,0.0,9.9,0.0,1005.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 17:00:00,84.5,84.5,84.5,69.9,61.71,88.8,15.4,23.0,200.0,,0.0,,0.0,9.9,0.0,1004.3,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 18:00:00,82.7,82.7,82.7,70.5,66.64,86.9,22.4,,194.0,,0.0,,0.0,9.9,16.9,1003.1,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 19:00:00,79.5,79.5,79.5,70.7,74.6,,14.5,,218.0,,0.0,,0.0,9.9,23.0,1004.1,"Rain, Thunderstorm, Heavy Rain",35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Jonesboro,AR,US",04/08/2020 20:00:00,72.2,72.2,72.2,65.5,79.6,,11.6,29.8,151.0,,0.02,,0.0,9.9,16.9,1003.6,"Lightning Without Thunder, Light Rain",35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Rain
+"Jonesboro,AR,US",04/08/2020 21:00:00,73.5,73.5,73.5,67.4,81.26,,10.9,,175.0,,0.0,,0.0,9.9,57.6,1004.2,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2020 22:00:00,71.1,71.1,71.1,66.1,84.36,,11.9,23.0,306.0,,0.0,,0.0,9.5,30.6,1004.8,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Partially cloudy
+"Jonesboro,AR,US",04/08/2020 23:00:00,72.0,72.0,72.0,67.7,86.6,,9.4,,203.0,,0.0,,0.0,9.9,16.9,1004.6,,35.8353,-90.7051,"Jonesboro, AR, United States","Jonesboro, AR, United States",,Clear
+"Carbondale,IL,US",04/08/2020 00:00:00,69.2,69.2,69.2,65.1,87.0,,11.1,18.3,211.0,,0.0,,0.0,9.9,99.9,1007.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2020 01:00:00,70.1,70.1,70.1,65.2,84.54,,13.3,16.1,211.0,,0.0,,0.0,9.9,90.1,1007.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2020 02:00:00,68.1,68.1,68.1,64.3,87.9,,11.3,17.2,210.0,,0.0,,0.0,9.9,3.7,1007.4,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 03:00:00,66.2,66.2,66.2,64.3,93.74,,8.3,,210.0,,0.0,,0.0,9.9,3.1,1007.0,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 04:00:00,68.0,68.0,68.0,65.2,90.69,,9.8,,220.0,,0.0,,0.0,9.9,54.7,1006.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2020 05:00:00,66.9,66.9,66.9,65.2,94.13,,8.9,,229.0,,0.0,,0.0,8.8,10.9,1006.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 06:00:00,65.1,65.1,65.1,64.3,97.05,,5.7,,221.0,,0.0,,0.0,7.9,6.2,1007.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 07:00:00,65.0,65.0,65.0,63.0,93.06,,4.6,,201.0,,0.0,,0.0,6.2,0.0,1007.4,Mist,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 08:00:00,68.0,68.0,68.0,65.1,90.32,,6.9,,231.0,,0.0,,0.0,6.8,0.0,1008.2,Mist,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 09:00:00,71.1,71.1,71.1,66.0,83.99,,10.3,,230.0,,0.0,,0.0,8.7,0.0,1008.4,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 10:00:00,74.0,74.0,74.0,66.0,75.96,,5.8,,250.0,,0.0,,0.0,9.9,0.6,1008.3,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 11:00:00,77.0,77.0,77.0,65.1,66.63,,5.8,,250.0,,0.0,,0.0,9.9,0.0,1008.3,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 12:00:00,79.1,79.1,79.1,65.1,62.21,,5.8,,260.0,,0.0,,0.0,9.9,0.0,1007.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 13:00:00,82.1,82.1,82.1,62.1,50.74,83.0,6.9,,201.0,,0.0,,0.0,8.7,0.0,1006.6,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 14:00:00,82.2,82.2,82.2,60.5,47.88,82.6,3.7,,171.0,,0.0,,0.0,10.6,1.6,1005.9,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 15:00:00,84.8,84.8,84.8,59.0,41.72,84.5,12.7,,200.0,,0.0,,0.0,9.9,49.4,1004.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2020 16:00:00,84.8,84.8,84.8,53.1,33.68,83.2,16.0,24.1,180.0,,0.0,,0.0,9.9,0.6,1003.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 17:00:00,83.1,83.1,83.1,57.8,42.34,82.7,13.8,,190.0,,0.0,,0.0,9.9,0.0,1002.3,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 18:00:00,80.1,80.1,80.1,65.0,60.12,81.9,13.8,,190.0,,0.0,,0.0,9.9,0.0,1001.5,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Clear
+"Carbondale,IL,US",04/08/2020 19:00:00,75.8,75.8,75.8,66.9,73.84,,7.9,,65.0,,0.0,,0.0,9.9,85.8,1002.1,"Lightning Without Thunder, Thunderstorm, Light Rain",37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Carbondale,IL,US",04/08/2020 20:00:00,65.9,65.9,65.9,56.9,72.75,,9.5,30.1,188.0,,0.25,,0.0,9.9,3.4,1002.0,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Rain
+"Carbondale,IL,US",04/08/2020 21:00:00,67.9,67.9,67.9,58.1,70.64,,8.1,25.3,167.0,,0.0,,0.0,9.9,27.6,1001.0,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Partially cloudy
+"Carbondale,IL,US",04/08/2020 22:00:00,65.9,65.9,65.9,56.1,70.56,,11.0,19.4,273.0,,0.02,,0.0,9.9,35.9,1004.7,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,"Rain, Partially cloudy"
+"Carbondale,IL,US",04/08/2020 23:00:00,62.3,62.3,62.3,54.1,74.54,,19.0,33.6,351.0,,0.0,,0.0,9.9,99.0,1007.1,,37.7273,-89.2158,"Carbondale, IL, United States","Carbondale, IL, United States",,Overcast
+"Evansville,IN,US",04/08/2020 00:00:00,69.9,69.9,69.9,61.4,74.43,,14.8,23.0,220.0,,0.0,,0.0,9.9,84.5,1008.1,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 01:00:00,69.7,69.7,69.7,62.3,77.37,,14.2,,210.0,,0.0,,0.0,9.9,100.0,1008.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 02:00:00,69.0,69.0,69.0,62.4,79.53,,14.5,,220.0,,0.0,,0.0,9.9,99.8,1007.4,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 03:00:00,69.0,69.0,69.0,62.4,79.53,,14.4,,229.0,,0.0,,0.0,9.9,100.0,1006.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 04:00:00,67.9,67.9,67.9,62.4,82.79,,11.2,,237.0,,0.0,,0.0,9.9,60.4,1006.7,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2020 05:00:00,67.9,67.9,67.9,62.4,82.79,,9.9,,229.0,,0.0,,0.0,9.9,90.6,1007.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 06:00:00,66.6,66.6,66.6,62.5,86.38,,7.9,,228.0,,0.0,,0.0,9.9,90.6,1007.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 07:00:00,66.6,66.6,66.6,63.2,88.74,,7.9,,229.0,,0.0,,0.0,8.7,91.3,1007.5,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 08:00:00,69.8,69.8,69.8,64.3,82.85,,10.7,,246.0,,0.0,,0.0,9.8,2.8,1007.8,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2020 09:00:00,72.1,72.1,72.1,64.6,77.26,,9.9,,249.0,,0.0,,0.0,9.9,78.2,1007.8,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 10:00:00,74.2,74.2,74.2,64.5,71.74,,11.1,,253.0,,0.0,,0.0,9.9,86.4,1008.3,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Overcast
+"Evansville,IN,US",04/08/2020 11:00:00,76.9,76.9,76.9,64.5,65.52,,7.0,,300.0,,0.0,,0.0,9.9,11.8,1008.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2020 12:00:00,80.1,80.1,80.1,63.3,56.66,81.5,8.4,,213.0,,0.0,,0.0,9.9,28.5,1007.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2020 13:00:00,82.2,82.2,82.2,61.1,48.9,82.9,5.9,,210.0,,0.0,,0.0,9.9,25.2,1006.6,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2020 14:00:00,83.9,83.9,83.9,61.2,46.43,84.3,12.4,,218.0,,0.0,,0.0,9.9,24.0,1005.9,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2020 15:00:00,84.1,84.1,84.1,61.2,46.25,84.4,6.6,17.2,220.0,,0.0,,0.0,9.9,27.9,1005.1,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2020 16:00:00,85.9,85.9,85.9,54.6,34.29,84.3,12.8,,231.0,,0.0,,0.0,9.9,9.6,1004.1,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2020 17:00:00,85.5,85.5,85.5,55.1,35.45,84.1,11.5,,218.0,,0.0,,0.0,9.9,29.0,1003.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2020 18:00:00,82.9,82.9,82.9,55.9,39.75,82.2,16.3,,201.0,,0.0,,0.0,9.9,0.0,1002.0,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2020 19:00:00,79.8,79.8,79.8,58.7,48.7,,14.3,23.0,204.0,,0.0,,0.0,9.9,0.0,1001.2,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2020 20:00:00,76.8,76.8,76.8,62.5,61.28,,13.1,26.1,209.0,,0.0,,0.0,9.9,0.0,1000.7,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Evansville,IN,US",04/08/2020 21:00:00,67.4,67.4,67.4,51.1,55.8,,35.0,52.5,339.0,,0.0,,0.0,9.9,42.6,1002.3,,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2020 22:00:00,62.4,62.4,62.4,53.2,71.73,,9.6,42.8,1.0,,0.0,,0.0,9.9,59.0,1005.0,Light Rain,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Partially cloudy
+"Evansville,IN,US",04/08/2020 23:00:00,61.1,61.1,61.1,55.2,80.88,,7.0,,247.0,,0.0,,0.0,9.9,1.1,1004.5,Light Rain,37.9771,-87.564,"Evansville, IN, United States","Evansville, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 00:00:00,69.9,69.9,69.9,62.2,76.54,,19.3,30.4,230.0,,0.0,,0.0,9.9,15.3,1004.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 01:00:00,69.4,69.4,69.4,63.1,80.36,,15.5,29.7,234.0,,0.0,,0.0,9.9,22.6,1004.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 02:00:00,68.4,68.4,68.4,63.1,83.21,,14.8,21.9,240.0,,0.0,,0.0,9.9,40.5,1004.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 03:00:00,67.2,67.2,67.2,63.1,86.47,,13.6,27.3,248.0,,0.0,,0.0,9.9,53.2,1004.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 04:00:00,66.2,66.2,66.2,61.8,85.54,,11.9,21.9,251.0,,0.0,,0.0,9.9,52.2,1003.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 05:00:00,65.8,65.8,65.8,62.1,87.84,,11.7,,255.0,,0.0,,0.0,9.9,62.2,1004.3,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 06:00:00,65.2,65.2,65.2,62.0,89.38,,8.0,,264.0,,0.0,,0.0,9.9,89.4,1004.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2020 07:00:00,64.3,64.3,64.3,61.9,92.11,,6.4,,279.0,,0.0,,0.0,9.9,72.8,1005.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 08:00:00,63.8,63.8,63.8,60.2,87.83,,1.9,,323.0,,0.0,,0.0,9.8,96.5,1005.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2020 09:00:00,64.9,64.9,64.9,58.1,78.76,,3.9,,351.0,,0.0,,0.0,9.1,93.4,1006.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Overcast
+"Indianapolis,IN,US",04/08/2020 10:00:00,66.0,66.0,66.0,58.5,76.84,,5.1,,351.0,,0.0,,0.0,9.3,48.1,1006.9,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 11:00:00,67.7,67.7,67.7,58.9,73.43,,2.5,,345.0,,0.0,,0.0,9.7,51.7,1007.5,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 12:00:00,70.3,70.3,70.3,59.1,67.7,,4.1,,334.0,,0.0,,0.0,9.8,15.3,1007.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 13:00:00,71.7,71.7,71.7,58.0,62.12,,2.3,,343.0,,0.0,,0.0,9.8,15.3,1007.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 14:00:00,75.2,75.2,75.2,52.7,45.49,,3.9,,323.0,,0.0,,0.0,9.9,15.3,1006.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 15:00:00,76.8,76.8,76.8,42.3,29.19,,3.2,,257.0,,0.0,,0.0,9.9,15.3,1005.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 16:00:00,76.9,76.9,76.9,43.4,30.33,,4.7,,133.0,,0.0,,0.0,9.9,15.3,1004.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 17:00:00,78.1,78.1,78.1,45.7,31.84,,6.9,,202.0,,0.0,,0.0,9.9,15.3,1003.1,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 18:00:00,78.4,78.4,78.4,47.5,33.65,,8.2,,173.0,,0.0,,0.0,9.9,15.3,1001.7,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 19:00:00,77.4,77.4,77.4,47.6,34.93,,10.2,,200.0,,0.0,,0.0,9.9,15.3,1000.0,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Clear
+"Indianapolis,IN,US",04/08/2020 20:00:00,74.6,74.6,74.6,49.2,40.75,,7.2,,203.0,,0.0,,0.0,9.9,33.1,998.6,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,Partially cloudy
+"Indianapolis,IN,US",04/08/2020 21:00:00,59.4,59.4,59.4,54.6,84.22,,26.8,57.5,311.0,,0.12,,0.0,3.0,78.0,1003.2,"Mist, Thunderstorm, Rain, Heavy Rain, Light Rain",39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,"Rain, Overcast"
+"Indianapolis,IN,US",04/08/2020 22:00:00,59.0,59.0,59.0,54.0,83.35,,1.8,43.0,260.0,,0.07,,0.0,9.8,72.8,1002.1,"Lightning Without Thunder, Thunderstorm, Rain, Heavy Rain, Light Rain",39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,"Rain, Partially cloudy"
+"Indianapolis,IN,US",04/08/2020 23:00:00,57.9,57.9,57.9,55.9,93.14,,7.9,,293.0,,0.01,,0.0,9.9,58.9,1003.2,,39.7669,-86.1501,"Indianapolis, IN, United States","Indianapolis, IN, United States",,"Rain, Partially cloudy"
+"Dayton,OH,US",04/08/2020 00:00:00,68.3,68.3,68.3,56.8,66.75,,12.6,,230.0,,0.0,,0.0,9.9,0.0,1004.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 01:00:00,66.5,66.5,66.5,57.2,71.87,,9.2,,234.0,,0.0,,0.0,9.9,7.1,1004.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 02:00:00,66.4,66.4,66.4,58.9,76.89,,10.8,,233.0,,0.0,,0.0,9.9,37.1,1003.8,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 03:00:00,68.3,68.3,68.3,60.7,76.72,,13.6,22.3,233.0,,0.0,,0.0,9.9,51.9,1003.6,"Thunderstorm, Smoke Or Haze",39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 04:00:00,63.8,63.8,63.8,58.7,83.63,,15.1,32.8,269.0,,0.63,,0.0,3.5,97.9,1003.5,"Mist, Thunderstorm, Rain, Heavy Rain, Light Rain",39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,"Rain, Overcast"
+"Dayton,OH,US",04/08/2020 05:00:00,65.9,65.9,65.9,60.8,83.86,,7.4,33.3,297.0,,0.39,,0.0,9.5,79.3,1003.6,Thunderstorm,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,"Rain, Overcast"
+"Dayton,OH,US",04/08/2020 06:00:00,65.1,65.1,65.1,61.1,86.87,,5.5,,320.0,,0.0,,0.0,9.3,73.8,1004.3,Thunderstorm,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 07:00:00,63.3,63.3,63.3,59.2,86.4,,5.0,,273.0,,0.0,,0.0,9.5,89.9,1005.1,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2020 08:00:00,61.9,61.9,61.9,58.6,89.0,,2.8,,294.0,,0.0,,0.0,8.6,66.5,1005.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 09:00:00,64.5,64.5,64.5,58.5,81.01,,8.2,,322.0,,0.0,,0.0,9.6,85.1,1006.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2020 10:00:00,64.7,64.7,64.7,56.9,75.67,,10.8,,340.0,,0.0,,0.0,8.9,52.9,1006.7,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 11:00:00,64.7,64.7,64.7,56.2,73.86,,8.6,,337.0,,0.0,,0.0,8.7,82.6,1007.5,Smoke Or Haze,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Overcast
+"Dayton,OH,US",04/08/2020 12:00:00,65.4,65.4,65.4,56.6,73.25,,7.5,,340.0,,0.0,,0.0,8.9,48.2,1008.0,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 13:00:00,66.2,66.2,66.2,56.9,71.92,,6.3,,339.0,,0.0,,0.0,8.9,26.5,1007.7,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 14:00:00,68.1,68.1,68.1,57.2,68.16,,6.6,18.3,324.0,,0.0,,0.0,8.9,9.2,1006.7,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 15:00:00,70.7,70.7,70.7,55.7,59.04,,6.9,,319.0,,0.0,,0.0,9.9,9.2,1006.2,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 16:00:00,73.1,73.1,73.1,48.4,41.57,,6.0,,346.0,,0.0,,0.0,7.9,9.2,1005.5,Smoke Or Haze,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 17:00:00,74.1,74.1,74.1,45.9,36.61,,4.8,,25.0,,0.0,,0.0,9.9,9.2,1004.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 18:00:00,74.5,74.5,74.5,43.4,32.8,,1.4,,23.0,,0.0,,0.0,9.9,0.0,1003.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 19:00:00,73.5,73.5,73.5,44.8,35.8,,3.5,,67.0,,0.0,,0.0,9.9,0.0,1002.6,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 20:00:00,69.3,69.3,69.3,44.5,40.83,,6.6,,104.0,,0.0,,0.0,9.9,9.2,1001.3,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 21:00:00,66.5,66.5,66.5,43.5,43.42,,8.9,,120.0,,0.0,,0.0,9.9,9.2,1000.3,,39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Clear
+"Dayton,OH,US",04/08/2020 22:00:00,67.3,67.3,67.3,44.0,42.93,,11.7,,130.0,,0.0,,0.0,9.9,33.8,999.0,"Light Rain, Smoke Or Haze",39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,Partially cloudy
+"Dayton,OH,US",04/08/2020 23:00:00,58.1,58.1,58.1,52.9,82.71,,22.6,34.0,341.0,,0.07,,0.0,3.7,66.9,1003.5,"Mist, Rain, Thunderstorm, Heavy Rain",39.7592,-84.1938,"Dayton, OH, United States","Dayton, OH, United States",,"Rain, Partially cloudy"
+"Toledo,OH,US",04/08/2020 00:00:00,56.0,56.0,56.0,54.6,95.17,,1.8,34.4,344.0,,0.56,,0.0,6.1,77.7,1003.3,"Mist, Thunderstorm, Rain, Heavy Rain, Light Rain",41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,"Rain, Overcast"
+"Toledo,OH,US",04/08/2020 01:00:00,56.9,56.9,56.9,53.7,89.27,,8.0,24.2,347.0,,0.05,,0.0,9.9,57.3,1003.2,"Lightning Without Thunder, Light Rain",41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,"Rain, Partially cloudy"
+"Toledo,OH,US",04/08/2020 02:00:00,56.9,56.9,56.9,53.6,88.84,,4.5,,245.0,,0.0,,0.0,9.8,3.8,1002.3,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 03:00:00,57.2,57.2,57.2,52.7,84.67,,8.7,,238.0,,0.0,,0.0,9.4,38.5,1001.8,Mist,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2020 04:00:00,55.7,55.7,55.7,51.8,86.87,,7.4,,240.0,,0.0,,0.0,9.8,7.7,1001.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 05:00:00,55.9,55.9,55.9,52.8,89.32,,6.3,,325.0,,0.0,,0.0,9.7,93.2,1002.9,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2020 06:00:00,56.0,56.0,56.0,52.9,89.3,,7.5,,326.0,,0.0,,0.0,6.5,67.5,1003.5,Mist,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2020 07:00:00,55.1,55.1,55.1,51.8,88.37,,7.0,,350.0,,0.0,,0.0,8.8,2.3,1004.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 08:00:00,53.8,53.8,53.8,50.8,89.57,,4.1,,351.0,,0.0,,0.0,6.8,4.5,1005.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 09:00:00,54.1,54.1,54.1,49.9,85.49,,8.0,,1.0,,0.0,,0.0,7.7,95.9,1006.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2020 10:00:00,55.3,55.3,55.3,50.1,82.7,,6.0,,360.0,,0.0,,0.0,7.6,88.5,1006.7,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2020 11:00:00,57.5,57.5,57.5,51.1,79.28,,4.5,,267.0,,0.0,,0.0,9.0,29.1,1007.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2020 12:00:00,60.7,60.7,60.7,49.9,67.5,,6.4,,290.0,,0.0,,0.0,9.9,0.0,1007.6,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 13:00:00,64.5,64.5,64.5,49.3,57.84,,5.7,18.3,236.0,,0.0,,0.0,9.9,0.0,1007.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 14:00:00,68.2,68.2,68.2,46.0,44.98,,7.1,20.8,278.0,,0.0,,0.0,9.9,0.0,1006.6,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 15:00:00,68.8,68.8,68.8,46.8,45.37,,8.5,16.1,228.0,,0.0,,0.0,9.9,0.0,1006.0,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 16:00:00,71.4,71.4,71.4,43.4,36.47,,8.3,17.2,288.0,,0.0,,0.0,9.9,22.5,1004.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 17:00:00,72.1,72.1,72.1,43.5,35.77,,9.7,18.3,301.0,,0.0,,0.0,9.9,0.0,1004.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 18:00:00,71.3,71.3,71.3,42.8,35.72,,7.0,,257.0,,0.0,,0.0,9.9,22.5,1003.4,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 19:00:00,70.1,70.1,70.1,44.2,39.18,,7.2,,216.0,,0.0,,0.0,9.9,32.7,1002.6,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2020 20:00:00,65.6,65.6,65.6,47.1,51.19,,6.9,,190.0,,0.0,,0.0,9.9,7.3,1001.5,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Clear
+"Toledo,OH,US",04/08/2020 21:00:00,62.8,62.8,62.8,49.2,61.13,,5.6,,176.0,,0.0,,0.0,9.9,59.5,1000.8,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Partially cloudy
+"Toledo,OH,US",04/08/2020 22:00:00,63.2,63.2,63.2,50.1,62.37,,5.7,,216.0,,0.0,,0.0,9.9,91.5,1001.0,,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,Overcast
+"Toledo,OH,US",04/08/2020 23:00:00,55.1,55.1,55.1,48.2,77.69,,19.2,42.3,344.0,,0.02,,0.0,6.3,70.7,1002.0,Light Rain,41.6538,-83.5363,"Toledo, OH, United States","Toledo, OH, United States",,"Rain, Partially cloudy"
+"Cleveland,OH,US",04/08/2020 00:00:00,52.1,52.1,52.1,48.0,85.78,,10.3,40.4,290.0,,0.28,,0.0,3.7,99.4,1005.2,"Mist, Rain, Thunderstorm, Heavy Rain",41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2020 01:00:00,54.0,54.0,54.0,50.0,86.55,,11.4,,130.0,,0.25,,0.0,8.1,80.2,1002.1,"Thunderstorm, Light Rain",41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2020 02:00:00,56.9,56.9,56.9,52.1,83.78,,8.0,,201.0,,0.04,,0.0,8.7,99.5,1003.2,"Thunderstorm, Light Rain",41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2020 03:00:00,59.0,59.0,59.0,52.1,77.87,,10.2,,209.0,,0.01,,0.0,9.9,88.8,1001.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,"Rain, Overcast"
+"Cleveland,OH,US",04/08/2020 04:00:00,56.9,56.9,56.9,51.2,81.13,,5.8,,190.0,,0.0,,0.0,9.9,0.5,1000.6,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 05:00:00,56.9,56.9,56.9,51.2,81.16,,9.1,,220.0,,0.0,,0.0,9.9,49.9,1001.3,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2020 06:00:00,52.1,52.1,52.1,48.9,88.69,,8.0,,260.0,,0.0,,0.0,5.0,0.9,1002.1,Mist,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 07:00:00,50.1,50.1,50.1,47.1,89.43,,6.9,,300.0,,0.0,,0.0,3.8,95.2,1003.5,Mist,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 08:00:00,47.1,47.1,47.1,45.0,92.39,,0.1,,360.0,,0.0,,0.0,0.0,99.6,1004.8,Fog,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 09:00:00,47.1,47.1,47.1,44.1,89.28,,5.8,,270.0,44.3,0.0,,0.0,0.0,99.6,1005.4,"Mist, Fog",41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 10:00:00,48.0,48.0,48.0,45.0,89.35,,8.0,,241.0,44.3,0.0,,0.0,1.9,99.8,1005.9,Mist,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 11:00:00,48.9,48.9,48.9,46.2,90.27,,9.1,,280.0,45.0,0.0,,0.0,0.1,99.6,1006.4,Fog,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 12:00:00,48.9,48.9,48.9,45.0,86.26,,9.1,,291.0,45.0,0.0,,0.0,0.7,99.4,1007.8,Fog,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 13:00:00,48.9,48.9,48.9,46.2,90.12,,8.0,,280.0,45.4,0.0,,0.0,0.1,98.8,1007.6,Fog,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 14:00:00,51.3,51.3,51.3,47.0,85.41,,5.8,,310.0,,0.0,,0.0,1.3,99.2,1007.6,Mist,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 15:00:00,53.1,53.1,53.1,47.1,79.79,,5.8,,311.0,,0.0,,0.0,3.2,99.0,1007.1,Smoke Or Haze,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Overcast
+"Cleveland,OH,US",04/08/2020 16:00:00,54.1,54.1,54.1,47.9,79.7,,4.7,,360.0,,0.0,,0.0,3.8,49.4,1006.3,Smoke Or Haze,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Partially cloudy
+"Cleveland,OH,US",04/08/2020 17:00:00,60.2,60.2,60.2,49.9,68.68,,0.1,,359.0,,0.0,,0.0,9.9,0.0,1005.2,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 18:00:00,60.2,60.2,60.2,46.0,59.43,,3.3,,300.0,,0.0,,0.0,9.9,0.0,1004.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 19:00:00,61.1,61.1,61.1,44.9,55.08,,3.3,,50.0,,0.0,,0.0,9.9,0.0,1003.8,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 20:00:00,62.9,62.9,62.9,44.9,51.64,,3.3,,110.0,,0.0,,0.0,9.9,0.0,1003.0,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 21:00:00,62.9,62.9,62.9,38.9,41.17,,5.8,,140.0,,0.0,,0.0,9.9,0.3,1002.3,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 22:00:00,62.0,62.0,62.0,38.1,41.08,,9.1,,150.0,,0.0,,0.0,9.9,0.5,1001.5,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Cleveland,OH,US",04/08/2020 23:00:00,62.0,62.0,62.0,38.1,41.06,,8.0,,170.0,,0.0,,0.0,9.9,1.0,1000.1,,41.5047,-81.6908,"Cleveland, OH, United States","Cleveland, OH, United States",,Clear
+"Erie,PA,US",04/08/2020 00:00:00,50.2,50.2,50.2,47.3,89.54,,6.0,31.9,341.0,,0.17,,0.0,3.4,74.0,1003.8,"Lightning Without Thunder, Mist, Rain, Thunderstorm, Heavy Rain, Light Rain",42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,"Rain, Partially cloudy"
+"Erie,PA,US",04/08/2020 01:00:00,51.1,51.1,51.1,47.9,88.89,,9.1,47.2,185.0,,0.08,,0.0,6.9,100.0,1004.1,"Mist, Rain, Heavy Rain, Light Rain",42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,"Rain, Overcast"
+"Erie,PA,US",04/08/2020 02:00:00,52.0,52.0,52.0,48.8,88.93,,16.6,,160.0,,0.04,,0.0,9.9,67.9,1000.8,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,"Rain, Partially cloudy"
+"Erie,PA,US",04/08/2020 03:00:00,54.9,54.9,54.9,48.9,80.03,,12.6,,200.0,,0.0,,0.0,9.9,4.1,1001.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2020 04:00:00,55.0,55.0,55.0,48.9,79.86,,10.2,,210.0,,0.0,,0.0,9.9,91.7,1001.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 05:00:00,47.1,47.1,47.1,44.2,89.69,,6.6,,39.0,43.9,0.0,,0.0,3.2,91.4,1002.2,"Mist, Fog",42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 06:00:00,47.1,47.1,47.1,45.1,92.75,,5.8,,46.0,44.4,0.0,,0.0,3.9,97.8,1002.9,Mist,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 07:00:00,48.0,48.0,48.0,46.3,93.53,,3.4,,76.0,47.1,0.0,,0.0,1.6,100.0,1003.2,Mist,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 08:00:00,48.0,48.0,48.0,46.2,93.56,,0.2,,353.0,,0.0,,0.0,2.1,100.0,1004.0,"Mist, Fog",42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 09:00:00,48.8,48.8,48.8,46.2,90.61,,3.5,,225.0,47.9,0.0,,0.0,3.3,94.2,1004.4,Mist,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 10:00:00,51.1,51.1,51.1,47.1,86.07,,0.3,,358.0,,0.0,,0.0,6.2,94.2,1004.8,Mist,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 11:00:00,53.8,53.8,53.8,47.9,80.52,,6.8,,289.0,,0.0,,0.0,8.8,40.4,1005.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Partially cloudy
+"Erie,PA,US",04/08/2020 12:00:00,47.4,47.4,47.4,44.3,88.97,,9.1,,282.0,43.1,0.0,,0.0,1.1,99.6,1006.6,Fog,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 13:00:00,50.2,50.2,50.2,45.1,82.39,,9.2,17.2,253.0,,0.0,,0.0,6.4,98.0,1006.8,Smoke Or Haze,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 14:00:00,50.3,50.3,50.3,44.9,81.72,,10.3,,272.0,,0.0,,0.0,6.4,91.5,1007.2,Smoke Or Haze,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 15:00:00,50.3,50.3,50.3,44.9,81.52,,11.3,,272.0,,0.0,,0.0,8.8,91.5,1007.2,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 16:00:00,53.2,53.2,53.2,43.0,68.18,,10.2,21.9,272.0,,0.0,,0.0,9.9,84.6,1006.7,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Overcast
+"Erie,PA,US",04/08/2020 17:00:00,54.2,54.2,54.2,43.0,65.7,,8.0,,245.0,,0.0,,0.0,9.9,0.0,1006.3,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2020 18:00:00,55.3,55.3,55.3,42.9,63.01,,3.4,,233.0,,0.0,,0.0,9.9,0.0,1005.4,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2020 19:00:00,56.1,56.1,56.1,39.8,54.18,,4.7,,240.0,,0.0,,0.0,9.9,0.0,1005.7,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2020 20:00:00,53.9,53.9,53.9,38.9,56.75,,3.5,,108.0,,0.0,,0.0,9.9,0.0,1004.8,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2020 21:00:00,51.2,51.2,51.2,39.8,65.02,,3.5,,148.0,,0.0,,0.0,9.9,0.0,1004.5,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Erie,PA,US",04/08/2020 22:00:00,51.2,51.2,51.2,38.9,62.83,,7.9,,139.0,,0.0,,0.0,9.9,27.5,1003.3,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Partially cloudy
+"Erie,PA,US",04/08/2020 23:00:00,53.0,53.0,53.0,38.9,58.73,,7.9,,139.0,,0.0,,0.0,9.9,1.4,1002.0,,42.1298,-80.0855,"Erie, PA, United States","Erie, PA, United States",,Clear
+"Buffalo,NY,US",04/08/2020 00:00:00,43.7,43.7,43.7,40.0,86.65,,11.0,20.8,69.0,37.8,0.01,,0.0,9.9,95.3,1003.4,Light Rain,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,"Rain, Overcast"
+"Buffalo,NY,US",04/08/2020 01:00:00,43.7,43.7,43.7,39.7,85.98,,9.7,23.0,58.0,38.3,0.0,,0.0,9.9,95.3,1001.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 02:00:00,43.8,43.8,43.8,39.9,85.97,,7.9,,69.0,39.3,0.0,,0.0,9.9,100.0,1001.2,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 03:00:00,44.4,44.4,44.4,39.9,83.94,,7.3,,30.0,40.4,0.0,,0.0,9.9,100.0,1001.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 04:00:00,43.6,43.6,43.6,40.7,89.58,,5.2,,19.0,40.5,0.0,,0.0,9.9,100.0,1001.3,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 05:00:00,43.1,43.1,43.1,39.5,87.2,,0.4,,357.0,,0.0,,0.0,9.9,91.4,1001.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 06:00:00,43.9,43.9,43.9,40.6,88.34,,3.4,,349.0,42.3,0.0,,0.0,9.9,93.9,1002.4,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 07:00:00,43.9,43.9,43.9,40.7,88.45,,0.2,,358.0,,0.0,,0.0,8.9,100.0,1002.7,Mist,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 08:00:00,43.9,43.9,43.9,40.7,88.4,,2.7,,283.0,,0.0,,0.0,8.2,100.0,1003.6,Mist,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 09:00:00,44.4,44.4,44.4,41.0,87.74,,5.3,,245.0,41.4,0.0,,0.0,7.6,100.0,1003.9,Mist,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 10:00:00,45.5,45.5,45.5,42.1,87.71,,9.3,,243.0,40.8,0.0,,0.0,7.9,98.7,1004.0,Mist,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 11:00:00,47.2,47.2,47.2,43.3,86.12,,8.4,,257.0,43.2,0.0,,0.0,9.9,94.4,1004.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 12:00:00,49.2,49.2,49.2,43.1,79.49,,8.9,,242.0,45.4,0.0,,0.0,9.9,92.9,1004.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 13:00:00,49.0,49.0,49.0,42.6,78.29,,16.0,23.0,239.0,43.2,0.0,,0.0,8.6,92.9,1004.7,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 14:00:00,51.0,51.0,51.0,43.2,74.68,,14.0,,232.0,,0.0,,0.0,8.5,85.8,1004.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 15:00:00,51.0,51.0,51.0,43.9,76.62,,16.2,23.0,230.0,,0.0,,0.0,9.5,70.8,1005.0,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2020 16:00:00,50.2,50.2,50.2,43.8,78.68,,15.7,,234.0,,0.0,,0.0,9.5,74.7,1004.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2020 17:00:00,50.0,50.0,50.0,43.8,79.08,,18.2,27.7,226.0,,0.0,,0.0,8.2,69.7,1004.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2020 18:00:00,49.5,49.5,49.5,42.7,77.33,,15.9,,221.0,43.8,0.0,,0.0,8.5,27.5,1004.7,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2020 19:00:00,47.3,47.3,47.3,41.5,80.06,,13.3,,224.0,41.6,0.0,,0.0,9.9,21.5,1004.6,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Clear
+"Buffalo,NY,US",04/08/2020 20:00:00,44.6,44.6,44.6,40.9,86.92,,11.8,,219.0,38.7,0.0,,0.0,9.9,29.3,1004.9,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2020 21:00:00,43.2,43.2,43.2,39.7,87.49,,8.2,,211.0,38.4,0.0,,0.0,8.5,29.3,1004.8,,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Buffalo,NY,US",04/08/2020 22:00:00,42.1,42.1,42.1,40.5,94.05,,9.1,,194.0,36.6,0.0,,0.0,3.3,78.3,1003.8,Mist,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Overcast
+"Buffalo,NY,US",04/08/2020 23:00:00,42.1,42.1,42.1,39.7,91.42,,6.6,,211.0,37.8,0.0,,0.0,2.3,69.7,1003.3,Mist,42.8854,-78.8785,"Buffalo, NY, United States","Buffalo, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 00:00:00,43.1,43.1,43.1,39.0,85.3,,6.8,8.1,92.0,39.0,0.1,,0.0,9.9,93.0,1004.1,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,"Rain, Overcast"
+"Rochester,NY,US",04/08/2020 01:00:00,44.0,44.0,44.0,39.8,85.03,,7.7,9.2,72.0,39.6,0.0,,0.0,9.9,93.4,1003.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 02:00:00,44.1,44.1,44.1,39.0,82.15,,7.5,12.8,80.0,39.8,0.0,,0.0,9.9,93.5,1002.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 03:00:00,44.1,44.1,44.1,39.9,85.09,,6.5,12.8,68.0,40.3,0.0,,0.0,9.9,99.3,1001.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 04:00:00,42.2,42.2,42.2,39.0,88.3,,5.8,9.2,21.0,38.5,0.0,,0.0,9.9,59.3,1001.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 05:00:00,42.2,42.2,42.2,39.0,88.29,,4.8,6.9,43.0,39.2,0.0,,0.0,9.9,93.3,1001.6,Mist,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 06:00:00,42.2,42.2,42.2,39.0,88.33,,4.4,5.8,341.0,39.5,0.0,,0.0,9.9,72.9,1002.4,Mist,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 07:00:00,42.2,42.2,42.2,39.0,88.33,,4.5,5.8,358.0,39.4,0.0,,0.0,9.9,93.4,1002.9,Mist,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 08:00:00,42.2,42.2,42.2,39.0,88.3,,0.2,2.2,9.0,,0.0,,0.0,9.9,100.0,1003.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 09:00:00,43.1,43.1,43.1,39.9,88.32,,2.9,2.2,182.0,,0.0,,0.0,9.9,59.3,1003.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 10:00:00,45.0,45.0,45.0,41.0,85.94,,4.3,3.4,334.0,42.8,0.0,,0.0,9.9,72.8,1004.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 11:00:00,46.2,46.2,46.2,41.1,82.28,,5.5,4.7,316.0,43.4,0.0,,0.0,9.9,100.0,1004.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 12:00:00,47.1,47.1,47.1,41.0,79.44,,5.5,4.7,320.0,44.5,0.0,,0.0,9.9,99.8,1004.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 13:00:00,48.0,48.0,48.0,42.2,80.37,,3.5,,295.0,47.0,0.0,,0.0,9.9,93.1,1004.6,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 14:00:00,51.2,51.2,51.2,43.1,73.75,,9.4,5.8,294.0,,0.0,,0.0,9.9,99.8,1004.5,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Overcast
+"Rochester,NY,US",04/08/2020 15:00:00,51.2,51.2,51.2,42.2,71.13,,5.0,7.3,300.0,,0.0,,0.0,9.9,54.7,1004.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 16:00:00,55.1,55.1,55.1,43.1,63.72,,6.9,8.8,290.0,,0.0,,0.0,9.9,54.4,1004.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 17:00:00,54.0,54.0,54.0,42.2,64.25,,9.6,7.1,258.0,,0.0,,0.0,9.9,68.3,1003.7,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 18:00:00,53.1,53.1,53.1,43.1,68.7,,17.5,6.8,291.0,,0.0,,0.0,9.9,53.8,1003.9,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 19:00:00,53.1,53.1,53.1,43.1,68.72,,7.4,5.5,300.0,,0.0,,0.0,9.9,26.8,1004.0,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 20:00:00,50.0,50.0,50.0,41.0,71.17,,8.2,4.7,305.0,46.7,0.0,,0.0,9.9,66.7,1004.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 21:00:00,47.9,47.9,47.9,41.0,76.8,,7.4,15.0,270.0,44.5,0.0,,0.0,9.9,26.8,1004.8,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 22:00:00,47.0,47.0,47.0,41.0,79.52,,4.9,6.9,246.0,44.8,0.0,,0.0,9.9,35.6,1004.2,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Rochester,NY,US",04/08/2020 23:00:00,43.1,43.1,43.1,39.9,88.23,,3.4,4.7,252.0,41.5,0.0,,0.0,9.9,49.1,1003.4,,43.1558,-77.6163,"Rochester, NY, United States","Rochester, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2020 00:00:00,46.1,46.1,46.1,39.8,78.78,,8.9,,79.0,41.6,0.02,,0.0,9.9,77.1,1003.4,Light Rain,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,"Rain, Overcast"
+"Syracuse,NY,US",04/08/2020 01:00:00,45.0,45.0,45.0,41.0,85.79,,7.9,,80.0,40.7,0.06,,0.0,9.9,94.6,1002.7,Light Rain,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,"Rain, Overcast"
+"Syracuse,NY,US",04/08/2020 02:00:00,44.9,44.9,44.9,40.9,85.78,,5.8,,89.0,41.8,0.0,,0.0,9.9,99.8,1001.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 03:00:00,44.9,44.9,44.9,39.9,82.41,,6.7,,61.0,41.2,0.0,,0.0,9.9,99.5,1000.9,Light Rain,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 04:00:00,44.9,44.9,44.9,39.8,82.27,,6.7,,58.0,41.2,0.0,,0.0,9.9,66.4,1000.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2020 05:00:00,44.1,44.1,44.1,39.8,84.98,,3.2,,49.0,42.7,0.0,,0.0,9.9,66.5,1000.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2020 06:00:00,44.1,44.1,44.1,39.8,84.98,,5.6,,40.0,40.9,0.0,,0.0,9.9,93.7,1000.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 07:00:00,44.1,44.1,44.1,39.8,84.98,,3.2,,20.0,42.7,0.0,,0.0,9.9,100.0,1001.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 08:00:00,44.9,44.9,44.9,40.9,85.78,,0.0,,0.0,,0.0,,0.0,9.9,100.0,1002.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 09:00:00,46.1,46.1,46.1,41.0,82.34,,3.4,,352.0,44.9,0.0,,0.0,9.9,66.5,1002.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2020 10:00:00,46.9,46.9,46.9,42.0,83.02,,4.7,,333.0,44.8,0.0,,0.0,9.9,99.0,1002.6,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 11:00:00,47.8,47.8,47.8,42.1,80.44,,3.3,,329.0,46.9,0.0,,0.0,9.9,99.6,1003.1,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 12:00:00,47.9,47.9,47.9,40.9,76.55,,6.8,,339.0,44.8,0.0,,0.0,9.9,99.6,1003.3,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 13:00:00,48.8,48.8,48.8,42.0,77.12,,6.8,,292.0,45.8,0.0,,0.0,9.9,77.3,1003.6,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 14:00:00,50.0,50.0,50.0,42.0,73.72,,6.9,,302.0,,0.0,,0.0,9.9,99.8,1003.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 15:00:00,51.2,51.2,51.2,40.9,67.78,,4.8,,244.0,,0.0,,0.0,9.9,98.9,1003.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 16:00:00,51.1,51.1,51.1,40.9,67.99,,6.0,,289.0,,0.0,,0.0,9.9,99.5,1003.2,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 17:00:00,52.0,52.0,52.0,40.9,65.97,,8.1,,308.0,,0.0,,0.0,9.9,94.4,1003.0,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 18:00:00,52.0,52.0,52.0,41.0,66.05,,7.1,,309.0,,0.0,,0.0,9.9,76.2,1003.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 19:00:00,51.9,51.9,51.9,40.9,66.05,,9.0,,301.0,,0.0,,0.0,9.9,75.6,1003.4,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 20:00:00,48.7,48.7,48.7,39.8,71.08,,3.4,,310.0,47.9,0.0,,0.0,9.9,52.1,1003.5,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Partially cloudy
+"Syracuse,NY,US",04/08/2020 21:00:00,48.5,48.5,48.5,40.8,74.63,,0.0,,0.0,,0.0,,0.0,9.9,90.7,1003.8,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 22:00:00,48.5,48.5,48.5,40.8,74.81,,3.4,,138.0,47.6,0.0,,0.0,9.9,90.6,1003.9,,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Syracuse,NY,US",04/08/2020 23:00:00,47.4,47.4,47.4,39.6,74.13,,3.2,,214.0,46.6,0.0,,0.0,9.7,84.8,1002.4,Mist,43.0504,-76.1474,"Syracuse, NY, United States","Syracuse, NY, United States",,Overcast
+"Burlington,VT,US",04/08/2020 00:00:00,42.9,42.9,42.9,24.2,47.41,,0.0,,360.0,,0.0,,0.0,9.9,0.0,1005.0,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2020 01:00:00,40.9,40.9,40.9,25.0,52.84,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1004.3,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2020 02:00:00,39.7,39.7,39.7,25.1,55.63,,3.3,,78.0,37.8,0.0,,0.0,9.9,0.0,1003.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2020 03:00:00,38.8,38.8,38.8,26.2,60.14,,3.2,,69.0,36.8,0.0,,0.0,9.9,0.0,1002.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2020 04:00:00,38.8,38.8,38.8,26.0,59.86,,0.1,,359.0,,0.0,,0.0,9.9,0.0,1002.4,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2020 05:00:00,38.8,38.8,38.8,25.0,57.47,,3.7,,77.0,36.2,0.0,,0.0,9.9,0.0,1001.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Clear
+"Burlington,VT,US",04/08/2020 06:00:00,37.0,37.0,37.0,25.0,61.68,,3.5,,321.0,34.3,0.0,,0.0,9.9,85.3,1001.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 07:00:00,37.0,37.0,37.0,28.8,72.02,,5.9,,330.0,32.2,0.0,,0.0,9.9,85.3,1002.6,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 08:00:00,38.0,38.0,38.0,28.0,67.01,,8.0,,350.0,32.1,0.0,,0.0,9.9,47.9,1003.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2020 09:00:00,38.1,38.1,38.1,26.9,63.55,,8.1,,303.0,32.3,0.0,,0.0,9.9,66.9,1003.2,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2020 10:00:00,40.0,40.0,40.0,27.9,61.85,,5.9,,293.0,35.8,0.0,,0.0,9.9,66.9,1003.0,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2020 11:00:00,42.3,42.3,42.3,26.8,53.88,,9.2,,323.0,36.9,0.0,,0.0,9.9,54.9,1003.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2020 12:00:00,46.2,46.2,46.2,26.8,46.51,,8.2,,323.0,42.1,0.0,,0.0,9.9,88.1,1002.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 13:00:00,48.0,48.0,48.0,25.0,40.38,,11.4,19.7,313.0,43.1,0.0,,0.0,9.9,93.3,1002.9,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 14:00:00,50.0,50.0,50.0,20.2,30.59,,11.3,,342.0,45.6,0.0,,0.0,9.9,58.6,1002.9,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2020 15:00:00,51.1,51.1,51.1,19.3,28.26,,9.3,21.9,351.0,,0.0,,0.0,9.9,71.1,1002.6,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2020 16:00:00,52.0,52.0,52.0,15.5,23.24,,7.1,17.2,333.0,,0.0,,0.0,9.9,89.5,1002.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 17:00:00,51.1,51.1,51.1,18.2,26.91,,7.0,,353.0,,0.0,,0.0,9.9,98.1,1002.5,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 18:00:00,49.9,49.9,49.9,20.1,30.53,,6.9,,21.0,47.1,0.0,,0.0,9.9,89.5,1002.8,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 19:00:00,48.7,48.7,48.7,19.2,30.73,,5.8,,1.0,46.3,0.0,,0.0,9.9,89.5,1002.7,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 20:00:00,47.8,47.8,47.8,18.2,30.48,,0.0,,0.0,,0.0,,0.0,9.9,94.2,1002.9,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 21:00:00,46.9,46.9,46.9,20.3,34.54,,0.0,,0.0,,0.0,,0.0,9.9,94.0,1003.9,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Burlington,VT,US",04/08/2020 22:00:00,44.8,44.8,44.8,24.3,44.24,,0.0,,0.0,,0.0,,0.0,9.9,62.6,1003.1,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Partially cloudy
+"Burlington,VT,US",04/08/2020 23:00:00,43.0,43.0,43.0,26.1,50.97,,0.1,,355.0,,0.0,,0.0,9.9,89.5,1002.4,,44.4759,-73.2128,"Burlington, VT, United States","Burlington, VT, United States",,Overcast
+"Houlton,ME,US",04/08/2020 00:00:00,26.1,26.1,26.1,20.9,80.62,,0.0,,0.0,,0.0,,0.27,9.9,88.6,1006.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2020 01:00:00,27.0,27.0,27.0,20.9,77.7,,0.0,,0.0,,0.0,,0.26,9.9,100.0,1006.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2020 02:00:00,28.1,28.1,28.1,20.9,74.1,,0.0,,0.0,,0.0,,0.26,9.9,99.8,1005.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2020 03:00:00,25.1,25.1,25.1,20.9,84.05,,3.3,,190.0,20.9,0.0,,0.25,9.9,88.6,1005.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Overcast
+"Houlton,ME,US",04/08/2020 04:00:00,21.8,21.8,21.8,19.1,89.16,,0.0,,0.0,,0.0,,0.24,9.9,0.0,1004.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 05:00:00,20.0,20.0,20.0,18.0,91.58,,0.0,,0.0,,0.0,,0.24,9.9,0.0,1004.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 06:00:00,19.1,19.1,19.1,16.1,87.66,,0.0,,0.0,,0.0,,0.23,9.9,0.0,1004.2,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 07:00:00,20.9,20.9,20.9,18.0,88.15,,0.0,,0.0,,0.0,,0.22,9.9,0.0,1004.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 08:00:00,30.8,30.8,30.8,19.1,61.48,,3.3,,10.0,27.5,0.0,,0.22,9.9,0.0,1004.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 09:00:00,33.2,33.2,33.2,18.0,53.24,,12.7,,10.0,23.9,0.0,,0.0,9.9,0.0,1004.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 10:00:00,36.0,36.0,36.0,17.1,45.81,,3.4,,30.0,33.3,0.0,,0.0,9.9,0.0,1004.4,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 11:00:00,38.0,38.0,38.0,14.0,36.95,,9.2,17.2,350.0,31.6,0.0,,0.0,9.9,0.0,1004.2,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 12:00:00,38.0,38.0,38.0,14.0,36.93,,15.0,,350.0,29.3,0.0,,0.0,9.9,0.1,1003.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 13:00:00,39.8,39.8,39.8,12.8,32.73,,11.4,,320.0,32.8,0.0,,0.0,9.9,0.1,1003.0,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 14:00:00,39.8,39.8,39.8,14.0,34.41,,16.1,,20.0,31.3,0.0,,0.0,9.9,0.1,1002.9,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 15:00:00,41.0,41.0,41.0,15.2,34.65,,9.2,,360.0,35.2,0.0,,0.0,9.9,0.1,1002.6,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 16:00:00,41.0,41.0,41.0,14.0,32.9,,8.1,,350.0,35.7,0.0,,0.0,9.9,0.0,1002.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 17:00:00,39.8,39.8,39.8,12.8,32.7,,12.7,,10.0,32.4,0.0,,0.0,9.9,0.0,1002.8,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 18:00:00,38.9,38.9,38.9,11.9,32.55,,13.9,,30.0,30.8,0.0,,0.0,9.9,0.0,1003.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 19:00:00,36.0,36.0,36.0,12.8,38.04,,8.0,,20.0,29.7,0.0,,0.0,9.9,0.0,1003.5,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 20:00:00,30.8,30.8,30.8,14.0,49.18,,4.7,,30.0,26.0,0.0,,0.0,9.9,0.0,1003.8,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 21:00:00,28.1,28.1,28.1,17.1,62.81,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1004.1,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 22:00:00,27.0,27.0,27.0,18.0,68.48,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1003.9,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Houlton,ME,US",04/08/2020 23:00:00,25.1,25.1,25.1,17.1,71.28,,0.0,,0.0,,0.0,,0.0,9.9,0.0,1003.7,,46.1241,-67.8398,"Houlton, ME, United States","Houlton, ME, United States",,Clear
+"Fredericton,NB,CA",04/08/2020 00:00:00,27.9,27.9,27.9,19.5,70.2,,1.9,,250.0,,0.0,,0.19,9.2,50.0,1007.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2020 01:00:00,27.9,27.9,27.9,22.7,80.54,,2.9,,316.0,,0.0,,0.19,8.7,100.0,1007.1,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2020 02:00:00,27.0,27.0,27.0,21.5,79.65,,0.9,,351.0,,0.0,,0.19,8.7,100.0,1006.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2020 03:00:00,28.2,28.2,28.2,22.7,79.5,,2.1,,351.0,,0.0,,0.19,9.2,100.0,1006.0,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2020 04:00:00,27.9,27.9,27.9,23.0,81.41,,3.1,,340.0,24.6,0.0,,0.19,8.7,100.0,1005.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2020 05:00:00,26.4,26.4,26.4,21.7,81.85,,1.9,,342.0,,0.0,,0.19,8.7,88.0,1004.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2020 06:00:00,24.6,24.6,24.6,21.4,87.29,,2.4,,334.0,,0.0,,0.19,9.2,50.0,1004.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2020 07:00:00,24.8,24.8,24.8,22.5,90.79,,5.2,,325.0,18.4,0.0,,0.19,8.7,5.1,1004.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 08:00:00,26.5,26.5,26.5,22.7,85.3,,4.9,,339.0,20.7,0.0,,0.19,8.7,0.0,1004.7,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 09:00:00,30.3,30.3,30.3,21.3,69.09,,4.8,,346.0,25.2,0.0,,0.0,9.2,0.0,1004.6,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 10:00:00,34.7,34.7,34.7,18.8,51.88,,4.9,,331.0,30.3,0.0,,0.0,8.7,0.0,1004.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 11:00:00,38.9,38.9,38.9,14.6,36.61,,5.5,,338.0,34.8,0.0,,0.0,8.7,0.0,1004.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 12:00:00,39.7,39.7,39.7,10.8,30.08,,4.3,,358.0,36.7,0.0,,0.0,9.2,0.0,1003.8,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 13:00:00,41.8,41.8,41.8,11.9,29.12,,7.6,17.2,309.0,37.0,0.0,,0.0,8.7,0.0,1003.0,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 14:00:00,43.0,43.0,43.0,10.3,25.9,,9.1,,330.0,37.7,0.0,,0.0,8.7,0.0,1002.4,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 15:00:00,43.1,43.1,43.1,13.5,29.7,,7.2,,9.0,38.7,0.0,,0.0,9.2,15.1,1001.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 16:00:00,44.4,44.4,44.4,11.9,26.26,,6.0,,339.0,41.1,0.0,,0.0,8.7,5.1,1001.5,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 17:00:00,44.7,44.7,44.7,10.9,24.82,,7.8,,331.0,40.5,0.0,,0.0,8.7,8.5,1001.5,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 18:00:00,44.7,44.7,44.7,10.3,24.26,,6.5,,300.0,41.0,0.0,,0.0,9.2,89.2,1001.8,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Overcast
+"Fredericton,NB,CA",04/08/2020 19:00:00,42.6,42.6,42.6,9.0,24.69,,7.0,,325.0,38.3,0.0,,0.0,8.7,50.0,1002.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Partially cloudy
+"Fredericton,NB,CA",04/08/2020 20:00:00,40.6,40.6,40.6,10.1,28.13,,7.1,,323.0,35.9,0.0,,0.0,8.7,0.0,1003.0,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 21:00:00,36.9,36.9,36.9,12.3,35.86,,2.5,,355.0,,0.0,,0.0,9.2,0.0,1003.9,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 22:00:00,33.7,33.7,33.7,11.6,39.44,,2.7,,313.0,,0.0,,0.0,8.7,0.0,1004.3,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Fredericton,NB,CA",04/08/2020 23:00:00,29.7,29.7,29.7,17.6,60.26,,1.2,,360.0,,0.0,,0.0,8.7,0.0,1004.2,,45.9606,-66.6391,"Fredericton, NB, Canada","Fredericton, NB, Canada",,Clear
+"Gander,NL,CA",04/08/2020 00:00:00,24.5,24.5,24.5,15.7,68.69,,13.8,19.7,270.0,12.5,0.0,,20.02,14.9,18.2,1001.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Clear
+"Gander,NL,CA",04/08/2020 01:00:00,23.0,23.0,23.0,15.8,73.62,,12.0,,250.0,11.4,0.0,,20.01,14.9,50.0,1001.2,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 02:00:00,21.3,21.3,21.3,15.7,78.59,,13.3,,245.0,8.7,0.0,,20.0,14.9,27.3,1001.2,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 03:00:00,21.3,21.3,21.3,14.1,73.35,,14.4,20.8,243.0,8.2,0.0,,19.98,14.9,18.2,1001.2,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Clear
+"Gander,NL,CA",04/08/2020 04:00:00,21.1,21.1,21.1,14.0,73.82,,13.9,20.8,230.0,8.1,0.0,,19.97,14.9,88.0,1001.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2020 05:00:00,19.5,19.5,19.5,14.0,78.64,,10.8,,230.0,7.8,0.0,,19.96,14.9,50.0,1001.2,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 06:00:00,19.5,19.5,19.5,13.1,75.87,,14.4,,240.0,5.9,0.0,,19.94,19.3,36.4,1001.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 07:00:00,21.1,21.1,21.1,12.3,68.21,,12.1,18.3,245.0,9.0,0.0,,19.93,14.9,88.0,1001.8,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2020 08:00:00,23.0,23.0,23.0,13.9,67.6,,11.4,,250.0,11.7,0.0,,19.91,19.9,25.0,1002.2,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Clear
+"Gander,NL,CA",04/08/2020 09:00:00,24.8,24.8,24.8,14.7,64.86,,11.8,17.2,256.0,13.8,0.0,,0.0,19.3,50.0,1002.3,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 10:00:00,26.7,26.7,26.7,15.0,60.69,,9.2,,255.0,17.7,0.0,,0.0,19.9,36.4,1002.7,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 11:00:00,28.4,28.4,28.4,15.8,58.76,,10.9,17.2,260.0,18.8,0.0,,0.0,19.9,50.0,1002.7,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 12:00:00,30.1,30.1,30.1,17.5,58.95,,8.9,,257.0,22.1,0.0,,0.0,19.3,63.7,1002.4,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 13:00:00,31.5,31.5,31.5,13.9,47.68,,10.2,17.2,225.0,23.0,0.0,,0.0,19.9,50.0,1001.9,Snow Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 14:00:00,31.9,31.9,31.9,10.3,40.02,,18.7,26.3,226.0,20.3,0.0,,0.0,19.9,88.0,1001.6,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2020 15:00:00,32.9,32.9,32.9,13.1,43.54,,14.1,20.1,220.0,23.0,0.0,,0.0,19.3,63.7,1001.3,Precipitation In Vicinity,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 16:00:00,32.0,32.0,32.0,13.9,46.81,,10.3,21.9,230.0,23.6,0.0,,0.0,19.9,50.0,1001.4,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 17:00:00,32.0,32.0,32.0,15.8,50.77,,14.4,20.8,219.0,21.8,0.0,,0.0,14.9,25.0,1001.5,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Clear
+"Gander,NL,CA",04/08/2020 18:00:00,30.3,30.3,30.3,19.4,63.42,,6.9,,226.0,23.6,0.0,,0.0,14.9,93.5,1002.0,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2020 19:00:00,29.2,29.2,29.2,21.3,72.1,,5.7,,273.0,23.1,0.0,,0.0,14.9,88.0,1002.1,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Overcast
+"Gander,NL,CA",04/08/2020 20:00:00,28.3,28.3,28.3,21.2,74.4,,8.0,,219.0,20.4,0.0,,0.0,14.9,25.0,1002.5,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Clear
+"Gander,NL,CA",04/08/2020 21:00:00,26.5,26.5,26.5,21.1,79.79,,8.6,,190.0,17.8,0.0,,0.0,14.9,36.4,1002.7,Sky Coverage Decreasing,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Partially cloudy
+"Gander,NL,CA",04/08/2020 22:00:00,26.6,26.6,26.6,22.9,85.75,,10.8,,175.0,16.6,0.0,,0.0,14.9,25.0,1002.5,,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Clear
+"Gander,NL,CA",04/08/2020 23:00:00,26.5,26.5,26.5,23.1,86.86,,8.0,,140.0,18.1,0.0,,0.0,3.7,25.0,1001.9,Snow Showers,48.9568,-54.6092,"Gander, NL, Canada","Gander, NL, Canada",,Clear
