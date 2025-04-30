@@ -6,6 +6,10 @@ from functools import reduce
 from itertools import combinations
 from datetime import date, datetime
 from io import StringIO, BytesIO
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
+
 
 YOURAPIKEY = ''
 base_url_weather_request = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/history?&aggregateHours=1&"
@@ -53,3 +57,12 @@ cities = [
 #   6: (15, 18),
 # }
 batch_times = {i: ('00', '23') for i in range(1,7)}
+
+# These were difficult to get
+manual_fill_by_year = pd.DataFrame([
+  ("Austin,TX,US", 1996, 10.0, 76.5),
+  ("Gander,NL,CA", 2005, 5.0, 48.0),
+  ("Houlton,ME,US", 1998, 20.0, 53.0),
+  ("Indianapolis,IN,US", 1996, 75.0, 44.0),
+], columns=['city', 'year', 'cloud_cover', 'temperature']
+)

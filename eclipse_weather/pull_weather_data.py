@@ -2,7 +2,7 @@ from eclipse_weather.shared_config import *
 
 # https://www.visualcrossing.com/resources/documentation/weather-api/weather-api-documentation/
 
-years = range(2000, 2020) # Pull from API
+years = range(1994,2000) # Pull from API
 
 for year in years:
   all_dfs = []
@@ -13,7 +13,7 @@ for year in years:
     locations = '|'.join(cities_to_pull)
 
     weather_request = f"{base_url_weather_request}startDateTime={start_time}&endDateTime={end_time}&unitGroup=us&contentType=csv&location={locations}&key={YOURAPIKEY}"
-    response = 'dummy_request' # response = requests.get(weather_request)
+    response = requests.get(weather_request)
     assert response.status_code == 200, "Error: Non-200 code"
     all_dfs.append(pd.read_csv(BytesIO(response.content), header=0))
     print(f"Finished year {year}, batch {b}")
