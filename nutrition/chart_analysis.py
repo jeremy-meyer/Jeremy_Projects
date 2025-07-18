@@ -46,6 +46,7 @@ generate_plot('Protein (g)', color='lightgreen')
 generate_plot('Carbohydrates (g)', color='skyblue')
 generate_plot('Fat (g)', color='coral')
 generate_plot('Saturated Fat', color='lightcoral')
+generate_plot('Fiber', color='green')
 
 # Plot calories per meal (stacked bar chart)
 calories_by_meal = (
