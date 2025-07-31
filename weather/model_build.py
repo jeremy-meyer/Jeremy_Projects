@@ -3,7 +3,9 @@ from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 import pandas as pd
 from matplotlib import pyplot as plt
+from datetime import date
 import seaborn as sns
+
 
 csv_subdir = 'weather/slc_daily_weather/'
 full_data = pd.read_csv(csv_subdir+'/combined_raw.csv', index_col=False)
@@ -161,3 +163,103 @@ plt.show()
 )
 
 # "Normals"
+N_years = 30
+current_year = date.today().year
+
+# Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
+def gen_DoY_index(x):
+  if x.is_leap_year:
+    if x.dayofyear > 60:
+      return x.dayofyear - 1
+    elif x.dayofyear==60:
+      return x.dayofyear - 0.5
+  return x.dayofyear
+
+
+data_for_normal = temperatures.loc[model_df['year'].between(current_year - N_years, current_year-1)].copy()
+data_for_normal['day_of_year'] = data_for_normal['date'].apply(gen_DoY_index)
+data_for_normal['date_formatted'] = data_for_normal['date'].dt.strftime('%b-%d')
+
+# Set upper bound to 366 so Jan 1 and Dec 31 have different predicted values
+basis_normal = dmatrix(
+    "1 + cc(day_of_year, df=8, constraints='center', upper_bound=366)",
+    {"day_of_year": data_for_normal['day_of_year'],},
+    return_type='dataframe'
+)
+
+# Predict fitted values
+model_norm = sm.OLS(data_for_normal['max_temp'], basis_normal).fit()
+model_norm.summary()
+data_for_normal['normal'] = round(model_norm.predict(basis_normal),2)
+
+sns.scatterplot(data_for_normal, x='day_of_year', y='max_temp', legend=None, alpha=0.4, color='red', size=3)
+sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y='normal', color='darkred', linewidth=2)
+plt.title('Average High Temperatures')
+plt.show()
+
+# Avg hottest/coldest day of the year?
+(
+  data_for_normal[data_for_normal['year']==2024]
+  [['day_of_year','date_formatted','normal']]
+  .sort_values(by='normal', ascending=False)
+)
+# July 25th/26th is the hottest day of the year
+# Jan 5th is coldest day of the year
+
+(
+  data_for_normal
+  .groupby('date_formatted')
+  .agg({'max_temp': 'mean'})
+  .reset_index()
+  .sort_values(by='max_temp', ascending=False)
+  .head(10)
+)
+
+data_for_normal[data_for_normal['year']==2024] # check endpints
+
+# 10/90 Bands
+percentiles = (
+    data_for_normal
+    .groupby('day_of_year')['max_temp']
+    .agg(p10=lambda x: x.quantile(0.1), p90=lambda x: x.quantile(0.9))
+    .reset_index()
+)
+
+# Create basis for 10/90 bands
+basis_9010 = dmatrix(
+    "1 + cc(day_of_year, df=8, constraints='center', upper_bound=366)",
+    {"day_of_year": percentiles['day_of_year'],},
+    return_type='dataframe'
+)
+
+model_percentiles_10 = sm.OLS(percentiles['p10'], basis_9010).fit()
+percentiles['lower_10'] = round(model_percentiles_10.predict(basis_9010),2)
+
+model_percentiles_90 = sm.OLS(percentiles['p90'], basis_9010).fit()
+percentiles['upper_90'] = round(model_percentiles_90.predict(basis_9010),2)
+
+
+# Fit a spline to this
+sns.scatterplot(percentiles, x='day_of_year', y='p10', label='10th Percentile', color='blue', alpha=0.5)
+sns.lineplot(percentiles, x='day_of_year', y='lower_10', color='darkblue', linewidth=2)
+sns.scatterplot(percentiles, x='day_of_year', y='p90', label='90th Percentile', color='red', alpha=0.5)
+sns.lineplot(percentiles, x='day_of_year', y='upper_90', color='darkred', linewidth=2)
+plt.show()
+
+data_for_normal['lower_10'] = model_percentiles_10.predict(basis_normal)
+data_for_normal['upper_90'] = model_percentiles_90.predict(basis_normal)
+
+# Put everything together
+sns.scatterplot(data_for_normal, x='day_of_year', y='max_temp', legend=None, alpha=0.3, color='black', size=2)
+sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y='normal', color='red', linewidth=2)
+sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y='lower_10', color='red', linewidth=1, ls='--')
+sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y='upper_90', color='red', linewidth=1, ls='--')
+plt.title('Average High Temperatures')
+plt.show()
+
+
+
+
+
+
+# Todo: Find optimal knots for cyclic cubic spline
