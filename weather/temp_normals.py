@@ -16,6 +16,8 @@ full_data = pd.read_csv('weather/slc_daily_weather/'+'/combined_raw.csv', index_
 temperatures = full_data[['date', 'avg_temp', 'min_temp', 'max_temp']].copy()
 temperatures['date'] = pd.to_datetime(temperatures['date'])
 temperatures['year'] = temperatures['date'].dt.year
+month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+temperatures['month'] = pd.Categorical(temperatures['date'].dt.strftime('%b'), categories=month_order, ordered=True)
 
 # Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
 # This will put Feb 29th between 2-28 and 3-1 in the model
@@ -154,9 +156,9 @@ data_for_normal[data_for_normal['year']==2024]
 # Calculate from data, then interpolate with spline
 
 def compute_bands(metric, p_bands=[0.1, 0.9], spline_df=6, plot=True):
-  p_bands=[0.1, 0.8]
+  # Need to specify p in lambda due to late binding
   band_aggs = {
-    f"p{str(p*100).replace('.', '_')}": lambda x: x.quantile(p) 
+    f"{metric}_p{str(p*100).replace('.', '_')}": lambda row, p=p: row.quantile(p)
     for p in p_bands
   }
   
@@ -164,12 +166,9 @@ def compute_bands(metric, p_bands=[0.1, 0.9], spline_df=6, plot=True):
   percentiles = (
       data_for_normal
       .groupby('day_of_year')[metric]
-      # .agg(**band_aggs)
-      # .agg(p10=lambda x: x.quantile(0.1), p90=lambda x: x.quantile(0.9),)
-      .agg(p10=band_aggs['p10_0'], p10_real=lambda x: x.quantile(0.9))
+      .agg(**band_aggs)
       .reset_index()
   )
-  percentiles
 
   # Create basis for bands
   basis_bands = dmatrix(
@@ -180,28 +179,107 @@ def compute_bands(metric, p_bands=[0.1, 0.9], spline_df=6, plot=True):
 
   models = {p: sm.OLS(percentiles[p], basis_bands).fit() for p in band_names}
   for p in band_names:
-    percentiles[p] = round(models[p].predict(basis_bands),2)
+    percentiles[p+'_fit'] = round(models[p].predict(basis_bands),2)
 
 
   # Fit a spline to this
   if plot:
-    sns.scatterplot(percentiles, x='day_of_year', y='p10', label='10th Percentile', color='blue', alpha=0.5)
-    sns.lineplot(percentiles, x='day_of_year', y='lower_10', color='darkblue', linewidth=2)
-    sns.scatterplot(percentiles, x='day_of_year', y='p90', label='90th Percentile', color='red', alpha=0.5)
-    sns.lineplot(percentiles, x='day_of_year', y='upper_90', color='darkred', linewidth=2)
+    colors = ['blue', 'red', 'green', 'orange']
+    for i, p in enumerate(band_names):
+      col = colors[i % 4]
+      sns.scatterplot(percentiles, x='day_of_year', y=p, label=str(p.split(f"{metric}_p")[1]).replace('_', '.') + " percentile", color=col, alpha=0.4)
+      sns.lineplot(percentiles, x='day_of_year', y=p+"_fit", color='dark'+col, linewidth=2)
     plt.show()
 
-  return {}
+  return percentiles
 
-data_for_normal['lower_10'] = model_percentiles_10.predict(basis_normal)
-data_for_normal['upper_90'] = model_percentiles_90.predict(basis_normal)
+high_quantiles = compute_bands('max_temp', [0.1, 0.9])
+low_quantiles = compute_bands('min_temp', [0.1, 0.9])
 
 # Put everything together
-sns.scatterplot(data_for_normal, x='day_of_year', y='max_temp', legend=None, alpha=0.3, color='black', size=2)
-sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y='normal', color='red', linewidth=2)
-sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y='lower_10', color='red', linewidth=1, ls='--')
-sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y='upper_90', color='red', linewidth=1, ls='--')
+combined = (
+  data_for_normal
+  .merge(high_quantiles, on='day_of_year', how='left')
+  .merge(low_quantiles, on='day_of_year', how='left')
+)
+one_year = combined[combined['year']==2024]
+
+# high Temperatures
+plt.figure(figsize=(8, 6))
+sns.scatterplot(combined, x='day_of_year', y='max_temp', legend=None, alpha=0.4, color='darkred', size=2)
+sns.lineplot(one_year, x='day_of_year', y='normal_high', color='darkred', linewidth=2)
+# Plot translucent band for 10th-90th percentile fit
+plt.fill_between(
+    one_year['day_of_year'],
+    one_year['max_temp_p10_0_fit'],
+    one_year['max_temp_p90_0_fit'],
+    color='red',
+    alpha=0.35,
+    label='10th-90th Percentile Band'
+)
 plt.title('Average High Temperatures')
 plt.show()
 
+# Low Temperatures
+plt.figure(figsize=(8, 6))
+sns.scatterplot(combined, x='day_of_year', y='min_temp', legend=None, alpha=0.4, color='darkblue', size=2)
+sns.lineplot(one_year, x='day_of_year', y='normal_low', color='blue', linewidth=2)
+# Plot translucent band for 10th-90th percentile fit
+plt.fill_between(
+    one_year['day_of_year'],
+    one_year['min_temp_p10_0_fit'],
+    one_year['min_temp_p90_0_fit'],
+    color='royalblue',
+    alpha=0.35,
+    label='10th-90th Percentile Band'
+)
+plt.title('Average Low Temperatures')
+plt.show()
 
+# Combined
+plt.figure(figsize=(10, 7))
+sns.scatterplot(combined, x='day_of_year', y='max_temp', legend=None, alpha=0.25, color='firebrick', size=1)
+sns.scatterplot(combined, x='day_of_year', y='min_temp', legend=None, alpha=0.25, color='darkblue', size=1)
+sns.lineplot(one_year, x='day_of_year', y='normal_high', color='darkred', linewidth=2)
+sns.lineplot(one_year, x='day_of_year', y='normal_low', color='blue', linewidth=2)
+# Plot translucent band for 10th-90th percentile fit
+plt.fill_between(
+    one_year['day_of_year'],
+    one_year['max_temp_p10_0_fit'],
+    one_year['max_temp_p90_0_fit'],
+    color='tomato',
+    alpha=0.35,
+    label='10th-90th High Percentile Band'
+)
+plt.fill_between(
+    one_year['day_of_year'],
+    one_year['min_temp_p10_0_fit'],
+    one_year['min_temp_p90_0_fit'],
+    color='royalblue',
+    alpha=0.35,
+    label='10th-90th Low Percentile Band'
+)
+plt.title('Average High/Low Temperatures')
+plt.show()
+
+# Monthly "normals"
+month_avgs = (
+  one_year
+  .groupby('month')
+  .agg({'normal_high': lambda x: round(mean(x), 1), 'normal_low': lambda x: round(mean(x), 1)})
+  .reset_index()
+)
+
+month_records = (
+  combined
+  .groupby('month')
+  .agg({'max_temp':'max', 'min_temp': 'min'})
+  .reset_index()
+)
+
+(
+  month_avgs
+  .merge(month_records, on='month', how='left')
+)
+
+# When is the average first/last frost?
