@@ -6,6 +6,8 @@ from numpy import mean
 from matplotlib import pyplot as plt
 from datetime import date
 import seaborn as sns
+import calplot
+
 
 # Config
 N_years = 30
@@ -29,9 +31,16 @@ def gen_DoY_index(x):
       return x.dayofyear - 0.5
   return x.dayofyear
 
+# Inverse DoY function (year is not a leap year)
+def dayofyear_to_month_day(doy):
+  dt = pd.Timestamp(f"2025-01-01") + pd.Timedelta(days=doy-1)
+  if doy==59.5:
+    return "Feb 29"
+  return dt.strftime('%b %d')
+
 # Create Day of Year Index Column
+temperatures['day_of_year'] = temperatures['date'].apply(gen_DoY_index)
 data_for_normal = temperatures.loc[temperatures['year'].between(current_year - N_years, current_year-1)].copy()
-data_for_normal['day_of_year'] = data_for_normal['date'].apply(gen_DoY_index)
 data_for_normal['date_formatted'] = data_for_normal['date'].dt.strftime('%b-%d')
 
 # MODEL SECTION --------------------------------------------------------------
@@ -282,4 +291,68 @@ month_records = (
   .merge(month_records, on='month', how='left')
 )
 
-# When is the average first/last frost?
+# When is the average last frost?
+
+temperatures['frost'] = temperatures.apply(
+    lambda row: row['day_of_year'] if row['min_temp'] < 32.5 else pd.NaT,
+    axis=1
+)
+
+frost_dates = (
+  temperatures[temperatures['day_of_year'] < 200]
+  .groupby('year')
+  .agg({"frost": "max"})
+  .reset_index()
+)
+
+frost_dates['date'] = frost_dates['frost'].apply(dayofyear_to_month_day)
+frost_dates
+
+sns.histplot(frost_dates['frost'].dropna(), bins=15, color='skyblue', edgecolor='black', kde=True, stat='density')
+plt.title('Avg First Frost')
+plt.show()
+
+# Quantiles
+frost_dates['frost'].quantile([0, 0.1, 0.5, 0.75, 0.9, 1]).apply(dayofyear_to_month_day)
+
+# Earliest Frost
+frost_dates_early = (
+  temperatures[temperatures['day_of_year'] > 200]
+  .groupby('year')
+  .agg({"frost": "min"})
+  .reset_index()
+  .dropna()
+)
+frost_dates_early['date'] = frost_dates_early['frost'].apply(dayofyear_to_month_day)
+frost_dates_early
+
+sns.histplot(frost_dates_early['frost'].dropna(), bins=15, color='orange', edgecolor='black', kde=True, stat='density')
+plt.title('Avg Last Frost')
+plt.show()
+
+# Quantiles
+frost_dates_early['frost'].quantile([0, 0.1, 0.5, 0.75, 0.9, 1]).apply(dayofyear_to_month_day)
+
+# Heatmap of actual temp relative to avg
+normals = data_for_normal[data_for_normal['year']==2024][['day_of_year', 'normal_high', 'normal_low']]
+heatmap = (
+  temperatures[temperatures['year'].between(2021, 2025)]
+  .merge(normals, on='day_of_year', how='left')
+).copy()
+
+heatmap["departure"] = heatmap['avg_temp'] - (heatmap['normal_high'] + heatmap['normal_low']) / 2.0
+heatmap = heatmap.set_index('date')
+
+calplot.calplot(
+    heatmap['departure'],
+    cmap='coolwarm',
+    colorbar=True,
+    figsize=(15, 12),
+    suptitle='Temperature Departure from Normal',
+    vmin=-22,
+    vmax=22,
+)
+plt.show()
+
+# Todo: See this on a monthly level
+
