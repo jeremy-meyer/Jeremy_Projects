@@ -7,6 +7,7 @@ from matplotlib import pyplot as plt
 from datetime import date
 import seaborn as sns
 import calplot
+from matplotlib.colors import LinearSegmentedColormap
 
 
 # Config
@@ -68,7 +69,7 @@ plt.show()
 # Goal: Pick smallest df where the error is minimized
 # Errors tend to taper off after df=5, so this is likley limit before overfitting
 
-cv_metric = 'min_temp'
+cv_metric = 'avg_temp'
 dfs = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,18,24]
 df_errors = dict()
 
@@ -111,6 +112,7 @@ plt.show()
 # Results:
 # DF=5 for max_temp
 # DF=6 for min_temp
+# DF=6 for avg_temp
 
 # "Normals" Model inference -------------------------
 def create_model(metric, df):
@@ -127,9 +129,11 @@ def create_model(metric, df):
 
 high_temp_model = create_model("max_temp", 5)
 low_temp_model = create_model("min_temp", 6)
-data_for_normal.drop(['initial_prediction'], inplace=True, axis=1)
+avg_temp_model = create_model("avg_temp", 6)
+# data_for_normal.drop(['initial_prediction'], inplace=True, axis=1)
 data_for_normal['normal_high'] = high_temp_model['predictions']
 data_for_normal['normal_low'] = low_temp_model['predictions']
+data_for_normal['normal_temp'] = avg_temp_model['predictions']
 
 # What is avg hottest / coldest day of year?
 
@@ -158,7 +162,7 @@ data_for_normal['normal_low'] = low_temp_model['predictions']
 )
 
 # check that endpoints are different
-data_for_normal[data_for_normal['year']==2024] 
+data_for_normal[data_for_normal['year']==2024]
 
 
 # 10/90 Bands
@@ -334,15 +338,19 @@ plt.show()
 frost_dates_early['frost'].quantile([0, 0.1, 0.5, 0.75, 0.9, 1]).apply(dayofyear_to_month_day)
 
 # Heatmap of actual temp relative to avg
-normals = data_for_normal[data_for_normal['year']==2024][['day_of_year', 'normal_high', 'normal_low']]
-heatmap = (
-  temperatures[temperatures['year'].between(2021, 2025)]
+normals = data_for_normal[data_for_normal['year']==2024][['day_of_year', 'normal_high', 'normal_low', 'normal_temp']]
+normals = (
+  temperatures
   .merge(normals, on='day_of_year', how='left')
 ).copy()
+normals["departure"] = normals['avg_temp'] - normals['normal_temp']
+normals["departure_high"] = normals['max_temp'] - normals['normal_high']
+normals["departure_low"] = normals['min_temp'] - normals['normal_low']
 
-heatmap["departure"] = heatmap['avg_temp'] - (heatmap['normal_high'] + heatmap['normal_low']) / 2.0
+heatmap = normals[normals['year'].between(2021, 2025)].copy()
 heatmap = heatmap.set_index('date')
 
+# Daily Mean Temp
 calplot.calplot(
     heatmap['departure'],
     cmap='coolwarm',
@@ -355,4 +363,78 @@ calplot.calplot(
 plt.show()
 
 # Todo: See this on a monthly level
+monthly_map = (
+  normals
+  .groupby(['year', 'month'])
+  .agg({'departure': "mean"})
+  .reset_index()
+).copy()
 
+monthly_map_year = (
+  monthly_map
+  .groupby(['year'])
+  .agg(
+    departure=('departure', 'mean'),
+    count=('departure', 'count'),
+  )
+  .reset_index()
+)
+
+monthly_map_year = monthly_map_year[monthly_map_year['count']==12]
+monthly_map_year = monthly_map_year.drop(['count'], axis=1)
+monthly_map_year['month'] = 'Year'
+monthly_map = pd.concat([monthly_map, monthly_map_year])
+monthly_map['month'] = pd.Categorical(monthly_map['month'], categories=month_order+["Year"], ordered=True)
+
+
+monthly_map['rank'] = (
+    monthly_map.groupby('month')['departure']
+    .rank(method='min', ascending=True)
+)
+
+monthly_pivot_value = monthly_map.pivot(index='month', columns='year', values='departure')
+monthly_pivot_rank = monthly_map.pivot(index='month', columns='year', values='rank')
+
+custom_colors = [
+  '#3b4cc0', '#528ecb', '#7fb8da', '#b5d5e6', 
+  '#e0e0e0',"#e0e0e0", '#e0e0e0','#e0e0e0',
+  '#f6bfa6', '#ea7b60', '#c63c36', '#962d20',
+]
+custom_cmap = LinearSegmentedColormap.from_list("custom_cmap", custom_colors)
+
+plt.figure(figsize=(12, 6))
+sns.heatmap(
+    monthly_pivot_value,
+    cmap=custom_cmap,
+    # annot=True,
+    fmt=".1f",
+    linewidths=0.05,
+    cbar_kws={'label': 'Departure (°F)'}
+)
+plt.title('Monthly Temperature Departure from 1995-2024 Normal')
+plt.xlabel('Year')
+plt.ylabel('Month')
+plt.tight_layout()
+plt.show()
+
+plt.figure(figsize=(15, 5))
+sns.heatmap(
+    monthly_pivot_rank,
+    cmap=custom_cmap,
+    vmax=max(monthly_map['rank']),
+    vmin=1,
+    center=(max(monthly_map['rank'])+1)/2,
+    annot=True,
+    fmt=".0f",
+    linewidths=0.005,
+    cbar_kws={'label': 'Rank'},
+    annot_kws={"size": 8}
+)
+plt.title('Monthly Departure Rank from 1995-2024 Normal')
+plt.xlabel('Year')
+plt.ylabel('Month')
+plt.tight_layout()
+plt.show()
+
+# Create function to update input data
+# Fit smoothing function to avgs over the last 30 years instead of all points
