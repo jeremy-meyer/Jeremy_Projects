@@ -15,7 +15,7 @@ N_years = 30
 current_year = 2025
 
 # Subset relevant data
-full_data = pd.read_csv('weather/slc_daily_weather/'+'/combined_raw.csv', index_col=False)
+full_data = pd.read_csv('weather/slc_daily_weather/'+'combined_slc_weather.csv', index_col=False)
 temperatures = full_data[['date', 'avg_temp', 'min_temp', 'max_temp']].copy()
 temperatures['date'] = pd.to_datetime(temperatures['date'])
 temperatures['year'] = temperatures['date'].dt.year
@@ -436,5 +436,8 @@ plt.ylabel('Month')
 plt.tight_layout()
 plt.show()
 
-# Create function to update input data
 # Fit smoothing function to avgs over the last 30 years instead of all points
+
+# Dashboard Ideas ----------------------
+# Heatmap over last month showing departure from normal
+# Show daily normal + record high/low + percentiles
