@@ -64,13 +64,20 @@ sns.lineplot(data_for_normal[data_for_normal['year']==2024], x='day_of_year', y=
 plt.title('Average High Temperatures')
 plt.show()
 
+# Model with all data
+basis_normal = dmatrix(
+    "1 + cc(day_of_year, df=5, constraints='center', upper_bound=366)",
+    {"day_of_year": data_for_normal['day_of_year'],},
+    return_type='dataframe'
+)
+
 # CV: Find optimal knots for cyclic cubic spline
 # To ensure equal number of points per day, Plan: 30-fold CV by year
 # Goal: Pick smallest df where the error is minimized
 # Errors tend to taper off after df=5, so this is likley limit before overfitting
 
-cv_metric = 'avg_temp'
-dfs = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,18,24]
+cv_metric = 'min_temp'
+dfs = range(2,25)
 df_errors = dict()
 
 for df in dfs:
@@ -100,7 +107,7 @@ for df in dfs:
   
   df_errors[df] = mean(errors_all_years)
   print(f"FInished {df}")
-print(df_errors)
+pd.DataFrame(df_errors.items(), columns=['df', 'error']).sort_values('error')
 
 plt.plot(df_errors.keys(), df_errors.values(), color='skyblue')
 plt.xlabel('Degrees of Freedom (df)')
@@ -109,8 +116,39 @@ plt.title(f'Spline Degrees of Freedom vs. Mean Squared Error {cv_metric}')
 plt.tight_layout()
 plt.show()
 
+
+# Check fits with other knots
+# Note: Fit will be the same as with full data, but it easier to see with N=1 instead of 30
+alt_model_input = (
+  data_for_normal
+  .groupby(['day_of_year'])
+  .agg(
+    max_temp=('max_temp', 'mean'),
+  )
+  .reset_index()
+)
+
+knots_to_display = [5,13]
+for k in knots_to_display:
+  basis = dmatrix(
+    f"1 + cc(day_of_year, df={k}, constraints='center', upper_bound=366)",
+    {"day_of_year": alt_model_input['day_of_year'],},
+    return_type='dataframe'
+  )
+  model = sm.OLS(alt_model_input[cv_metric], basis).fit()
+  alt_model_input[f'prediction_{k}'] = round(model.predict(basis),2)
+
+
+alt_model_input.sort_values('prediction_5', ascending=False)
+colors = ['darkred', 'orange', 'gold', 'darkyellow', 'green']
+sns.scatterplot(alt_model_input, x='day_of_year', y=cv_metric, legend=None, alpha=0.5, color='red', size=3)
+for i, k in enumerate(knots_to_display):
+  sns.lineplot(alt_model_input, x='day_of_year', y=f'prediction_{k}', color=colors[i], linewidth=2, label=f'df={k}')
+plt.title(f'Average {cv_metric}')
+plt.show()
+
 # Results:
-# DF=5 for max_temp
+# DF=13 for max_temp
 # DF=6 for min_temp
 # DF=6 for avg_temp
 
@@ -127,7 +165,7 @@ def create_model(metric, df):
   predictions = round(model_norm.predict(basis_normal),2)
   return {"basis": basis_normal, "model": model_norm, "predictions": predictions}
 
-high_temp_model = create_model("max_temp", 5)
+high_temp_model = create_model("max_temp", 13)
 low_temp_model = create_model("min_temp", 6)
 avg_temp_model = create_model("avg_temp", 6)
 # data_for_normal.drop(['initial_prediction'], inplace=True, axis=1)
@@ -149,7 +187,7 @@ data_for_normal['normal_temp'] = avg_temp_model['predictions']
 )
 
 # Jan 4th is the coldest day of the year
-# July 25th is hottest day of the year
+# July 20th is hottest day of the year
 
 # Sanity Check work
 (
@@ -206,7 +244,7 @@ def compute_bands(metric, p_bands=[0.1, 0.9], spline_df=6, plot=True):
 
   return percentiles
 
-high_quantiles = compute_bands('max_temp', [0.1, 0.9])
+high_quantiles = compute_bands('max_temp', [0.1, 0.9], spline_df=6)
 low_quantiles = compute_bands('min_temp', [0.1, 0.9])
 
 # Put everything together
@@ -435,8 +473,6 @@ plt.xlabel('Year')
 plt.ylabel('Month')
 plt.tight_layout()
 plt.show()
-
-# Fit smoothing function to avgs over the last 30 years instead of all points
 
 # Dashboard Ideas ----------------------
 # Heatmap over last month showing departure from normal

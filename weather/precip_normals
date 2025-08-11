@@ -1,0 +1,18 @@
+import pandas as pd
+from numpy import mean
+from matplotlib import pyplot as plt
+import seaborn as sns
+
+# Config
+N_years = 30
+current_year = 2025
+
+# Subset relevant data
+full_data = pd.read_csv('weather/slc_daily_weather/'+'combined_slc_weather.csv', index_col=False)
+month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+precip = full_data[['date', 'max_temp', 'min_temp', 'temp','precipitation', 'Precipitation Cover', 'snow_depth', 'Weather Type', 'wind_chill']].copy()
+precip['date'] = pd.to_datetime(precip['date'])
+precip['year'] = precip['date'].dt.year
+precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
+
+precip[precip['date'].between('2025-03-01', '2025-03-07')]
