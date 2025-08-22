@@ -248,4 +248,4 @@ precip['dry_streak'] = precip['is_dry'] * (
     precip['is_dry'].groupby((precip['is_dry'] != precip['is_dry'].shift()).cumsum()).cumcount() + 1
 )
 
-precip.sort_values(by='dry_streak', ascending=False).head(10) # 46 days!!!
+precip.sort_values(by='dry_streak', ascending=False).head(10) # 46 days in 2005!!!
