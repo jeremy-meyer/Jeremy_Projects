@@ -73,7 +73,6 @@ precip[(precip['snow']>0)&(precip['day_of_year']>200)].sort_values('day_of_year'
 # Latest snow
 precip[(precip['snow']>0)&(precip['day_of_year']<200)].sort_values('day_of_year', ascending=False).head(10)
 
-
 last_date = max(precip[precip['precip'].notna()]['date'])
 
 # Compared to normal
@@ -134,9 +133,9 @@ plt.figure(figsize=(17, 6.5))
 sns.heatmap(
     monthly_pivot_rank,
     cmap=dry_to_moist_cmap,
-    vmax=max(precip_anomalies['rank']),
+    vmax=max(precip_w_year['rank']),
     vmin=1,
-    center=(max(precip_anomalies['rank'])+1)/2,
+    center=(max(precip_w_year['rank'])+1)/2,
     annot=True,
     fmt=".0f",
     linewidths=0.005,
@@ -193,7 +192,6 @@ plt.show()
 
 # Is there a long term trend of precipation?
 from patsy import dmatrix
-from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 
 model_precip = precip_anomalies[precip_anomalies['year'].between(current_year - N_years, current_year-1)].copy()
@@ -248,4 +246,44 @@ precip['dry_streak'] = precip['is_dry'] * (
     precip['is_dry'].groupby((precip['is_dry'] != precip['is_dry'].shift()).cumsum()).cumcount() + 1
 )
 
-precip.sort_values(by='dry_streak', ascending=False).head(10) # 46 days in 2005!!!
+precip['dry_streak_group'] = precip['dry_streak'].groupby()
+
+precip.sort_values(by='dry_streak', ascending=False).head(20) # 46 days in 2005!!!
+
+
+(precip['is_dry'] != precip['is_dry'].shift()).head(10)
+precip['is_dry'].head(10)
+
+# Snowfall
+snow = (
+  precip
+  .groupby(['year'])
+  .agg(
+    snow=('snow', 'sum'),
+  )
+  .reset_index()
+  .query("year < @current_year")
+  .assign(
+    year_index=lambda x: x['year'] - x['year'].min()
+  )
+)
+
+snow.sort_values(by='snow', ascending=False).head(10)
+basis_snow = dmatrix(
+    # f"1 + cr(year_index, df=2, constraints='center')",
+    f"1 + year_index",
+    {"year_index": snow['year_index']},
+    return_type='dataframe'
+)
+
+model_snow = sm.OLS(snow['snow'], basis_snow).fit()
+model_snow.summary() # Significance, snow is decreasing! Around -0.6in/year
+snow['forecast'] = model_snow.predict(basis_snow)
+
+sns.lineplot(data=snow, x='year', y='snow', color='gray', alpha=0.5)
+sns.lineplot(data=snow, x='year', y='forecast', color='blue')
+plt.title('Annual Snowfall')
+plt.xlabel('Year')
+plt.ylabel('Snowfall (inches)')
+plt.ylim(0, None)
+plt.show()
