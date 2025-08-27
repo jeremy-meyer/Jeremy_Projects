@@ -1,5 +1,4 @@
 from patsy import dmatrix
-from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 import pandas as pd
 from numpy import mean

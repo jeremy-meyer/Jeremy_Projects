@@ -17,6 +17,10 @@ precip['year'] = precip['date'].dt.year
 precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
 precip['precip_day'] = (precip['precip'] > 0).astype(int)
 
+# Define snow season as Aug - Jul
+precip['snow_season'] = np.where(precip['month'].isin(['Aug', 'Sep', 'Oct', 'Nov', 'Dec']), precip['year'], precip['year'] - 1)
+precip['snow_season'] = precip['snow_season'].astype(str) + '-' + (precip['snow_season'] + 1).astype(str)
+
 def gen_DoY_index(x):
   if x.is_leap_year:
     if x.dayofyear > 60:
@@ -254,36 +258,68 @@ precip.sort_values(by='dry_streak', ascending=False).head(20) # 46 days in 2005!
 (precip['is_dry'] != precip['is_dry'].shift()).head(10)
 precip['is_dry'].head(10)
 
-# Snowfall
-snow = (
+
+# Snow
+snow_season = (
   precip
-  .groupby(['year'])
+  .groupby(['snow_season'])
   .agg(
     snow=('snow', 'sum'),
   )
   .reset_index()
-  .query("year < @current_year")
-  .assign(
-    year_index=lambda x: x['year'] - x['year'].min()
-  )
 )
+snow_season['year'] = snow_season['snow_season'].str.split('-').str[0].astype(int)
+snow_season['year_index'] = snow_season['year'] - snow_season['year'].min()
+snow_season['rank'] = snow_season['snow'].rank(ascending=False).astype(int)
+snow_season = snow_season[snow_season['year'].between(snow_season['year'].min()+1, current_year-1)] # get rid of incomplete years
 
-snow.sort_values(by='snow', ascending=False).head(10)
 basis_snow = dmatrix(
     # f"1 + cr(year_index, df=2, constraints='center')",
     f"1 + year_index",
-    {"year_index": snow['year_index']},
+    {"year_index": snow_season['year_index']},
     return_type='dataframe'
 )
 
-model_snow = sm.OLS(snow['snow'], basis_snow).fit()
-model_snow.summary() # Significance, snow is decreasing! Around -0.6in/year
-snow['forecast'] = model_snow.predict(basis_snow)
+model_snow = sm.OLS(snow_season['snow'], basis_snow).fit()
+model_snow.summary() # Significance, snow is decreasing! Around -0.63in/year
+snow_season['forecast'] = model_snow.predict(basis_snow)
 
-sns.lineplot(data=snow, x='year', y='snow', color='gray', alpha=0.5)
-sns.lineplot(data=snow, x='year', y='forecast', color='blue')
+
+sns.lineplot(data=snow_season, x='year', y='snow', color='gray', alpha=0.5)
+sns.lineplot(data=snow_season, x='year', y='forecast', color='blue')
 plt.title('Annual Snowfall')
 plt.xlabel('Year')
 plt.ylabel('Snowfall (inches)')
 plt.ylim(0, None)
 plt.show()
+
+# snow by season
+(
+  snow_season[['rank','snow_season', 'snow']]
+  .sort_values(by='snow', ascending=False)
+  .head(10)
+)
+
+# By Year
+snow_season.sort_values(by='year', ascending=False).head(10)[['snow_season', 'snow', 'rank']]
+
+
+# "Snow to date" grouped by season
+snow_to_date = (
+  precip[['date', 'precip', 'snow', 'snow_depth', 'snow_season', 'day_of_year']]
+  [precip['snow_season'].between('1970-1971', '2024-2025')] # get rid of incomplete years
+  .copy()
+)
+
+# Compute "snow to date" cumulative sum within season
+first_day = 213
+snow_to_date['day_of_year'] = np.where(snow_to_date['day_of_year'] >= first_day, snow_to_date['day_of_year']-first_day, snow_to_date['day_of_year'] + (365-first_day))
+snow_to_date['snow_to_date'] = snow_to_date.groupby('snow_season')['snow'].cumsum()
+
+snow_to_date_agg = (
+  snow_to_date
+  .groupby(['day_of_year'])
+  .agg({'snow_to_date': 'median'})
+)
+
+# avg first snow, avg last snow percentiles
