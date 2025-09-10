@@ -9,9 +9,9 @@ from datetime import timedelta, datetime, date
 
 YOURAPIKEY = "<API_KEY>"
 base_url_weather_request = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/history?&aggregateHours=24&"
-csv_subdir = 'weather/slc_daily_weather/'
+csv_subdir = 'weather/data_sources/'
 location = "Salt Lake City, UT, US"
-combined_file = 'combined_slc_weather.csv'
+combined_file = 'daily_weather.csv'
 
 
 # https://www.visualcrossing.com/resources/documentation/weather-api/weather-api-documentation/
@@ -50,7 +50,7 @@ def clean_transform_raw_csv(df_raw):
 
 # Data Update ---------------------
 # Calculate new data to pull
-max_date = pd.read_csv(csv_subdir+'/combined_raw.csv', index_col=0)['date'].max()
+max_date = pd.read_csv(csv_subdir + combined_file, index_col=0)['date'].max()
 max_date = pd.to_datetime(max_date) + timedelta(days=1)
 days_to_update = (date.today() - max_date.date()).days - 1
 start_time = max_date.strftime('%Y-%m-%dT00:00:00')
@@ -76,13 +76,14 @@ elif too_many_to_update:
 
 
 # Pull Data for multiple years + save to separate files-------------
-years = range(1980,2025) # Pull from API
+years = range(1976,1978) # Pull from API
 for year in years:
     start_time = f"{year}-01-01T00:00:00"
     end_time = f"{year}-12-31T00:00:00"
-    df = pull_weather_data(start_time, end_time, location)
+    df = clean_transform_raw_csv(pull_weather_data(start_time, end_time, location))
     df.to_csv(f'{csv_subdir}/slc_{year}.csv', index=False)
     print(f"Finished {year}")
+
 
 # Write combined file (only need to do once)
 filepaths = [csv_subdir+'/'+f for f in os.listdir(csv_subdir) if (f.endswith('.csv') and f.startswith('slc'))]
@@ -92,7 +93,6 @@ combined_df.to_csv(csv_subdir+combined_file, index=False)
 
 
 # Future Ideas ------------------
-# When is the 
 # Look at snowfall / rainfall extremes
 # Plot sunrise/sunset hours
 
@@ -100,6 +100,6 @@ combined_df.to_csv(csv_subdir+combined_file, index=False)
 
 # Atmospheric pressure?
 
-# Todo: Find optimal degrees of freedom
-# Is a basic slope term needed?
+# Dashboard (how normal is today?)
+# clean up ingest code
 

@@ -3,7 +3,7 @@ import pandas as pd
 # This code will pull from the noaa source
 # It has more accurate precipation data, and the temperature is recorded at the SLC airport
 
-noaa = pd.read_csv('weather/slc_daily_weather/noaa_raw.csv')
+noaa = pd.read_csv('weather/data-sources/noaa_raw.csv')
 noaa.drop(columns=['SN52', 'SN53', 'SX52', 'SX53'], inplace=True)
 noaa.rename(columns={
     'DATE': 'date',
