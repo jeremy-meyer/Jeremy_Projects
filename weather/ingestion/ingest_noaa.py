@@ -54,3 +54,10 @@ noaa.rename(columns={
 # print(nan_percent)
 
 ## Todo: Pull from API
+
+# station: USW00024127
+# token: kKrDcgsFHGiHfIumvsrcqfreBuafqoO
+import requests
+
+
+noaa_api = "https://www.ncei.noaa.gov/access/services/search/v1/data?dataset=daily-summaries&startDate=2025-08-01&endDate=2025-08-31&dataTypes=PRCP&stations=USW00024127&limit=1"
