@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 .vscode
+.env
 mood_tracker/.env

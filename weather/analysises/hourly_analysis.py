@@ -130,9 +130,9 @@ sns.scatterplot(
     s=25,  # Size of the dots
     marker='o'
 )
-plt.title('Hourly avg temperature anomalies by Month')
+plt.title('Average Hourly Temperature by Month')
 plt.xlabel('Hour of Day')
-plt.ylabel('Temperature (F)')
+plt.ylabel('Temperature Deviation (F)')
 plt.xticks(range(24))
 plt.legend(title='Month', bbox_to_anchor=(1.115, 1), loc='upper right')
 plt.show()
@@ -244,4 +244,7 @@ fig.legend(
 # Adjust layout
 plt.tight_layout(rect=[0,0,0.92,1])  # Leave space for the shared legend
 plt.show()
+
+# Todo: Find optimal df of hourly model
+# Adjust for DST?
 
