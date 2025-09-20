@@ -3,6 +3,9 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
+from patsy import dmatrix
+import statsmodels.api as sm
+
 
 # Config
 N_years = 30
@@ -28,6 +31,12 @@ def gen_DoY_index(x):
     elif x.dayofyear==60:
       return x.dayofyear - 0.5
   return x.dayofyear
+
+def dayofyear_to_month_day(doy):
+  dt = pd.Timestamp(f"2025-01-01") + pd.Timedelta(days=doy-1)
+  if doy==59.5:
+    return "Feb 29"
+  return dt.strftime('%b %d')
 
 precip['day_of_year'] = precip['date'].apply(gen_DoY_index)
 
@@ -195,9 +204,6 @@ plt.tight_layout()
 plt.show()
 
 # Is there a long term trend of precipation?
-from patsy import dmatrix
-import statsmodels.api as sm
-
 model_precip = precip_anomalies[precip_anomalies['year'].between(current_year - N_years, current_year-1)].copy()
 
 basis = dmatrix(
