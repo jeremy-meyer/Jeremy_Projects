@@ -48,6 +48,23 @@ def clean_transform_raw_csv(df_raw):
     return combined_df
 
 
+def append_to_csv(path, df, max_append=1000):
+  days_to_update = df.shape[0]
+  schema_match = all(
+      pd.read_csv(path).columns == df.columns
+  )
+  too_many_to_update = days_to_update > max_append
+  if schema_match and not too_many_to_update:
+      # Append new data to combined file
+      # append mode, prevents column overwrite and data index overwrite
+      df.to_csv(path, mode='a', header=False, index=False)
+      print('Appended new data!')
+  elif not schema_match:
+      raise Exception("Error: Schema mismatch between new data and existing combined file")
+  elif too_many_to_update:
+      raise Exception("Error: Too many days to update at once, please double check work")    
+
+
 # Data Update ---------------------
 # Calculate new data to pull
 max_date = pd.read_csv(csv_subdir + combined_file, index_col=0)['date'].max()
@@ -58,31 +75,21 @@ end_time = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%dT00:00:00')
 print(f"Pulling data from {start_time} to {end_time}")
 df = pull_weather_data(start_time, end_time, location)
 df_cleaned = clean_transform_raw_csv(df)
-
-schema_match = all(
-    pd.read_csv(csv_subdir + combined_file).columns == df_cleaned.columns
-)
-too_many_to_update = days_to_update > 1000
-if schema_match and not too_many_to_update:
-    # Append new data to combined file
-    # append mode, prevents column overwrite and data index overwrite
-    df_cleaned.to_csv(csv_subdir + combined_file, mode='a', header=False, index=False)
-    print('Appended new data!')
-elif not schema_match:
-    raise Exception("Error: Schema mismatch between new data and existing combined file")
-elif too_many_to_update:
-    raise Exception("Error: Too many days to update at once, please double check work")
-
+append_to_csv(csv_subdir + combined_file, df_cleaned)
 
 
 # Pull Data for multiple years + save to separate files-------------
-years = range(1976,1978) # Pull from API
+years = range(1974,1976) # Pull from API
+dfs = dict()
 for year in years:
     start_time = f"{year}-01-01T00:00:00"
     end_time = f"{year}-12-31T00:00:00"
-    df = clean_transform_raw_csv(pull_weather_data(start_time, end_time, location))
-    df.to_csv(f'{csv_subdir}/slc_{year}.csv', index=False)
+    dfs[year] = clean_transform_raw_csv(pull_weather_data(start_time, end_time, location))
+    # df.to_csv(f'{csv_subdir}/slc_{year}.csv', index=False)
     print(f"Finished {year}")
+
+# combine all years + append
+append_to_csv(csv_subdir + combined_file, pd.concat(dfs.values(), ignore_index=True))
 
 
 # Write combined file (only need to do once)
@@ -102,4 +109,9 @@ combined_df.to_csv(csv_subdir+combined_file, index=False)
 
 # Dashboard (how normal is today?)
 # clean up ingest code
+
+# Dashboard
+# Current conditions & how normal is today
+# Historical departures from normal (monthly view)
+# 
 

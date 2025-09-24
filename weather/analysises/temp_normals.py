@@ -254,6 +254,14 @@ combined = (
 )
 one_year = combined[combined['year']==2024]
 
+# Write out normals to CSV
+(
+  one_year
+  .rename(columns={'max_temp_p10_0_fit': 'max_temp_p10', 'max_temp_p90_0_fit': 'max_temp_p90', 'min_temp_p10_0_fit': 'min_temp_p10', 'min_temp_p90_0_fit': 'min_temp_p90'})
+  [['date_formatted', 'day_of_year', 'month', 'day_of_year', 'normal_high', 'normal_low', 'normal_temp', 'max_temp_p10', 'max_temp_p90', 'min_temp_p10', 'min_temp_p90']]
+  .to_csv('weather/output_sources/temp_normals.csv', index=False)
+)
+
 # high Temperatures
 plt.figure(figsize=(8, 6))
 sns.scatterplot(combined, x='day_of_year', y='max_temp', legend=None, alpha=0.4, color='darkred', size=2)
