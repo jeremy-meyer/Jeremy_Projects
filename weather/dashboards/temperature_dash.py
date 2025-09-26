@@ -2,8 +2,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 import plotly.io as pio
 import pandas as pd
+from dash import dcc
 
 pio.renderers.default = "browser"
+# pio.templates.default = "plotly_dark"
 
 # Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
 # This will put Feb 29th between 2-28 and 3-1 in the model
@@ -40,6 +42,15 @@ fig.add_bar(
     base=recent['min_temp'],  # This sets the starting point of each bar
     marker_color='red',
     name='Observed Temperature',
+    customdata=recent[['normal_high', 'normal_low']],
+    hovertemplate=(
+      '<b>Date:</b> %{x}<br><br>' +
+      '<b>Observed High:</b> %{y}°F<br>' +
+      '<b>Observed Low:</b> %{base}°F<br>' + 
+      '<b>Normal High:</b> %{customdata[0]}°F<br>' +
+      '<b>Normal Low:</b> %{customdata[1]}°F<br>' +
+      '<extra></extra>'  # Removes the default trace info
+  )
 )
 fig.add_trace(
     go.Scatter(
@@ -109,8 +120,9 @@ fig.add_trace(
     )
 )
 
+# Add titles / figsize
 fig.update_layout(title="Daily Observed Temperature", xaxis_title='Date', yaxis_title='Temperature (°F)', height=1000)
-
+# Add Slider bar and buttons for year
 fig.update_layout(
     xaxis=dict(
         rangeselector=dict(
@@ -138,9 +150,9 @@ fig.update_layout(
             visible=True
         ),
         type="date",
-        range=[recent['date'].max() - pd.DateOffset(months=6), recent['date'].max()]
+        range=[recent['date'].max() - pd.DateOffset(months=6), recent['date'].max() + pd.DateOffset(days=1)]
     )
 )
 
-
+# dcc.Graph(figure=fig)
 fig.show()
