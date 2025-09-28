@@ -1,12 +1,19 @@
-import plotly.express as px
-import plotly.graph_objects as go
-import plotly.io as pio
+from dash import Dash, html, dash_table, dcc, callback, Output, Input, html
+import dash_bootstrap_components as dbc
 import pandas as pd
-from dash import dcc
+import plotly.express as px
+import plotly.io as pio
+import plotly.graph_objects as go
+from plotly_calplot import calplot
 
+pio.templates.default = "seaborn"
 pio.renderers.default = "browser"
-# pio.templates.default = "plotly_dark"
 
+# Initialize the app - incorporate a Dash Bootstrap theme
+external_stylesheets = [dbc.themes.DARKLY]
+app = Dash(__name__, external_stylesheets=external_stylesheets)
+
+# INPUT DATA
 # Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
 # This will put Feb 29th between 2-28 and 3-1 in the model
 def gen_DoY_index(x):
@@ -34,6 +41,7 @@ record_lows = recent[recent['low_rank'] == 1.0]
 high_min = recent[recent['low_rank'] == recent['low_rank'].max()]
 low_max = recent[recent['high_rank'] == recent['high_rank'].max()]
 
+# Temperature Figure
 fig = go.Figure()
 # Total Temp
 fig.add_bar(
@@ -154,5 +162,53 @@ fig.update_layout(
     )
 )
 
-# dcc.Graph(figure=fig)
-fig.show()
+# Temp Heatmap
+recent['departure_high'] = recent['max_temp'] - recent['normal_high']
+custom_colors = [
+  '#3b4cc0', '#528ecb', '#7fb8da', '#b5d5e6', 
+  '#e0e0e0',"#e0e0e0", 
+  '#f6bfa6', '#ea7b60', '#c63c36', '#962d20',
+]
+
+fig_heatmap = calplot(
+    recent,
+    x="date",
+    y="departure_high",
+    month_lines=True,
+    month_lines_color='black',
+    month_lines_width=2,
+    colorscale=custom_colors,
+    years_title=True,
+    showscale=True,
+    cmap_min=-20,
+    cmap_max=20,
+    total_height=1200,
+
+)
+
+# App layout
+app.layout = dbc.Container([
+  dbc.Tabs([
+    dcc.Tab(label='Temperature', children=[
+      dbc.Row([
+        html.Div("Temperature Dashboard")
+      ]),
+      dbc.Row([
+        dcc.Graph(figure=fig, id='observed_temp_line')
+      ]),
+    ]),
+    dcc.Tab(label='Departure from Normal', children = [
+      dbc.Row([
+        html.Div("Calendar Heatmap"),
+      ]),
+      dbc.Row([
+        dcc.Graph(figure=fig_heatmap, id='calendar_heatmap')
+      ]),
+    ]),
+  ])
+], fluid=True)
+
+
+# Run the app
+if __name__ == '__main__':
+    app.run(debug=True, port=8052)
