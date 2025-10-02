@@ -13,9 +13,15 @@ print(os.getcwd())
 # TODO: Figure out why assets folder isn't working properly with the dark dropdown css
 
 # Initialize the app
-# external_stylesheets = [dbc.themes.DARKLY, 'dark_dropdown.css']
+external_stylesheets = [dbc.themes.DARKLY, 'dark_dropdown.css']
 
-app = Dash(__name__) #, external_stylesheets=external_stylesheets, assets_folder='./weather/dashboards/assets/')
+app = Dash(__name__, external_stylesheets=external_stylesheets, assets_folder='./weather/dashboards/assets/')
+
+temp_colors = [
+    '#3b4cc0', '#528ecb', '#7fb8da', '#b5d5e6', 
+    '#e0e0e0',"#e0e0e0", "#e0e0e0", 
+    '#f6bfa6', '#ea7b60', '#c63c36', '#962d20',
+]
 # INPUT DATA
 # Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
 # This will put Feb 29th between 2-28 and 3-1 in the model
@@ -38,7 +44,10 @@ temps_minmax = (temps['year'].min(),temps['year'].max())
 # add a column rank to temp that ranks how hot each day was relative to all other years
 temps['high_rank'] = temps.groupby('day_of_year')['max_temp'].rank(ascending=False, method='min')
 temps['low_rank'] = temps.groupby('day_of_year')['min_temp'].rank(ascending=True, method='min')
-temps_full = temps.merge(normals, on='day_of_year', how='left')
+month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+temps['month'] = pd.Categorical(temps['date'].dt.strftime('%b'), categories=month_order, ordered=True)
+
+temps_full = temps.merge(normals.drop(columns=['month'], axis=1), on='day_of_year', how='left', suffixes=('', '_y'))
 
 recent = temps_full[temps_full['date'] >= '2020-01-01']
 
@@ -46,6 +55,50 @@ record_highs = recent[recent['high_rank'] == 1.0]
 record_lows = recent[recent['low_rank'] == 1.0]
 high_min = recent[recent['low_rank'] == recent['low_rank'].max()]
 low_max = recent[recent['high_rank'] == recent['high_rank'].max()]
+
+
+# Monthly Heatmap Data
+max_date = temps_full['date'].max()
+if max_date != max_date + pd.offsets.MonthEnd(0):
+  most_recent_month = temps_full['date'].max().replace(day=1) - pd.Timedelta(days=1)
+else:
+  most_recent_month = max_date
+
+
+monthly_map = (
+  pd.melt(
+    temps_full[temps_full['date'] <= most_recent_month]\
+      [['year', 'month', 'max_temp', 'min_temp', 'avg_temp']],
+    id_vars=['year', 'month'],
+    value_vars=['max_temp', 'min_temp', 'avg_temp'],
+    var_name='metric',
+    value_name='temp',
+  )
+  .groupby(['year', 'month', 'metric'])
+  .agg(mean=("temp", "mean"))
+  .reset_index()
+)
+
+monthly_map_year = (
+  monthly_map
+  .groupby(['year', 'metric'])
+  .agg(
+    mean=('mean', 'mean'),
+    count=('mean', 'count'),
+  )
+  .reset_index()
+)
+
+monthly_map_year = monthly_map_year[monthly_map_year['count']==12]
+monthly_map_year = monthly_map_year.drop(['count'], axis=1)
+monthly_map_year['month'] = 'Year'
+monthly_map = pd.concat([monthly_map, monthly_map_year])
+monthly_map['month'] = pd.Categorical(monthly_map['month'], categories=month_order+["Year"], ordered=True)
+
+monthly_map['rank'] = (
+    monthly_map.groupby(['month', 'metric'])['mean']
+    .rank(method='min', ascending=True)
+)
 
 # Temperature Figure
 fig = go.Figure()
@@ -186,7 +239,8 @@ app.layout = dbc.Container([
     ]),
     dcc.Tab(label='Departure from Normal', children = [
       dbc.Row([
-        html.Div("Daily Heatmap 5 year Departure from Normal"),
+        html.H3("Departure From Normal Temperatures"),
+        html.Div("Select metric for heatmaps:"),
         dcc.Dropdown(
           options={
             'max_temp': 'High Temperature',
@@ -197,7 +251,7 @@ app.layout = dbc.Container([
           style={"color": "#000000"},
           id='daily_heatmap_dropdown',
         ),
-      html.Div("Select start for 5-year range:"),
+      html.Div("Select start for 5-year range (daily only):"),
       dcc.Slider(
           min=int(round(temps_minmax[0]/10)*10),
           max=temps_minmax[1],
@@ -209,8 +263,12 @@ app.layout = dbc.Container([
           included=False,
       )      
       ]),
+      html.Div(" "),
       dbc.Row([
         dcc.Graph(figure={}, id='calendar_heatmap')
+      ]),
+      dbc.Row([
+        dcc.Graph(figure={}, id='monthly_temp_heatmap')
       ]),
     ]),
     ]),
@@ -224,31 +282,25 @@ app.layout = dbc.Container([
     Input(component_id='daily_heatmap_dropdown', component_property='value'),
     Input(component_id='heatmap-year-slider', component_property='value')
 )
-def update_graph(col_chosen, year_start):
+def update_graph(metric_chosen, year_start):
 
   heatmap_df = temps_full[temps_full['year'].between(year_start, year_start+4)].copy()
   heatmap_df['departure'] = {
     'max_temp': heatmap_df['max_temp'] - heatmap_df['normal_high'],
     'min_temp': heatmap_df['min_temp'] - heatmap_df['normal_low'],
     'avg_temp': heatmap_df['avg_temp'] - heatmap_df['normal_temp'],
-  }[col_chosen]
-
-  custom_colors = [
-    '#3b4cc0', '#528ecb', '#7fb8da', '#b5d5e6', 
-    '#e0e0e0',"#e0e0e0", 
-    '#f6bfa6', '#ea7b60', '#c63c36', '#962d20',
-  ]
+  }[metric_chosen]
 
   fig_heatmap = calplot(
       heatmap_df,
       x="date",
       y="departure",
-      text=col_chosen,
+      text=metric_chosen,
       # texttemplate="%{text}°F",
       month_lines=True,
       month_lines_color='#333333',
       month_lines_width=3.5,
-      colorscale=custom_colors,
+      colorscale=temp_colors,
       years_title=True,
       showscale=True,
       cmap_min=-20,
@@ -257,9 +309,49 @@ def update_graph(col_chosen, year_start):
       dark_theme=True,
       space_between_plots=0.05,
   )
-  fig_heatmap.update_layout(width=1600)
+  fig_heatmap.update_layout(width=1420)
 
   return fig_heatmap
+
+
+@callback(
+    Output(component_id='monthly_temp_heatmap', component_property='figure'),
+    Input(component_id='daily_heatmap_dropdown', component_property='value'),
+)
+def update_monthly_heatmap(metric_chosen):
+
+  data_for_temp_heatmap = monthly_map[monthly_map['metric']==metric_chosen]
+
+  fig = go.Figure(data=go.Heatmap(
+      x=data_for_temp_heatmap['year'],
+      y=data_for_temp_heatmap['month'],
+      z=data_for_temp_heatmap['rank'],
+      colorscale=temp_colors,
+      zmin=1,
+      xgap=1,
+      ygap=1,
+      zmax=data_for_temp_heatmap['rank'].max(),
+      connectgaps=False,
+      customdata=data_for_temp_heatmap[['mean',]],
+      texttemplate="%{z}",
+      hovertemplate=(
+        '%{y} %{x}:' +
+        '<br>Rank: %{z}' +
+        f'<br>Avg({metric_chosen}): %{{customdata[0]:.1f}}°F' +
+        '<extra></extra>'  # Removes the default trace info
+    )
+  ))
+  fig.update_layout(
+      title=f'Monthly Temperature Rank',
+      xaxis_title='Year',
+      yaxis=dict(title='Month',autorange='reversed'),
+      height=750,
+      width=1420,
+      paper_bgcolor='#222222',
+      plot_bgcolor='#222222',
+  )
+  
+  return fig
 
 
 # Run the app

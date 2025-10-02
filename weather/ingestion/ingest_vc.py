@@ -79,7 +79,7 @@ append_to_csv(csv_subdir + combined_file, df_cleaned)
 
 
 # Pull Data for multiple years + save to separate files-------------
-years = range(1972,1974) # Pull from API
+years = range(1970,1972) # Pull from API
 dfs = dict()
 for year in years:
     start_time = f"{year}-01-01T00:00:00"
