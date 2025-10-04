@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 import plotly.graph_objects as go
+from datetime import date
 from plotly_calplot import calplot
 import os
 
@@ -13,7 +14,7 @@ print(os.getcwd())
 # TODO: Figure out why assets folder isn't working properly with the dark dropdown css
 
 # Initialize the app
-external_stylesheets = [dbc.themes.DARKLY, 'dark_dropdown.css']
+external_stylesheets = [dbc.themes.BOOTSTRAP, dbc.themes.DARKLY, 'dark_dropdown.css']
 
 app = Dash(__name__, external_stylesheets=external_stylesheets, assets_folder='./weather/dashboards/assets/')
 
@@ -64,6 +65,31 @@ if max_date != max_date + pd.offsets.MonthEnd(0):
 else:
   most_recent_month = max_date
 
+today = date.today()
+normal_n_year = 30
+years_for_normals = range(date.today().year - normal_n_year, date.today().year)
+
+# Compute Monthly Normals with 30 years; records use all data
+month_avgs = (
+  temps_full
+  .assign(
+    for_avg_high = lambda x: x['max_temp'].where(x['year'].isin(years_for_normals), None),
+    for_avg_low = lambda x: x['min_temp'].where(x['year'].isin(years_for_normals), None),
+    for_avg_temp = lambda x: x['avg_temp'].where(x['year'].isin(years_for_normals), None),
+  )
+  .groupby(['month'])
+  .agg(
+    # round these to 1 decimal place
+    normal_high=('for_avg_high', lambda x: round(x.mean(), 1)),
+    normal_low=('for_avg_low', lambda x: round(x.mean(), 1)),
+    normal_temp=('for_avg_temp', lambda x: round(x.mean(), 1)),
+    max_temp_p90=('max_temp', lambda x: round(x.quantile(0.9), 1)),
+    min_temp_p10=('min_temp', lambda x: round(x.quantile(0.1), 1)),
+    record_high=('max_temp', 'max'),
+    record_low=('min_temp', 'min'),
+  )
+  .reset_index()
+)
 
 monthly_map = (
   pd.melt(
@@ -224,7 +250,55 @@ fig.update_layout(
     template='plotly_dark',
 )
 
-# Temp Heatmap
+# Monthly Avg Figure
+def monthly_avg_temp():
+  fig = go.Figure()
+  # Total Temp
+  fig.add_bar(
+      x=month_avgs['month'],
+      y=month_avgs['normal_high'] - month_avgs['normal_low'],
+      base=month_avgs['normal_low'],  # This sets the starting point of each bar
+      marker_color='red',
+      name='Monthly Normal',
+      customdata=month_avgs[['record_high', 'record_low']],
+      hovertemplate=(
+        '<b>Month:</b> %{x}<br>' +
+        '<b>Avg High:</b> %{y}°F<br>' +
+        '<b>Avg Low:</b> %{base}°F<br>' + 
+        '<b>Record High:</b> %{customdata[0]}°F<br>' +
+        '<b>Record Low:</b> %{customdata[1]}°F<br>' +
+        '<extra></extra>'
+    )
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=month_avgs['month'], y=month_avgs['record_high'], mode='lines+markers', name='Record High', text='record_high',
+          line=dict(color='darkred', width=3)
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=month_avgs['month'], y=month_avgs['record_low'], mode='lines+markers', name='Record Low', text='record_low',
+          line=dict(color='royalblue', width=3)
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=list(month_avgs['month']) + list(month_avgs['month'])[::-1],
+          y=list(month_avgs['max_temp_p90']) + list(month_avgs['min_temp_p10'])[::-1],
+          fill='toself',
+          fillcolor='rgba(125,125,125,0.25)', 
+          line_color='rgba(255,255,255,0)',
+          showlegend=True,
+          name='10-90th percentile',
+          hoverinfo="skip",
+      ),
+  )
+  fig.update_layout(xaxis_title='Month', yaxis_title='Temperature (°F)')
+  return fig
+
+dbc_row_col = lambda x, width=12: dbc.Row(children=[dbc.Col([x], width=width)])
+first_col_width = 7
 
 # Dash layout
 app.layout = dbc.Container([
@@ -238,9 +312,8 @@ app.layout = dbc.Container([
       ]),
     ]),
     dcc.Tab(label='Departure from Normal', children = [
-      dbc.Row([
-        html.H3("Departure From Normal Temperatures"),
-        html.Div("Select metric for heatmaps:"),
+      dbc_row_col(html.Div("Select metric for heatmaps:")),
+      dbc_row_col(
         dcc.Dropdown(
           options={
             'max_temp': 'High Temperature',
@@ -250,28 +323,43 @@ app.layout = dbc.Container([
           value='max_temp',
           style={"color": "#000000"},
           id='daily_heatmap_dropdown',
-        ),
-      html.Div("Select start for 5-year range (daily only):"),
-      dcc.Slider(
-          min=int(round(temps_minmax[0]/10)*10),
-          max=temps_minmax[1],
-          step=1,
-          id='heatmap-year-slider',
-          value=2021,
-          marks={str(year): str(year) for year in range(int(round(temps_minmax[0]/10)*10), temps_minmax[1]+1, 5)},
-          tooltip={"placement": "bottom", "always_visible": True},
-          included=False,
-      )      
-      ]),
-      html.Div(" "),
+        )
+      ),
+      dbc_row_col(html.Div("Select start for 5-year range (daily only):")),
+      dbc_row_col(
+          dcc.Slider(
+              min=int(round(temps_minmax[0]/10)*10),
+              max=temps_minmax[1],
+              step=1,
+              id='heatmap-year-slider',
+              value=2021,
+              marks={str(year): str(year) for year in range(int(round(temps_minmax[0]/10)*10), temps_minmax[1]+1, 5)},
+              tooltip={"placement": "bottom", "always_visible": True},
+              included=False,
+          )         
+      ),
       dbc.Row([
-        dcc.Graph(figure={}, id='calendar_heatmap')
+        dbc.Col([
+          html.Div(children="Daily Temperature Deviation from Normal", style={'fontSize': 24}),
+        ], width=first_col_width),
+        dbc.Col([
+          html.Div(children="Monthly Normals", style={'fontSize': 24}),
+        ], width=12-first_col_width),
       ]),
       dbc.Row([
-        dcc.Graph(figure={}, id='monthly_temp_heatmap')
+        dbc.Col([
+          dcc.Graph(figure={}, id='calendar_heatmap')
+        ], width=first_col_width),
+        dbc.Col([
+          dcc.Graph(figure=monthly_avg_temp(), id='monthly_avg_temp')
+        ], width=12-first_col_width),
       ]),
+      dbc_row_col(html.Div("Monthly Temperature Rank (1 = Coldest)", style={'fontSize': 24}), width=first_col_width),
+      dbc_row_col(
+        dcc.Graph(figure={}, id='monthly_temp_heatmap'), width=first_col_width
+      ),
     ]),
-    ]),
+  ]),
 ], fluid=True)
 
 # Callbacks
@@ -307,9 +395,9 @@ def update_graph(metric_chosen, year_start):
       cmap_max=20,
       total_height=175*5,
       dark_theme=True,
-      space_between_plots=0.05,
+      space_between_plots=0.04,
   )
-  fig_heatmap.update_layout(width=1420)
+  # fig_heatmap.update_layout(width=1420)
 
   return fig_heatmap
 
@@ -339,16 +427,17 @@ def update_monthly_heatmap(metric_chosen):
         '<br>Rank: %{z}' +
         f'<br>Avg({metric_chosen}): %{{customdata[0]:.1f}}°F' +
         '<extra></extra>'  # Removes the default trace info
-    )
+    ),
   ))
   fig.update_layout(
-      title=f'Monthly Temperature Rank',
+      # title=f'Monthly Temperature Rank',
       xaxis_title='Year',
       yaxis=dict(title='Month',autorange='reversed'),
-      height=750,
-      width=1420,
+      height=600,
+      # width=1420,
       paper_bgcolor='#222222',
       plot_bgcolor='#222222',
+      margin=dict(l=20, r=20, t=20, b=20),
   )
   
   return fig
