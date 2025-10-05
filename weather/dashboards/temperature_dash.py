@@ -87,6 +87,8 @@ month_avgs = (
     min_temp_p10=('min_temp', lambda x: round(x.quantile(0.1), 1)),
     record_high=('max_temp', 'max'),
     record_low=('min_temp', 'min'),
+    record_high_year=('max_temp', lambda x: temps_full.loc[x.idxmax(), 'date'].date()),
+    record_low_year=('min_temp', lambda x: temps_full.loc[x.idxmin(), 'date'].date()),
   )
   .reset_index()
 )
@@ -259,26 +261,40 @@ def monthly_avg_temp():
       y=month_avgs['normal_high'] - month_avgs['normal_low'],
       base=month_avgs['normal_low'],  # This sets the starting point of each bar
       marker_color='red',
-      name='Monthly Normal',
-      customdata=month_avgs[['record_high', 'record_low']],
+      name='Normal',
+      customdata=month_avgs[['record_high', 'record_low', 'record_high_year', 'record_low_year']],
+      text = month_avgs['normal_high'].astype(str) + '°F',
+      textposition='inside',
       hovertemplate=(
         '<b>Month:</b> %{x}<br>' +
         '<b>Avg High:</b> %{y}°F<br>' +
         '<b>Avg Low:</b> %{base}°F<br>' + 
-        '<b>Record High:</b> %{customdata[0]}°F<br>' +
-        '<b>Record Low:</b> %{customdata[1]}°F<br>' +
+        '<b>Record High:</b> %{customdata[0]}°F (%{customdata[2]})<br>' +
+        '<b>Record Low:</b> %{customdata[1]}°F (%{customdata[3]})<br>' +
         '<extra></extra>'
     )
   )
+  for i in range(month_avgs.shape[0]):
+    fig.add_annotation(
+        x=month_avgs['month'][i],
+        y=month_avgs['normal_low'][i],
+        text=(month_avgs['normal_low'].astype(str) + '°F').tolist()[i],
+        showarrow=False,
+        yshift=10,  # Adjust vertical position above the bar
+    )
   fig.add_trace(
       go.Scatter(
-          x=month_avgs['month'], y=month_avgs['record_high'], mode='lines+markers', name='Record High', text='record_high',
+          x=month_avgs['month'], y=month_avgs['record_high'], mode='lines+markers+text', name='Record High', text=month_avgs['record_high'],
+          customdata=month_avgs[['record_high_year']],
+          hovertemplate='Record High: %{y}°F (%{customdata[0]})<extra></extra>',
           line=dict(color='darkred', width=3)
       ),
   )
   fig.add_trace(
       go.Scatter(
-          x=month_avgs['month'], y=month_avgs['record_low'], mode='lines+markers', name='Record Low', text='record_low',
+          x=month_avgs['month'], y=month_avgs['record_low'], mode='lines+markers+text', name='Record Low', text=month_avgs['record_low'],
+          customdata=month_avgs[['record_low_year']],
+          hovertemplate='Record Low: %{y}°F (%{customdata[0]})<extra></extra>',
           line=dict(color='royalblue', width=3)
       ),
   )
@@ -294,7 +310,12 @@ def monthly_avg_temp():
           hoverinfo="skip",
       ),
   )
-  fig.update_layout(xaxis_title='Month', yaxis_title='Temperature (°F)')
+  fig.update_layout(
+    xaxis_title='Month', 
+    yaxis_title='Temperature (°F)',
+    paper_bgcolor='#333333', # figure
+    plot_bgcolor="#222222", # plot area
+  )
   return fig
 
 dbc_row_col = lambda x, width=12: dbc.Row(children=[dbc.Col([x], width=width)])
@@ -312,7 +333,7 @@ app.layout = dbc.Container([
       ]),
     ]),
     dcc.Tab(label='Departure from Normal', children = [
-      dbc_row_col(html.Div("Select metric for heatmaps:")),
+      dbc_row_col(html.Div("Select metric for heatmaps:"), width=first_col_width),
       dbc_row_col(
         dcc.Dropdown(
           options={
@@ -323,9 +344,9 @@ app.layout = dbc.Container([
           value='max_temp',
           style={"color": "#000000"},
           id='daily_heatmap_dropdown',
-        )
+        ), width=first_col_width
       ),
-      dbc_row_col(html.Div("Select start for 5-year range (daily only):")),
+      dbc_row_col(html.Div("Select start for 5-year range (daily only):"), width=first_col_width),
       dbc_row_col(
           dcc.Slider(
               min=int(round(temps_minmax[0]/10)*10),
@@ -336,7 +357,7 @@ app.layout = dbc.Container([
               marks={str(year): str(year) for year in range(int(round(temps_minmax[0]/10)*10), temps_minmax[1]+1, 5)},
               tooltip={"placement": "bottom", "always_visible": True},
               included=False,
-          )         
+          ), width=first_col_width         
       ),
       dbc.Row([
         dbc.Col([
@@ -397,7 +418,10 @@ def update_graph(metric_chosen, year_start):
       dark_theme=True,
       space_between_plots=0.04,
   )
-  # fig_heatmap.update_layout(width=1420)
+  fig_heatmap.update_layout(
+    # paper_bgcolor='#222222', # figure
+    # plot_bgcolor='#222222', # plot area
+  )
 
   return fig_heatmap
 
@@ -435,8 +459,8 @@ def update_monthly_heatmap(metric_chosen):
       yaxis=dict(title='Month',autorange='reversed'),
       height=600,
       # width=1420,
-      paper_bgcolor='#222222',
-      plot_bgcolor='#222222',
+      paper_bgcolor='#333333',
+      plot_bgcolor='#333333',
       margin=dict(l=20, r=20, t=20, b=20),
   )
   
