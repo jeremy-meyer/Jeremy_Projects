@@ -2,6 +2,7 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input, html
 import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
+from plotly.subplots import make_subplots
 import plotly.io as pio
 import plotly.graph_objects as go
 from datetime import date
@@ -126,6 +127,72 @@ monthly_map['month'] = pd.Categorical(monthly_map['month'], categories=month_ord
 monthly_map['rank'] = (
     monthly_map.groupby(['month', 'metric'])['mean']
     .rank(method='min', ascending=True)
+)
+
+# Hourly Data
+hourly_temp = pd.read_csv("weather/data_sources/hourly_weather.csv", parse_dates=['timestamp'])
+hourly_temp['month'] = pd.Categorical(hourly_temp['timestamp'].dt.strftime('%b'), categories=month_order, ordered=True)
+hourly_temp['hour'] = hourly_temp['timestamp'].dt.hour
+hourly_temp['year'] = hourly_temp['timestamp'].dt.year
+hourly_metrics_pretty= {
+  'temp': 'Temperature (°F)',
+  'humidity': 'Humidity (%)', 
+  'wind_speed': 'Wind Speed (mph)',
+  'dew_point': 'Dew Point (°F)',
+  'precip': 'Precipitation (in)',
+  'rain': 'Rain (in)',
+  'snow': 'Snow (in)',
+  'cloud_cover': 'Cloud Cover (%)',
+  'pressure': 'Pressure (mb)',
+}
+
+season_map = {
+  'winter': ['Dec', 'Jan', 'Feb'],
+  'spring': ['Mar', 'Apr', 'May'],
+  'summer': ['Jun', 'Jul', 'Aug'],
+  'fall': ['Sep', 'Oct', 'Nov']
+}
+
+
+hourly_all_metrics = (
+  hourly_temp
+  .melt(id_vars=['timestamp', 'month', 'hour', 'year'], 
+         value_vars=hourly_metrics_pretty.keys(),
+         var_name='metric_name', value_name='metric_value'
+  )
+)
+
+hourly_all_year = (
+  hourly_all_metrics
+  .groupby(['year','month' , 'hour', 'metric_name'])
+  .agg(
+    metric_value=('metric_value', 'mean'),
+  )
+  .reset_index()
+)
+
+hourly_all_mean = (
+  hourly_all_year
+  .groupby(['month' , 'hour', 'metric_name'])
+  .agg(
+    metric_value=('metric_value', 'mean'),
+  )
+  .reset_index()
+)
+# Season column
+hourly_all_mean['season'] = hourly_all_mean['month'].map({v: k for k, vs in season_map.items() for v in vs})
+hourly_all_mean_season = (
+  hourly_all_mean
+  .groupby(['season' , 'hour', 'metric_name'])
+  .agg(
+    metric_value=('metric_value', 'mean'),
+  )
+  .reset_index()
+)
+
+# Relative to month avg across hour
+hourly_all_mean_season['avg_deviation'] = hourly_all_mean_season['metric_value'] - (
+  hourly_all_mean_season.groupby(['season', 'metric_name'])['metric_value'].transform('mean')
 )
 
 # Temperature Figure
@@ -310,6 +377,12 @@ def monthly_avg_temp():
           hoverinfo="skip",
       ),
   )
+  fig.add_vline(
+      x=today.strftime("%b"),
+      line_width=2,
+      line_dash="dash",
+      line_color='rgba(125,125,125,0.25)',
+  )
   fig.update_layout(
     xaxis_title='Month', 
     yaxis_title='Temperature (°F)',
@@ -379,6 +452,33 @@ app.layout = dbc.Container([
       dbc_row_col(
         dcc.Graph(figure={}, id='monthly_temp_heatmap'), width=first_col_width
       ),
+    ]),
+    dcc.Tab(label='Hourly', children=[
+      dbc_row_col(html.Div("Select metric for hourly plots:")),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=hourly_metrics_pretty,
+          value='temp',
+          style={"color": "#000000"},
+          id='hourly_monthly_input',
+        )
+      ),
+      dbc_row_col(html.Div("Hourly Average by Month", style={'fontSize': 24})),
+      dbc_row_col(dcc.Graph(figure={}, id='hourly_monthly_scatter')),
+      dbc.Row([
+        dbc.Col([
+          html.Div(children="Seasonal Hourly Average", style={'fontSize': 24}),
+        ], width=6),
+        dbc.Col([], width=6),
+      ]),
+      dbc.Row([
+        dbc.Col([
+          dcc.Graph(figure={}, id='hourly_season'),
+        ], width=6),
+        dbc.Col([
+          dcc.Graph(figure={}, id='hourly_season_deviation'),
+        ], width=6),        
+      ])
     ]),
   ]),
 ], fluid=True)
@@ -466,6 +566,117 @@ def update_monthly_heatmap(metric_chosen):
   
   return fig
 
+# Monthly Hourly Scatter
+@callback(
+    Output(component_id='hourly_monthly_scatter', component_property='figure'),
+    Input(component_id='hourly_monthly_input', component_property='value'),
+)
+def update_monthly_heatmap(metric_name):
+  fig = make_subplots(
+    rows=1, cols=len(month_order), subplot_titles=month_order, shared_yaxes=True, horizontal_spacing=0.004,
+    y_title=hourly_metrics_pretty[metric_name],
+    x_title='Time of Day',
+  )
+
+  for i, month in enumerate(month_order):
+    month_hour = hourly_all_year[(hourly_all_year['month']==month)&(hourly_all_year['metric_name']==metric_name)]
+    month_mean = hourly_all_mean[(hourly_all_mean['month']==month)&(hourly_all_mean['metric_name']==metric_name)]
+
+    fig.add_trace(
+        go.Scatter(
+            x=month_hour['hour'], 
+            y=month_hour['metric_value'], 
+            mode='markers', 
+            name='Observed Month Avg', 
+            marker=dict(size=4, color='red', opacity=0.3),
+            # line=dict(width=1, dash='dot', color='rgba(255, 0, 0, 0.25)'),
+            customdata=month_hour[['year', 'month']],
+            hovertemplate=(
+                "<b>%{customdata[1]} %{customdata[0]}</b><br>" +
+                "<b>Hour: %{x}:00</b><br>"+
+                f"<b>{hourly_metrics_pretty[metric_name]}: %{{y:.2f}}</b><br>"+
+                "<extra></extra>"
+            ),
+            showlegend=(i==0),
+            legendgroup='Group A',
+        ), row=1, col=i+1
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=month_mean['hour'], y=month_mean['metric_value'], mode='lines', name='Mean', line=dict(color='red', width=4),
+            hovertemplate=(
+            "<b>Hour: %{x}:00</b><br>"+
+            f"<b>{hourly_metrics_pretty[metric_name]}: %{{y:.2f}}</b><br>"+
+            "<extra></extra>"
+            ),
+            showlegend=(i==0),
+            legendgroup='Group B',
+        ), row=1, col=i+1
+    )
+  fig.update_layout(
+      # title=f'Hourly Temperature for {month}',
+      paper_bgcolor='#333333', # figure
+      plot_bgcolor="#222222", # plot area
+      height=1000,
+  )
+
+  return fig
+
+# Seasonal Hourly Avg
+@callback(
+    Output(component_id='hourly_season', component_property='figure'),
+    Input(component_id='hourly_monthly_input', component_property='value'),
+)
+def update_hourly_season(metric_name):
+  data = hourly_all_mean_season[hourly_all_mean_season['metric_name']==metric_name]
+  fig = px.line(
+    data,
+    x='hour', y='metric_value', color='season', color_discrete_map = {
+      'winter': 'royalblue',
+      'spring': 'green',
+      'summer': 'gold',
+      'fall': 'red',
+    },
+  )
+  fig.update_traces(
+    hovertemplate=("<b>Season: %{customdata[0]}</b><br>" +
+      "<b>Hour:</b> %{x}<br>" +
+      f"<b>{hourly_metrics_pretty[metric_name]}:</b> %{{y:.6f}}<extra></extra>"
+    ),
+    customdata=data[['season']],
+  )
+  fig.update_layout(
+    paper_bgcolor='#333333', # figure
+    plot_bgcolor="#222222", # plot area
+    height=650,
+    xaxis_title='Time of Day',
+    yaxis_title=hourly_metrics_pretty[metric_name],
+)
+  return fig
+
+# Seasonal avg adjusted
+@callback(
+    Output(component_id='hourly_season_deviation', component_property='figure'),
+    Input(component_id='hourly_monthly_input', component_property='value'),
+)
+def update_hourly_season(metric_name):
+  fig = px.line(
+    hourly_all_mean_season[hourly_all_mean_season['metric_name']==metric_name],
+    x='hour', y='avg_deviation', color='season', color_discrete_map = {
+      'winter': 'royalblue',
+      'spring': 'green',
+      'summer': 'gold',
+      'fall': 'red',
+    },
+  )
+  fig.update_layout(
+    paper_bgcolor='#333333', # figure
+    plot_bgcolor="#222222", # plot area
+    height=650,
+    xaxis_title='Time of Day',
+    yaxis_title=hourly_metrics_pretty[metric_name] + " Deviation from Avg",
+)
+  return fig
 
 # Run the app
 if __name__ == '__main__':
