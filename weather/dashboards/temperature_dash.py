@@ -35,8 +35,19 @@ def gen_DoY_index(x):
       return x.dayofyear - 0.5
   return x.dayofyear
 
+def dayofyear_to_month_day(doy):
+  dt = pd.Timestamp(f"2025-01-01") + pd.Timedelta(days=doy-1)
+  if doy==59.5:
+    return "Feb 29"
+  return dt.strftime('%b %d')
+
+def str_to_decimal_hr(s):
+  h, m = s.split('T')[1].split(':')
+  return int(h) + int(m)/60.0
+
 temps = pd.read_csv("weather/data_sources/daily_weather.csv", parse_dates=['date'])#.query("date >= '1995-01-01'")
 normals = pd.read_csv("weather/output_sources/temp_normals.csv")
+sunrise_sunset = pd.read_csv("weather/data_sources/sunrise_set_slc.csv", parse_dates=['time'])
 
 temps['day_of_year'] = temps['date'].apply(gen_DoY_index)
 temps['range'] = temps['max_temp'] - temps['min_temp']
@@ -57,6 +68,14 @@ record_highs = recent[recent['high_rank'] == 1.0]
 record_lows = recent[recent['low_rank'] == 1.0]
 high_min = recent[recent['low_rank'] == recent['low_rank'].max()]
 low_max = recent[recent['high_rank'] == recent['high_rank'].max()]
+
+sunrise_sunset_clean = (
+  sunrise_sunset[sunrise_sunset['time'].dt.year == 2024]
+  .rename({'time': 'date', 'sunset (iso8601)': 'sunset', 'sunrise (iso8601)': 'sunrise'}, axis=1)
+)
+sunrise_sunset_clean['sunset_hr'] = sunrise_sunset_clean['sunset'].apply(str_to_decimal_hr)
+sunrise_sunset_clean['sunrise_hr'] = sunrise_sunset_clean['sunrise'].apply(str_to_decimal_hr)
+sunrise_sunset_clean['day_of_year'] = sunrise_sunset_clean['date'].apply(gen_DoY_index)
 
 
 # Monthly Heatmap Data
@@ -134,11 +153,15 @@ hourly_temp = pd.read_csv("weather/data_sources/hourly_weather.csv", parse_dates
 hourly_temp['month'] = pd.Categorical(hourly_temp['timestamp'].dt.strftime('%b'), categories=month_order, ordered=True)
 hourly_temp['hour'] = hourly_temp['timestamp'].dt.hour
 hourly_temp['year'] = hourly_temp['timestamp'].dt.year
+hourly_temp['day_of_year']  = hourly_temp['timestamp'].apply(gen_DoY_index)
+hourly_temp['precip_chance'] = (hourly_temp['precip'] > 0).astype('int')
+
 hourly_metrics_pretty= {
   'temp': 'Temperature (°F)',
   'humidity': 'Humidity (%)', 
   'wind_speed': 'Wind Speed (mph)',
   'dew_point': 'Dew Point (°F)',
+  'precip_chance': 'Precipitation Chance (%)',
   'precip': 'Precipitation (in)',
   'rain': 'Rain (in)',
   'snow': 'Snow (in)',
@@ -156,11 +179,21 @@ season_map = {
 
 hourly_all_metrics = (
   hourly_temp
-  .melt(id_vars=['timestamp', 'month', 'hour', 'year'], 
+  .melt(id_vars=['timestamp', 'month', 'hour', 'year', 'day_of_year'], 
          value_vars=hourly_metrics_pretty.keys(),
          var_name='metric_name', value_name='metric_value'
   )
 )
+
+hourly_heatmap = (
+  hourly_all_metrics
+  .groupby(['day_of_year' , 'hour', 'metric_name'])
+  .agg(
+    metric_value=('metric_value', 'mean'),
+  )
+  .reset_index()
+)
+hourly_heatmap['DoY_label'] = hourly_heatmap['day_of_year'].apply(dayofyear_to_month_day)
 
 hourly_all_year = (
   hourly_all_metrics
@@ -465,6 +498,8 @@ app.layout = dbc.Container([
       ),
       dbc_row_col(html.Div("Hourly Average by Month", style={'fontSize': 24})),
       dbc_row_col(dcc.Graph(figure={}, id='hourly_monthly_scatter')),
+      dbc_row_col(html.Div("30-Year Hourly Average", style={'fontSize': 24})),      
+      dbc_row_col(dcc.Graph(figure={}, id='hourly_heatmap')),
       dbc.Row([
         dbc.Col([
           html.Div(children="Seasonal Hourly Average", style={'fontSize': 24}),
@@ -478,7 +513,7 @@ app.layout = dbc.Container([
         dbc.Col([
           dcc.Graph(figure={}, id='hourly_season_deviation'),
         ], width=6),        
-      ])
+      ]),
     ]),
   ]),
 ], fluid=True)
@@ -617,7 +652,14 @@ def update_monthly_heatmap(metric_name):
       # title=f'Hourly Temperature for {month}',
       paper_bgcolor='#333333', # figure
       plot_bgcolor="#222222", # plot area
-      height=1000,
+      height=800,
+      legend=dict(
+          orientation="h",
+          yanchor="bottom",
+          y=-0.10,
+          xanchor="center",
+          x=0.05,
+      ),
   )
 
   return fig
@@ -648,7 +690,7 @@ def update_hourly_season(metric_name):
   fig.update_layout(
     paper_bgcolor='#333333', # figure
     plot_bgcolor="#222222", # plot area
-    height=650,
+    height=500,
     xaxis_title='Time of Day',
     yaxis_title=hourly_metrics_pretty[metric_name],
 )
@@ -672,10 +714,72 @@ def update_hourly_season(metric_name):
   fig.update_layout(
     paper_bgcolor='#333333', # figure
     plot_bgcolor="#222222", # plot area
-    height=650,
+    height=500,
     xaxis_title='Time of Day',
     yaxis_title=hourly_metrics_pretty[metric_name] + " Deviation from Avg",
 )
+  return fig
+
+# Hourly heatmap
+@callback(
+    Output(component_id='hourly_heatmap', component_property='figure'),
+    Input(component_id='hourly_monthly_input', component_property='value'),
+)
+def update_hourly_heatmap(metric_chosen):
+  data_for_temp_heatmap = (
+    hourly_heatmap[hourly_heatmap['metric_name']==metric_chosen]
+  ).query("day_of_year != 59.5")
+
+  fig = go.Figure(data=go.Heatmap(
+      x=data_for_temp_heatmap['day_of_year'],
+      y=data_for_temp_heatmap['hour'],
+      z=data_for_temp_heatmap['metric_value'],
+      customdata=data_for_temp_heatmap[['DoY_label']],
+      colorscale='turbo',
+      connectgaps=False,
+      hovertemplate=(
+        '<br>Day of Year: %{customdata[0]}' +
+        '<br>Hour: %{y}:00' +
+        f'<br>Avg({metric_chosen})=%{{z}}' +
+        '<extra></extra>'
+    ),
+  ))
+  fig.add_trace(
+    go.Scatter(
+        x=sunrise_sunset_clean['day_of_year'], 
+        y=sunrise_sunset_clean['sunset_hr'], 
+        mode='lines', 
+        line=dict(color='black', width=0.5, dash='dot'), 
+        showlegend=False,
+        hovertemplate=(
+          '<br>sunset: %{y:.2f}' +
+          '<extra></extra>'
+        )        
+    )
+  )
+  fig.add_trace(
+    go.Scatter(
+        x=sunrise_sunset_clean['day_of_year'], 
+        y=sunrise_sunset_clean['sunrise_hr'], 
+        mode='lines',
+        line=dict(color='black', width=0.5, dash='dot'),
+        showlegend=False,
+        hovertemplate=(
+          '<br>sunrise: %{y:.2f}' +
+          '<extra></extra>'
+        )
+    )    
+  )
+  fig.update_layout(
+      # title=f'Monthly Temperature Rank',
+      xaxis_title='Day of Year',
+      yaxis_title='Time of Day',
+      height=500,
+      # width=1420,
+      paper_bgcolor='#333333',
+      plot_bgcolor='#333333',
+      margin=dict(l=20, r=20, t=20, b=20),
+  )
   return fig
 
 # Run the app
