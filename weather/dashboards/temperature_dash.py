@@ -515,6 +515,21 @@ app.layout = dbc.Container([
         ], width=6),        
       ]),
     ]),
+    dcc.Tab(label='Precipitation', children=[
+      dbc_row_col(html.Div("Select precipitation metric:")),
+      dbc_row_col(
+        dcc.Dropdown(
+          options={
+            'precip': 'Total Precipitation',
+            'rain': 'Rainfall', 
+            'snow': 'Snowfall',
+          },
+          value='precip',
+          style={"color": "#000000"},
+          id='precip_metric_dropdown',
+        ),
+      ),
+    ]),
   ]),
 ], fluid=True)
 

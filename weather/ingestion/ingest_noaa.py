@@ -102,7 +102,6 @@ upserted_data = (
     existing_data
     .merge(incremental_data[cols_available], on='date', how='outer', suffixes=('', '_new'))
 )
-upserted_data[upserted_data['date'].isin(['2025-08-13', date(2025,8,13)])]
 
 for c in existing_data.columns:
   if (c in incremental_data.columns) and (c != 'date'):
