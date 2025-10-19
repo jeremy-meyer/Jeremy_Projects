@@ -520,9 +520,9 @@ app.layout = dbc.Container([
       dbc_row_col(
         dcc.Dropdown(
           options={
-            'precip': 'Total Precipitation',
-            'rain': 'Rainfall', 
-            'snow': 'Snowfall',
+            'precip': 'Total Precipitation (in)',
+            'rain': 'Rainfall (in)', 
+            'snow': 'Snowfall (in)',
           },
           value='precip',
           style={"color": "#000000"},
