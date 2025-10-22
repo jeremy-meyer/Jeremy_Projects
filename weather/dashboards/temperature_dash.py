@@ -27,13 +27,23 @@ temp_colors = [
 # INPUT DATA
 # Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
 # This will put Feb 29th between 2-28 and 3-1 in the model
-def gen_DoY_index(x):
+def gen_DoY_index(x, year_type='calendar_year'):
+  excess = {
+      'calendar_year': 0,
+      'water_year': 92,
+      'winter_season': 153,
+  }[year_type]
+  
+  mar1_day = 60
+  return_value = x.dayofyear
+
   if x.is_leap_year:
-    if x.dayofyear > 60:
-      return x.dayofyear - 1
-    elif x.dayofyear==60:
-      return x.dayofyear - 0.5
-  return x.dayofyear
+    if x.dayofyear > mar1_day:
+      return_value -= 1 
+    elif x.dayofyear == mar1_day:
+      return_value -= 0.5
+
+  return (return_value - excess - 1) % 365 + 1
 
 def dayofyear_to_month_day(doy):
   dt = pd.Timestamp(f"2025-01-01") + pd.Timedelta(days=doy-1)
@@ -44,6 +54,11 @@ def dayofyear_to_month_day(doy):
 def str_to_decimal_hr(s):
   h, m = s.split('T')[1].split(':')
   return int(h) + int(m)/60.0
+
+def offset_season(s, offset):
+  return str(int(s.split('-')[0]) + offset) + '-' + str(int(s.split('-')[1]) + offset)
+
+N_years = 30 # For normals
 
 temps = pd.read_csv("weather/data_sources/daily_weather.csv", parse_dates=['date'])#.query("date >= '1995-01-01'")
 normals = pd.read_csv("weather/output_sources/temp_normals.csv")
@@ -226,6 +241,36 @@ hourly_all_mean_season = (
 # Relative to month avg across hour
 hourly_all_mean_season['avg_deviation'] = hourly_all_mean_season['metric_value'] - (
   hourly_all_mean_season.groupby(['season', 'metric_name'])['metric_value'].transform('mean')
+)
+
+# Precip Data
+precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False, parse_dates=['date'])
+
+current_year = precip['year'].max()
+max_water_year = precip['water_year'].max()
+max_winter_year = precip['snow_season'].max()
+
+precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False, parse_dates=['date'])
+ytd_normals = pd.read_csv('weather/output_sources/ytd_precip_normals.csv')
+precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
+precip_data_for_norm = pd.concat([
+  precip[precip['year'].between(current_year - N_years, current_year)]\
+    .assign(year_type='calendar_year', current_year=current_year, year_for_dash=precip['year']),
+  precip[precip['water_year'].between(max_water_year - N_years, max_water_year)]\
+    .assign(year_type='water_year', current_year=max_water_year, year_for_dash=precip['water_year']),
+  precip[precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), offset_season(max_winter_year, -1))]\
+    .assign(year_type='winter_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
+])
+
+precip_data_for_norm['day_of_year_dash'] = precip_data_for_norm.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
+
+precip_data_for_norm = (
+  precip_data_for_norm
+  .melt(
+    ['date', 'month', 'year_for_dash', 'day_of_year', 'day_of_year_dash', 'year_type', 'current_year'], 
+    value_vars=['precip', 'snow', 'rain'], 
+    var_name='metric_name', 
+    value_name='metric_value')
 )
 
 # Temperature Figure
@@ -529,6 +574,21 @@ app.layout = dbc.Container([
           id='precip_metric_dropdown',
         ),
       ),
+      dbc_row_col(html.Div("Select Year Type:")),
+      dbc_row_col(
+        dcc.Dropdown(
+          options={
+            'calendar_year': 'Calendar Year (Jan-Dec)',
+            'water_year': 'Water Year (Oct-Sep)', 
+            'snow_season': 'Snow Season (Aug-Jul)',
+          },
+          value='calendar_year',
+          style={"color": "#000000"},
+          id='water_calendar_dropdown',
+        ),
+      ),
+      dbc_row_col(html.Div("Year to Date Precipitation vs. Normals", style={'fontSize': 24})),
+      dbc_row_col(dcc.Graph(figure={}, id='ytd_precip_chart'), width=6),
     ]),
   ]),
 ], fluid=True)
@@ -794,6 +854,59 @@ def update_hourly_heatmap(metric_chosen):
       paper_bgcolor='#333333',
       plot_bgcolor='#333333',
       margin=dict(l=20, r=20, t=20, b=20),
+  )
+  return fig
+
+# Precip Dash
+@callback(
+    Output(component_id='ytd_precip_chart', component_property='figure'),
+    Input(component_id='water_calendar_dropdown', component_property='value'),
+    Input(component_id='precip_metric_dropdown', component_property='value'),
+)
+def precip_ytd_chart(calendar_type, metric):
+  ytd = (
+    precip_data_for_norm
+    .fillna({"metric_value": 0})
+    .query(f"(metric_name == '{metric}') & (year_type == '{calendar_type}')")
+    .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
+    .groupby(['year_type', 'metric_name', 'year_for_dash'])
+    .apply(lambda x: x.assign(year_to_date_precip=x['metric_value'].cumsum()))
+    .reset_index(drop=True)
+    .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'day_of_year_dash'])
+  )
+
+  current_year_ytd = ytd.query("year_for_dash == current_year")
+  chart_label = current_year_ytd['current_year'].head().iloc[0]
+
+  ytd_avg = (
+    ytd_normals
+    .query(f"(metric_name == '{metric}') & (year_type == '{calendar_type}')")
+  )
+
+  fig = px.line(ytd.query(f"(year_for_dash != current_year) & (year_type == '{calendar_type}')"), x='day_of_year_dash', y='year_to_date_precip', color='year_for_dash')
+  fig.update_traces(
+      line=dict(color='rgb(144, 238, 144, 0.25)', width=0.75, dash='dot'),
+      selector=dict(mode='lines')  # Ensure it applies only to line traces
+  )
+  fig.add_scatter(x=current_year_ytd['day_of_year_dash'], y=current_year_ytd['year_to_date_precip'], mode='lines', name=chart_label, line=dict(color='rgb(50, 255, 210)', width=2))
+  fig.add_scatter(x=ytd_avg['day_of_year_dash'], y=ytd_avg['avg_precip_ytd'], mode='lines', name='Average', line=dict(color='green', width=4))
+  fig.add_traces([
+      go.Scatter(
+          x=list(ytd_avg['day_of_year_dash']) + list(ytd_avg['day_of_year_dash'])[::-1],
+          y=list(ytd_avg['p75_precip_ytd']) + list(ytd_avg['p25_precip_ytd'])[::-1],
+          fill='toself',
+          fillcolor='rgba(0, 200, 0, 0.25)',
+          line=dict(color='rgba(255,255,255,0)'),
+          hoverinfo="skip",
+          name='25th-75th Percentile',
+      )
+  ])
+  fig.update_layout(
+    height=800, 
+    xaxis_title='Day of Year', 
+    yaxis_title=metric, 
+    paper_bgcolor='#333333', 
+    plot_bgcolor="#222222"
   )
   return fig
 

@@ -25,13 +25,24 @@ precip['snow_season'] = precip['snow_season'].astype(str) + '-' + (precip['snow_
 
 precip['water_year'] = np.where(precip['month'].isin(['Oct', 'Nov', 'Dec']), precip['year']+1, precip['year'] - 1)
 
-def gen_DoY_index(x):
+def gen_DoY_index(x, year_type='calendar_year'):
+  excess = {
+      'calendar_year': 0,
+      'water_year': 92,
+      'winter_season': 153,
+  }[year_type]
+  
+  mar1_day = 60
+  return_value = x.dayofyear
+
   if x.is_leap_year:
-    if x.dayofyear > 60:
-      return x.dayofyear - 1
-    elif x.dayofyear==60:
-      return x.dayofyear - 0.5
-  return x.dayofyear
+    if x.dayofyear > mar1_day:
+      return_value -= 1 
+    elif x.dayofyear == mar1_day:
+      return_value -= 0.5
+
+  return (return_value - excess - 1) % 365 + 1
+
 
 def dayofyear_to_month_day(doy):
   dt = pd.Timestamp(f"2025-01-01") + pd.Timedelta(days=doy-1)
@@ -70,12 +81,23 @@ precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False,
 precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
 precip_data_for_norm = pd.concat([
   precip[precip['year'].between(current_year - N_years, current_year)]\
-    .assign(year_type='calendar_year', current_year=current_year),
+    .assign(year_type='calendar_year', current_year=current_year, year_for_dash=precip['year']),
   precip[precip['water_year'].between(max_water_year - N_years, max_water_year)]\
-    .assign(year_type='water_year', current_year=max_water_year),
+    .assign(year_type='water_year', current_year=max_water_year, year_for_dash=precip['water_year']),
   precip[precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), offset_season(max_winter_year, -1))]\
-    .assign(year_type='winter_season', current_year=max_winter_year),
+    .assign(year_type='winter_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
 ])
+
+precip_data_for_norm['day_of_year_dash'] = precip_data_for_norm.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
+
+precip_data_for_norm = (
+  precip_data_for_norm
+  .melt(
+    ['date', 'month', 'year_for_dash', 'day_of_year', 'day_of_year_dash', 'year_type', 'current_year'], 
+    value_vars=['precip', 'snow', 'rain', 'precip_day'], 
+    var_name='metric_name', 
+    value_name='metric_value')
+)
 
 monthly_normals = (
     precip_data_for_norm
@@ -104,24 +126,25 @@ monthly_normals.to_csv('weather/output_sources/monthly_precip_normals.csv', inde
 # Daily Normals Methodology (year / month to date)
 
 calendar_type = 'calendar_year'
-metric = 'snow'
+metric = 'precip'
 ytd = (
   precip_data_for_norm
-  .fillna({metric: 0})
-  .sort_values(by=['current_year', 'year_type', 'year', 'date'])
+  .query("metric_name != 'precip_day'")
+  .fillna({'metric_value': 0})
+  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
+  .groupby(['year_type', 'metric_name', 'year_for_dash'])
+  .apply(lambda x: x.assign(year_to_date_precip=x['metric_value'].cumsum()))
   .reset_index(drop=True)
-  .groupby(['year_type','year'])
-  .apply(lambda x: x.assign(year_to_date_precip=x[metric].cumsum()))
-  .reset_index(drop=True)
+  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
 )
 
-current_year_ytd = ytd.query("year == current_year")
-chart_label = current_year_ytd['current_year'].head().iloc[0]
+current_year_ytd = ytd.query("year_for_dash == current_year")
+# chart_label = current_year_ytd['current_year'].head().iloc[0]
 
 ytd_avg = (
   ytd
-  .query("year != current_year")
-  .groupby(['year_type','day_of_year'])
+  .query("year_for_dash != current_year")
+  .groupby(['year_type', 'metric_name', 'day_of_year', 'day_of_year_dash'])
   .agg(
       avg_precip_ytd=('year_to_date_precip', 'mean'),
       p10_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 10)),
@@ -131,13 +154,16 @@ ytd_avg = (
       p90_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 90)),
   )
   .reset_index()
-  .query("day_of_year != 59.5")
-  .query(f"year_type == '{calendar_type}'")
+  .query("day_of_year % 1 == 0") # get rid if leap day
+  # .query(f"year_type == '{calendar_type}'") # Uncomment to run
 )
 
-ytd_avg.sort_values(by='day_of_year', inplace=True)
 
-fig = px.line(ytd.query("year != current_year"), x='day_of_year', y='year_to_date_precip', color='year', title='Year to Date Precipitation by Year')
+ytd_avg.sort_values(by=['year_type', 'metric_name', 'day_of_year'], inplace=True)
+ytd_avg.to_csv("weather/output_sources/ytd_precip_normals.csv", index=False)
+
+# Chart
+fig = px.line(ytd.query(f"(year != current_year) & (year_type == '{calendar_type}')"), x='day_of_year', y='year_to_date_precip', color='year', title='Year to Date Precipitation by Year')
 fig.update_traces(
     line=dict(color='rgb(0, 100, 0, 0.5)', width=0.75, dash='dot'),
     selector=dict(mode='lines')  # Ensure it applies only to line traces
@@ -157,5 +183,3 @@ fig.add_traces([
 ])
 
 fig.show(renderer="browser")
-
-ytd_avg['p75_precip_ytd'][ytd_avg['p75_precip_ytd'].isnull()]
