@@ -263,6 +263,7 @@ precip_data_for_norm = pd.concat([
 ])
 
 precip_data_for_norm['day_of_year_dash'] = precip_data_for_norm.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
+current_precip_month = precip_data_for_norm.query("(year_for_dash == current_year)")['month'].max()
 
 precip_data_for_norm = (
   precip_data_for_norm
@@ -272,6 +273,23 @@ precip_data_for_norm = (
     var_name='metric_name', 
     value_name='metric_value')
 )
+
+precip_data_for_norm = precip_data_for_norm.assign(
+  day_of_month=precip_data_for_norm['date'].dt.day, 
+)
+
+mtd = (
+  precip_data_for_norm.query("(year_type == 'calendar_year')")\
+    [['date', 'month', 'year_for_dash', 'current_year', 'metric_name', 'metric_value', 'day_of_month']]
+  .fillna({'metric_value': 0})
+  .sort_values(by=['metric_name', 'year_for_dash' ,'date'])
+  .groupby(['metric_name', 'year_for_dash', 'month'])
+  .apply(lambda x: x.assign(month_to_date_precip=x['metric_value'].cumsum()))
+  .reset_index(drop=True)
+  # .sort_values(by=['year_type', 'metric_name', 'calendar_year', 'date'])
+)
+mtd_avg = pd.read_csv('weather/output_sources/mtd_precip_normals.csv')
+
 
 # Temperature Figure
 fig = go.Figure()
@@ -587,8 +605,22 @@ app.layout = dbc.Container([
           id='water_calendar_dropdown',
         ),
       ),
-      dbc_row_col(html.Div("Year to Date Precipitation vs. Normals", style={'fontSize': 24})),
-      dbc_row_col(dcc.Graph(figure={}, id='ytd_precip_chart'), width=6),
+      dbc.Row([
+        dbc.Col([
+          html.Div("Year to Date Precipitation vs. Normals", style={'fontSize': 24}),
+        ], width=6),
+        dbc.Col([
+          html.Div(f"Month to Date Precipitation vs. Normals ({current_precip_month})", style={'fontSize': 24}),
+        ], width=6)
+      ]),
+      dbc.Row([
+        dbc.Col([
+          dcc.Graph(figure={}, id='ytd_precip_chart'),
+        ], width=6),
+        dbc.Col([
+          dcc.Graph(figure={}, id='mtd_precip_chart'),
+        ], width=6)
+      ]),
     ]),
   ]),
 ], fluid=True)
@@ -901,14 +933,125 @@ def precip_ytd_chart(calendar_type, metric):
           name='25th-75th Percentile',
       )
   ])
+  fig.add_traces([
+      go.Scatter(
+          x=list(ytd_avg['day_of_year_dash']) + list(ytd_avg['day_of_year_dash'])[::-1],
+          y=list(ytd_avg['max_precip_ytd']) + list(ytd_avg['min_precip_ytd'])[::-1],
+          fill='toself',
+          fillcolor='rgba(0, 150, 0, 0.1)',
+          line=dict(color='rgba(255,255,255,0)'),
+          hoverinfo="skip",
+          name='Min/Max Percentile',
+          showlegend=False
+      )
+  ])
+  # fig.add_traces([
+  #     go.Scatter(
+  #         x=list(ytd_avg['day_of_year_dash']) + list(ytd_avg['day_of_year_dash'])[::-1],
+  #         y=list(ytd_avg['p90_precip_ytd']) + list(ytd_avg['p10_precip_ytd'])[::-1],
+  #         fill='toself',
+  #         fillcolor='rgba(0, 150, 0, 0.1)',
+  #         line=dict(color='rgba(255,255,255,0)'),
+  #         hoverinfo="skip",
+  #         name='10th-90th Percentile',
+  #         showlegend=False
+  #   )
+  # ])
   fig.update_layout(
     height=800, 
     xaxis_title='Day of Year', 
     yaxis_title=metric, 
     paper_bgcolor='#333333', 
+    plot_bgcolor="#222222",
+    legend_title=None,
+  )
+  return fig
+
+@callback(
+    Output(component_id='mtd_precip_chart', component_property='figure'),
+    Input(component_id='precip_metric_dropdown', component_property='value'),
+)
+def mtd_precip_chart(metric):
+
+  current_year_mtd = mtd.query(f"year_for_dash == current_year & metric_name == '{metric}' & month == '{current_precip_month}'")
+  current_year_label = current_year_mtd['current_year'].head().iloc[0]
+  mtd_avg_metric = mtd_avg.query(f"metric_name == '{metric}' & month == '{current_precip_month}'")
+  
+
+  fig = go.Figure()
+  fig.add_scatter(
+    x=current_year_mtd['day_of_month'], 
+    y=current_year_mtd['month_to_date_precip'], 
+    mode='lines', name=current_precip_month + ' ' + str(current_year_label), 
+    line=dict(color='rgb(50, 255, 210)', width=2)
+  )
+  fig.add_scatter(
+    x=mtd_avg_metric['day_of_month'], 
+    y=mtd_avg_metric['avg_precip_mtd'], 
+    mode='lines', 
+    name='Average', 
+    line=dict(color='green', width=4)
+  )
+  fig.add_scatter(
+    x=mtd_avg_metric['day_of_month'], 
+    y=mtd_avg_metric['max_precip_mtd'], 
+    mode='lines', 
+    name='Maximum', 
+    line=dict(color='green', width=1, dash='dot')
+  )
+  fig.add_scatter(
+    x=mtd_avg_metric['day_of_month'], 
+    y=mtd_avg_metric['min_precip_mtd'], 
+    mode='lines', 
+    name='Minimum', 
+    line=dict(color='green', width=1, dash='dot')
+  )
+  fig.add_traces([
+      go.Scatter(
+          x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
+          y=list(mtd_avg_metric['p75_precip_mtd']) + list(mtd_avg_metric['p25_precip_mtd'])[::-1],
+          fill='toself',
+          fillcolor='rgba(0, 150, 0, 0.2)',
+          line=dict(color='rgba(255,255,255,0)'),
+          hoverinfo="skip",
+          name='25th-75th Percentile',
+          showlegend=False,
+      )
+  ])
+  fig.add_traces([
+      go.Scatter(
+          x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
+          y=list(mtd_avg_metric['max_precip_mtd']) + list(mtd_avg_metric['min_precip_mtd'])[::-1],
+          fill='toself',
+          fillcolor='rgba(0, 150, 0, 0.1)',
+          line=dict(color='rgba(255,255,255,0)'),
+          hoverinfo="skip",
+          name='Min/Max Percentile',
+          showlegend=False
+      )
+  ])
+  fig.add_traces([
+      go.Scatter(
+          x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
+          y=list(mtd_avg_metric['p90_precip_mtd']) + list(mtd_avg_metric['p10_precip_mtd'])[::-1],
+          fill='toself',
+          fillcolor='rgba(0, 150, 0, 0.1)',
+          line=dict(color='rgba(255,255,255,0)'),
+          hoverinfo="skip",
+          name='10th-90th Percentile',
+          showlegend=False
+      )
+  ])
+  fig.update_layout(
+    height=800, 
+    xaxis_title=f'Day Of Month ({current_precip_month})', 
+    yaxis_title=metric, 
+    paper_bgcolor='#333333', 
     plot_bgcolor="#222222"
   )
   return fig
+
+
 
 # Run the app
 if __name__ == '__main__':

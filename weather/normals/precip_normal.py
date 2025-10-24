@@ -125,11 +125,47 @@ monthly_normals.to_csv('weather/output_sources/monthly_precip_normals.csv', inde
 
 # Daily Normals Methodology (year / month to date)
 
-calendar_type = 'calendar_year'
-metric = 'precip'
+# Month to date
+precip_data_for_norm = precip_data_for_norm.assign(
+  day_of_month=precip_data_for_norm['date'].dt.day, 
+)
+
+mtd = (
+  precip_data_for_norm.query("(year_type == 'calendar_year')")\
+    [['date', 'month', 'year_for_dash', 'current_year', 'metric_name', 'metric_value', 'day_of_month']]
+  .fillna({'metric_value': 0})
+  .sort_values(by=['metric_name', 'year_for_dash' ,'date'])
+  .groupby(['metric_name', 'year_for_dash', 'month'])
+  .apply(lambda x: x.assign(month_to_date_precip=x['metric_value'].cumsum()))
+  .reset_index(drop=True)
+  # .sort_values(by=['year_type', 'metric_name', 'calendar_year', 'date'])
+)
+
+
+mtd_avg = (
+  mtd
+  .query("year_for_dash != current_year")
+  .groupby(['metric_name', 'month', 'day_of_month'])
+  .agg(
+      avg_precip_mtd=('month_to_date_precip', 'mean'),
+      min_precip_mtd=('month_to_date_precip', 'min'),
+      max_precip_mtd=('month_to_date_precip', 'max'),
+      p10_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 10)),
+      p25_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 25)),
+      p50_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 50)),
+      p75_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 75)),
+      p90_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 90)),
+  )
+  .reset_index()
+  # .query(f"year_type == '{calendar_type}'") # Uncomment to run
+)
+
+mtd_avg.sort_values(by=['metric_name', 'month' ,'day_of_month'], inplace=True)
+mtd_avg.to_csv("weather/output_sources/mtd_precip_normals.csv", index=False)
+
+
 ytd = (
   precip_data_for_norm
-  .query("metric_name != 'precip_day'")
   .fillna({'metric_value': 0})
   .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
   .groupby(['year_type', 'metric_name', 'year_for_dash'])
@@ -147,6 +183,8 @@ ytd_avg = (
   .groupby(['year_type', 'metric_name', 'day_of_year', 'day_of_year_dash'])
   .agg(
       avg_precip_ytd=('year_to_date_precip', 'mean'),
+      min_precip_ytd=('year_to_date_precip', 'min'),
+      max_precip_ytd=('year_to_date_precip', 'max'),
       p10_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 10)),
       p25_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 25)),
       p50_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 50)),
@@ -182,4 +220,77 @@ fig.add_traces([
     )
 ])
 
+fig.show(renderer="browser")
+
+metric = 'precip'  # Change as needed
+month = 'Oct'  # Change as needed
+
+current_year_mtd = mtd.query(f"year_for_dash == current_year & metric_name == '{metric}' & month == '{month}'")
+current_year_label = current_year_mtd['current_year'].head().iloc[0]
+mtd_avg_metric = mtd_avg.query(f"metric_name == '{metric}' & month == '{month}'")
+
+fig = go.Figure()
+fig.add_scatter(
+  x=current_year_mtd['day_of_month'], 
+  y=current_year_mtd['month_to_date_precip'], 
+  mode='lines', name=month + ' ' + str(current_year_label), 
+  line=dict(color='black', width=2)
+)
+fig.add_scatter(
+  x=mtd_avg_metric['day_of_month'], 
+  y=mtd_avg_metric['avg_precip_mtd'], 
+  mode='lines', 
+  name='Average', 
+  line=dict(color='green', width=4)
+)
+fig.add_scatter(
+  x=mtd_avg_metric['day_of_month'], 
+  y=mtd_avg_metric['max_precip_mtd'], 
+  mode='lines', 
+  name='Maximum', 
+  line=dict(color='green', width=1, dash='dot')
+)
+fig.add_scatter(
+  x=mtd_avg_metric['day_of_month'], 
+  y=mtd_avg_metric['min_precip_mtd'], 
+  mode='lines', 
+  name='Minimum', 
+  line=dict(color='green', width=1, dash='dot')
+)
+fig.add_traces([
+    go.Scatter(
+        x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
+        y=list(mtd_avg_metric['p75_precip_mtd']) + list(mtd_avg_metric['p25_precip_mtd'])[::-1],
+        fill='toself',
+        fillcolor='rgba(0, 150, 0, 0.2)',
+        line=dict(color='rgba(255,255,255,0)'),
+        hoverinfo="skip",
+        name='25th-75th Percentile',
+        showlegend=False,
+    )
+])
+fig.add_traces([
+    go.Scatter(
+        x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
+        y=list(mtd_avg_metric['max_precip_mtd']) + list(mtd_avg_metric['min_precip_mtd'])[::-1],
+        fill='toself',
+        fillcolor='rgba(0, 150, 0, 0.1)',
+        line=dict(color='rgba(255,255,255,0)'),
+        hoverinfo="skip",
+        name='Min/Max Percentile',
+        showlegend=False
+    )
+])
+fig.add_traces([
+    go.Scatter(
+        x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
+        y=list(mtd_avg_metric['p90_precip_mtd']) + list(mtd_avg_metric['p10_precip_mtd'])[::-1],
+        fill='toself',
+        fillcolor='rgba(0, 150, 0, 0.1)',
+        line=dict(color='rgba(255,255,255,0)'),
+        hoverinfo="skip",
+        name='10th-90th Percentile',
+        showlegend=False
+    )
+])
 fig.show(renderer="browser")
