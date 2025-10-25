@@ -31,7 +31,7 @@ def gen_DoY_index(x, year_type='calendar_year'):
   excess = {
       'calendar_year': 0,
       'water_year': 92,
-      'winter_season': 153,
+      'snow_season': 153,
   }[year_type]
   
   mar1_day = 60
@@ -43,7 +43,7 @@ def gen_DoY_index(x, year_type='calendar_year'):
     elif x.dayofyear == mar1_day:
       return_value -= 0.5
 
-  return (return_value - excess - 1) % 365 + 1
+  return (return_value + excess - 1) % 365 + 1
 
 def dayofyear_to_month_day(doy):
   dt = pd.Timestamp(f"2025-01-01") + pd.Timedelta(days=doy-1)
@@ -258,8 +258,8 @@ precip_data_for_norm = pd.concat([
     .assign(year_type='calendar_year', current_year=current_year, year_for_dash=precip['year']),
   precip[precip['water_year'].between(max_water_year - N_years, max_water_year)]\
     .assign(year_type='water_year', current_year=max_water_year, year_for_dash=precip['water_year']),
-  precip[precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), offset_season(max_winter_year, -1))]\
-    .assign(year_type='winter_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
+  precip[precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), max_winter_year)]\
+    .assign(year_type='snow_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
 ])
 
 precip_data_for_norm['day_of_year_dash'] = precip_data_for_norm.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
@@ -289,6 +289,18 @@ mtd = (
   # .sort_values(by=['year_type', 'metric_name', 'calendar_year', 'date'])
 )
 mtd_avg = pd.read_csv('weather/output_sources/mtd_precip_normals.csv')
+
+ytd = (
+  precip_data_for_norm
+  .fillna({"metric_value": 0})
+  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
+  .groupby(['year_type', 'metric_name', 'year_for_dash'])
+  .apply(lambda x: x.assign(year_to_date_precip=x['metric_value'].cumsum()))
+  .reset_index(drop=True)
+  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'day_of_year_dash'])
+)
+ytd['dashboard_date'] = ytd['date'].dt.strftime('%b %d')
+ytd['year'] = ytd['date'].dt.year
 
 
 # Temperature Figure
@@ -896,32 +908,70 @@ def update_hourly_heatmap(metric_chosen):
     Input(component_id='precip_metric_dropdown', component_property='value'),
 )
 def precip_ytd_chart(calendar_type, metric):
-  ytd = (
-    precip_data_for_norm
-    .fillna({"metric_value": 0})
-    .query(f"(metric_name == '{metric}') & (year_type == '{calendar_type}')")
-    .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
-    .groupby(['year_type', 'metric_name', 'year_for_dash'])
-    .apply(lambda x: x.assign(year_to_date_precip=x['metric_value'].cumsum()))
-    .reset_index(drop=True)
-    .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'day_of_year_dash'])
+  ytd_dash = (
+      ytd
+      .query(f"(metric_name == '{metric}') & (year_type == '{calendar_type}')")
   )
 
-  current_year_ytd = ytd.query("year_for_dash == current_year")
+  current_year_ytd = ytd_dash.query("year_for_dash == current_year")
+  not_current_ytd = ytd_dash.query(f"(year_for_dash != current_year)")
   chart_label = current_year_ytd['current_year'].head().iloc[0]
 
   ytd_avg = (
     ytd_normals
     .query(f"(metric_name == '{metric}') & (year_type == '{calendar_type}')")
+    .sort_values(by=['year_type', 'metric_name', 'day_of_year_dash'])
   )
 
-  fig = px.line(ytd.query(f"(year_for_dash != current_year) & (year_type == '{calendar_type}')"), x='day_of_year_dash', y='year_to_date_precip', color='year_for_dash')
+  labels_ytd = (
+    ytd_avg[['day_of_year_dash', 'dashboard_date']]
+    [ytd_avg['dashboard_date'].str.endswith('01')] 
+  )
+
+  fig = px.line(
+    not_current_ytd, 
+    x='day_of_year_dash', 
+    y='year_to_date_precip', 
+    color='year_for_dash',
+  )
   fig.update_traces(
       line=dict(color='rgb(144, 238, 144, 0.25)', width=0.75, dash='dot'),
-      selector=dict(mode='lines')  # Ensure it applies only to line traces
+      selector=dict(mode='lines'),  # Ensure it applies only to line traces
+      customdata = not_current_ytd[['dashboard_date', 'year']],
+      hovertemplate=(
+        '<b>Date:</b> %{customdata[0]} %{customdata[1]}<br>' +
+        f'<b>Year to Date {metric}:</b> %{{y}}<br>' +
+        '<extra></extra>'
+      ),
+      showlegend=False,
   )
-  fig.add_scatter(x=current_year_ytd['day_of_year_dash'], y=current_year_ytd['year_to_date_precip'], mode='lines', name=chart_label, line=dict(color='rgb(50, 255, 210)', width=2))
-  fig.add_scatter(x=ytd_avg['day_of_year_dash'], y=ytd_avg['avg_precip_ytd'], mode='lines', name='Average', line=dict(color='green', width=4))
+  fig.add_scatter(
+    x=ytd_avg['day_of_year_dash'], 
+    y=ytd_avg['avg_precip_ytd'], 
+    mode='lines', 
+    name='Average', 
+    line=dict(color='rgb(0, 225, 0, 0.9)', width=4),
+    customdata = not_current_ytd[['dashboard_date', 'year']],
+    hovertemplate=(
+      '<b>Date:</b> %{customdata[0]} %{customdata[1]}<br>' +
+      f'<b>{N_years}-year avg: %{{y}}<br>' +
+      '<extra></extra>'
+    )
+  )
+  fig.add_scatter(
+    x=current_year_ytd['day_of_year_dash'], 
+    y=current_year_ytd['year_to_date_precip'], 
+    mode='lines', 
+    name=chart_label, 
+    line=dict(color='rgb(50, 255, 210)', width=2),
+    customdata = current_year_ytd[['dashboard_date', 'year']],
+    hovertemplate=(
+      '<b>Date:</b> %{customdata[0]} %{customdata[1]}<br>' +
+      f'<b>{chart_label} {metric}</b>: %{{y}}<br>' +
+      '<extra></extra>'
+    )
+
+  )
   fig.add_traces([
       go.Scatter(
           x=list(ytd_avg['day_of_year_dash']) + list(ytd_avg['day_of_year_dash'])[::-1],
@@ -931,6 +981,7 @@ def precip_ytd_chart(calendar_type, metric):
           line=dict(color='rgba(255,255,255,0)'),
           hoverinfo="skip",
           name='25th-75th Percentile',
+          showlegend=False,
       )
   ])
   fig.add_traces([
@@ -958,8 +1009,14 @@ def precip_ytd_chart(calendar_type, metric):
   #   )
   # ])
   fig.update_layout(
-    height=800, 
-    xaxis_title='Day of Year', 
+    height=800,
+    xaxis=dict(
+      title='Day of Year',
+      tickvals=labels_ytd['day_of_year_dash'],
+      ticktext=labels_ytd['dashboard_date'],
+      tickangle=0,
+      showgrid=True
+    ), 
     yaxis_title=metric, 
     paper_bgcolor='#333333', 
     plot_bgcolor="#222222",
@@ -980,17 +1037,11 @@ def mtd_precip_chart(metric):
 
   fig = go.Figure()
   fig.add_scatter(
-    x=current_year_mtd['day_of_month'], 
-    y=current_year_mtd['month_to_date_precip'], 
-    mode='lines', name=current_precip_month + ' ' + str(current_year_label), 
-    line=dict(color='rgb(50, 255, 210)', width=2)
-  )
-  fig.add_scatter(
     x=mtd_avg_metric['day_of_month'], 
     y=mtd_avg_metric['avg_precip_mtd'], 
     mode='lines', 
     name='Average', 
-    line=dict(color='green', width=4)
+    line=dict(color='rgb(0, 225, 0, 0.9)', width=4)
   )
   fig.add_scatter(
     x=mtd_avg_metric['day_of_month'], 
@@ -1005,6 +1056,12 @@ def mtd_precip_chart(metric):
     mode='lines', 
     name='Minimum', 
     line=dict(color='green', width=1, dash='dot')
+  )
+  fig.add_scatter(
+    x=current_year_mtd['day_of_month'], 
+    y=current_year_mtd['month_to_date_precip'], 
+    mode='lines', name=current_precip_month + ' ' + str(current_year_label), 
+    line=dict(color='rgb(50, 255, 210)', width=2)
   )
   fig.add_traces([
       go.Scatter(

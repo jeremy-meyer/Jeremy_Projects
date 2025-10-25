@@ -29,7 +29,7 @@ def gen_DoY_index(x, year_type='calendar_year'):
   excess = {
       'calendar_year': 0,
       'water_year': 92,
-      'winter_season': 153,
+      'snow_season': 153,
   }[year_type]
   
   mar1_day = 60
@@ -41,7 +41,7 @@ def gen_DoY_index(x, year_type='calendar_year'):
     elif x.dayofyear == mar1_day:
       return_value -= 0.5
 
-  return (return_value - excess - 1) % 365 + 1
+  return (return_value + excess - 1) % 365 + 1
 
 
 def dayofyear_to_month_day(doy):
@@ -85,7 +85,7 @@ precip_data_for_norm = pd.concat([
   precip[precip['water_year'].between(max_water_year - N_years, max_water_year)]\
     .assign(year_type='water_year', current_year=max_water_year, year_for_dash=precip['water_year']),
   precip[precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), offset_season(max_winter_year, -1))]\
-    .assign(year_type='winter_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
+    .assign(year_type='snow_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
 ])
 
 precip_data_for_norm['day_of_year_dash'] = precip_data_for_norm.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
@@ -167,11 +167,11 @@ mtd_avg.to_csv("weather/output_sources/mtd_precip_normals.csv", index=False)
 ytd = (
   precip_data_for_norm
   .fillna({'metric_value': 0})
-  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
+  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'day_of_year_dash'])
   .groupby(['year_type', 'metric_name', 'year_for_dash'])
   .apply(lambda x: x.assign(year_to_date_precip=x['metric_value'].cumsum()))
   .reset_index(drop=True)
-  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'date'])
+  .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'day_of_year_dash'])
 )
 
 current_year_ytd = ytd.query("year_for_dash == current_year")
@@ -196,7 +196,7 @@ ytd_avg = (
   # .query(f"year_type == '{calendar_type}'") # Uncomment to run
 )
 
-
+ytd_avg['dashboard_date'] = ytd_avg['day_of_year'].apply(dayofyear_to_month_day)
 ytd_avg.sort_values(by=['year_type', 'metric_name', 'day_of_year'], inplace=True)
 ytd_avg.to_csv("weather/output_sources/ytd_precip_normals.csv", index=False)
 
