@@ -23,7 +23,7 @@ precip['precip_day'] = (precip['precip'] > 0).astype(int)
 precip['snow_season'] = np.where(precip['month'].isin(['Aug', 'Sep', 'Oct', 'Nov', 'Dec']), precip['year'], precip['year'] - 1)
 precip['snow_season'] = precip['snow_season'].astype(str) + '-' + (precip['snow_season'] + 1).astype(str)
 
-precip['water_year'] = np.where(precip['month'].isin(['Oct', 'Nov', 'Dec']), precip['year']+1, precip['year'] - 1)
+precip['water_year'] = np.where(precip['month'].isin(['Oct', 'Nov', 'Dec']), precip['year']+1, precip['year'])
 
 def gen_DoY_index(x, year_type='calendar_year'):
   excess = {
@@ -79,30 +79,51 @@ def offset_season(s, offset):
 
 precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False, parse_dates=['date'])
 precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
-precip_data_for_norm = pd.concat([
-  precip[precip['year'].between(current_year - N_years, current_year)]\
-    .assign(year_type='calendar_year', current_year=current_year, year_for_dash=precip['year']),
-  precip[precip['water_year'].between(max_water_year - N_years, max_water_year)]\
-    .assign(year_type='water_year', current_year=max_water_year, year_for_dash=precip['water_year']),
-  precip[precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), offset_season(max_winter_year, -1))]\
-    .assign(year_type='snow_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
+
+precip_data_unpivot = pd.concat([
+  precip\
+    .assign(
+      year_type='calendar_year', 
+      current_year=str(current_year), 
+      year_for_dash=precip['year'],
+      norm_range=precip['year'].between(current_year - N_years, current_year),
+    ),
+  precip\
+    .assign(
+      year_type='water_year', 
+      current_year=str(max_water_year), 
+      year_for_dash=precip['water_year'],
+      norm_range=precip['water_year'].between(max_water_year - N_years, max_water_year),
+    ),
+  precip\
+    .assign(
+      year_type='snow_season', 
+      current_year=max_winter_year, 
+      year_for_dash=precip['snow_season'],
+      norm_range=precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), offset_season(max_winter_year, -1)),
+    ),
 ])
 
-precip_data_for_norm['day_of_year_dash'] = precip_data_for_norm.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
+precip_data_unpivot['year_for_dash'] = precip_data_unpivot['year_for_dash'].astype(str)
+precip_data_unpivot['current_year'] = precip_data_unpivot['current_year'].astype(str)
+precip_data_unpivot['day_of_year_dash'] = precip_data_unpivot.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
 
-precip_data_for_norm = (
-  precip_data_for_norm
+precip_data_unpivot = (
+  precip_data_unpivot
   .melt(
-    ['date', 'month', 'year_for_dash', 'day_of_year', 'day_of_year_dash', 'year_type', 'current_year'], 
+    ['date', 'month', 'year_for_dash', 'day_of_year', 'day_of_year_dash', 'year_type', 'current_year', 'norm_range'], 
     value_vars=['precip', 'snow', 'rain', 'precip_day'], 
     var_name='metric_name', 
     value_name='metric_value')
 )
 
+precip_data_for_norm = (
+  precip_data_unpivot.query("(norm_range) | (current_year == year_for_dash)")
+)
+
+
 monthly_normals = (
-    precip_data_for_norm
-    .query("year != current_year")
-    .query("year_type == 'calendar_year'")
+    precip[precip['year'].between(current_year - N_years, current_year-1)]
     .groupby(['year', 'month'])
     .agg({
         'precip': 'sum',
@@ -123,7 +144,33 @@ monthly_normals = (
 
 monthly_normals.to_csv('weather/output_sources/monthly_precip_normals.csv', index=False)
 
-# Daily Normals Methodology (year / month to date)
+
+# Precip rank
+max_date = precip['date'].max()
+if max_date != max_date + pd.offsets.MonthEnd(0):
+  most_recent_month = max_date.replace(day=1) - pd.Timedelta(days=1)
+else:
+  most_recent_month = max_date
+# Create monthly_totals
+
+precip_data_unpivot['current_year'] = precip_data_unpivot['current_year'].astype(str)
+precip_data_unpivot['year_for_dash'] = precip_data_unpivot['year_for_dash'].astype(str)
+
+monthly_totals = (
+    precip_data_unpivot
+    .query(f"date <= '{most_recent_month}'")
+    .groupby(['year_type', 'metric_name', 'year_for_dash', 'month'], observed=True)
+    .agg(
+        total=('metric_value', 'sum'),
+    )
+    .reset_index()
+)
+
+monthly_totals['precip_rank'] = (
+    monthly_totals
+    .groupby(['year_type', 'metric_name', 'month'])['total']
+    .rank(ascending=False, method='min').astype(int)
+)
 
 # Month to date
 precip_data_for_norm = precip_data_for_norm.assign(

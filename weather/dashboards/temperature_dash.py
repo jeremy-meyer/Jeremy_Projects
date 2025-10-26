@@ -24,6 +24,12 @@ temp_colors = [
     '#e0e0e0',"#e0e0e0", "#e0e0e0", 
     '#f6bfa6', '#ea7b60', '#c63c36', '#962d20',
 ]
+precip_colors = [
+  '#865513','#D2B469', '#F4E8C4', '#F5F5F5', 
+  '#CBE9E5', '#69B3AC', '#20645E'
+]
+
+
 # INPUT DATA
 # Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
 # This will put Feb 29th between 2-28 and 3-1 in the model
@@ -253,30 +259,52 @@ max_winter_year = precip['snow_season'].max()
 precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False, parse_dates=['date'])
 ytd_normals = pd.read_csv('weather/output_sources/ytd_precip_normals.csv')
 precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
-precip_data_for_norm = pd.concat([
-  precip[precip['year'].between(current_year - N_years, current_year)]\
-    .assign(year_type='calendar_year', current_year=current_year, year_for_dash=precip['year']),
-  precip[precip['water_year'].between(max_water_year - N_years, max_water_year)]\
-    .assign(year_type='water_year', current_year=max_water_year, year_for_dash=precip['water_year']),
-  precip[precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), max_winter_year)]\
-    .assign(year_type='snow_season', current_year=max_winter_year, year_for_dash=precip['snow_season']),
+precip_data_unpivot = pd.concat([
+  precip\
+    .assign(
+      year_type='calendar_year', 
+      current_year=str(current_year), 
+      year_for_dash=precip['year'],
+      norm_range=precip['year'].between(current_year - N_years, current_year),
+    ),
+  precip\
+    .assign(
+      year_type='water_year', 
+      current_year=str(max_water_year), 
+      year_for_dash=precip['water_year'],
+      norm_range=precip['water_year'].between(max_water_year - N_years, max_water_year),
+    ),
+  precip\
+    .assign(
+      year_type='snow_season', 
+      current_year=max_winter_year, 
+      year_for_dash=precip['snow_season'],
+      norm_range=precip['snow_season'].between(offset_season(max_winter_year, - N_years + 1), offset_season(max_winter_year, -1)),
+    ),
 ])
 
-precip_data_for_norm['day_of_year_dash'] = precip_data_for_norm.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
-current_precip_month = precip_data_for_norm.query("(year_for_dash == current_year)")['month'].max()
+precip_data_unpivot['year_for_dash'] = precip_data_unpivot['year_for_dash'].astype(str)
+precip_data_unpivot['current_year'] = precip_data_unpivot['current_year'].astype(str)
+precip_data_unpivot['day_of_year_dash'] = precip_data_unpivot.apply(lambda x: gen_DoY_index(x['date'], x['year_type']), axis=1)
 
-precip_data_for_norm = (
-  precip_data_for_norm
+precip_data_unpivot = (
+  precip_data_unpivot
   .melt(
-    ['date', 'month', 'year_for_dash', 'day_of_year', 'day_of_year_dash', 'year_type', 'current_year'], 
-    value_vars=['precip', 'snow', 'rain'], 
+    ['date', 'month', 'year_for_dash', 'day_of_year', 'day_of_year_dash', 'year_type', 'current_year', 'norm_range'], 
+    value_vars=['precip', 'snow', 'rain', 'precip_day'], 
     var_name='metric_name', 
     value_name='metric_value')
+)
+
+precip_data_for_norm = (
+  precip_data_unpivot.query("(norm_range) | (current_year == year_for_dash)")
 )
 
 precip_data_for_norm = precip_data_for_norm.assign(
   day_of_month=precip_data_for_norm['date'].dt.day, 
 )
+
+current_precip_month = precip_data_for_norm.query("(year_for_dash == current_year)")['month'].max()
 
 mtd = (
   precip_data_for_norm.query("(year_type == 'calendar_year')")\
@@ -301,6 +329,50 @@ ytd = (
 )
 ytd['dashboard_date'] = ytd['date'].dt.strftime('%b %d')
 ytd['year'] = ytd['date'].dt.year
+
+# Precip rank
+max_date = precip['date'].max()
+if max_date != max_date + pd.offsets.MonthEnd(0):
+  most_recent_month = max_date.replace(day=1) - pd.Timedelta(days=1)
+else:
+  most_recent_month = max_date
+# Create monthly_totals
+
+precip_data_unpivot['current_year'] = precip_data_unpivot['current_year'].astype(str)
+precip_data_unpivot['year_for_dash'] = precip_data_unpivot['year_for_dash'].astype(str)
+
+precip_rank_month = (
+    precip_data_unpivot
+    .query(f"date <= '{most_recent_month}'")
+    .groupby(['year_type', 'metric_name', 'year_for_dash', 'month'], observed=True)
+    .agg(
+        total=('metric_value', 'sum'),
+    )
+    .reset_index()
+)
+
+precip_rank_year = (
+  precip_rank_month
+  .groupby(['year_type','metric_name', 'year_for_dash'])
+  .agg(
+    total=('total', 'sum'),
+    count=('total', 'count'),
+  )
+  .reset_index()
+  .query("count == 12")
+  .assign(month='Year')
+  .drop(['count'], axis=1)
+)
+
+precip_rank = pd.concat([precip_rank_month, precip_rank_year])
+precip_rank['month'] = pd.Categorical(precip_rank['month'], categories=month_order+["Year"], ordered=True)
+
+
+precip_rank['rank'] = (
+    precip_rank
+    .groupby(['year_type', 'metric_name', 'month'])['total']
+    .rank(ascending=True, method='min').astype(int)
+)
 
 
 # Temperature Figure
@@ -633,6 +705,12 @@ app.layout = dbc.Container([
           dcc.Graph(figure={}, id='mtd_precip_chart'),
         ], width=6)
       ]),
+      dbc_row_col(
+        html.Div("Monthly Precipitation Rank (1=driest)", style={'fontSize': 24}),
+      ),
+      dbc_row_col(
+        dcc.Graph(figure={}, id='monthly_precip_heatmap')
+      ),
     ]),
   ]),
 ], fluid=True)
@@ -1108,7 +1186,50 @@ def mtd_precip_chart(metric):
   )
   return fig
 
+@callback(
+    Output(component_id='monthly_precip_heatmap', component_property='figure'),
+    Input(component_id='precip_metric_dropdown', component_property='value'),
+    Input(component_id='water_calendar_dropdown', component_property='value'),
+)
+def update_monthly_precip_heatmap(metric_chosen, calendar_chosen):
 
+  data_for_temp_heatmap = (
+    precip_rank
+    .query(f"metric_name == '{metric_chosen}'")
+    .query(f"year_type == '{calendar_chosen}'")
+    .rename({'year_for_dash': 'year'}, axis=1)
+  )
+
+  fig = go.Figure(data=go.Heatmap(
+      x=data_for_temp_heatmap['year'],
+      y=data_for_temp_heatmap['month'],
+      z=data_for_temp_heatmap['rank'],
+      colorscale=precip_colors,
+      zmin=1,
+      xgap=1,
+      ygap=1,
+      zmax=data_for_temp_heatmap['rank'].max(),
+      connectgaps=False,
+      customdata=data_for_temp_heatmap[['total',]],
+      texttemplate="%{z}",
+      hovertemplate=(
+        '%{y} %{x}:' +
+        '<br>Rank: %{z}' +
+        f'<br>Total ({metric_chosen}): %{{customdata[0]:.1f}} in' +
+        '<extra></extra>'  # Removes the default trace info
+    ),
+  ))
+  fig.update_layout(
+      xaxis_title=calendar_chosen,
+      yaxis=dict(title='Month',autorange='reversed'),
+      height=600,
+      # width=1420,
+      paper_bgcolor='#333333',
+      plot_bgcolor='#333333',
+      margin=dict(l=20, r=20, t=20, b=20),
+  )
+  
+  return fig
 
 # Run the app
 if __name__ == '__main__':
