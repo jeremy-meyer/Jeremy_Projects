@@ -296,6 +296,26 @@ precip_data_unpivot = (
     value_name='metric_value')
 )
 
+monthly_norm = (
+  pd.read_csv('weather/output_sources/monthly_precip_normals.csv')
+  .rename({'norm_precip': 'precip', 'norm_snow': 'snow', 'norm_rain': 'rain', 'norm_precip_perc': 'precip_perc'}, axis=1)
+  .melt(['month'], ['precip', 'snow', 'rain', 'precip_perc'], 'metric_name' ,'normal')
+)
+
+monthly_totals = (
+  precip_data_unpivot
+  .query(f"year_type == 'calendar_year'")
+  .groupby(['year_type', 'current_year', 'metric_name', 'month', 'year_for_dash'])
+  .agg(
+    observed=('metric_value', 'sum')
+  )
+  .reset_index()
+  .merge(monthly_norm, on=['month', 'metric_name'], how='inner')
+  .melt(['year_type', 'current_year', 'metric_name', 'month', 'year_for_dash'], ['observed', 'normal'], 'type', 'metric_value')
+)
+
+monthly_totals['month'] = pd.Categorical(monthly_totals['month'], categories=month_order, ordered=True)
+
 precip_data_for_norm = (
   precip_data_unpivot.query("(norm_range) | (current_year == year_for_dash)")
 )
@@ -711,6 +731,13 @@ app.layout = dbc.Container([
       dbc_row_col(
         dcc.Graph(figure={}, id='monthly_precip_heatmap')
       ),
+      dbc_row_col(
+        html.Div("Monthly Precip Total", style={'fontSize': 24}),
+      ),
+      dbc_row_col(
+        dcc.Graph(figure={}, id='monthly_precip_total')
+      ),      
+
     ]),
   ]),
 ], fluid=True)
@@ -1229,6 +1256,52 @@ def update_monthly_precip_heatmap(metric_chosen, calendar_chosen):
       margin=dict(l=20, r=20, t=20, b=20),
   )
   
+  return fig
+
+@callback(
+    Output(component_id='monthly_precip_total', component_property='figure'),
+    Input(component_id='precip_metric_dropdown', component_property='value'),
+)
+def update_monthly_precip_total(metric_chosen):
+
+  monthly_totals_for_graph = (
+    monthly_totals
+    .query("year_for_dash == current_year")
+    .query(f"metric_name == '{metric_chosen}'")
+    .rename({'year_for_dash': 'year'}, axis=1)
+    .sort_values(['month', 'type'])
+  )
+
+  fig = px.histogram(
+    monthly_totals_for_graph, 
+    x="month", 
+    y="metric_value", 
+    color='type',
+    barmode='group',
+    height=550,
+    color_discrete_sequence=['#228B22', '#00FF00'],
+    text_auto=True,
+  )
+
+  fig.update_traces(
+    texttemplate='%{y:.2f}',
+    textposition='outside',
+    customdata=monthly_totals_for_graph[['year', 'type']],
+    hovertemplate=(
+      '%{x} %{customdata[0]}:' +
+      f'<br>%{{customdata[1]}} {metric_chosen}: %{{y:.1f}} in' +
+      '<extra></extra>'  # Removes the default trace info
+  ),
+)
+
+  fig.update_layout(
+    xaxis_title="Month",
+    yaxis_title=f"{metric_chosen} (in)",
+    height=600,
+    paper_bgcolor='#333333', 
+    plot_bgcolor="#222222"
+  )
+
   return fig
 
 # Run the app
