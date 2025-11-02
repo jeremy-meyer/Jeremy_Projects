@@ -86,14 +86,18 @@ def generic_data_table(df, page_size=10, clean_table=False, metric_value=None):
               'border': '1px solid #444'    # Gray border for the data rows
           },
           style_data_conditional=[
-              {
-                  'if': {'row_index': 'odd'},  # Alternate row styling
-                  'backgroundColor': '#2a2a2a'  # Slightly lighter background for odd rows
-              }
-          ]
-      )
-])
-)
+          {
+              'if': {'row_index': 'odd'},  # Alternate row styling
+              'backgroundColor': '#2a2a2a'  # Slightly lighter background for odd rows
+          },
+           ],
+          style_cell_conditional=[
+              {'if': {'column_id': 'rank'}, 'width': '10%'},  # Set width for 'rank' column
+              {'if': {'column_id': 'date'}, 'width': '25%'},  # Set width for 'date' column
+          ],
+        )
+    ])
+  )
 
 # Initialize the app
 external_stylesheets = [dbc.themes.BOOTSTRAP, dbc.themes.DARKLY, 'dark_dropdown.css']
