@@ -9,28 +9,10 @@ from datetime import date
 from plotly_calplot import calplot
 import os
 
+
 pio.templates.default = "plotly_dark"
 pio.renderers.default = "browser"
-print(os.getcwd())
-# TODO: Figure out why assets folder isn't working properly with the dark dropdown css
 
-# Initialize the app
-external_stylesheets = [dbc.themes.BOOTSTRAP, dbc.themes.DARKLY, 'dark_dropdown.css']
-
-app = Dash(__name__, external_stylesheets=external_stylesheets, assets_folder='./weather/dashboards/assets/')
-
-temp_colors = [
-    '#3b4cc0', '#528ecb', '#7fb8da', '#b5d5e6', 
-    '#e0e0e0',"#e0e0e0", "#e0e0e0", 
-    '#f6bfa6', '#ea7b60', '#c63c36', '#962d20',
-]
-precip_colors = [
-  '#865513','#D2B469', '#F4E8C4', '#F5F5F5', 
-  '#CBE9E5', '#69B3AC', '#20645E'
-]
-
-
-# INPUT DATA
 # Create 1/2 index for leap year so we can intepret "hottest day of year" correctly
 # This will put Feb 29th between 2-28 and 3-1 in the model
 def gen_DoY_index(x, year_type='calendar_year'):
@@ -64,6 +46,61 @@ def str_to_decimal_hr(s):
 def offset_season(s, offset):
   return str(int(s.split('-')[0]) + offset) + '-' + str(int(s.split('-')[1]) + offset)
 
+
+# SHARED CONFIGS ---------------------
+temp_colors = [
+    '#3b4cc0', '#528ecb', '#7fb8da', '#b5d5e6', 
+    '#e0e0e0',"#e0e0e0", "#e0e0e0", 
+    '#f6bfa6', '#ea7b60', '#c63c36', '#962d20',
+]
+precip_colors = [
+  '#865513','#D2B469', '#F4E8C4', '#F5F5F5', 
+  '#CBE9E5', '#69B3AC', '#20645E'
+]
+
+# Code to generate dashboard style tables
+def generic_data_table(df, page_size=10, clean_table=False, metric_value=None):
+  if clean_table:
+    df = (
+      df[['rank','date', 'metric_value']]
+      .rename({'metric_value': metric_value}, axis=1)
+    )
+  
+  return (
+    html.Div([
+      dash_table.DataTable(
+          id='table-paging-native',
+          columns=[{"name": i, "id": i} for i in df.columns],
+          data=df.to_dict('records'),
+          page_action='native',  # Enable native front-end paging
+          page_size=page_size,          # Number of rows per page
+          style_table={'overflowX': 'auto'},  # Ensure horizontal scrolling if needed
+          style_header={
+              'backgroundColor': '#333333',  # Dark background for the header
+              'color': 'white',             # White text for the header
+              'fontWeight': 'bold',         # Bold text for the header
+          },
+          style_data={
+              'backgroundColor': '#222222',  # Darker background for the data rows
+              'color': 'white',             # White text for the data rows
+              'border': '1px solid #444'    # Gray border for the data rows
+          },
+          style_data_conditional=[
+              {
+                  'if': {'row_index': 'odd'},  # Alternate row styling
+                  'backgroundColor': '#2a2a2a'  # Slightly lighter background for odd rows
+              }
+          ]
+      )
+])
+)
+
+# Initialize the app
+external_stylesheets = [dbc.themes.BOOTSTRAP, dbc.themes.DARKLY, 'dark_dropdown.css']
+
+app = Dash(__name__, external_stylesheets=external_stylesheets, assets_folder='./weather/dashboards/assets/')
+
+# INPUT DATA
 N_years = 30 # For normals
 
 temps = pd.read_csv("weather/data_sources/daily_weather.csv", parse_dates=['date'])#.query("date >= '1995-01-01'")
@@ -251,12 +288,10 @@ hourly_all_mean_season['avg_deviation'] = hourly_all_mean_season['metric_value']
 
 # Precip Data
 precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False, parse_dates=['date'])
-
 current_year = precip['year'].max()
 max_water_year = precip['water_year'].max()
 max_winter_year = precip['snow_season'].max()
 
-precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False, parse_dates=['date'])
 ytd_normals = pd.read_csv('weather/output_sources/ytd_precip_normals.csv')
 precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
 precip_data_unpivot = pd.concat([
@@ -386,14 +421,125 @@ precip_rank_year = (
 
 precip_rank = pd.concat([precip_rank_month, precip_rank_year])
 precip_rank['month'] = pd.Categorical(precip_rank['month'], categories=month_order+["Year"], ordered=True)
-
-
 precip_rank['rank'] = (
     precip_rank
     .groupby(['year_type', 'metric_name', 'month'])['total']
-    .rank(ascending=True, method='min').astype(int)
+    .rank("min", ascending=False)
+    .astype(int)
 )
 
+
+# Records
+# Rainiest day (all time)
+# Snowiest day (all time)
+# Rainiest day (within month)
+# Snowiest day (within month)
+# Earliest snow
+# Latest snow
+# Longest dry period
+
+# Rainiest month
+# Driest month
+# Snowiest month
+
+def compute_daily_precip_records(precip, records_top_N=10):
+  cols_for_wet_days = ['date', 'snow', 'rain', 'month', 'year', 'precip_day', 'snow_season']
+  record_column_order = ['rank','date', 'metric_name', 'metric_value', 'month', 'record']
+  wet_days = pd.concat([
+    precip[cols_for_wet_days][precip['rain'] > 0].assign(metric_name='rain', metric_value=lambda x: x.rain),
+    precip[cols_for_wet_days][precip['snow'] > 0].assign(metric_name='snow', metric_value=lambda x: x.snow),
+  ])
+  wet_days['day_of_year'] = wet_days.apply(lambda row: gen_DoY_index(row['date'], 'snow_season'), axis=1)
+  min_year = wet_days.agg({'year': 'min'}).iloc[0]
+
+  wet_days['rank'] = (
+      wet_days.groupby(['metric_name','month'])['metric_value']
+      .rank(ascending=False, method='min')
+      .astype(int)
+  )
+
+  wet_days['overall_rank'] = (
+      wet_days.groupby(['metric_name'])['metric_value']
+      .rank(ascending=False, method='min')
+      .astype(int)
+  )
+  within_month_records = (
+    wet_days
+    .query(f"rank <= {records_top_N}")
+    .assign(record=lambda x: x.metric_name + 'iest day (' + x.month.astype(str) + ')')
+    [record_column_order]
+  )
+  across_month_records = (
+    wet_days.drop(['rank'], axis=1)
+    .rename({'overall_rank': 'rank'}, axis=1)
+    .query(f"rank <= {records_top_N}")
+    .assign(month='ALL')
+    .assign(record=lambda x: x.metric_name + "iest day")
+    [record_column_order]
+  )
+
+  earliest_snow = (
+    wet_days
+    .query("(metric_name == 'snow')")
+    .sort_values('day_of_year')
+    .assign(rank=lambda x: x['day_of_year'].rank(ascending=True, method='min').astype(int))
+    .head(records_top_N)
+    .assign(month='ALL')
+    .assign(record='earliest_snow')
+     [record_column_order]
+  )
+
+  latest_snow = (
+    wet_days
+    .query(f"(metric_name == 'snow') & (snow_season >= '{min_year}')")
+    .sort_values('day_of_year', ascending=False)
+    .assign(rank=lambda x: x['day_of_year'].rank(ascending=False, method='min').astype(int))
+    .head(records_top_N)
+    .assign(month='ALL')
+    .assign(record='latest_snow')
+    [record_column_order]
+  )
+
+  precip_days = (
+    precip.query("precip_day == 1")[['date']]
+  )
+  precip_days['metric_value'] = precip_days['date'].diff().dt.days - 1
+  precip_days['rank'] = (
+      precip_days['metric_value']
+      .rank(ascending=False, method='min')
+  )
+  drought_rank = (
+    precip_days
+    .query(f"(metric_value > 0) & (rank <= {records_top_N})")
+    .assign(month='ALL', metric_name='precip', record='consecutive_days_dry')
+    [record_column_order]
+  )
+  combined = pd.concat([
+    within_month_records,
+    across_month_records,
+    drought_rank,
+    latest_snow,
+    earliest_snow,
+  ]).sort_values(['record', 'metric_name' ,'rank'])
+
+  combined['date'] = combined['date'].dt.date
+
+  return combined
+
+precip_records = compute_daily_precip_records(precip, 15)
+dashboard_tables = {
+  "rain": [
+    generic_data_table(precip_records.query("record == 'rainiest day'"), clean_table=True, metric_value='rain'),
+    generic_data_table(precip_records.query("record == 'rainiest day (Oct)'"), clean_table=True, metric_value='rain'),
+    generic_data_table(precip_records.query("record == 'consecutive_days_dry'"), clean_table=True, metric_value='days'),
+  ],
+
+}
+
+
+precip_records.groupby('record').agg({"record": 'count'})
+
+# rainest day (all), rainiest day (oct), consecutive dry days
 
 # Temperature Figure
 fig = go.Figure()
@@ -736,9 +882,36 @@ app.layout = dbc.Container([
       ),
       dbc_row_col(
         dcc.Graph(figure={}, id='monthly_precip_total')
-      ),      
-
+      ),
     ]),
+    dcc.Tab(label='Records', children=[
+      dbc_row_col(html.Div("Rain Records", style={'fontSize': 24})),
+      dbc.Row([
+        dbc.Col([
+          html.H4("Rainest Day (all time)", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=4),
+        dbc.Col([
+          html.H4("Rainiest Day in October", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=4),
+        dbc.Col([
+          html.H4("Consecutive dry days", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=4),        
+      ]),
+      dbc.Row([
+        dbc.Col([
+          dashboard_tables['rain'][0]
+        ], width=4),
+        dbc.Col([
+          dashboard_tables['rain'][1]
+        ], width=4),
+        dbc.Col([
+          dashboard_tables['rain'][2]
+        ], width=4),
+      ]),
+      
+      dbc_row_col(html.Div("Temperature Records", style={'fontSize': 24})),
+    ]),
+    dcc.Tab(label='Trend', children=[]),
   ]),
 ], fluid=True)
 
@@ -1146,7 +1319,12 @@ def mtd_precip_chart(metric):
     y=mtd_avg_metric['avg_precip_mtd'], 
     mode='lines', 
     name='Average', 
-    line=dict(color='rgb(0, 225, 0, 0.9)', width=4)
+    line=dict(color='rgb(0, 225, 0, 0.9)', width=4),
+    hovertemplate=(
+      '<b>Day Of Month:</b> %{x}<br>' +
+      f'<b>Avg {metric}: %{{y:.2f}} in<br>' +
+      '<extra></extra>'
+    )
   )
   fig.add_scatter(
     x=mtd_avg_metric['day_of_month'], 
@@ -1166,7 +1344,12 @@ def mtd_precip_chart(metric):
     x=current_year_mtd['day_of_month'], 
     y=current_year_mtd['month_to_date_precip'], 
     mode='lines', name=current_precip_month + ' ' + str(current_year_label), 
-    line=dict(color='rgb(50, 255, 210)', width=2)
+    line=dict(color='rgb(50, 255, 210)', width=2),
+      hovertemplate=(
+      f"<b>Date:</b> %{{x}} {current_precip_month + ' ' + str(current_year_label)}<br>" +
+      f'<b>Cumulative {metric}: %{{y:.2f}} in<br>' +
+      '<extra></extra>'
+    )
   )
   fig.add_traces([
       go.Scatter(
@@ -1220,7 +1403,7 @@ def mtd_precip_chart(metric):
 )
 def update_monthly_precip_heatmap(metric_chosen, calendar_chosen):
 
-  data_for_temp_heatmap = (
+  data_for_precip_heatmap = (
     precip_rank
     .query(f"metric_name == '{metric_chosen}'")
     .query(f"year_type == '{calendar_chosen}'")
@@ -1228,16 +1411,16 @@ def update_monthly_precip_heatmap(metric_chosen, calendar_chosen):
   )
 
   fig = go.Figure(data=go.Heatmap(
-      x=data_for_temp_heatmap['year'],
-      y=data_for_temp_heatmap['month'],
-      z=data_for_temp_heatmap['rank'],
+      x=data_for_precip_heatmap['year'],
+      y=data_for_precip_heatmap['month'],
+      z=data_for_precip_heatmap['rank'],
       colorscale=precip_colors,
       zmin=1,
       xgap=1,
       ygap=1,
-      zmax=data_for_temp_heatmap['rank'].max(),
+      zmax=data_for_precip_heatmap['rank'].max(),
       connectgaps=False,
-      customdata=data_for_temp_heatmap[['total',]],
+      customdata=data_for_precip_heatmap[['total',]],
       texttemplate="%{z}",
       hovertemplate=(
         '%{y} %{x}:' +
