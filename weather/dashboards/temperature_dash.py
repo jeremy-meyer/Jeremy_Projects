@@ -59,7 +59,7 @@ precip_colors = [
 ]
 
 # Code to generate dashboard style tables
-def generic_data_table(df, page_size=10, clean_table=False, metric_value=None):
+def generic_data_table(df, id, page_size=10, clean_table=False, metric_value=None):
   if clean_table:
     df = (
       df[['rank','date', 'metric_value']]
@@ -69,7 +69,7 @@ def generic_data_table(df, page_size=10, clean_table=False, metric_value=None):
   return (
     html.Div([
       dash_table.DataTable(
-          id='table-paging-native',
+          id=id,
           columns=[{"name": i, "id": i} for i in df.columns],
           data=df.to_dict('records'),
           page_action='native',  # Enable native front-end paging
@@ -428,9 +428,11 @@ precip_rank['month'] = pd.Categorical(precip_rank['month'], categories=month_ord
 precip_rank['rank'] = (
     precip_rank
     .groupby(['year_type', 'metric_name', 'month'])['total']
-    .rank("min", ascending=False)
+    .rank(method="min", ascending=True)
     .astype(int)
 )
+
+
 
 
 # Records
@@ -442,9 +444,13 @@ precip_rank['rank'] = (
 # Latest snow
 # Longest dry period
 
-# Rainiest month
-# Driest month
-# Snowiest month
+# Rainiest month (all time)
+# Snowiest month (all time)
+# Snowiest Season (by year)
+# Rainiest Year (by year)
+# Least snowiest season (by year)
+# Driest month (all time)
+
 
 def compute_daily_precip_records(precip, records_top_N=10):
   cols_for_wet_days = ['date', 'snow', 'rain', 'month', 'year', 'precip_day', 'snow_season']
@@ -530,20 +536,98 @@ def compute_daily_precip_records(precip, records_top_N=10):
 
   return combined
 
+
+def compute_monthly_precip_records(records_top_N=10):
+  record_order = ['rank','date', 'metric_value' ,'record']
+  snow_year = (
+    precip_rank
+    .query("year_type == 'snow_season'")
+    .query("month == 'Year'")
+    .query("metric_name == 'snow'")
+    .assign(rank_wettest=lambda x: x.total.rank(method="min", ascending=False).astype(int))
+  )
+
+  rain_year = (
+    precip_rank
+    .drop(['rank'], axis=1)
+    .query("year_type == 'calendar_year'")
+    .query("month == 'Year'")
+    .query("metric_name == 'rain'")
+    .assign(rank_wettest=lambda x: x.total.rank(method="min", ascending=False).astype(int))
+    .query(f"rank_wettest <= {records_top_N}")
+    .assign(record='most_rain_year')
+    .rename({'total': 'metric_value', 'year_for_dash': 'date', 'rank_wettest': 'rank'}, axis=1)
+    [record_order]
+  )
+
+
+  month_precip_records = (
+    precip_rank
+    .query("year_type == 'calendar_year'")
+    .query("metric_name in ('rain', 'snow', 'precip')")
+    .query("month != 'Year'")
+    .drop(['rank'], axis=1)
+    .assign(
+      rank_wettest=lambda x: x.groupby(['metric_name'])['total'].rank(method="min", ascending=False).astype(int),
+      rank_driest=lambda x: x.groupby(['metric_name'])['total'].rank(method="min", ascending=True).astype(int),
+    )
+  )
+  month_precip_records['month_year'] = month_precip_records['month'].astype(str)+ ' ' + month_precip_records['year_for_dash'].astype(str)
+
+
+  return pd.concat([
+    (
+      month_precip_records
+      .query(f"(rank_wettest <= {records_top_N}) & (metric_name != 'precip')")
+      .assign(record=lambda x: x.metric_name + "iest_month")
+      .rename({'total': 'metric_value', 'month_year': 'date', 'rank_wettest': 'rank'}, axis=1)[record_order]
+    ),
+    (
+      month_precip_records
+      .query(f"(rank_driest <= {records_top_N}) & (metric_name == 'precip')")
+      .assign(record='driest_month')
+      .rename({'total': 'metric_value', 'month_year': 'date', 'rank_driest': 'rank'}, axis=1)[record_order]
+    ),
+    (
+      snow_year
+      .query(f"rank<={records_top_N}")
+      .assign(record='least_snow_year')
+      .rename({'total': 'metric_value', 'year_for_dash': 'date'}, axis=1)[record_order]
+    ),
+    (
+      snow_year
+      .drop(['rank'], axis=1)
+      .query(f"rank_wettest<={records_top_N}")
+      .assign(record='most_snow_year')
+      .rename({'total': 'metric_value', 'year_for_dash': 'date', 'rank_wettest': 'rank'}, axis=1)[record_order]\
+    ),
+    rain_year,
+  ]).sort_values(['record', 'rank'])
+
+precip_records_nodaily = compute_monthly_precip_records(10)
 precip_records = compute_daily_precip_records(precip, 15)
+curr_precip_month = precip['date'].max().strftime('%b')
 dashboard_tables = {
   "rain": [
-    generic_data_table(precip_records.query("record == 'rainiest day'"), clean_table=True, metric_value='rain'),
-    generic_data_table(precip_records.query("record == 'rainiest day (Oct)'"), clean_table=True, metric_value='rain'),
-    generic_data_table(precip_records.query("record == 'consecutive_days_dry'"), clean_table=True, metric_value='days'),
+    generic_data_table(precip_records.query("record == 'rainiest day'"), id='rain_day' ,clean_table=True, metric_value='rain (in)'),
+    generic_data_table(precip_records.query(f"record == 'rainiest day ({curr_precip_month})'"), id='rain_day_month', clean_table=True, metric_value='rain (in)'),
+    generic_data_table(precip_records.query("record == 'consecutive_days_dry'"), id='dry_day', clean_table=True, metric_value='days'),
   ],
-
+  "snow": [
+    generic_data_table(precip_records.query("record == 'snowiest day'"), id='snow_day', clean_table=True, metric_value='snow (in)'),
+    generic_data_table(precip_records.query(f"record == 'snowiest day ({curr_precip_month})'"), id='snow_day_month', clean_table=True, metric_value='snow (in)'),
+    generic_data_table(precip_records.query("record == 'earliest_snow'"), id='early_snow', clean_table=True, metric_value='snow (in)'),
+    generic_data_table(precip_records.query("record == 'latest_snow'"), id='late_snow', clean_table=True, metric_value='snow (in)'),
+  ],
+  "precip_nondaily": [
+    generic_data_table(precip_records_nodaily.query("record == 'rainiest_month'"), id='rain_month', clean_table=True, metric_value='rain (in)'),
+    generic_data_table(precip_records_nodaily.query("record == 'snowiest_month'"), id='snow_month', clean_table=True, metric_value='snow (in)'),
+    generic_data_table(precip_records_nodaily.query("record == 'most_rain_year'"), id='rain_year', clean_table=True, metric_value='rain (in)'),
+    generic_data_table(precip_records_nodaily.query("record == 'most_snow_year'"), id='snow_year', clean_table=True, metric_value='snow (in)'),
+    generic_data_table(precip_records_nodaily.query("record == 'driest_month'"), id='dry_month', clean_table=True, metric_value='precip (in)'),
+    generic_data_table(precip_records_nodaily.query("record == 'least_snow_year'"), id='dry_snow', clean_table=True, metric_value='precip (in)'),
+  ]
 }
-
-
-precip_records.groupby('record').agg({"record": 'count'})
-
-# rainest day (all), rainiest day (oct), consecutive dry days
 
 # Temperature Figure
 fig = go.Figure()
@@ -893,26 +977,61 @@ app.layout = dbc.Container([
       dbc.Row([
         dbc.Col([
           html.H4("Rainest Day (all time)", style={'textAlign': 'center', 'marginBottom': '10px'})
-        ], width=4),
+        ], width=3),
         dbc.Col([
-          html.H4("Rainiest Day in October", style={'textAlign': 'center', 'marginBottom': '10px'})
-        ], width=4),
+          html.H4(f"Rainiest Day ({curr_precip_month})", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
         dbc.Col([
           html.H4("Consecutive dry days", style={'textAlign': 'center', 'marginBottom': '10px'})
-        ], width=4),        
+        ], width=3),        
       ]),
       dbc.Row([
-        dbc.Col([
-          dashboard_tables['rain'][0]
-        ], width=4),
-        dbc.Col([
-          dashboard_tables['rain'][1]
-        ], width=4),
-        dbc.Col([
-          dashboard_tables['rain'][2]
-        ], width=4),
+        dbc.Col(dashboard_tables['rain'][0], width=3),
+        dbc.Col(dashboard_tables['rain'][1], width=3),
+        dbc.Col(dashboard_tables['rain'][2], width=3),
       ]),
-      
+      dbc_row_col(html.Div("Snow Records", style={'fontSize': 24})),
+      dbc.Row([
+        dbc.Col([
+          html.H4("Snowiest Day (all time)", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Snowiest Day ({curr_precip_month})", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4("Earliest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4("Latest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),           
+      ]),
+      dbc.Row([
+        dbc.Col(dashboard_tables['snow'][0], width=3),
+        dbc.Col(dashboard_tables['snow'][1], width=3),
+        dbc.Col(dashboard_tables['snow'][2], width=3),
+        dbc.Col(dashboard_tables['snow'][3], width=3),
+      ]),
+      dbc_row_col(html.Div("Precip Monthly Records", style={'fontSize': 24})),
+      dbc.Row([
+        dbc.Col([
+          html.H4("Rainiest Month", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Snowiest Month", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4("Rainiest Year", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4("Snowiest Season", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+      ]),
+      dbc.Row([
+        dbc.Col(dashboard_tables['precip_nondaily'][0], width=3),
+        dbc.Col(dashboard_tables['precip_nondaily'][1], width=3),
+        dbc.Col(dashboard_tables['precip_nondaily'][2], width=3),
+        dbc.Col(dashboard_tables['precip_nondaily'][3], width=3),
+      ]),      
       dbc_row_col(html.Div("Temperature Records", style={'fontSize': 24})),
     ]),
     dcc.Tab(label='Trend', children=[]),
@@ -1493,4 +1612,4 @@ def update_monthly_precip_total(metric_chosen):
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True, port=8052)
+    app.run(debug=True, port=8053)
