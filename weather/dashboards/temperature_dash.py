@@ -7,6 +7,7 @@ import plotly.io as pio
 import plotly.graph_objects as go
 from datetime import date
 from plotly_calplot import calplot
+import statsmodels.api as sm
 import os
 
 
@@ -59,12 +60,14 @@ precip_colors = [
 ]
 
 # Code to generate dashboard style tables
-def generic_data_table(df, id, page_size=10, clean_table=False, metric_value=None):
+def generic_data_table(df, id, page_size=10, clean_table=False, metric_value=None, decimal_places=2):
   if clean_table:
     df = (
-      df[['rank','date', 'metric_value']]
+      df
+      [['rank','date', 'metric_value']]
       .rename({'metric_value': metric_value}, axis=1)
     )
+    df[metric_value] = round(df[metric_value], decimal_places)
   
   return (
     html.Div([
@@ -123,13 +126,6 @@ month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'O
 temps['month'] = pd.Categorical(temps['date'].dt.strftime('%b'), categories=month_order, ordered=True)
 
 temps_full = temps.merge(normals.drop(columns=['month'], axis=1), on='day_of_year', how='left', suffixes=('', '_y'))
-
-recent = temps_full[temps_full['date'] >= '2020-01-01']
-
-record_highs = recent[recent['high_rank'] == 1.0]
-record_lows = recent[recent['low_rank'] == 1.0]
-high_min = recent[recent['low_rank'] == recent['low_rank'].max()]
-low_max = recent[recent['high_rank'] == recent['high_rank'].max()]
 
 sunrise_sunset_clean = (
   sunrise_sunset[sunrise_sunset['time'].dt.year == 2024]
@@ -432,9 +428,6 @@ precip_rank['rank'] = (
     .astype(int)
 )
 
-
-
-
 # Records
 # Rainiest day (all time)
 # Snowiest day (all time)
@@ -608,251 +601,46 @@ precip_records_nodaily = compute_monthly_precip_records(10)
 precip_records = compute_daily_precip_records(precip, 15)
 curr_precip_month = precip['date'].max().strftime('%b')
 dashboard_tables = {
-  "rain": [
-    generic_data_table(precip_records.query("record == 'rainiest day'"), id='rain_day' ,clean_table=True, metric_value='rain (in)'),
-    generic_data_table(precip_records.query(f"record == 'rainiest day ({curr_precip_month})'"), id='rain_day_month', clean_table=True, metric_value='rain (in)'),
-    generic_data_table(precip_records.query("record == 'consecutive_days_dry'"), id='dry_day', clean_table=True, metric_value='days'),
-  ],
-  "snow": [
-    generic_data_table(precip_records.query("record == 'snowiest day'"), id='snow_day', clean_table=True, metric_value='snow (in)'),
-    generic_data_table(precip_records.query(f"record == 'snowiest day ({curr_precip_month})'"), id='snow_day_month', clean_table=True, metric_value='snow (in)'),
-    generic_data_table(precip_records.query("record == 'earliest_snow'"), id='early_snow', clean_table=True, metric_value='snow (in)'),
-    generic_data_table(precip_records.query("record == 'latest_snow'"), id='late_snow', clean_table=True, metric_value='snow (in)'),
-  ],
-  "precip_nondaily": [
-    generic_data_table(precip_records_nodaily.query("record == 'rainiest_month'"), id='rain_month', clean_table=True, metric_value='rain (in)'),
-    generic_data_table(precip_records_nodaily.query("record == 'snowiest_month'"), id='snow_month', clean_table=True, metric_value='snow (in)'),
-    generic_data_table(precip_records_nodaily.query("record == 'most_rain_year'"), id='rain_year', clean_table=True, metric_value='rain (in)'),
-    generic_data_table(precip_records_nodaily.query("record == 'most_snow_year'"), id='snow_year', clean_table=True, metric_value='snow (in)'),
-    generic_data_table(precip_records_nodaily.query("record == 'driest_month'"), id='dry_month', clean_table=True, metric_value='precip (in)'),
-    generic_data_table(precip_records_nodaily.query("record == 'least_snow_year'"), id='dry_snow', clean_table=True, metric_value='precip (in)'),
-  ]
+  "rain_day": generic_data_table(precip_records.query("record == 'rainiest day'"), id='rain_day' ,clean_table=True, metric_value='rain (in)'),
+  'rain_day_month': generic_data_table(precip_records.query(f"record == 'rainiest day ({curr_precip_month})'"), id='rain_day_month', clean_table=True, metric_value='rain (in)'),
+  'dry_day': generic_data_table(precip_records.query("record == 'consecutive_days_dry'"), id='dry_day', clean_table=True, metric_value='days'),
+  'snow_day' : generic_data_table(precip_records.query("record == 'snowiest day'"), id='snow_day', clean_table=True, metric_value='snow (in)'),
+  'snow_day_month' : generic_data_table(precip_records.query(f"record == 'snowiest day ({curr_precip_month})'"), id='snow_day_month', clean_table=True, metric_value='snow (in)'),
+  'snow_early' : generic_data_table(precip_records.query("record == 'earliest_snow'"), id='snow_early', clean_table=True, metric_value='snow (in)'),
+  'snow_late' : generic_data_table(precip_records.query("record == 'latest_snow'"), id='snow_late', clean_table=True, metric_value='snow (in)'),
+  'rain_month' : generic_data_table(precip_records_nodaily.query("record == 'rainiest_month'"), id='rain_month', clean_table=True, metric_value='rain (in)'),
+  'snow_month' : generic_data_table(precip_records_nodaily.query("record == 'snowiest_month'"), id='snow_month', clean_table=True, metric_value='snow (in)'),
+  'rain_year' : generic_data_table(precip_records_nodaily.query("record == 'most_rain_year'"), id='rain_year', clean_table=True, metric_value='rain (in)'),
+  'snow_year' : generic_data_table(precip_records_nodaily.query("record == 'most_snow_year'"), id='snow_year', clean_table=True, metric_value='snow (in)'),
+  'dry_month' : generic_data_table(precip_records_nodaily.query("record == 'driest_month'"), id='dry_month', clean_table=True, metric_value='precip (in)'),
+  'dry_snow' : generic_data_table(precip_records_nodaily.query("record == 'least_snow_year'"), id='dry_snow', clean_table=True, metric_value='precip (in)'),
 }
 
-# Temperature Figure
-fig = go.Figure()
-# Total Temp
-fig.add_bar(
-    x=recent['date'],
-    y=recent['range'],
-    base=recent['min_temp'],  # This sets the starting point of each bar
-    marker_color='red',
-    name='Observed Temperature',
-    customdata=recent[['normal_high', 'normal_low']],
-    hovertemplate=(
-      '<b>Date:</b> %{x}<br><br>' +
-      '<b>Observed High:</b> %{y}°F<br>' +
-      '<b>Observed Low:</b> %{base}°F<br>' + 
-      '<b>Normal High:</b> %{customdata[0]}°F<br>' +
-      '<b>Normal Low:</b> %{customdata[1]}°F<br>' +
-      '<extra></extra>'  # Removes the default trace info
+yearly_trend_metrics = pd.concat([
+  (
+    monthly_map
+    .query("month == 'Year'")
+    .rename({'mean': 'total', "metric": 'metric_name'}, axis=1)
+    [['metric_name', 'year', 'total', 'rank']]
+  ),
+  (
+    precip_rank
+    .query("month == 'Year'")
+    .query("year_type in ('water_year')")
+    .rename({'year_for_dash': 'year'}, axis=1)
+    [['metric_name', 'year', 'total', 'rank']]
   )
-)
-fig.add_trace(
-    go.Scatter(
-        x=recent['date'], y=recent['normal_temp'], mode='lines', name='Seasonal Normal',
-        line=dict(color='darkred', width=3)
-    ),
-)
-fig.add_trace(
-    go.Scatter(
-        x=recent['date'], y=recent['min_temp_p10'], mode='lines', name='10th percentile Low',
-        line=dict(color='blue', width=1, dash='dot')
-    ),
-)
-fig.add_trace(
-    go.Scatter(
-        x=recent['date'], y=recent['max_temp_p90'], mode='lines', name='90th Percentile High',
-        line=dict(color='red', width=1, dash='dot')
-    ),
-)
-fig.add_trace(
-    go.Scatter(
-        x=list(recent['date']) + list(recent['date'])[::-1],
-        y=list(recent['normal_high']) + list(recent['normal_low'])[::-1],
-        fill='toself',
-        fillcolor='rgba(125,125,125,0.25)', 
-        line_color='rgba(255,255,255,0)',
-        showlegend=True,
-        name='Normal',
-        hoverinfo="skip",
-    ),
-)
-fig.add_trace(
-    go.Scatter(
-        x=record_highs['date'],
-        y=record_highs['max_temp'],
-        mode='markers',
-        marker=dict(color='darkred', size=8, symbol='diamond'),
-        name='Record High'
-    )
-)
+])
 
-fig.add_trace(
-    go.Scatter(
-        x=record_lows['date'],
-        y=record_lows['min_temp'],
-        mode='markers',
-        marker=dict(color='blue', size=8, symbol='diamond'),
-        name='Record Low'
-    )
-)
-fig.add_trace(
-    go.Scatter(
-        x=low_max['date'],
-        y=low_max['max_temp'],
-        mode='markers',
-        marker=dict(color='royalblue', size=6, symbol='square'),
-        name='Coldest High'
-    )
-)
-fig.add_trace(
-    go.Scatter(
-        x=high_min['date'],
-        y=high_min['min_temp'],
-        mode='markers',
-        marker=dict(color='mediumvioletred', size=6, symbol='square'),
-        name='Warmest Low'
-    )
-)
 
-# Add titles / figsize
-fig.update_layout(title="Daily Observed Temperature", xaxis_title='Date', yaxis_title='Temperature (°F)', height=1000, template='plotly_dark')
-# Add Slider bar and buttons for year
-fig.update_layout(
-    xaxis=dict(
-        rangeselector=dict(
-            buttons=list([
-                dict(count=3,
-                     label="3m",
-                     step="month",
-                     stepmode="backward"),
-                dict(count=6,
-                     label="6m",
-                     step="month",
-                     stepmode="backward"),
-                dict(count=1,
-                     label="YTD",
-                     step="year",
-                     stepmode="todate"),
-                dict(count=1,
-                     label="1y",
-                     step="year",
-                     stepmode="backward"),
-                dict(step="all")
-            ]),
-            bgcolor='black',
-            activecolor='darkred',
-        ),
-        rangeslider=dict(
-            visible=True
-        ),
-        type="date",
-        range=[recent['date'].max() - pd.DateOffset(months=6), recent['date'].max() + pd.DateOffset(days=1)],
-    ),
-    template='plotly_dark',
-)
-
-# Monthly Avg Figure
-def monthly_avg_temp():
-  fig = go.Figure()
-  # Total Temp
-  fig.add_bar(
-      x=month_avgs['month'],
-      y=month_avgs['normal_high'] - month_avgs['normal_low'],
-      base=month_avgs['normal_low'],  # This sets the starting point of each bar
-      marker_color='red',
-      name='Normal',
-      customdata=month_avgs[['record_high', 'record_low', 'record_high_year', 'record_low_year']],
-      text = month_avgs['normal_high'].astype(str) + '°F',
-      textposition='inside',
-      hovertemplate=(
-        '<b>Month:</b> %{x}<br>' +
-        '<b>Avg High:</b> %{y}°F<br>' +
-        '<b>Avg Low:</b> %{base}°F<br>' + 
-        '<b>Record High:</b> %{customdata[0]}°F (%{customdata[2]})<br>' +
-        '<b>Record Low:</b> %{customdata[1]}°F (%{customdata[3]})<br>' +
-        '<extra></extra>'
-    )
-  )
-  for i in range(month_avgs.shape[0]):
-    fig.add_annotation(
-        x=month_avgs['month'][i],
-        y=month_avgs['normal_low'][i],
-        text=(month_avgs['normal_low'].astype(str) + '°F').tolist()[i],
-        showarrow=False,
-        yshift=10,  # Adjust vertical position above the bar
-    )
-  fig.add_trace(
-      go.Scatter(
-          x=month_avgs['month'], y=month_avgs['record_high'], mode='lines+markers+text', name='Record High', text=month_avgs['record_high'],
-          customdata=month_avgs[['record_high_year']],
-          hovertemplate='Record High: %{y}°F (%{customdata[0]})<extra></extra>',
-          line=dict(color='darkred', width=3)
-      ),
-  )
-  fig.add_trace(
-      go.Scatter(
-          x=month_avgs['month'], y=month_avgs['record_low'], mode='lines+markers+text', name='Record Low', text=month_avgs['record_low'],
-          customdata=month_avgs[['record_low_year']],
-          hovertemplate='Record Low: %{y}°F (%{customdata[0]})<extra></extra>',
-          line=dict(color='royalblue', width=3)
-      ),
-  )
-  fig.add_trace(
-      go.Scatter(
-          x=list(month_avgs['month']) + list(month_avgs['month'])[::-1],
-          y=list(month_avgs['max_temp_p90']) + list(month_avgs['min_temp_p10'])[::-1],
-          fill='toself',
-          fillcolor='rgba(125,125,125,0.25)', 
-          line_color='rgba(255,255,255,0)',
-          showlegend=True,
-          name='10-90th percentile',
-          hoverinfo="skip",
-      ),
-  )
-  fig.add_vline(
-      x=today.strftime("%b"),
-      line_width=2,
-      line_dash="dash",
-      line_color='rgba(125,125,125,0.25)',
-  )
-  fig.update_layout(
-    xaxis_title='Month', 
-    yaxis_title='Temperature (°F)',
-    paper_bgcolor='#333333', # figure
-    plot_bgcolor="#222222", # plot area
-  )
-  return fig
-
+# LAYOUT -------------------------------------------------------------------------
 dbc_row_col = lambda x, width=12: dbc.Row(children=[dbc.Col([x], width=width)])
 first_col_width = 7
 
 # Dash layout
 app.layout = dbc.Container([
   dbc.Tabs([
-    dcc.Tab(label='Temperature', children=[
-      dbc.Row([
-        html.Div("Temperature Dashboard")
-      ]),
-      dbc.Row([
-        dcc.Graph(figure=fig, id='observed_temp_line')
-      ]),
-    ]),
-    dcc.Tab(label='Departure from Normal', children = [
-      dbc_row_col(html.Div("Select metric for heatmaps:"), width=first_col_width),
-      dbc_row_col(
-        dcc.Dropdown(
-          options={
-            'max_temp': 'High Temperature',
-            'min_temp':'Low Temperature', 
-            'avg_temp': 'Mean Temperature',
-          },
-          value='max_temp',
-          style={"color": "#000000"},
-          id='daily_heatmap_dropdown',
-        ), width=first_col_width
-      ),
+    dcc.Tab(label='Temperature', children = [
       dbc_row_col(html.Div("Select start for 5-year range (daily only):"), width=first_col_width),
       dbc_row_col(
           dcc.Slider(
@@ -865,6 +653,23 @@ app.layout = dbc.Container([
               tooltip={"placement": "bottom", "always_visible": True},
               included=False,
           ), width=first_col_width         
+      ),
+      dbc_row_col(html.Div(children="Daily Observed Temperature", style={'fontSize': 24})),
+      dbc.Row([
+        dcc.Graph(figure={}, id='daily_temperature_bar')
+      ]),
+      dbc_row_col(html.Div("Select metric for heatmaps:"), width=first_col_width),
+      dbc_row_col(
+        dcc.Dropdown(
+          options={
+            'max_temp': 'High Temperature',
+            'min_temp':'Low Temperature', 
+            'avg_temp': 'Mean Temperature',
+          },
+          value='max_temp',
+          style={"color": "#000000"},
+          id='daily_heatmap_dropdown',
+        ), width=first_col_width
       ),
       dbc.Row([
         dbc.Col([
@@ -879,12 +684,12 @@ app.layout = dbc.Container([
           dcc.Graph(figure={}, id='calendar_heatmap')
         ], width=first_col_width),
         dbc.Col([
-          dcc.Graph(figure=monthly_avg_temp(), id='monthly_avg_temp')
+          dcc.Graph(figure={}, id='monthly_avg_temp')
         ], width=12-first_col_width),
       ]),
-      dbc_row_col(html.Div("Monthly Temperature Rank (1 = Coldest)", style={'fontSize': 24}), width=first_col_width),
+      dbc_row_col(html.Div("Monthly Temperature Rank (1 = Coldest)", style={'fontSize': 24})),
       dbc_row_col(
-        dcc.Graph(figure={}, id='monthly_temp_heatmap'), width=first_col_width
+        dcc.Graph(figure={}, id='monthly_temp_heatmap')
       ),
     ]),
     dcc.Tab(label='Hourly', children=[
@@ -982,13 +787,17 @@ app.layout = dbc.Container([
           html.H4(f"Rainiest Day ({curr_precip_month})", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
         dbc.Col([
-          html.H4("Consecutive dry days", style={'textAlign': 'center', 'marginBottom': '10px'})
-        ], width=3),        
+          html.H4("Rainiest Months", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4("Rainiest Years", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
       ]),
       dbc.Row([
-        dbc.Col(dashboard_tables['rain'][0], width=3),
-        dbc.Col(dashboard_tables['rain'][1], width=3),
-        dbc.Col(dashboard_tables['rain'][2], width=3),
+        dbc.Col(dashboard_tables['rain_day'], width=3),
+        dbc.Col(dashboard_tables['rain_day_month'], width=3),
+        dbc.Col(dashboard_tables['rain_month'], width=3),
+        dbc.Col(dashboard_tables['rain_year'], width=3),
       ]),
       dbc_row_col(html.Div("Snow Records", style={'fontSize': 24})),
       dbc.Row([
@@ -999,52 +808,288 @@ app.layout = dbc.Container([
           html.H4(f"Snowiest Day ({curr_precip_month})", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
         dbc.Col([
-          html.H4("Earliest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+          html.H4("Snowiest Month", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
         dbc.Col([
-          html.H4("Latest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+          html.H4("Snowiest Year", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),           
       ]),
       dbc.Row([
-        dbc.Col(dashboard_tables['snow'][0], width=3),
-        dbc.Col(dashboard_tables['snow'][1], width=3),
-        dbc.Col(dashboard_tables['snow'][2], width=3),
-        dbc.Col(dashboard_tables['snow'][3], width=3),
+        dbc.Col(dashboard_tables['snow_day'], width=3),
+        dbc.Col(dashboard_tables['snow_day_month'], width=3),
+        dbc.Col(dashboard_tables['snow_month'], width=3),
+        dbc.Col(dashboard_tables['snow_year'], width=3),
       ]),
-      dbc_row_col(html.Div("Precip Monthly Records", style={'fontSize': 24})),
+      dbc_row_col(html.Div("Dry Records", style={'fontSize': 24})),
       dbc.Row([
         dbc.Col([
-          html.H4("Rainiest Month", style={'textAlign': 'center', 'marginBottom': '10px'})
+          html.H4("Days without rain/snow", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
         dbc.Col([
-          html.H4(f"Snowiest Month", style={'textAlign': 'center', 'marginBottom': '10px'})
+          html.H4(f"Driest Month", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
         dbc.Col([
-          html.H4("Rainiest Year", style={'textAlign': 'center', 'marginBottom': '10px'})
-        ], width=3),
-        dbc.Col([
-          html.H4("Snowiest Season", style={'textAlign': 'center', 'marginBottom': '10px'})
+          html.H4("Driest Snow Year", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
       ]),
       dbc.Row([
-        dbc.Col(dashboard_tables['precip_nondaily'][0], width=3),
-        dbc.Col(dashboard_tables['precip_nondaily'][1], width=3),
-        dbc.Col(dashboard_tables['precip_nondaily'][2], width=3),
-        dbc.Col(dashboard_tables['precip_nondaily'][3], width=3),
+        dbc.Col(dashboard_tables['dry_day'], width=3),
+        dbc.Col(dashboard_tables['dry_month'], width=3),
+        dbc.Col(dashboard_tables['dry_snow'], width=3),
       ]),      
+      dbc_row_col(html.Div("Frost/Freeze Records", style={'fontSize': 24})),
+      dbc.Row([
+        dbc.Col([
+          html.H4("Earliest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Latest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+      ]),
+      dbc.Row([
+        dbc.Col(dashboard_tables['snow_early'], width=3),
+        dbc.Col(dashboard_tables['snow_late'], width=3),
+      ]),
       dbc_row_col(html.Div("Temperature Records", style={'fontSize': 24})),
     ]),
-    dcc.Tab(label='Trend', children=[]),
+    dcc.Tab(label='Trend', children=[
+      dbc_row_col(
+        dcc.Dropdown(
+          options=list(yearly_trend_metrics['metric_name'].unique()),
+          value='precip',
+          style={"color": "#000000"},
+          id='yearly_trend_dropdown',
+        ),
+      ),
+      dbc_row_col(html.Div("Yearly Trend", style={'fontSize': 24})),
+      dbc_row_col(dcc.Graph(figure={}, id='yearly_trend')),
+    ]),
   ]),
 ], fluid=True)
 
 # Callbacks
 
+# Temperature Figure
+@callback(
+    Output(component_id='daily_temperature_bar', component_property='figure'),
+    Input(component_id='heatmap-year-slider', component_property='value')    
+)
+def update_temperature_chart(start_year):
+
+  recent = temps_full[
+    temps_full['date'].between(f'{start_year}-01-01', f"{start_year+4}-12-31'")
+  ]
+  record_highs = recent[recent['high_rank'] == 1.0]
+  record_lows = recent[recent['low_rank'] == 1.0]
+  high_min = recent[recent['low_rank'] == recent['low_rank'].max()]
+  low_max = recent[recent['high_rank'] == recent['high_rank'].max()]
+  
+  fig = go.Figure()
+  # Total Temp
+  fig.add_bar(
+      x=recent['date'],
+      y=recent['range'],
+      base=recent['min_temp'],  # This sets the starting point of each bar
+      marker_color='red',
+      name='Observed Temperature',
+      customdata=recent[['normal_high', 'normal_low']],
+      hovertemplate=(
+        '<b>Date:</b> %{x}<br><br>' +
+        '<b>Observed High:</b> %{y}°F<br>' +
+        '<b>Observed Low:</b> %{base}°F<br>' + 
+        '<b>Normal High:</b> %{customdata[0]}°F<br>' +
+        '<b>Normal Low:</b> %{customdata[1]}°F<br>' +
+        '<extra></extra>'  # Removes the default trace info
+    )
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=recent['date'], y=recent['normal_temp'], mode='lines', name='Seasonal Normal',
+          line=dict(color='darkred', width=3)
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=recent['date'], y=recent['min_temp_p10'], mode='lines', name='10th percentile Low',
+          line=dict(color='royalblue', width=1, dash='dot')
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=recent['date'], y=recent['max_temp_p90'], mode='lines', name='90th Percentile High',
+          line=dict(color='red', width=1, dash='dot')
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=list(recent['date']) + list(recent['date'])[::-1],
+          y=list(recent['normal_high']) + list(recent['normal_low'])[::-1],
+          fill='toself',
+          fillcolor='rgba(125,125,125,0.25)', 
+          line_color='rgba(255,255,255,0)',
+          showlegend=True,
+          name='Normal',
+          hoverinfo="skip",
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=record_highs['date'],
+          y=record_highs['max_temp'],
+          mode='markers',
+          marker=dict(color='darkred', size=8, symbol='diamond'),
+          name='Record High'
+      )
+  )
+
+  fig.add_trace(
+      go.Scatter(
+          x=record_lows['date'],
+          y=record_lows['min_temp'],
+          mode='markers',
+          marker=dict(color='rgb(0,75,255)', size=8, symbol='diamond'),
+          name='Record Low'
+      )
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=low_max['date'],
+          y=low_max['max_temp'],
+          mode='markers',
+          marker=dict(color='skyblue', size=6, symbol='square'),
+          name='Coldest High'
+      )
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=high_min['date'],
+          y=high_min['min_temp'],
+          mode='markers',
+          marker=dict(color='mediumvioletred', size=6, symbol='square'),
+          name='Warmest Low'
+      )
+  )
+
+  # Add titles / figsize
+  fig.update_layout(xaxis_title='Date', yaxis_title='Temperature (°F)', height=1000, template='plotly_dark')
+  # Add Slider bar and buttons for year
+  fig.update_layout(
+      xaxis=dict(
+          rangeselector=dict(
+              buttons=list([
+                  dict(count=3,
+                      label="3m",
+                      step="month",
+                      stepmode="backward"),
+                  dict(count=6,
+                      label="6m",
+                      step="month",
+                      stepmode="backward"),
+                  dict(count=1,
+                      label="YTD",
+                      step="year",
+                      stepmode="todate"),
+                  dict(count=1,
+                      label="1y",
+                      step="year",
+                      stepmode="backward"),
+                  dict(step="all")
+              ]),
+              bgcolor='black',
+              activecolor='darkred',
+          ),
+          rangeslider=dict(
+              visible=True
+          ),
+          type="date",
+          range=[recent['date'].max() - pd.DateOffset(months=6), recent['date'].max() + pd.DateOffset(days=1)],
+      ),
+      template='plotly_dark',
+  )
+  return fig
+
+# Monthly Avg Figure
+@callback(
+    Output(component_id='monthly_avg_temp', component_property='figure'),
+    Input(component_id='daily_heatmap_dropdown', component_property='value'),   
+)
+def monthly_avg_temp(placeholder):
+  fig = go.Figure()
+  # Total Temp
+  fig.add_bar(
+      x=month_avgs['month'],
+      y=month_avgs['normal_high'] - month_avgs['normal_low'],
+      base=month_avgs['normal_low'],  # This sets the starting point of each bar
+      marker_color='red',
+      name='Normal',
+      customdata=month_avgs[['record_high', 'record_low', 'record_high_year', 'record_low_year']],
+      text = month_avgs['normal_high'].astype(str) + '°F',
+      textposition='inside',
+      hovertemplate=(
+        '<b>Month:</b> %{x}<br>' +
+        '<b>Avg High:</b> %{y}°F<br>' +
+        '<b>Avg Low:</b> %{base}°F<br>' + 
+        '<b>Record High:</b> %{customdata[0]}°F (%{customdata[2]})<br>' +
+        '<b>Record Low:</b> %{customdata[1]}°F (%{customdata[3]})<br>' +
+        '<extra></extra>'
+    )
+  )
+  for i in range(month_avgs.shape[0]):
+    fig.add_annotation(
+        x=month_avgs['month'][i],
+        y=month_avgs['normal_low'][i],
+        text=(month_avgs['normal_low'].astype(str) + '°F').tolist()[i],
+        showarrow=False,
+        yshift=10,  # Adjust vertical position above the bar
+    )
+  fig.add_trace(
+      go.Scatter(
+          x=month_avgs['month'], y=month_avgs['record_high'], mode='lines+markers+text', name='Record High', text=month_avgs['record_high'],
+          customdata=month_avgs[['record_high_year']],
+          hovertemplate='Record High: %{y}°F (%{customdata[0]})<extra></extra>',
+          line=dict(color='darkred', width=3)
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=month_avgs['month'], y=month_avgs['record_low'], mode='lines+markers+text', name='Record Low', text=month_avgs['record_low'],
+          customdata=month_avgs[['record_low_year']],
+          hovertemplate='Record Low: %{y}°F (%{customdata[0]})<extra></extra>',
+          line=dict(color='royalblue', width=3)
+      ),
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=list(month_avgs['month']) + list(month_avgs['month'])[::-1],
+          y=list(month_avgs['max_temp_p90']) + list(month_avgs['min_temp_p10'])[::-1],
+          fill='toself',
+          fillcolor='rgba(125,125,125,0.25)', 
+          line_color='rgba(255,255,255,0)',
+          showlegend=True,
+          name='10-90th percentile',
+          hoverinfo="skip",
+      ),
+  )
+  fig.add_vline(
+      x=today.strftime("%b"),
+      line_width=2,
+      line_dash="dash",
+      line_color='rgba(125,125,125,0.25)',
+  )
+  fig.update_layout(
+    xaxis_title='Month', 
+    yaxis_title='Temperature (°F)',
+    paper_bgcolor='#333333', # figure
+    plot_bgcolor="#222222", # plot area
+  )
+  return fig
+
+
 # Daily Heatmap
 @callback(
     Output(component_id='calendar_heatmap', component_property='figure'),
     Input(component_id='daily_heatmap_dropdown', component_property='value'),
-    Input(component_id='heatmap-year-slider', component_property='value')
+    Input(component_id='heatmap-year-slider', component_property='value'),
 )
 def update_graph(metric_chosen, year_start):
 
@@ -1608,6 +1653,65 @@ def update_monthly_precip_total(metric_chosen):
     plot_bgcolor="#222222"
   )
 
+  return fig
+
+@callback(
+    Output(component_id='yearly_trend', component_property='figure'),
+    Input(component_id='yearly_trend_dropdown', component_property='value'),
+)
+def yearly_trend(metric):
+  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'")
+  to_display['year'] = pd.to_numeric(to_display['year'], errors='coerce')
+  fig=go.Figure()
+  fig.add_trace(
+    go.Bar(
+      x=to_display['year'],
+      y=to_display['total'],
+      name=metric,
+    )
+  )
+
+  X = sm.add_constant(to_display['year'] - to_display['year'].min())  # Add intercept
+  y = to_display['total']
+  avg_line = y.mean()
+
+  # Fit the model
+  model = sm.OLS(y, X)
+  model_res = model.fit()
+  lm_fit = model_res.predict(X)
+  slope = model_res.params['year']
+  slope_pvalue = model_res.pvalues['year']
+  line_text = f'Slope: {slope:.4f}/year, p-value: {slope_pvalue:.4f}{"*" if slope_pvalue < 0.01 else ""}' 
+
+  fig.add_hline(
+      y=avg_line,
+      line=dict(color='blue', width=1.5, dash='dash'),  # Customize the line color, width, and style
+      annotation_text=f"Avg: {avg_line:.2f}",  # Add a label for the line
+      annotation_position="top left",  # Position the label
+  )
+  fig.add_trace(
+      go.Scatter(
+          x=to_display['year'],
+          y=lm_fit,  # Evaluate the trend line at each x value
+          mode='lines',
+          name='Linear Trend',
+          line=dict(color='red', width=2, dash='dot'),
+      )
+  )
+  # Add a label for the Linear Trend line
+  fig.add_annotation(
+      x=to_display['year'].mean(),  # Place the label at the end of the trend line
+      y=y.max()*1.10,  # Corresponding y-value at the end of the trend line
+      text=line_text,  # Text to display
+      showarrow=False,  # Show an arrow pointing to the trend line
+      font=dict(color='red', size=24),  # Customize font color and size
+      align="left",  # Align text to the left
+      bgcolor="rgba(255, 255, 255, 0.8)",  # Add a semi-transparent background to the text
+      bordercolor='red',
+  )
+  fig.update_layout(
+    height=600,
+  )
   return fig
 
 # Run the app
