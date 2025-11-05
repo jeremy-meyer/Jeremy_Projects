@@ -135,7 +135,6 @@ sunrise_sunset_clean['sunset_hr'] = sunrise_sunset_clean['sunset'].apply(str_to_
 sunrise_sunset_clean['sunrise_hr'] = sunrise_sunset_clean['sunrise'].apply(str_to_decimal_hr)
 sunrise_sunset_clean['day_of_year'] = sunrise_sunset_clean['date'].apply(gen_DoY_index)
 
-
 # Monthly Heatmap Data
 max_date = temps_full['date'].max()
 if max_date != max_date + pd.offsets.MonthEnd(0):
@@ -616,6 +615,27 @@ dashboard_tables = {
   'dry_snow' : generic_data_table(precip_records_nodaily.query("record == 'least_snow_year'"), id='dry_snow', clean_table=True, metric_value='precip (in)'),
 }
 
+# Temp year records
+temp_year_records = (
+  temps_full
+  .assign(
+    degree_100=lambda x: (x.max_temp >= 100)*1,
+    frost_days=lambda x: (x.min_temp <= 32)*1,
+  )
+  .groupby(['year'])
+  .agg(
+    full_max=('max_temp', 'max'),
+    full_min=('min_temp', 'min'),
+    days_100=('degree_100', 'sum'),
+    frost_days=('frost_days', 'sum'),
+  )
+  .reset_index()
+  .melt(['year'], ['full_max', 'full_min', 'days_100', 'frost_days'], 'metric_name', 'total')
+  .assign(rank=lambda x: x.groupby('metric_name')['total'].rank(method='min', ascending=False))
+  .query(f"year < {max_date.year}")
+)
+
+
 yearly_trend_metrics = pd.concat([
   (
     monthly_map
@@ -629,9 +649,11 @@ yearly_trend_metrics = pd.concat([
     .query("year_type in ('water_year')")
     .rename({'year_for_dash': 'year'}, axis=1)
     [['metric_name', 'year', 'total', 'rank']]
-  )
+  ),
+  temp_year_records[['metric_name', 'year', 'total', 'rank']],
 ])
 
+# cloud_cover, pressure, dew, humididy, wind
 
 # LAYOUT -------------------------------------------------------------------------
 dbc_row_col = lambda x, width=12: dbc.Row(children=[dbc.Col([x], width=width)])
@@ -692,35 +714,6 @@ app.layout = dbc.Container([
         dcc.Graph(figure={}, id='monthly_temp_heatmap')
       ),
     ]),
-    dcc.Tab(label='Hourly', children=[
-      dbc_row_col(html.Div("Select metric for hourly plots:")),
-      dbc_row_col(
-        dcc.Dropdown(
-          options=hourly_metrics_pretty,
-          value='temp',
-          style={"color": "#000000"},
-          id='hourly_monthly_input',
-        )
-      ),
-      dbc_row_col(html.Div("Hourly Average by Month", style={'fontSize': 24})),
-      dbc_row_col(dcc.Graph(figure={}, id='hourly_monthly_scatter')),
-      dbc_row_col(html.Div("30-Year Hourly Average", style={'fontSize': 24})),      
-      dbc_row_col(dcc.Graph(figure={}, id='hourly_heatmap')),
-      dbc.Row([
-        dbc.Col([
-          html.Div(children="Seasonal Hourly Average", style={'fontSize': 24}),
-        ], width=6),
-        dbc.Col([], width=6),
-      ]),
-      dbc.Row([
-        dbc.Col([
-          dcc.Graph(figure={}, id='hourly_season'),
-        ], width=6),
-        dbc.Col([
-          dcc.Graph(figure={}, id='hourly_season_deviation'),
-        ], width=6),        
-      ]),
-    ]),
     dcc.Tab(label='Precipitation', children=[
       dbc_row_col(html.Div("Select precipitation metric:")),
       dbc_row_col(
@@ -765,17 +758,66 @@ app.layout = dbc.Container([
         ], width=6)
       ]),
       dbc_row_col(
-        html.Div("Monthly Precipitation Rank (1=driest)", style={'fontSize': 24}),
-      ),
-      dbc_row_col(
-        dcc.Graph(figure={}, id='monthly_precip_heatmap')
-      ),
-      dbc_row_col(
         html.Div("Monthly Precip Total", style={'fontSize': 24}),
       ),
       dbc_row_col(
         dcc.Graph(figure={}, id='monthly_precip_total')
       ),
+      dbc_row_col(
+        html.Div("Monthly Precipitation Rank (1=driest)", style={'fontSize': 24}),
+      ),
+      dbc_row_col(
+        dcc.Graph(figure={}, id='monthly_precip_heatmap')
+      ),
+    ]),
+    dcc.Tab(label='Hourly', children=[
+      dbc_row_col(html.Div("Select metric for hourly plots:")),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=hourly_metrics_pretty,
+          value='temp',
+          style={"color": "#000000"},
+          id='hourly_monthly_input',
+        )
+      ),
+      dbc_row_col(html.Div("Hourly Average by Month", style={'fontSize': 24})),
+      dbc_row_col(dcc.Graph(figure={}, id='hourly_monthly_scatter')),
+      dbc_row_col(html.Div("30-Year Hourly Average", style={'fontSize': 24})),      
+      dbc_row_col(dcc.Graph(figure={}, id='hourly_heatmap')),
+      dbc.Row([
+        dbc.Col([
+          html.Div(children="Seasonal Hourly Average", style={'fontSize': 24}),
+        ], width=6),
+        dbc.Col([], width=6),
+      ]),
+      dbc.Row([
+        dbc.Col([
+          dcc.Graph(figure={}, id='hourly_season'),
+        ], width=6),
+        dbc.Col([
+          dcc.Graph(figure={}, id='hourly_season_deviation'),
+        ], width=6),
+      ]),
+      dbc_row_col(html.Div("2D hourly", style={'fontSize': 24})),
+      dbc_row_col(html.Div("Select x-axis metric:"), width=6),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=hourly_metrics_pretty,
+          value='temp',
+          style={"color": "#000000"},
+          id='hourly_2d_xaxis',
+        ), width=6
+      ),
+      dbc_row_col(html.Div("Select y-axis metric:"), width=6),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=hourly_metrics_pretty,
+          value='pressure',
+          style={"color": "#000000"},
+          id='hourly_2d_yaxis',
+        ), width=6
+      ),
+      dbc_row_col(dcc.Graph(figure={}, id='hourly_2d'), width=6),
     ]),
     dcc.Tab(label='Records', children=[
       dbc_row_col(html.Div("Rain Records", style={'fontSize': 24})),
@@ -853,6 +895,7 @@ app.layout = dbc.Container([
       dbc_row_col(html.Div("Temperature Records", style={'fontSize': 24})),
     ]),
     dcc.Tab(label='Trend', children=[
+      dbc_row_col(html.Div("Select metric:")),
       dbc_row_col(
         dcc.Dropdown(
           options=list(yearly_trend_metrics['metric_name'].unique()),
@@ -861,13 +904,19 @@ app.layout = dbc.Container([
           id='yearly_trend_dropdown',
         ),
       ),
-      dbc_row_col(html.Div("Yearly Trend", style={'fontSize': 24})),
-      dbc_row_col(dcc.Graph(figure={}, id='yearly_trend')),
+      dbc.Row([
+        dbc.Col(html.Div("Yearly Trend", style={'fontSize': 24}), width=8),
+        dbc.Col(html.Div("Yearly Scatter", style={'fontSize': 24}), width=4),
+      ]),
+      dbc.Row([
+        dbc.Col(dcc.Graph(figure={}, id='yearly_trend'), width=8),
+        dbc.Col(dcc.Graph(figure={}, id='yearly_scatter'), width=4),
+      ])
     ]),
   ]),
 ], fluid=True)
 
-# Callbacks
+# Callbacks ----------------------------------------------------------------------
 
 # Temperature Figure
 @callback(
@@ -1347,6 +1396,33 @@ def update_hourly_heatmap(metric_chosen):
   )
   return fig
 
+@callback(
+    Output(component_id='hourly_2d', component_property='figure'),
+    Input(component_id='hourly_2d_xaxis', component_property='value'),
+    Input(component_id='hourly_2d_yaxis', component_property='value'),
+)
+def hourly_2d(metric1, metric2):
+  
+  min_year = (max_date.year-1) - 29 # 10 years
+  fig = px.density_heatmap(
+    hourly_temp.query(f"(year >= {min_year}) & (year < {max_date.year})"), 
+    x=metric1, 
+    y=metric2,
+    marginal_x='histogram', 
+    marginal_y='histogram',
+    color_continuous_scale=px.colors.sequential.Viridis,
+    nbinsx=100,
+    nbinsy=100,
+  )
+
+  fig.update_layout(
+    xaxis_title = hourly_metrics_pretty[metric1],
+    yaxis_title = hourly_metrics_pretty[metric2],
+    height=850,
+  )
+
+  return fig
+
 # Precip Dash
 @callback(
     Output(component_id='ytd_precip_chart', component_property='figure'),
@@ -1660,59 +1736,91 @@ def update_monthly_precip_total(metric_chosen):
     Input(component_id='yearly_trend_dropdown', component_property='value'),
 )
 def yearly_trend(metric):
-  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'")
+  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'").copy()
   to_display['year'] = pd.to_numeric(to_display['year'], errors='coerce')
+  avg_line = to_display['total'].mean()
   fig=go.Figure()
   fig.add_trace(
     go.Bar(
       x=to_display['year'],
       y=to_display['total'],
       name=metric,
+      text=to_display['total'],
+      textposition='outside',
+      texttemplate='%{text:.1f}'
     )
   )
+  fig.add_hline(
+      y=avg_line,
+      line=dict(color='red', width=1.5, dash='dash'),  # Customize the line color, width, and style
+      annotation_text=f"Avg: {avg_line:.2f}",  # Add a label for the line
+      annotation_position="top left",  # Position the label
+  )
+  fig.update_layout(
+    height=600,
+    margin=dict(l=20, r=20, t=20, b=20),
+    xaxis_title='Year',
+    yaxis_title=metric,
+  )
+  return fig
 
+
+@callback(
+    Output(component_id='yearly_scatter', component_property='figure'),
+    Input(component_id='yearly_trend_dropdown', component_property='value'),
+)
+def yearly_scatter(metric):
+  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'").copy()
+  to_display['year'] = pd.to_numeric(to_display['year'], errors='coerce')
+  
+  # Fit the model
   X = sm.add_constant(to_display['year'] - to_display['year'].min())  # Add intercept
   y = to_display['total']
-  avg_line = y.mean()
-
-  # Fit the model
   model = sm.OLS(y, X)
   model_res = model.fit()
   lm_fit = model_res.predict(X)
   slope = model_res.params['year']
   slope_pvalue = model_res.pvalues['year']
-  line_text = f'Slope: {slope:.4f}/year, p-value: {slope_pvalue:.4f}{"*" if slope_pvalue < 0.01 else ""}' 
+  line_text = f'Slope: {10*slope:.2f}/decade, p-value: {slope_pvalue:.4f}{"*" if slope_pvalue < 0.01 else ""}'
 
-  fig.add_hline(
-      y=avg_line,
-      line=dict(color='blue', width=1.5, dash='dash'),  # Customize the line color, width, and style
-      annotation_text=f"Avg: {avg_line:.2f}",  # Add a label for the line
-      annotation_position="top left",  # Position the label
+  fig = go.Figure()
+  fig.add_trace(
+    go.Scatter(
+      x=to_display['year'],
+      y=to_display['total'],
+      mode='markers',
+      marker=dict(size=10),
+      text=to_display['total'],  # Add the 'total' column as text
+      textposition='top center',  # Position the text on top of the markers
+      name=f'Yearly {metric.title()}',
+    )
   )
   fig.add_trace(
-      go.Scatter(
-          x=to_display['year'],
-          y=lm_fit,  # Evaluate the trend line at each x value
-          mode='lines',
-          name='Linear Trend',
-          line=dict(color='red', width=2, dash='dot'),
-      )
+    go.Scatter(
+      x=to_display['year'],
+      y=lm_fit,
+      mode='lines',
+      name='Linear Trend',    
+    )
   )
-  # Add a label for the Linear Trend line
   fig.add_annotation(
       x=to_display['year'].mean(),  # Place the label at the end of the trend line
       y=y.max()*1.10,  # Corresponding y-value at the end of the trend line
       text=line_text,  # Text to display
       showarrow=False,  # Show an arrow pointing to the trend line
-      font=dict(color='red', size=24),  # Customize font color and size
+      font=dict(color='red', size=22),  # Customize font color and size
       align="left",  # Align text to the left
       bgcolor="rgba(255, 255, 255, 0.8)",  # Add a semi-transparent background to the text
       bordercolor='red',
   )
   fig.update_layout(
     height=600,
+    margin=dict(l=20, r=20, t=20, b=20),
+    xaxis_title='Year',
+    yaxis_title=metric,
   )
   return fig
+
 
 # Run the app
 if __name__ == '__main__':
