@@ -428,20 +428,92 @@ precip_rank['rank'] = (
 )
 
 # Records
-# Rainiest day (all time)
-# Snowiest day (all time)
-# Rainiest day (within month)
-# Snowiest day (within month)
-# Earliest snow
-# Latest snow
-# Longest dry period
+# Hottest/coldest Day (all time)
+# Hottest/coldest Day (month)
+# Hottest/coldest month
+# Hottest/coldest year
 
-# Rainiest month (all time)
-# Snowiest month (all time)
-# Snowiest Season (by year)
-# Rainiest Year (by year)
-# Least snowiest season (by year)
-# Driest month (all time)
+# First freeze, last freeze, 100 degree days
+# Coldest Maximum
+# Warmest Minimum
+
+monthly_map.query("metric == 'avg_temp'")
+
+def compute_temp_records(records_top_N=10):
+  records_top_N = 10
+  record_column_order = ['rank','date', 'metric_name', 'metric_value', 'month', 'record']
+  daily_temps = temps_full[['min_temp', 'max_temp', 'avg_temp', 'date', 'month', 'year']].copy()
+  daily_temps['deg_100'] = 1*(daily_temps['max_temp'] >= 100)
+  daily_temps_unpivot = pd.concat([
+    daily_temps.assign(metric_name='max_temp', metric_value=lambda x: x.max_temp),
+    daily_temps.assign(metric_name='min_temp', metric_value=lambda x: x.min_temp),
+  ])
+
+  daily_temps_unpivot = daily_temps_unpivot.assign(
+    warm_rank=lambda x: x.groupby(['metric_name','month'])['metric_value'].rank(ascending=False, method='min').astype(int),
+    warm_overall=lambda x: x.groupby(['metric_name'])['metric_value'].rank(ascending=False, method='min').astype(int),
+    cold_rank=lambda x: x.groupby(['metric_name','month'])['metric_value'].rank(ascending=True, method='min').astype(int),
+    cold_overall=lambda x: x.groupby(['metric_name'])['metric_value'].rank(ascending=True, method='min').astype(int),
+  )
+
+  over_100 = (
+    daily_temps
+    .groupby(['year'])
+    .agg({'deg_100': 'sum'})
+    .reset_index()
+    .assign(rank=lambda x: x['deg_100'].rank(ascending=False, method='min').astype(int))
+    .query(f"rank <= {records_top_N}")
+    .assign(metric_name='100 Degree Days', month='Year', record='100 Degree Days')
+    .rename({"year": 'date', "deg_100": "metric_value"}, axis=1)
+    [record_column_order]
+  )
+
+  day_records = pd.concat([
+    (
+      daily_temps_unpivot.query(f"warm_rank <= {records_top_N}")
+      .query("metric_name == 'max_temp'")
+      .rename({'warm_rank': 'rank'}, axis=1)
+      .assign(record=lambda x: 'Hottest Day (' + x.month.astype(str) + ')')
+      [record_column_order]
+    ),
+    (
+      daily_temps_unpivot.query(f"warm_overall <= {records_top_N}")
+      .query("metric_name == 'max_temp'")
+      .rename({'warm_overall': 'rank'}, axis=1)
+      .assign(record=lambda x: 'Hottest Day')
+      [record_column_order]
+    ),
+    (
+      daily_temps_unpivot.query(f"cold_rank <= {records_top_N}")
+      .query("metric_name == 'min_temp'")
+      .rename({'cold_rank': 'rank'}, axis=1)
+      .assign(record=lambda x: 'Coldest Day (' + x.month.astype(str) + ')')
+      [record_column_order]
+    ),
+    (
+      daily_temps_unpivot.query(f"cold_overall <= {records_top_N}")
+      .query("metric_name == 'min_temp'")
+      .rename({'cold_overall': 'rank'}, axis=1)
+      .assign(record=lambda x: 'Coldest Day')
+      [record_column_order]
+    ),
+    (
+      daily_temps_unpivot.query(f"cold_overall <= {records_top_N}")
+      .query("metric_name == 'max_temp'")
+      .rename({'cold_overall': 'rank'}, axis=1)
+      .assign(record=lambda x: 'Coldest Maximum')
+      [record_column_order]
+    ),
+    (
+      daily_temps_unpivot.query(f"warm_overall <= {records_top_N}")
+      .query("metric_name == 'min_temp'")
+      .rename({'warm_overall': 'rank'}, axis=1)
+      .assign(record=lambda x: 'Warmest Mimimum')
+      [record_column_order]
+    ),
+  ])
+
+  return pd.concat([day_records, over_100])
 
 
 def compute_daily_precip_records(precip, records_top_N=10):
@@ -652,6 +724,9 @@ yearly_trend_metrics = pd.concat([
   ),
   temp_year_records[['metric_name', 'year', 'total', 'rank']],
 ])
+yearly_trend_metrics['year'] = yearly_trend_metrics['year'].astype('int')
+min_trend_year = yearly_trend_metrics["year"].min()
+max_trend_year = yearly_trend_metrics["year"].max()
 
 # cloud_cover, pressure, dew, humididy, wind
 
@@ -817,6 +892,17 @@ app.layout = dbc.Container([
           id='hourly_2d_yaxis',
         ), width=6
       ),
+      dbc_row_col(html.Div("Select month(s):"), width=6),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=month_order,
+          value=month_order,
+          style={"color": "#000000"},
+          id='hourly_month_dropdown',
+          multi=True,
+          closeOnSelect=False,
+        ), width=6
+      ),
       dbc_row_col(dcc.Graph(figure={}, id='hourly_2d'), width=6),
     ]),
     dcc.Tab(label='Records', children=[
@@ -903,6 +989,19 @@ app.layout = dbc.Container([
           style={"color": "#000000"},
           id='yearly_trend_dropdown',
         ),
+      ),
+      dbc_row_col(html.Div("Select start year:")),
+      dbc_row_col(
+        dcc.Slider(
+            min=int(round(min_trend_year/10)*10),
+            max=max_trend_year-1,
+            step=1,
+            id='yearly_trend_slider',
+            value=1970,
+            marks={str(year): str(year) for year in range(int(round(temps_minmax[0]/10)*10), temps_minmax[1]+1, 5)},
+            tooltip={"placement": "bottom", "always_visible": True},
+            included=False,
+        ), width=6         
       ),
       dbc.Row([
         dbc.Col(html.Div("Yearly Trend", style={'fontSize': 24}), width=8),
@@ -1400,12 +1499,13 @@ def update_hourly_heatmap(metric_chosen):
     Output(component_id='hourly_2d', component_property='figure'),
     Input(component_id='hourly_2d_xaxis', component_property='value'),
     Input(component_id='hourly_2d_yaxis', component_property='value'),
+    Input(component_id='hourly_month_dropdown', component_property='value'),
 )
-def hourly_2d(metric1, metric2):
+def hourly_2d(metric1, metric2, months):
   
   min_year = (max_date.year-1) - 29 # 10 years
   fig = px.density_heatmap(
-    hourly_temp.query(f"(year >= {min_year}) & (year < {max_date.year})"), 
+    hourly_temp.query(f"(year >= {min_year}) & (year < {max_date.year}) & (month in {months})"), 
     x=metric1, 
     y=metric2,
     marginal_x='histogram', 
@@ -1734,9 +1834,10 @@ def update_monthly_precip_total(metric_chosen):
 @callback(
     Output(component_id='yearly_trend', component_property='figure'),
     Input(component_id='yearly_trend_dropdown', component_property='value'),
+    Input(component_id='yearly_trend_slider', component_property='value'),
 )
-def yearly_trend(metric):
-  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'").copy()
+def yearly_trend(metric, start_year):
+  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'").query(f"year >= {start_year}").copy()
   to_display['year'] = pd.to_numeric(to_display['year'], errors='coerce')
   avg_line = to_display['total'].mean()
   fig=go.Figure()
@@ -1768,9 +1869,10 @@ def yearly_trend(metric):
 @callback(
     Output(component_id='yearly_scatter', component_property='figure'),
     Input(component_id='yearly_trend_dropdown', component_property='value'),
+    Input(component_id='yearly_trend_slider', component_property='value'),
 )
-def yearly_scatter(metric):
-  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'").copy()
+def yearly_scatter(metric, start_year):
+  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'").query(f"year >= {start_year}").copy()
   to_display['year'] = pd.to_numeric(to_display['year'], errors='coerce')
   
   # Fit the model
