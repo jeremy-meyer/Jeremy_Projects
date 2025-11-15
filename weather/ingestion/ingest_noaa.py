@@ -1,6 +1,10 @@
 import requests
 import pandas as pd
+import os
 from datetime import datetime, timedelta, date
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # This code will pull from the noaa source
 # It has more accurate precipation data, and the temperature is recorded at the SLC airport
@@ -45,7 +49,6 @@ end_date = str(date.today() - timedelta(days=1))
 print(f"Updating data from {start_date} to {end_date}")
 
 # NOAA API configuration
-TOKEN = ""
 BASE_URL = "https://www.ncei.noaa.gov/access/services/data/v1"
 STATION_ID = "USW00024127"  # Salt Lake City Airport station
 
@@ -62,7 +65,7 @@ def fetch_noaa_data(start_date, end_date, station_id, data_types):
         "includeAttributes": "false",
         "includeStationName": "true",
         "includeStationLocation": "true",
-        "token": TOKEN,
+        "token": os.getenv("TOKEN"),
     }
 
     response = requests.get(BASE_URL, params=params)

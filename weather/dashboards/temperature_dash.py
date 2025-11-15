@@ -1,6 +1,7 @@
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, html
 import dash_bootstrap_components as dbc
 import pandas as pd
+import numpy as np
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.io as pio
@@ -58,6 +59,7 @@ precip_colors = [
   '#865513','#D2B469', '#F4E8C4', '#F5F5F5', 
   '#CBE9E5', '#69B3AC', '#20645E'
 ]
+RECORDS_DEFAULT=15
 
 # Code to generate dashboard style tables
 def generic_data_table(df, id, page_size=10, clean_table=False, metric_value=None, decimal_places=2):
@@ -124,6 +126,9 @@ temps['high_rank'] = temps.groupby('day_of_year')['max_temp'].rank(ascending=Fal
 temps['low_rank'] = temps.groupby('day_of_year')['min_temp'].rank(ascending=True, method='min')
 month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 temps['month'] = pd.Categorical(temps['date'].dt.strftime('%b'), categories=month_order, ordered=True)
+temps['snow_season'] = np.where(temps['month'].isin(['Aug', 'Sep', 'Oct', 'Nov', 'Dec']), temps['year'], temps['year'] - 1)
+temps['snow_season'] = temps['snow_season'].astype(str) + '-' + (temps['snow_season'] + 1).astype(str)
+temps['snow_day_of_year'] = temps.apply(lambda x: gen_DoY_index(x['date'], 'snow_season'), axis=1)
 
 temps_full = temps.merge(normals.drop(columns=['month'], axis=1), on='day_of_year', how='left', suffixes=('', '_y'))
 
@@ -436,14 +441,11 @@ precip_rank['rank'] = (
 # First freeze, last freeze, 100 degree days
 # Coldest Maximum
 # Warmest Minimum
-
-monthly_map.query("metric == 'avg_temp'")
-
-def compute_temp_records(records_top_N=10):
-  records_top_N = 10
+def compute_temp_records(records_top_N=RECORDS_DEFAULT):
   record_column_order = ['rank','date', 'metric_name', 'metric_value', 'month', 'record']
-  daily_temps = temps_full[['min_temp', 'max_temp', 'avg_temp', 'date', 'month', 'year']].copy()
+  daily_temps = temps_full[['min_temp', 'max_temp', 'avg_temp', 'date', 'month', 'year', 'snow_season', 'snow_day_of_year']].copy()
   daily_temps['deg_100'] = 1*(daily_temps['max_temp'] >= 100)
+  daily_temps['date'] = daily_temps['date'].dt.date
   daily_temps_unpivot = pd.concat([
     daily_temps.assign(metric_name='max_temp', metric_value=lambda x: x.max_temp),
     daily_temps.assign(metric_name='min_temp', metric_value=lambda x: x.min_temp),
@@ -463,7 +465,7 @@ def compute_temp_records(records_top_N=10):
     .reset_index()
     .assign(rank=lambda x: x['deg_100'].rank(ascending=False, method='min').astype(int))
     .query(f"rank <= {records_top_N}")
-    .assign(metric_name='100 Degree Days', month='Year', record='100 Degree Days')
+    .assign(metric_name='100 Degree Days', month='Year', record='100_degree_days')
     .rename({"year": 'date', "deg_100": "metric_value"}, axis=1)
     [record_column_order]
   )
@@ -473,50 +475,84 @@ def compute_temp_records(records_top_N=10):
       daily_temps_unpivot.query(f"warm_rank <= {records_top_N}")
       .query("metric_name == 'max_temp'")
       .rename({'warm_rank': 'rank'}, axis=1)
-      .assign(record=lambda x: 'Hottest Day (' + x.month.astype(str) + ')')
+      .assign(record=lambda x: 'hottest_day (' + x.month.astype(str) + ')')
       [record_column_order]
     ),
     (
       daily_temps_unpivot.query(f"warm_overall <= {records_top_N}")
       .query("metric_name == 'max_temp'")
       .rename({'warm_overall': 'rank'}, axis=1)
-      .assign(record=lambda x: 'Hottest Day')
+      .assign(record=lambda x: 'hottest_day')
       [record_column_order]
     ),
     (
       daily_temps_unpivot.query(f"cold_rank <= {records_top_N}")
       .query("metric_name == 'min_temp'")
       .rename({'cold_rank': 'rank'}, axis=1)
-      .assign(record=lambda x: 'Coldest Day (' + x.month.astype(str) + ')')
+      .assign(record=lambda x: 'coldest_day (' + x.month.astype(str) + ')')
       [record_column_order]
     ),
     (
       daily_temps_unpivot.query(f"cold_overall <= {records_top_N}")
       .query("metric_name == 'min_temp'")
       .rename({'cold_overall': 'rank'}, axis=1)
-      .assign(record=lambda x: 'Coldest Day')
+      .assign(record=lambda x: 'coldest_day')
       [record_column_order]
     ),
     (
       daily_temps_unpivot.query(f"cold_overall <= {records_top_N}")
       .query("metric_name == 'max_temp'")
       .rename({'cold_overall': 'rank'}, axis=1)
-      .assign(record=lambda x: 'Coldest Maximum')
+      .assign(record=lambda x: 'coldest_maximum')
       [record_column_order]
     ),
     (
       daily_temps_unpivot.query(f"warm_overall <= {records_top_N}")
       .query("metric_name == 'min_temp'")
       .rename({'warm_overall': 'rank'}, axis=1)
-      .assign(record=lambda x: 'Warmest Mimimum')
+      .assign(record=lambda x: 'hottest_minimum')
       [record_column_order]
     ),
   ])
 
-  return pd.concat([day_records, over_100])
+  min_temp_date = daily_temps['date'].min()
+  max_temp_date = daily_temps['date'].max()
+  min_snow_year = (min_temp_date.year+1 if min_temp_date.month>=8 else min_temp_date.year)
+  max_snow_year = (max_temp_date.year-1 if max_temp_date.month<7 else max_temp_date.year)
 
+  first_freezes = (
+    daily_temps
+    .query("min_temp<= 32.0")
+    .assign(freeze_num=lambda x: x.groupby('snow_season')['snow_day_of_year'].rank(ascending=True, method='min'))
+    .query('freeze_num == 1')
+    .query(f"snow_season >= '{min_snow_year}'")
+    .assign(
+      rank=lambda x: x['snow_day_of_year'].rank(ascending=True, method='min').astype(int),
+      metric_name='Freeze', month='Year', record='first_freeze'
+    )
+    .rename({"min_temp": "metric_value"}, axis=1)
+    .query(f"rank <= {records_top_N}")
+    [record_column_order]
+  )
 
-def compute_daily_precip_records(precip, records_top_N=10):
+  last_freezes = (
+    daily_temps
+    .query("min_temp<= 32.0")
+    .assign(freeze_num=lambda x: x.groupby('snow_season')['snow_day_of_year'].rank(ascending=False, method='min'))
+    .query('freeze_num == 1')
+    .query(f"snow_season <= '{max_snow_year}'")
+    .assign(
+      rank=lambda x: x['snow_day_of_year'].rank(ascending=False, method='min').astype(int),
+      metric_name='Freeze', month='Year', record='last_freeze'
+    )
+    .rename({"min_temp": "metric_value"}, axis=1)
+    .query(f"rank <= {records_top_N}")
+    [record_column_order]
+  )
+
+  return pd.concat([day_records, over_100, first_freezes, last_freezes]).sort_values(['record', 'rank'])
+
+def compute_daily_precip_records(precip, records_top_N=RECORDS_DEFAULT):
   cols_for_wet_days = ['date', 'snow', 'rain', 'month', 'year', 'precip_day', 'snow_season']
   record_column_order = ['rank','date', 'metric_name', 'metric_value', 'month', 'record']
   wet_days = pd.concat([
@@ -601,7 +637,7 @@ def compute_daily_precip_records(precip, records_top_N=10):
   return combined
 
 
-def compute_monthly_precip_records(records_top_N=10):
+def compute_monthly_precip_records(records_top_N=RECORDS_DEFAULT):
   record_order = ['rank','date', 'metric_value' ,'record']
   snow_year = (
     precip_rank
@@ -668,9 +704,12 @@ def compute_monthly_precip_records(records_top_N=10):
     rain_year,
   ]).sort_values(['record', 'rank'])
 
-precip_records_nodaily = compute_monthly_precip_records(10)
-precip_records = compute_daily_precip_records(precip, 15)
+precip_records_nodaily = compute_monthly_precip_records()
+precip_records = compute_daily_precip_records(precip)
 curr_precip_month = precip['date'].max().strftime('%b')
+curr_temp_month = temps['date'].max().strftime('%b')
+temp_records = compute_temp_records()
+
 dashboard_tables = {
   "rain_day": generic_data_table(precip_records.query("record == 'rainiest day'"), id='rain_day' ,clean_table=True, metric_value='rain (in)'),
   'rain_day_month': generic_data_table(precip_records.query(f"record == 'rainiest day ({curr_precip_month})'"), id='rain_day_month', clean_table=True, metric_value='rain (in)'),
@@ -684,7 +723,16 @@ dashboard_tables = {
   'rain_year' : generic_data_table(precip_records_nodaily.query("record == 'most_rain_year'"), id='rain_year', clean_table=True, metric_value='rain (in)'),
   'snow_year' : generic_data_table(precip_records_nodaily.query("record == 'most_snow_year'"), id='snow_year', clean_table=True, metric_value='snow (in)'),
   'dry_month' : generic_data_table(precip_records_nodaily.query("record == 'driest_month'"), id='dry_month', clean_table=True, metric_value='precip (in)'),
-  'dry_snow' : generic_data_table(precip_records_nodaily.query("record == 'least_snow_year'"), id='dry_snow', clean_table=True, metric_value='precip (in)'),
+  'dry_snow' : generic_data_table(precip_records_nodaily.query("record == 'least_snow_year'"), id='dry_snow', clean_table=True, metric_value='snow (in)'),
+  'cold_day' : generic_data_table(temp_records.query("record == 'coldest_day'"), id='cold_day', clean_table=True, metric_value='temp (F)'),
+  'cold_day_month' : generic_data_table(temp_records.query(f"record == 'coldest_day ({curr_temp_month})'"), id=f'cold_day_month', clean_table=True, metric_value='temp (F)'),
+  'hot_day' : generic_data_table(temp_records.query("record == 'hottest_day'"), id='hot_day', clean_table=True, metric_value='temp (F)'),
+  'hot_day_month' : generic_data_table(temp_records.query(f"record == 'hottest_day ({curr_temp_month})'"), id=f'hot_day_month', clean_table=True, metric_value='temp (F)'),
+  'hottest_min' : generic_data_table(temp_records.query("record == 'hottest_minimum'"), id='hot_min', clean_table=True, metric_value='temp (F)'),
+  'coldest_max' : generic_data_table(temp_records.query("record == 'coldest_maximum'"), id='coldest_max', clean_table=True, metric_value='temp (F)'),
+  '100_deg' : generic_data_table(temp_records.query("record == '100_degree_days'"), id='100_deg', clean_table=True, metric_value='temp (F)'),
+  'first_freeze': generic_data_table(temp_records.query("record == 'first_freeze'"), id='first_freeze', clean_table=True, metric_value='temp (F)'),
+  'last_freeze': generic_data_table(temp_records.query("record == 'last_freeze'"), id='last_freeze', clean_table=True, metric_value='temp (F)'),
 }
 
 # Temp year records
@@ -906,6 +954,44 @@ app.layout = dbc.Container([
       dbc_row_col(dcc.Graph(figure={}, id='hourly_2d'), width=6),
     ]),
     dcc.Tab(label='Records', children=[
+      dbc_row_col(html.Div("Hot Records", style={'fontSize': 24})),
+      dbc.Row([
+        dbc.Col([
+          html.H4("Hottest Day", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Hottest Day ({curr_temp_month})", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Hottest Minimum", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"100 Degree Days", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+      ]),
+      dbc.Row([
+        dbc.Col(dashboard_tables['hot_day'], width=3),
+        dbc.Col(dashboard_tables['hot_day_month'], width=3),
+        dbc.Col(dashboard_tables['hottest_min'], width=3),
+        dbc.Col(dashboard_tables['100_deg'], width=3),
+      ]),
+      dbc_row_col(html.Div("Cold Records", style={'fontSize': 24})),
+      dbc.Row([
+        dbc.Col([
+          html.H4("Coldest Day", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Coldest Day ({curr_temp_month})", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Coldest Maximum", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+      ]),
+      dbc.Row([
+        dbc.Col(dashboard_tables['cold_day'], width=3),
+        dbc.Col(dashboard_tables['cold_day_month'], width=3),
+        dbc.Col(dashboard_tables['coldest_max'], width=3),
+      ]),
       dbc_row_col(html.Div("Rain Records", style={'fontSize': 24})),
       dbc.Row([
         dbc.Col([
@@ -968,17 +1054,24 @@ app.layout = dbc.Container([
       dbc_row_col(html.Div("Frost/Freeze Records", style={'fontSize': 24})),
       dbc.Row([
         dbc.Col([
-          html.H4("Earliest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+          html.H4(f"First Freeze", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
         dbc.Col([
-          html.H4(f"Latest Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+          html.H4(f"Last Freeze", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4("First Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
+        ], width=3),
+        dbc.Col([
+          html.H4(f"Last Snow", style={'textAlign': 'center', 'marginBottom': '10px'})
         ], width=3),
       ]),
       dbc.Row([
+        dbc.Col(dashboard_tables['first_freeze'], width=3),
+        dbc.Col(dashboard_tables['last_freeze'], width=3),        
         dbc.Col(dashboard_tables['snow_early'], width=3),
         dbc.Col(dashboard_tables['snow_late'], width=3),
       ]),
-      dbc_row_col(html.Div("Temperature Records", style={'fontSize': 24})),
     ]),
     dcc.Tab(label='Trend', children=[
       dbc_row_col(html.Div("Select metric:")),

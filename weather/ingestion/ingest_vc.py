@@ -6,8 +6,11 @@ import os
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datetime import timedelta, datetime, date
+from dotenv import load_dotenv
 
-YOURAPIKEY = "<API_KEY>"
+load_dotenv()
+
+YOURAPIKEY = os.getenv('YOURAPIKEY')
 base_url_weather_request = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/history?&aggregateHours=24&"
 csv_subdir = 'weather/data_sources/'
 location = "Salt Lake City, UT, US"
