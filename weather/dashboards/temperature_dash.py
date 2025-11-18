@@ -120,6 +120,14 @@ temps['day_of_year'] = temps['date'].apply(gen_DoY_index)
 temps['range'] = temps['max_temp'] - temps['min_temp']
 temps['year'] = temps['date'].dt.year
 temps_minmax = (temps['year'].min(),temps['year'].max())
+temps =   temps.rename({
+    'Dew Point': 'dew_point',
+    'Cloud Cover': 'cloud_cover',
+    'wind_chill': 'wind_chill',
+    'Sea Level Pressure': 'pressure',
+    'Heat Index': 'heat_index',
+  }, axis=1
+)
 
 # add a column rank to temp that ranks how hot each day was relative to all other years
 temps['high_rank'] = temps.groupby('day_of_year')['max_temp'].rank(ascending=False, method='min')
@@ -776,7 +784,14 @@ yearly_trend_metrics['year'] = yearly_trend_metrics['year'].astype('int')
 min_trend_year = yearly_trend_metrics["year"].min()
 max_trend_year = yearly_trend_metrics["year"].max()
 
-# cloud_cover, pressure, dew, humididy, wind
+records_dash_disagg = (
+  temps[['date','year','day_of_year','min_temp', 'max_temp', 'avg_temp', 'dew_point', 'wind_speed','wind_chill', 'pressure', 'heat_index']]
+  .merge(
+    precip[['date', 'precip', 'rain', 'snow', 'precip_day']],
+    on='date',
+    how='left'
+  )
+)
 
 # LAYOUT -------------------------------------------------------------------------
 dbc_row_col = lambda x, width=12: dbc.Row(children=[dbc.Col([x], width=width)])
@@ -1103,7 +1118,25 @@ app.layout = dbc.Container([
       dbc.Row([
         dbc.Col(dcc.Graph(figure={}, id='yearly_trend'), width=8),
         dbc.Col(dcc.Graph(figure={}, id='yearly_scatter'), width=4),
-      ])
+      ]),
+      dbc_row_col(html.Div("Select records metric:")),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=[
+            x for x in records_dash_disagg.columns \
+              if x not in ['date', 'year', 'day_of_year', 'high_rank', 'low_rank']
+          ],
+          value='avg_temp',
+          style={"color": "#000000"},
+          id='records_yearly_dropdown',
+        ), width=8
+      ),
+      dbc.Row([
+        dbc.Col(html.Div("Number of Daily Records", style={'fontSize': 24}), width=8),
+      ]),
+      dbc.Row([
+        dbc.Col(dcc.Graph(figure={}, id='records_yearly'), width=8),
+      ]),      
     ]),
   ]),
 ], fluid=True)
@@ -2013,6 +2046,37 @@ def yearly_scatter(metric, start_year):
     margin=dict(l=20, r=20, t=20, b=20),
     xaxis_title='Year',
     yaxis_title=metric,
+  )
+  return fig
+
+
+@callback(
+    Output(component_id='records_yearly', component_property='figure'),
+    Input(component_id='records_yearly_dropdown', component_property='value'),
+)
+def records_dash(metric):
+  
+  records_dash_disagg_rank = records_dash_disagg.copy()
+  records_dash_disagg_rank['high_rank'] = records_dash_disagg_rank.groupby('day_of_year')[metric].rank(method='min', ascending=False)
+  records_dash_disagg_rank['low_rank'] = records_dash_disagg_rank.groupby('day_of_year')[metric].rank(method='min', ascending=True)
+  if metric in ['rain', 'snow', 'precip', 'precip_day']:
+    records_dash_disagg_rank = records_dash_disagg_rank.query(f"{metric} > 0") # Too many 0 days
+
+  records_dash = (
+    records_dash_disagg_rank
+    .assign(record_high=lambda x: x['high_rank'] == 1.0, record_low=lambda x: -1*(x['low_rank'] == 1.0))
+    .groupby('year')
+    .agg(
+      record_high_days=('record_high', 'sum'),
+      record_low_days=('record_low', 'sum'),
+    )
+    .reset_index()
+  )
+
+  fig = px.bar(records_dash, x='year', y=['record_high_days', 'record_low_days'], color_discrete_sequence=['red', '#6e6df7'])
+  fig.update_layout(
+    legend_title_text='',
+    margin=dict(l=20, r=20, t=20, b=20),
   )
   return fig
 
