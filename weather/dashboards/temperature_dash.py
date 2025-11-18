@@ -2055,7 +2055,6 @@ def yearly_scatter(metric, start_year):
     Input(component_id='records_yearly_dropdown', component_property='value'),
 )
 def records_dash(metric):
-  
   records_dash_disagg_rank = records_dash_disagg.copy()
   records_dash_disagg_rank['high_rank'] = records_dash_disagg_rank.groupby('day_of_year')[metric].rank(method='min', ascending=False)
   records_dash_disagg_rank['low_rank'] = records_dash_disagg_rank.groupby('day_of_year')[metric].rank(method='min', ascending=True)
