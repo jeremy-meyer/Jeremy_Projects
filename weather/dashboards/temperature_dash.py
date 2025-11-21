@@ -120,6 +120,12 @@ temps['day_of_year'] = temps['date'].apply(gen_DoY_index)
 temps['range'] = temps['max_temp'] - temps['min_temp']
 temps['year'] = temps['date'].dt.year
 temps_minmax = (temps['year'].min(),temps['year'].max())
+
+min_temp_date = temps['date'].min()
+max_temp_date = temps['date'].max()
+min_snow_year = (min_temp_date.year+1 if min_temp_date.month>=8 else min_temp_date.year)
+max_snow_year = (max_temp_date.year-1 if max_temp_date.month<7 else max_temp_date.year)
+
 temps =   temps.rename({
     'Dew Point': 'dew_point',
     'Cloud Cover': 'cloud_cover',
@@ -130,6 +136,7 @@ temps =   temps.rename({
 )
 
 # add a column rank to temp that ranks how hot each day was relative to all other years
+temps['diurnal_temp_range'] = temps['max_temp'] - temps['min_temp']
 temps['high_rank'] = temps.groupby('day_of_year')['max_temp'].rank(ascending=False, method='min')
 temps['low_rank'] = temps.groupby('day_of_year')['min_temp'].rank(ascending=True, method='min')
 month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -303,6 +310,7 @@ precip = pd.read_csv('weather/output_sources/precip_table.csv', index_col=False,
 current_year = precip['year'].max()
 max_water_year = precip['water_year'].max()
 max_winter_year = precip['snow_season'].max()
+precip['snow_day_of_year'] = precip.apply(lambda x: gen_DoY_index(x['date'], 'snow_season'), axis=1)
 
 ytd_normals = pd.read_csv('weather/output_sources/ytd_precip_normals.csv')
 precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
@@ -523,11 +531,6 @@ def compute_temp_records(records_top_N=RECORDS_DEFAULT):
     ),
   ])
 
-  min_temp_date = daily_temps['date'].min()
-  max_temp_date = daily_temps['date'].max()
-  min_snow_year = (min_temp_date.year+1 if min_temp_date.month>=8 else min_temp_date.year)
-  max_snow_year = (max_temp_date.year-1 if max_temp_date.month<7 else max_temp_date.year)
-
   first_freezes = (
     daily_temps
     .query("min_temp<= 32.0")
@@ -718,6 +721,71 @@ curr_precip_month = precip['date'].max().strftime('%b')
 curr_temp_month = temps['date'].max().strftime('%b')
 temp_records = compute_temp_records()
 
+# First/Last Freeze Percentiles
+freeze_dates = (
+  temps.query("min_temp<= 32.0")
+  .groupby('snow_season')
+  .agg(
+    first_freeze_doy=('snow_day_of_year', 'min'),
+    first_freeze_date=('date', 'min'),
+    last_freeze_doy=('snow_day_of_year', 'max'),
+  )
+  .reset_index()
+  .query(f"(snow_season < '{max_snow_year}') & (snow_season >= '{min_snow_year}')")
+)
+
+freeze_percs = pd.concat([
+  pd.DataFrame(
+    freeze_dates['first_freeze_doy'].quantile([0, 0.1, 0.25, 0.5, 0.75, 0.9,1]))\
+    .rename({'first_freeze_doy': 'freeze_doy'}, axis=1)\
+    .assign(metric='first_freeze'),
+  pd.DataFrame(
+    freeze_dates['last_freeze_doy'].quantile([0, 0.1, 0.25, 0.5, 0.75, 0.9,1]))\
+    .rename({'last_freeze_doy': 'freeze_doy'}, axis=1)\
+    .assign(metric='last_freeze'),
+]).reset_index()
+
+freeze_percs['date'] = (
+  freeze_percs
+  .apply(lambda x: dayofyear_to_month_day(int((x['freeze_doy'] - 154) % 365 + 1)), axis=1)
+)
+
+freeze_percs['percentile'] = freeze_percs['index'].apply(lambda x: f"{int(x*100)}th Percentile")
+freeze_percs = freeze_percs[['date', 'percentile', 'metric']]
+
+snow_dates = (
+  precip
+  .query("snow> 0.0")
+  .groupby('snow_season')
+  .agg(
+    first_snow_doy=('snow_day_of_year', 'min'),
+    first_snow_date=('date', 'min'),
+    last_snow_doy=('snow_day_of_year', 'max'),
+  )
+  .reset_index()
+  .query(f"(snow_season < '{max_snow_year}') & (snow_season >= '{min_snow_year}')")
+)
+
+snow_percs = pd.concat([
+  pd.DataFrame(
+    snow_dates['first_snow_doy'].quantile([0, 0.1, 0.25, 0.5, 0.75, 0.9,1]))\
+    .rename({'first_snow_doy': 'freeze_doy'}, axis=1)\
+    .assign(metric='first_snow'),
+  pd.DataFrame(
+    snow_dates['last_snow_doy'].quantile([0, 0.1, 0.25, 0.5, 0.75, 0.9,1]))\
+    .rename({'last_snow_doy': 'freeze_doy'}, axis=1)\
+    .assign(metric='last_snow'),
+]).reset_index()
+
+snow_percs['date'] = (
+  snow_percs
+  .apply(lambda x: dayofyear_to_month_day(int((x['freeze_doy'] - 154) % 365 + 1)), axis=1)
+)
+
+snow_percs['percentile'] = snow_percs['index'].apply(lambda x: f"{int(x*100)}th Percentile")
+snow_percs = snow_percs[['date', 'percentile', 'metric']]
+
+
 dashboard_tables = {
   "rain_day": generic_data_table(precip_records.query("record == 'rainiest day'"), id='rain_day' ,clean_table=True, metric_value='rain (in)'),
   'rain_day_month': generic_data_table(precip_records.query(f"record == 'rainiest day ({curr_precip_month})'"), id='rain_day_month', clean_table=True, metric_value='rain (in)'),
@@ -741,6 +809,10 @@ dashboard_tables = {
   '100_deg' : generic_data_table(temp_records.query("record == '100_degree_days'"), id='100_deg', clean_table=True, metric_value='temp (F)'),
   'first_freeze': generic_data_table(temp_records.query("record == 'first_freeze'"), id='first_freeze', clean_table=True, metric_value='temp (F)'),
   'last_freeze': generic_data_table(temp_records.query("record == 'last_freeze'"), id='last_freeze', clean_table=True, metric_value='temp (F)'),
+  'first_freeze_perc': generic_data_table(freeze_percs.query("metric == 'first_freeze'")[['date', 'percentile']], id='first_freeze_perc', clean_table=False, metric_value='date'),
+  'last_freeze_perc': generic_data_table(freeze_percs.query("metric == 'last_freeze'")[['date', 'percentile']], id='last_freeze_perc', clean_table=False, metric_value='date'),
+  'first_snow_perc': generic_data_table(snow_percs.query("metric == 'first_snow'")[['date', 'percentile']], id='first_snow_perc', clean_table=False, metric_value='date'),
+  'last_snow_perc': generic_data_table(snow_percs.query("metric == 'last_snow'")[['date', 'percentile']], id='last_snow_perc', clean_table=False, metric_value='date'),
 }
 
 # Temp year records
@@ -756,13 +828,22 @@ temp_year_records = (
     full_min=('min_temp', 'min'),
     days_100=('degree_100', 'sum'),
     frost_days=('frost_days', 'sum'),
+    diurnal_temp_range=('diurnal_temp_range', 'mean'),
   )
   .reset_index()
-  .melt(['year'], ['full_max', 'full_min', 'days_100', 'frost_days'], 'metric_name', 'total')
+  .melt(['year'], ['full_max', 'full_min', 'days_100', 'frost_days', 'diurnal_temp_range'], 'metric_name', 'total')
   .assign(rank=lambda x: x.groupby('metric_name')['total'].rank(method='min', ascending=False))
   .query(f"year < {max_date.year}")
 )
 
+# Compute additional metrics from temp table
+additional_yearly_metrics = ['cloud_cover', 'pressure', 'dew_point', 'wind_speed']
+additional_yearly_rank = (
+  temps[['year', *additional_yearly_metrics]]
+  .groupby('year').mean().reset_index()
+  .melt(['year'], additional_yearly_metrics, 'metric_name', 'total')
+  .assign(rank=lambda x: x.groupby('metric_name')['total'].rank(method='min', ascending=False))
+)
 
 yearly_trend_metrics = pd.concat([
   (
@@ -779,19 +860,50 @@ yearly_trend_metrics = pd.concat([
     [['metric_name', 'year', 'total', 'rank']]
   ),
   temp_year_records[['metric_name', 'year', 'total', 'rank']],
+  additional_yearly_rank[['metric_name', 'year', 'total', 'rank']],
 ])
 yearly_trend_metrics['year'] = yearly_trend_metrics['year'].astype('int')
 min_trend_year = yearly_trend_metrics["year"].min()
-max_trend_year = yearly_trend_metrics["year"].max()
+max_trend_year = yearly_trend_metrics["year"].max()-1 # exclude partial year
+yearly_trend_metrics = yearly_trend_metrics.query(f"year <= {max_trend_year}")
 
 records_dash_disagg = (
-  temps[['date','year','day_of_year','min_temp', 'max_temp', 'avg_temp', 'dew_point', 'wind_speed','wind_chill', 'pressure', 'heat_index']]
+  temps[['date','year','day_of_year','min_temp', 'max_temp', 'avg_temp', 'dew_point', 'wind_speed','wind_chill', 'pressure', 'heat_index', 'diurnal_temp_range']]
   .merge(
-    precip[['date', 'precip', 'rain', 'snow', 'precip_day']],
+    precip[['date', 'precip', 'rain', 'snow']],
     on='date',
     how='left'
   )
 )
+
+records_dash_options = [
+  x for x in records_dash_disagg.columns \
+    if x not in ['date', 'year', 'day_of_year', 'high_rank', 'low_rank']
+]
+
+yearly_trend_labels = {
+  'avg_temp': 'Mean Temp',
+  'max_temp': 'Avg High Temp',
+  'min_temp': 'Avg Low Temp',
+  'precip': 'Precipitation (water year)',
+  'rain': 'Rainfall (water year)',
+  'snow': 'Snowfall (water year)',
+  'precip_day': 'Precipitation Days',
+  'full_max': 'Yearly Maximum Temp',
+  'full_min': 'Yearly Minimum Temp',
+  'days_100': '100 Degree Days',
+  'frost_days': "32 Degree Days",
+  'cloud_cover': 'Cloud Cover (%)',
+  'pressure': 'Pressure (mb)',
+  'dew_point': 'Dew Point (F)',
+  'wind_speed': 'Wind Speed (mph)',
+  'diurnal_temp_range': 'Avg Diurnal Temp Range (F)',
+}
+
+records_dash_labels = {
+  x: (yearly_trend_labels | {'wind_chill': 'Wind Chill (F)', 'heat_index': 'Heat Index (F)', 'max_temp': "High Temp", 'min_temp': "Low Temp"} ).get(x, x)\
+      for x in records_dash_options
+}
 
 # LAYOUT -------------------------------------------------------------------------
 dbc_row_col = lambda x, width=12: dbc.Row(children=[dbc.Col([x], width=width)])
@@ -895,12 +1007,34 @@ app.layout = dbc.Container([
           dcc.Graph(figure={}, id='mtd_precip_chart'),
         ], width=6)
       ]),
-      dbc_row_col(
-        html.Div("Monthly Precip Total", style={'fontSize': 24}),
-      ),
-      dbc_row_col(
-        dcc.Graph(figure={}, id='monthly_precip_total')
-      ),
+      dbc.Row([
+        dbc.Col([
+          html.Div("Monthly Precip Total", style={'fontSize': 24})
+          ], width=6),
+        dbc.Col([html.Div("First Freeze Dates", style={'fontSize': 24})], width=3),
+        dbc.Col([html.Div("First Snow Dates", style={'fontSize': 24})], width=3),
+      ]),
+      dbc.Row([
+        dbc.Col([
+          dcc.Graph(figure={}, id='monthly_precip_total')
+          ], width=6),
+        dbc.Col([
+            dashboard_tables['first_freeze_perc'],
+            html.Br(),
+            html.Div("Last Freeze Dates", style={'fontSize': 24}), 
+            dashboard_tables['last_freeze_perc'],
+          ],
+          width=3
+        ),
+        dbc.Col([
+            dashboard_tables['first_snow_perc'],
+            html.Br(),
+            html.Div("Last Snow Dates", style={'fontSize': 24}), 
+            dashboard_tables['last_snow_perc'],
+          ],
+          width=3
+        ),
+      ]),
       dbc_row_col(
         html.Div("Monthly Precipitation Rank (1=driest)", style={'fontSize': 24}),
       ),
@@ -1092,7 +1226,7 @@ app.layout = dbc.Container([
       dbc_row_col(html.Div("Select metric:")),
       dbc_row_col(
         dcc.Dropdown(
-          options=list(yearly_trend_metrics['metric_name'].unique()),
+          options=yearly_trend_labels,
           value='precip',
           style={"color": "#000000"},
           id='yearly_trend_dropdown',
@@ -1122,10 +1256,7 @@ app.layout = dbc.Container([
       dbc_row_col(html.Div("Select records metric:")),
       dbc_row_col(
         dcc.Dropdown(
-          options=[
-            x for x in records_dash_disagg.columns \
-              if x not in ['date', 'year', 'day_of_year', 'high_rank', 'low_rank']
-          ],
+          options=records_dash_labels,
           value='avg_temp',
           style={"color": "#000000"},
           id='records_yearly_dropdown',
@@ -1987,7 +2118,7 @@ def yearly_trend(metric, start_year):
     height=600,
     margin=dict(l=20, r=20, t=20, b=20),
     xaxis_title='Year',
-    yaxis_title=metric,
+    yaxis_title=yearly_trend_labels[metric],
   )
   return fig
 
@@ -2045,7 +2176,7 @@ def yearly_scatter(metric, start_year):
     height=600,
     margin=dict(l=20, r=20, t=20, b=20),
     xaxis_title='Year',
-    yaxis_title=metric,
+    yaxis_title=yearly_trend_labels[metric],
   )
   return fig
 
@@ -2076,6 +2207,8 @@ def records_dash(metric):
   fig.update_layout(
     legend_title_text='',
     margin=dict(l=20, r=20, t=20, b=20),
+    xaxis_title='Year',
+    yaxis_title=records_dash_labels[metric] + " Days",
   )
   return fig
 
