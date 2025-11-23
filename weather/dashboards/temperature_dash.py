@@ -905,6 +905,25 @@ records_dash_labels = {
       for x in records_dash_options
 }
 
+# Precip dynamic colors
+non_snow_colors = {
+  'year_lines': "rgb(144, 238, 144, 0.25)",
+  'avg_line': "rgb(0, 225, 0, 0.9)",
+  'current_year_line': 'rgb(50, 255, 210)',
+  'fillcolor1': 'rgba(0, 200, 0, 0.25)',
+  'fillcolor2': 'rgba(0, 150, 0, 0.1)',
+  'monthly_total': ['#228B22', '#00FF00'],
+}
+
+snow_colors = {
+  'year_lines': "rgb(0, 144, 238, 0.25)",
+  'avg_line': "rgb(0, 200, 255, 0.9)",
+  'current_year_line': 'rgb(50, 255, 210)',
+  'fillcolor1': 'rgba(0, 100, 255, 0.5)',
+  'fillcolor2': 'rgba(0, 75, 200, 0.25)',
+  'monthly_total': ['#007bff', '#00f0ff'],  
+}
+
 # LAYOUT -------------------------------------------------------------------------
 dbc_row_col = lambda x, width=12: dbc.Row(children=[dbc.Col([x], width=width)])
 first_col_width = 7
@@ -1792,6 +1811,8 @@ def precip_ytd_chart(calendar_type, metric):
       .query(f"(metric_name == '{metric}') & (year_type == '{calendar_type}')")
   )
 
+  colors = snow_colors if metric == 'snow' else non_snow_colors
+
   current_year_ytd = ytd_dash.query("year_for_dash == current_year")
   not_current_ytd = ytd_dash.query(f"(year_for_dash != current_year)")
   chart_label = current_year_ytd['current_year'].head().iloc[0]
@@ -1814,7 +1835,7 @@ def precip_ytd_chart(calendar_type, metric):
     color='year_for_dash',
   )
   fig.update_traces(
-      line=dict(color='rgb(144, 238, 144, 0.25)', width=0.75, dash='dot'),
+      line=dict(color=colors['year_lines'], width=0.75, dash='dot'),
       selector=dict(mode='lines'),  # Ensure it applies only to line traces
       customdata = not_current_ytd[['dashboard_date', 'year']],
       hovertemplate=(
@@ -1829,7 +1850,7 @@ def precip_ytd_chart(calendar_type, metric):
     y=ytd_avg['avg_precip_ytd'], 
     mode='lines', 
     name='Average', 
-    line=dict(color='rgb(0, 225, 0, 0.9)', width=4),
+    line=dict(color=colors['avg_line'], width=4),
     customdata = not_current_ytd[['dashboard_date', 'year']],
     hovertemplate=(
       '<b>Date:</b> %{customdata[0]} %{customdata[1]}<br>' +
@@ -1842,7 +1863,7 @@ def precip_ytd_chart(calendar_type, metric):
     y=current_year_ytd['year_to_date_precip'], 
     mode='lines', 
     name=chart_label, 
-    line=dict(color='rgb(50, 255, 210)', width=2),
+    line=dict(color=colors['current_year_line'], width=2),
     customdata = current_year_ytd[['dashboard_date', 'year']],
     hovertemplate=(
       '<b>Date:</b> %{customdata[0]} %{customdata[1]}<br>' +
@@ -1856,7 +1877,7 @@ def precip_ytd_chart(calendar_type, metric):
           x=list(ytd_avg['day_of_year_dash']) + list(ytd_avg['day_of_year_dash'])[::-1],
           y=list(ytd_avg['p75_precip_ytd']) + list(ytd_avg['p25_precip_ytd'])[::-1],
           fill='toself',
-          fillcolor='rgba(0, 200, 0, 0.25)',
+          fillcolor=colors['fillcolor1'],
           line=dict(color='rgba(255,255,255,0)'),
           hoverinfo="skip",
           name='25th-75th Percentile',
@@ -1868,7 +1889,7 @@ def precip_ytd_chart(calendar_type, metric):
           x=list(ytd_avg['day_of_year_dash']) + list(ytd_avg['day_of_year_dash'])[::-1],
           y=list(ytd_avg['max_precip_ytd']) + list(ytd_avg['min_precip_ytd'])[::-1],
           fill='toself',
-          fillcolor='rgba(0, 150, 0, 0.1)',
+          fillcolor=colors['fillcolor2'],
           line=dict(color='rgba(255,255,255,0)'),
           hoverinfo="skip",
           name='Min/Max Percentile',
@@ -1909,10 +1930,13 @@ def precip_ytd_chart(calendar_type, metric):
 )
 def mtd_precip_chart(metric):
 
-  current_year_mtd = mtd.query(f"year_for_dash == current_year & metric_name == '{metric}' & month == '{current_precip_month}'")
+  current_year_mtd = (
+    mtd.query(f"year_for_dash == current_year & metric_name == '{metric}' & month == '{current_precip_month}'")
+    .sort_values(['day_of_month'])
+  )
   current_year_label = current_year_mtd['current_year'].head().iloc[0]
-  mtd_avg_metric = mtd_avg.query(f"metric_name == '{metric}' & month == '{current_precip_month}'")
-  
+  mtd_avg_metric = mtd_avg.query(f"metric_name == '{metric}' & month == '{current_precip_month}'").dropna().sort_values(['day_of_month'])
+  colors = snow_colors if metric == 'snow' else non_snow_colors
 
   fig = go.Figure()
   fig.add_scatter(
@@ -1920,7 +1944,7 @@ def mtd_precip_chart(metric):
     y=mtd_avg_metric['avg_precip_mtd'], 
     mode='lines', 
     name='Average', 
-    line=dict(color='rgb(0, 225, 0, 0.9)', width=4),
+    line=dict(color=colors['avg_line'], width=4),
     hovertemplate=(
       '<b>Day Of Month:</b> %{x}<br>' +
       f'<b>Avg {metric}: %{{y:.2f}} in<br>' +
@@ -1932,20 +1956,20 @@ def mtd_precip_chart(metric):
     y=mtd_avg_metric['max_precip_mtd'], 
     mode='lines', 
     name='Maximum', 
-    line=dict(color='green', width=1, dash='dot')
+    line=dict(color=colors['year_lines'], width=1, dash='dot')
   )
   fig.add_scatter(
     x=mtd_avg_metric['day_of_month'], 
     y=mtd_avg_metric['min_precip_mtd'], 
     mode='lines', 
     name='Minimum', 
-    line=dict(color='green', width=1, dash='dot')
+    line=dict(color=colors['year_lines'], width=1, dash='dot')
   )
   fig.add_scatter(
     x=current_year_mtd['day_of_month'], 
     y=current_year_mtd['month_to_date_precip'], 
     mode='lines', name=current_precip_month + ' ' + str(current_year_label), 
-    line=dict(color='rgb(50, 255, 210)', width=2),
+    line=dict(color=colors['current_year_line'], width=2),
       hovertemplate=(
       f"<b>Date:</b> %{{x}} {current_precip_month + ' ' + str(current_year_label)}<br>" +
       f'<b>Cumulative {metric}: %{{y:.2f}} in<br>' +
@@ -1957,7 +1981,7 @@ def mtd_precip_chart(metric):
           x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
           y=list(mtd_avg_metric['p75_precip_mtd']) + list(mtd_avg_metric['p25_precip_mtd'])[::-1],
           fill='toself',
-          fillcolor='rgba(0, 150, 0, 0.2)',
+          fillcolor=colors['fillcolor1'],
           line=dict(color='rgba(255,255,255,0)'),
           hoverinfo="skip",
           name='25th-75th Percentile',
@@ -1969,7 +1993,7 @@ def mtd_precip_chart(metric):
           x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
           y=list(mtd_avg_metric['max_precip_mtd']) + list(mtd_avg_metric['min_precip_mtd'])[::-1],
           fill='toself',
-          fillcolor='rgba(0, 150, 0, 0.1)',
+          fillcolor=colors['fillcolor2'],
           line=dict(color='rgba(255,255,255,0)'),
           hoverinfo="skip",
           name='Min/Max Percentile',
@@ -1981,7 +2005,7 @@ def mtd_precip_chart(metric):
           x=list(mtd_avg_metric['day_of_month']) + list(mtd_avg_metric['day_of_month'])[::-1],
           y=list(mtd_avg_metric['p90_precip_mtd']) + list(mtd_avg_metric['p10_precip_mtd'])[::-1],
           fill='toself',
-          fillcolor='rgba(0, 150, 0, 0.1)',
+          fillcolor=colors['fillcolor2'],
           line=dict(color='rgba(255,255,255,0)'),
           hoverinfo="skip",
           name='10th-90th Percentile',
@@ -2004,6 +2028,7 @@ def mtd_precip_chart(metric):
 )
 def update_monthly_precip_heatmap(metric_chosen, calendar_chosen):
 
+  heatmap_color_scale = precip_colors
   data_for_precip_heatmap = (
     precip_rank
     .query(f"metric_name == '{metric_chosen}'")
@@ -2015,7 +2040,7 @@ def update_monthly_precip_heatmap(metric_chosen, calendar_chosen):
       x=data_for_precip_heatmap['year'],
       y=data_for_precip_heatmap['month'],
       z=data_for_precip_heatmap['rank'],
-      colorscale=precip_colors,
+      colorscale=heatmap_color_scale,
       zmin=1,
       xgap=1,
       ygap=1,
@@ -2048,6 +2073,7 @@ def update_monthly_precip_heatmap(metric_chosen, calendar_chosen):
 )
 def update_monthly_precip_total(metric_chosen):
 
+  colors = snow_colors if metric_chosen == 'snow' else non_snow_colors
   monthly_totals_for_graph = (
     monthly_totals
     .query("year_for_dash == current_year")
@@ -2063,7 +2089,7 @@ def update_monthly_precip_total(metric_chosen):
     color='type',
     barmode='group',
     height=550,
-    color_discrete_sequence=['#228B22', '#00FF00'],
+    color_discrete_sequence=colors['monthly_total'],
     text_auto=True,
   )
 

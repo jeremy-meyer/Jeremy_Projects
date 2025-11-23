@@ -118,7 +118,7 @@ precip_data_unpivot = (
 )
 
 precip_data_for_norm = (
-  precip_data_unpivot.query("(norm_range) | (current_year == year_for_dash)")
+  precip_data_unpivot#.query("(norm_range) | (current_year == year_for_dash)")
 )
 
 
@@ -179,10 +179,10 @@ precip_data_for_norm = precip_data_for_norm.assign(
 
 mtd = (
   precip_data_for_norm.query("(year_type == 'calendar_year')")\
-    [['date', 'month', 'year_for_dash', 'current_year', 'metric_name', 'metric_value', 'day_of_month']]
+    [['date', 'month', 'year_for_dash', 'current_year', 'metric_name', 'metric_value', 'day_of_month', 'norm_range']]
   .fillna({'metric_value': 0})
   .sort_values(by=['metric_name', 'year_for_dash' ,'date'])
-  .groupby(['metric_name', 'year_for_dash', 'month'])
+  .groupby(['metric_name', 'year_for_dash', 'norm_range', 'month'], observed=True)
   .apply(lambda x: x.assign(month_to_date_precip=x['metric_value'].cumsum()))
   .reset_index(drop=True)
   # .sort_values(by=['year_type', 'metric_name', 'calendar_year', 'date'])
@@ -192,16 +192,17 @@ mtd = (
 mtd_avg = (
   mtd
   .query("year_for_dash != current_year")
-  .groupby(['metric_name', 'month', 'day_of_month'])
+  .assign(month_to_date_precip_norm=lambda x: np.where(x['norm_range'], x['month_to_date_precip'], np.nan))
+  .groupby(['metric_name', 'month', 'day_of_month'], observed=True)
   .agg(
-      avg_precip_mtd=('month_to_date_precip', 'mean'),
+      avg_precip_mtd=('month_to_date_precip_norm', 'mean'),
       min_precip_mtd=('month_to_date_precip', 'min'),
       max_precip_mtd=('month_to_date_precip', 'max'),
-      p10_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 10)),
-      p25_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 25)),
-      p50_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 50)),
-      p75_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 75)),
-      p90_precip_mtd=('month_to_date_precip', lambda x: np.percentile(x, 90)),
+      p10_precip_mtd=('month_to_date_precip_norm', lambda x: np.nanpercentile (x, 10)),
+      p25_precip_mtd=('month_to_date_precip_norm', lambda x: np.nanpercentile (x, 25)),
+      p50_precip_mtd=('month_to_date_precip_norm', lambda x: np.nanpercentile (x, 50)),
+      p75_precip_mtd=('month_to_date_precip_norm', lambda x: np.nanpercentile (x, 75)),
+      p90_precip_mtd=('month_to_date_precip_norm', lambda x: np.nanpercentile (x, 90)),
   )
   .reset_index()
   # .query(f"year_type == '{calendar_type}'") # Uncomment to run
@@ -215,7 +216,7 @@ ytd = (
   precip_data_for_norm
   .fillna({'metric_value': 0})
   .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'day_of_year_dash'])
-  .groupby(['year_type', 'metric_name', 'year_for_dash'])
+  .groupby(['year_type', 'metric_name', 'norm_range' ,'year_for_dash'], observed=True)
   .apply(lambda x: x.assign(year_to_date_precip=x['metric_value'].cumsum()))
   .reset_index(drop=True)
   .sort_values(by=['year_type', 'metric_name', 'year_for_dash', 'day_of_year_dash'])
@@ -223,20 +224,33 @@ ytd = (
 
 current_year_ytd = ytd.query("year_for_dash == current_year")
 # chart_label = current_year_ytd['current_year'].head().iloc[0]
+incomplete_years = (
+  precip_data_for_norm
+  .groupby(['year_type', 'year_for_dash'])
+  .agg(min_index=('day_of_year_dash', 'min'))
+  .reset_index().query("min_index!=1")
+  [['year_type', 'year_for_dash']]
+  .values.tolist()
+)
+
 
 ytd_avg = (
   ytd
+  [~(ytd['year_type'] + ytd['year_for_dash'].astype(str)).isin(["".join(item) for item in incomplete_years])]
   .query("year_for_dash != current_year")
+  .assign(
+    year_to_date_precip_norm=lambda x: np.where(x['norm_range'], x['year_to_date_precip'], np.nan)
+  )
   .groupby(['year_type', 'metric_name', 'day_of_year', 'day_of_year_dash'])
   .agg(
-      avg_precip_ytd=('year_to_date_precip', 'mean'),
+      avg_precip_ytd=('year_to_date_precip_norm', 'mean'),
       min_precip_ytd=('year_to_date_precip', 'min'),
       max_precip_ytd=('year_to_date_precip', 'max'),
-      p10_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 10)),
-      p25_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 25)),
-      p50_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 50)),
-      p75_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 75)),
-      p90_precip_ytd=('year_to_date_precip', lambda x: np.percentile(x, 90)),
+      p10_precip_ytd=('year_to_date_precip_norm', lambda x: np.nanpercentile (x, 10)),
+      p25_precip_ytd=('year_to_date_precip_norm', lambda x: np.nanpercentile(x, 25)),
+      p50_precip_ytd=('year_to_date_precip_norm', lambda x: np.nanpercentile(x, 50)),
+      p75_precip_ytd=('year_to_date_precip_norm', lambda x: np.nanpercentile(x, 75)),
+      p90_precip_ytd=('year_to_date_precip_norm', lambda x: np.nanpercentile(x, 90)),
   )
   .reset_index()
   .query("day_of_year % 1 == 0") # get rid if leap day
