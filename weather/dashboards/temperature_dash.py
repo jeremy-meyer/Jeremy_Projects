@@ -905,6 +905,17 @@ records_dash_labels = {
       for x in records_dash_options
 }
 
+wind = (
+  temps[['date', 'month' ,'wind_speed', 'Wind Direction']]
+  .assign(
+    wind_speed_cat = lambda x: pd.cut(x['wind_speed'], bins=[0,10,15,20,30,40, temps['wind_speed'].max()], labels=['0-10', '10-15' ,'15-20','20-30','30-40','40+']),
+    wind_direction_cat = lambda x: (round(x['Wind Direction']/ (360/16)) * (360/16)) % 360
+  )
+  .groupby(['month','wind_speed_cat', 'wind_direction_cat'])
+  .agg(frequency=('date', 'count'))
+  .reset_index()
+)
+
 # Precip dynamic colors
 non_snow_colors = {
   'year_lines': "rgb(144, 238, 144, 0.25)",
@@ -1089,8 +1100,10 @@ app.layout = dbc.Container([
           dcc.Graph(figure={}, id='hourly_season_deviation'),
         ], width=6),
       ]),
-      dbc_row_col(html.Div("2D hourly", style={'fontSize': 24})),
-      dbc_row_col(html.Div("Select x-axis metric:"), width=6),
+      dbc.Row([
+        dbc.Col([html.Div("2D hourly", style={'fontSize': 24})], width=6),
+        dbc.Col([html.Div("Wind Direction/Speed", style={'fontSize': 24})], width=6),
+      ]),
       dbc_row_col(
         dcc.Dropdown(
           options=hourly_metrics_pretty,
@@ -1119,7 +1132,10 @@ app.layout = dbc.Container([
           closeOnSelect=False,
         ), width=6
       ),
-      dbc_row_col(dcc.Graph(figure={}, id='hourly_2d'), width=6),
+      dbc.Row([
+        dbc.Col([dcc.Graph(figure={}, id='hourly_2d')], width=6),
+        dbc.Col([dcc.Graph(figure={}, id='wind_direction')], width=6),
+      ]),
     ]),
     dcc.Tab(label='Records', children=[
       dbc_row_col(html.Div("Hot Records", style={'fontSize': 24})),
@@ -1290,7 +1306,6 @@ app.layout = dbc.Container([
     ]),
   ]),
 ], fluid=True)
-
 # Callbacks ----------------------------------------------------------------------
 
 # Temperature Figure
@@ -2236,6 +2251,28 @@ def records_dash(metric):
     xaxis_title='Year',
     yaxis_title=records_dash_labels[metric] + " Days",
   )
+  return fig
+
+
+@callback(
+    Output(component_id='wind_direction', component_property='figure'),
+    Input(component_id='hourly_month_dropdown', component_property='value'),
+)
+def wind_dir_graph(months):
+  wind_chart = (
+    wind
+    .query(f"month in {months}")
+    .groupby(['wind_direction_cat', 'wind_speed_cat'])
+    .agg(frequency=('frequency', 'sum'))
+    .reset_index()
+  )
+  
+  wind_chart['percent'] = wind_chart['frequency'] / wind_chart['frequency'].sum()
+
+
+  fig = px.bar_polar(wind_chart, r="percent", theta="wind_direction_cat",
+                    color="wind_speed_cat", template="plotly_dark",
+                    color_discrete_sequence= px.colors.sequential.Plasma_r)
   return fig
 
 
