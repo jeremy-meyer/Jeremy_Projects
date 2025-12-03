@@ -70,6 +70,8 @@ def generic_data_table(df, id, page_size=10, clean_table=False, metric_value=Non
       .rename({'metric_value': metric_value}, axis=1)
     )
     df[metric_value] = round(df[metric_value], decimal_places)
+  current_year = date.today().year
+  date_condition = f"({{date}} contains '{current_year}') || ({{date}} contains '{current_year-1}') || ({{date}} contains '{current_year-2}')"
   
   return (
     html.Div([
@@ -94,6 +96,13 @@ def generic_data_table(df, id, page_size=10, clean_table=False, metric_value=Non
           {
               'if': {'row_index': 'odd'},  # Alternate row styling
               'backgroundColor': '#2a2a2a'  # Slightly lighter background for odd rows
+          },
+          {
+            'if': {
+                'filter_query': date_condition,
+            },
+            'backgroundColor': "#4E4D00",
+            'fontWeight': 'bold',
           },
            ],
           style_cell_conditional=[
@@ -1090,7 +1099,7 @@ app.layout = dbc.Container([
         dbc.Col([
           html.Div(children="Seasonal Hourly Average", style={'fontSize': 24}),
         ], width=6),
-        dbc.Col([], width=6),
+        dbc.Col([html.Div(children="Seasonal Hourly Deviation", style={'fontSize': 24})], width=6),
       ]),
       dbc.Row([
         dbc.Col([
@@ -1104,6 +1113,23 @@ app.layout = dbc.Container([
         dbc.Col([html.Div("2D hourly", style={'fontSize': 24})], width=6),
         dbc.Col([html.Div("Wind Direction/Speed", style={'fontSize': 24})], width=6),
       ]),
+      dbc_row_col(html.Div("Select month(s):"), width=6),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=month_order,
+          value=month_order,
+          style={"color": "#000000"},
+          id='hourly_month_dropdown',
+          multi=True,
+          closeOnSelect=False,
+        ), width=6
+      ),
+      dbc_row_col(html.Br()),
+      dbc.Row([
+        dbc.Col([dcc.Graph(figure={}, id='hourly_2d')], width=6),
+        dbc.Col([dcc.Graph(figure={}, id='wind_direction')], width=6),
+      ]),
+      dbc_row_col(html.Div("Select x-axis metric:"), width=6),
       dbc_row_col(
         dcc.Dropdown(
           options=hourly_metrics_pretty,
@@ -1121,22 +1147,8 @@ app.layout = dbc.Container([
           id='hourly_2d_yaxis',
         ), width=6
       ),
-      dbc_row_col(html.Div("Select month(s):"), width=6),
-      dbc_row_col(
-        dcc.Dropdown(
-          options=month_order,
-          value=month_order,
-          style={"color": "#000000"},
-          id='hourly_month_dropdown',
-          multi=True,
-          closeOnSelect=False,
-        ), width=6
-      ),
-      dbc.Row([
-        dbc.Col([dcc.Graph(figure={}, id='hourly_2d')], width=6),
-        dbc.Col([dcc.Graph(figure={}, id='wind_direction')], width=6),
-      ]),
     ]),
+    dcc.Tab(label='On This Day', children=[]),
     dcc.Tab(label='Records', children=[
       dbc_row_col(html.Div("Hot Records", style={'fontSize': 24})),
       dbc.Row([
@@ -1299,9 +1311,11 @@ app.layout = dbc.Container([
       ),
       dbc.Row([
         dbc.Col(html.Div("Number of Daily Records", style={'fontSize': 24}), width=8),
+        dbc.Col(html.Div("Departure from 30yr normal", style={'fontSize': 24}), width=4),
       ]),
       dbc.Row([
         dbc.Col(dcc.Graph(figure={}, id='records_yearly'), width=8),
+        dbc.Col(dcc.Graph(figure={}, id='yearly_trend_from_norm'), width=4),
       ]),      
     ]),
   ]),
@@ -2154,6 +2168,38 @@ def yearly_trend(metric, start_year):
       line=dict(color='red', width=1.5, dash='dash'),  # Customize the line color, width, and style
       annotation_text=f"Avg: {avg_line:.2f}",  # Add a label for the line
       annotation_position="top left",  # Position the label
+  )
+  fig.update_layout(
+    height=600,
+    margin=dict(l=20, r=20, t=20, b=20),
+    xaxis_title='Year',
+    yaxis_title=yearly_trend_labels[metric],
+  )
+  return fig
+
+
+@callback(
+    Output(component_id='yearly_trend_from_norm', component_property='figure'),
+    Input(component_id='yearly_trend_dropdown', component_property='value'),
+    Input(component_id='yearly_trend_slider', component_property='value'),
+)
+def yearly_trend_from_norm(metric, start_year):
+  max_year = yearly_trend_metrics['year'].max()
+  to_display = yearly_trend_metrics.query(f"metric_name == '{metric}'").query(f"year >= {start_year}").copy()
+  to_display['year'] = pd.to_numeric(to_display['year'], errors='coerce')
+  to_display['departure_from_normal'] = to_display['total'] - to_display.query(f"year >= {max_year - 30}")['total'].mean()
+  
+  fig=go.Figure()
+  fig.add_trace(
+    go.Bar(
+      x=to_display['year'],
+      y=to_display['departure_from_normal'],
+      name=metric,
+    )
+  )
+  fig.add_hline(
+      y=0,
+      line=dict(color='white', width=1.5, dash='dash'),  # Customize the line color, width, and style
   )
   fig.update_layout(
     height=600,
