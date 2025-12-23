@@ -6,7 +6,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.io as pio
 import plotly.graph_objects as go
-from datetime import date
+from datetime import date, datetime
 from plotly_calplot import calplot
 import statsmodels.api as sm
 import os
@@ -26,6 +26,7 @@ def gen_DoY_index(x, year_type='calendar_year'):
   
   mar1_day = 60
   return_value = x.dayofyear
+
 
   if x.is_leap_year:
     if x.dayofyear > mar1_day:
@@ -174,6 +175,9 @@ else:
 today = date.today()
 normal_n_year = 30
 years_for_normals = range(date.today().year - normal_n_year, date.today().year)
+
+all_dates = pd.date_range(start="2024-01-01", end="2024-12-31")  # Leap year to include Feb 29
+formatted_dates = [x.strftime("%b %d") for x in all_dates]  # Format as "MMMM D"
 
 # Compute Monthly Normals with 30 years; records use all data
 month_avgs = (
@@ -1148,7 +1152,31 @@ app.layout = dbc.Container([
         ), width=6
       ),
     ]),
-    dcc.Tab(label='On This Day', children=[]),
+    dcc.Tab(label='On This Day', children=[
+      dbc_row_col(html.Div("Select Day of Year:")),
+      dbc_row_col(
+        dcc.Dropdown(
+          options=formatted_dates,
+          value=date.today().strftime('%b %d'),
+          style={"color": "#000000"},
+          id='datepicker_day_of_year',
+        ), width=6
+      ),
+      dbc.Row([
+        dbc.Col([
+          html.Div(children="Min Temperature", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_min_temp')),
+        ], width=4),
+        dbc.Col([
+          html.Div(children="Max Temperature", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_max_temp')),
+        ], width=4),
+        dbc.Col([
+          html.Div(children="Cloud Cover", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_cloud_cover')),
+        ], width=4),
+      ]),
+    ]),
     dcc.Tab(label='Records', children=[
       dbc_row_col(html.Div("Hot Records", style={'fontSize': 24})),
       dbc.Row([
@@ -2319,6 +2347,52 @@ def wind_dir_graph(months):
   fig = px.bar_polar(wind_chart, r="percent", theta="wind_direction_cat",
                     color="wind_speed_cat", template="plotly_dark",
                     color_discrete_sequence= px.colors.sequential.Plasma_r)
+  return fig
+
+# On This day view
+@callback(
+    Output(component_id='on_this_day_min_temp', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_min_temp(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = temps.query(f"day_of_year == {day_of_year}")
+
+  fig = px.histogram(df, x="min_temp", histnorm='percent')
+  fig.update_layout(xaxis_title="Minimum Temperature", yaxis_title="Frequency", bargap=0.1)
+  return fig
+
+
+@callback(
+    Output(component_id='on_this_day_max_temp', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_max_temp(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = temps.query(f"day_of_year == {day_of_year}")
+
+  fig = px.histogram(df, x="max_temp", color_discrete_sequence=['firebrick'], histnorm='percent')
+  fig.update_layout(xaxis_title="Maximum Temperature", yaxis_title="Frequency", bargap=0.1)
+  return fig
+
+@callback(
+    Output(component_id='on_this_day_cloud_cover', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_cloud_cover(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = temps.query(f"day_of_year == {day_of_year}")
+
+  fig = px.histogram(df, x="cloud_cover", color_discrete_sequence=['cornflowerblue'], histnorm='percent')
+  fig.update_traces(xbins={'start': 0, 'end': 100, 'size': 10})
+  fig.update_layout(xaxis_title="Cloud Cover", yaxis_title="Frequency", bargap=0.1)
+
   return fig
 
 
