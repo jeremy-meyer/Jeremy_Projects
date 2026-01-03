@@ -40,7 +40,7 @@ plt.title('Moving Average of Mood Rating')
 plt.show()
 
 # Day of week avg
-plt.subplots(figsize=(6.75, 4.75))
+plt.subplots(figsize=(7, 5))
 plt.ylim(bottom=0, top=3.75)
 index_ordering = [(x,2023) for x in weekday_order] + [(x,2024) for x in weekday_order] + [(x,2025) for x in weekday_order]
 day_avg = mood_data_raw.groupby(["day_of_week", "year"]).aggregate({'rating' : 'mean'}).reindex(index_ordering)
@@ -51,7 +51,7 @@ ax.set(ylabel='rating avg', xlabel='weekday', title='Weekday Avg')
 plt.show()
 
 # Month avg
-plt.subplots(figsize=(6.75, 4.75))
+plt.subplots(figsize=(7, 5))
 plt.ylim(bottom=0, top=3.5)
 index_ordering = [(x,2023) for x in month_order] + [(x,2024) for x in month_order] + [(x,2025) for x in month_order]
 month_avg = mood_data_raw.groupby(['month', 'year']).aggregate({'rating' : 'mean'}).reindex(index_ordering)
@@ -98,11 +98,11 @@ cal_input=cal_input[cal_input.index <= datetime.today()]
 
 fig_mood = calplot.calplot(cal_input,
                 suptitle = 'On a scale of -5 to +5, how was your day?',
-                suptitle_kws = {'x': 0.5, 'y': 1.0},
+                suptitle_kws = {'x': 0.5, 'y': 1.001},
                 edgecolor = 'black',
                 yearlabel_kws = {'fontsize': 20, 'color': 'black'},
                 cmap="viridis", # Spectral
-                figsize=(16,5.5),
+                figsize=(16,6),
 )
 plt.show()
 

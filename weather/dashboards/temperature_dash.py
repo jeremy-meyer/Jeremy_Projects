@@ -49,6 +49,11 @@ def str_to_decimal_hr(s):
 def offset_season(s, offset):
   return str(int(s.split('-')[0]) + offset) + '-' + str(int(s.split('-')[1]) + offset)
 
+def create_bins(x, bins, labels, max_label):
+  for i, bin_val in enumerate(bins):
+    if x <= bin_val:
+      return labels[i]
+  return max_label
 
 # SHARED CONFIGS ---------------------
 temp_colors = [
@@ -324,6 +329,8 @@ current_year = precip['year'].max()
 max_water_year = precip['water_year'].max()
 max_winter_year = precip['snow_season'].max()
 precip['snow_day_of_year'] = precip.apply(lambda x: gen_DoY_index(x['date'], 'snow_season'), axis=1)
+precip['snow'].fillna(0, inplace=True)
+precip['rain'].fillna(0, inplace=True)
 
 ytd_normals = pd.read_csv('weather/output_sources/ytd_precip_normals.csv')
 precip['month'] = pd.Categorical(precip['date'].dt.strftime('%b'), categories=month_order, ordered=True)
@@ -1175,6 +1182,20 @@ app.layout = dbc.Container([
           html.Div(children="Cloud Cover", style={'fontSize': 24}),
           dbc_row_col(dcc.Graph(figure={}, id='on_this_day_cloud_cover')),
         ], width=4),
+      ]),
+      dbc.Row([
+        dbc.Col([
+          html.Div(children="Rain", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_rain')),
+        ], width=4),
+        dbc.Col([
+          html.Div(children="Snow", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_snow')),
+        ], width=4),
+        dbc.Col([
+          html.Div(children="Dew Point", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_dew_point')),
+        ], width=4),         
       ]),
     ]),
     dcc.Tab(label='Records', children=[
@@ -2395,7 +2416,71 @@ def on_this_day_cloud_cover(date_value):
 
   return fig
 
+@callback(
+    Output(component_id='on_this_day_dew_point', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_dew_point(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = temps.query(f"day_of_year == {day_of_year}")
+
+  fig = px.histogram(df, x="dew_point", color_discrete_sequence=['darkgreen'], histnorm='percent')
+  fig.update_layout(xaxis_title="Dew Point", yaxis_title="Frequency", bargap=0.1)
+
+  return fig
+
+@callback(
+    Output(component_id='on_this_day_snow', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_snow(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = precip.query(f"day_of_year == {day_of_year}").copy()
+  snow_labels = ['0in', '0-1in', '1-3in', '3-5in', '5-8in', '8-12in', '12-18in', '18+in']
+  snow_bins = lambda x: create_bins(
+    x,
+    [0, 1, 3, 5, 8, 12, 18], 
+    snow_labels,
+    snow_labels[-1],
+  )
+  df['snow'] = df['snow'].apply(snow_bins)
+
+  fig = px.histogram(df, x="snow", color_discrete_sequence=['cyan'], histnorm='percent')
+  fig.update_xaxes(categoryorder='array', categoryarray=snow_labels)
+  fig.update_layout(xaxis_title="Precipitation", yaxis_title="Frequency", bargap=0.1)
+
+  return fig
+
+
+@callback(
+    Output(component_id='on_this_day_rain', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_rain(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = precip.query(f"day_of_year == {day_of_year}").copy()
+  rain_labels = ['0in', '0-0.25in', '0.25-0.5in', '0.5-0.75in', '0.75-1in', '1-2in', '2+in']
+  rain_bins = lambda x: create_bins(
+    x,
+    [0, 0.25, 0.5, 0.75, 1, 2], 
+    rain_labels,
+    rain_labels[-1],
+  )
+  df['rain'] = df['rain'].apply(rain_bins)
+
+  fig = px.histogram(df, x="rain", color_discrete_sequence=['limegreen'], histnorm='percent')
+  fig.update_xaxes(categoryorder='array', categoryarray=rain_labels)
+  fig.update_layout(xaxis_title="Precipitation", yaxis_title="Frequency", bargap=0.1)
+
+  return fig
 
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True, port=8053)
+
