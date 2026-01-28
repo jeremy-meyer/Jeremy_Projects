@@ -970,7 +970,7 @@ app.layout = dbc.Container([
               max=temps_minmax[1],
               step=1,
               id='heatmap-year-slider',
-              value=2021,
+              value=temps_minmax[1] - 4,
               marks={str(year): str(year) for year in range(int(round(temps_minmax[0]/10)*10), temps_minmax[1]+1, 5)},
               tooltip={"placement": "bottom", "always_visible": True},
               included=False,
@@ -1196,6 +1196,26 @@ app.layout = dbc.Container([
           html.Div(children="Dew Point", style={'fontSize': 24}),
           dbc_row_col(dcc.Graph(figure={}, id='on_this_day_dew_point')),
         ], width=4),         
+      ]),
+      dbc.Row([
+        dbc.Col([
+          html.Div(children="High Temperature by Year", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_max_temp_trend')),
+        ], width=6),
+        dbc.Col([
+          html.Div(children="Low Temperature by Year", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_min_temp_trend')),
+        ], width=6),        
+      ]),
+      dbc.Row([
+        dbc.Col([
+          html.Div(children="Precipitation by Year", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_precip_trend')),
+        ], width=6),
+        dbc.Col([
+          html.Div(children="Cloud Cover by Year", style={'fontSize': 24}),
+          dbc_row_col(dcc.Graph(figure={}, id='on_this_day_cloud_cover_trend')),
+        ], width=6),        
       ]),
     ]),
     dcc.Tab(label='Records', children=[
@@ -2480,7 +2500,80 @@ def on_this_day_rain(date_value):
 
   return fig
 
+@callback(
+    Output(component_id='on_this_day_min_temp_trend', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_min_temp_trend(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = temps.query(f"day_of_year == {day_of_year}")
+
+  fig = px.bar(df, x="year", y='min_temp', text_auto=True)
+  fig.update_layout(xaxis_title="Year", yaxis_title=f"{date_value} Minimum Temperature", bargap=0.15)
+  return fig
+
+
+@callback(
+    Output(component_id='on_this_day_max_temp_trend', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_max_temp_trend(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = temps.query(f"day_of_year == {day_of_year}")
+
+  fig = px.bar(df, x="year", y='max_temp', color_discrete_sequence=['firebrick'], text_auto=True)
+  fig.update_layout(xaxis_title="Year", yaxis_title=f"{date_value} Maximum Temperature", bargap=0.15)
+  return fig
+
+
+@callback(
+    Output(component_id='on_this_day_cloud_cover_trend', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_cloud_cover_trend(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = temps.query(f"day_of_year == {day_of_year}")
+
+  fig = px.bar(df, x='year', y="cloud_cover", color_discrete_sequence=['cornflowerblue'], text_auto=True)
+  fig.update_layout(xaxis_title="Year", yaxis_title=f"{date_value} Cloud Cover", bargap=0.15)
+
+  return fig
+
+
+@callback(
+    Output(component_id='on_this_day_precip_trend', component_property='figure'),
+    Input(component_id='datepicker_day_of_year', component_property='value'),
+)
+def on_this_day_precip_trend(date_value):
+
+  date_formatted = datetime.strptime(date_value+" 2024", "%b %d %Y")
+  day_of_year = gen_DoY_index(pd.to_datetime(date_formatted))
+  df = precip.query(f"day_of_year == {day_of_year}").copy()
+
+  fig = px.bar(df, x='year', y=['rain', 'snow'], color_discrete_sequence=['limegreen', 'cyan'], text_auto=True)
+  fig.update_layout(xaxis_title="Year", yaxis_title=f"{date_value} Precipitation", bargap=0.15)
+
+  return fig
+
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True, port=8053)
+
+
+# On this day view
+# Normal High
+# Normal Low
+# Record High (year)
+# Record Low (year)
+# % cloud cover
+# Most Rain
+# Most Snow
+
+# Trend view over time for min, max, cloud cover, precip
 
