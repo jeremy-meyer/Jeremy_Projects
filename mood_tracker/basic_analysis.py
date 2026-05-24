@@ -53,7 +53,7 @@ plt.show()
 # Month avg
 plt.subplots(figsize=(7, 5))
 plt.ylim(bottom=0, top=3.5)
-index_ordering = [(x,2023) for x in month_order] + [(x,2024) for x in month_order] + [(x,2025) for x in month_order]
+index_ordering = [(x,2023) for x in month_order] + [(x,2024) for x in month_order] + [(x,2025) for x in month_order] +  [(x,2026) for x in month_order]
 month_avg = mood_data_raw.groupby(['month', 'year']).aggregate({'rating' : 'mean'}).reindex(index_ordering)
 month_avg['month'] = [x[0][:3] for x in month_avg.index]
 month_avg['year'] = [x[1] for x in month_avg.index]
